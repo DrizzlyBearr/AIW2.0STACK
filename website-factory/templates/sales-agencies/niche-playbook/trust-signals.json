@@ -58,5 +58,40 @@
       "tier": "elite",
       "isMultiColor": false
     }
-  ]
+  ],
+  "optionalBadges": [
+    {
+      "id": "podcast-sdr-chronicles",
+      "name": "SDR Chronicles Featured",
+      "logoPath": "templates/sales-agencies/niche-playbook/trust-badges/podcast-sdr-chronicles.svg",
+      "appliesIf": "client has a podcast appearance on SDR Chronicles -- drop SVG screenshot or logo into trust-badges/ and set id in brand-dna.trust_badges",
+      "niche": "sales-agencies",
+      "tier": "mid"
+    },
+    {
+      "id": "podcast-sales-hacker",
+      "name": "Sales Hacker Featured",
+      "logoPath": "templates/sales-agencies/niche-playbook/trust-badges/podcast-sales-hacker.svg",
+      "appliesIf": "client has a podcast appearance on Sales Hacker -- drop SVG screenshot or logo into trust-badges/ and set id in brand-dna.trust_badges",
+      "niche": "sales-agencies",
+      "tier": "mid"
+    },
+    {
+      "id": "podcast-30mpp",
+      "name": "30 Minutes to President's Club Featured",
+      "logoPath": "templates/sales-agencies/niche-playbook/trust-badges/podcast-30mpp.svg",
+      "appliesIf": "client has a podcast appearance on 30 Minutes to President's Club",
+      "niche": "sales-agencies",
+      "tier": "mid"
+    },
+    {
+      "id": "speaking-salesforce-event",
+      "name": "Salesforce Event Speaker",
+      "logoPath": "templates/sales-agencies/niche-playbook/trust-badges/speaking-salesforce.svg",
+      "appliesIf": "client has a confirmed speaking credit at a Salesforce, HubSpot, or LinkedIn event -- high credibility for tech-forward buyers",
+      "niche": "sales-agencies",
+      "tier": "elite"
+    }
+  ],
+  "_tailorNote": "Core badges (clutch, g2, hubspot, salesforce, soc2) registered by Module 2D. Optional podcast/speaking badges added by /tailor-factory from research Sub-task 5. Optional badges render only when the client supplies the SVG file and sets the id in brand-dna.trust_badges."
 }
