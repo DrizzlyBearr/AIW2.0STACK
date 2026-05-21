@@ -1,6 +1,6 @@
 {
   "studentName": "Katleho Mohlomi",
-  "currentModule": "m2b_research",
+  "currentModule": "m2d_template_build",
   "candidateNiches": [
     "law-firms",
     "b2b-saas",
@@ -14,8 +14,8 @@
     "web-agencies-local-services"
   ],
   "finalistNiches": ["sales-agencies", "law-firms", "fintech"],
-  "chosenNiche": null,
-  "lastUpdated": "2026-05-21T00:00:00.000Z",
+  "chosenNiche": "sales-agencies",
+  "lastUpdated": "2026-05-21T16:03:00.000Z",
   "interviewNotes": {
     "section1": "Consultative sales and warm lead calling background across legal marketing, PE, web/digital. Founded Millionaire Contracts: two-door model (managed rep placement + systems build) for founder-led businesses. Live divisions: law firms, fintech, B2B, solar. Also runs BD and guest pipeline for QL Strategies / Modern Wellness Podcast. Building sales training platform and AI tooling internally.",
     "section2": "Inside knowledge: legal intake (iLawyer, Martino Law Group, Starcast Group), PE deal sourcing (Eads Bridge), sales infrastructure for founder-led businesses (MC core), B2B/SaaS outbound, health and wellness (Medellin Health, McLifestyle). Wellness/QL Strategies is process familiarity only (1 month).",

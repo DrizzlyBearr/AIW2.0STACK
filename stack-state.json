@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "module": "m2b_research",
-  "niche": null,
+  "module": "m2c_niche_decision",
+  "niche": "sales-agencies",
   "studentName": "Katleho Mohlomi",
   "gates": {
     "setup.complete": true,
@@ -9,7 +9,7 @@
     "m1.profileLocked": true,
     "m2a.scoresLocked": true,
     "m2b.researchComplete": true,
-    "m2c.nicheDecided": false,
+    "m2c.nicheDecided": true,
     "m2d.templateBuilt": false,
     "m3.offerLocked": false,
     "m4.factoryStructureLoaded": false,
@@ -41,6 +41,7 @@
     { "timestamp": "2026-05-21T00:02:00.000Z", "command": "/score-niches", "outcome": "complete", "finalists": ["sales-agencies", "law-firms", "fintech"] },
     { "timestamp": "2026-05-21T16:00:00.000Z", "command": "/research", "outcome": "complete", "niche": "sales-agencies", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] },
     { "timestamp": "2026-05-21T16:01:00.000Z", "command": "/research", "outcome": "complete", "niche": "law-firms", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] },
-    { "timestamp": "2026-05-21T16:02:00.000Z", "command": "/research", "outcome": "complete", "niche": "fintech", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] }
+    { "timestamp": "2026-05-21T16:02:00.000Z", "command": "/research", "outcome": "complete", "niche": "fintech", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] },
+    { "timestamp": "2026-05-21T16:03:00.000Z", "command": "/pick-niche", "outcome": "complete", "chosenNiche": "sales-agencies", "dropped": ["fintech"], "secondary": ["law-firms"] }
   ]
 }
