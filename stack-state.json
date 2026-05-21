@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "module": "m4_factory_structure_loaded",
+  "module": "m5_factory_brief_locked",
   "niche": "sales-agencies",
   "studentName": "Katleho Mohlomi",
   "gates": {
@@ -13,7 +13,7 @@
     "m2d.templateBuilt": true,
     "m3.offerLocked": true,
     "m4.factoryStructureLoaded": true,
-    "m5.factoryBriefLocked": false,
+    "m5.factoryBriefLocked": true,
     "factory.tailored": false,
     "factory.deployed": false,
     "m6.engineStructureLoaded": false,
@@ -121,6 +121,15 @@
       "ts": "2026-05-21T21:56:15.550412+00:00",
       "event": "factory.generated",
       "niche": "sales-agencies"
+    },
+    {
+      "ts": "2026-05-22T00:45:00.000000+00:00",
+      "command": "/generate-wf-brief",
+      "event": "m5.factoryBriefLocked",
+      "outcome": "complete",
+      "briefPath": "research/output/website-factory-brief.md",
+      "creditAgency": "Millionaire Contracts",
+      "missingFields": "per-client only (filled at /run-factory)"
     },
     {
       "ts": "2026-05-22T00:31:00.000000+00:00",

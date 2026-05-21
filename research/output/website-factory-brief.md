@@ -2,7 +2,7 @@
 # Niche: sales-agencies
 # Student: Katleho Mohlomi
 # Generated: 2026-05-22
-# Status: AWAITING LOCK
+# Status: LOCKED
 
 ---
 
@@ -332,7 +332,7 @@ These fields are required in `brand-dna.json` at Stage 7 (Brand DNA) and cannot 
 | `faq[]` | Per-client FAQ; locked niche starter questions are the fallback | Stage 6 copy-deck-agent |
 | `blog_posts[]` | No content yet; `[]` at launch is valid | Added post-launch |
 | `pages.*` | Per-client page copy bundles | Stage 6 copy-deck-agent |
-| `credit.agency` | Katleho's agency name for footer credit | Set once in `/tailor-factory` -- applies to all clients |
+| `credit.agency` | **Millionaire Contracts** | Set in `/tailor-factory` -- applies to all clients |
 | `meta.title` | Per-client | Stage 10.2 personalise |
 | `meta.description` | Per-client | Stage 10.2 personalise |
 
@@ -362,6 +362,6 @@ Gate check against `research/_structure/Website_Factory_Structure.md`:
 | Form pattern documented | PASS -- 5 fields, locked phrases, friction-removal |
 | Anti-patterns documented | PASS -- 8 named anti-patterns |
 | Palette + typography defaults | PASS -- hex values confirmed from `09-template-spec.md` |
-| Stage 7 / tailor-factory: `credit.agency` | [MISSING] -- Katleho's agency name for footer credit; set once in `/tailor-factory` |
+| Stage 7 / tailor-factory: `credit.agency` | PASS -- **Millionaire Contracts** |
 
 No required field is silently blank. All missing fields are explicitly marked `[MISSING]` with a reason and the step that fills them.
