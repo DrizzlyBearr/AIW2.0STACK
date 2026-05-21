@@ -1,6 +1,6 @@
 {
   "studentName": "Katleho Mohlomi",
-  "currentModule": "m2a_scoring",
+  "currentModule": "m2b_research",
   "candidateNiches": [
     "law-firms",
     "b2b-saas",
@@ -13,7 +13,7 @@
     "pe-acquisition-firms",
     "web-agencies-local-services"
   ],
-  "finalistNiches": [],
+  "finalistNiches": ["sales-agencies", "law-firms", "fintech"],
   "chosenNiche": null,
   "lastUpdated": "2026-05-21T00:00:00.000Z",
   "interviewNotes": {
