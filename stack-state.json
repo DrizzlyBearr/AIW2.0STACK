@@ -8,7 +8,7 @@
     "agency.brandLocked": false,
     "m1.profileLocked": true,
     "m2a.scoresLocked": true,
-    "m2b.researchComplete": false,
+    "m2b.researchComplete": true,
     "m2c.nicheDecided": false,
     "m2d.templateBuilt": false,
     "m3.offerLocked": false,
@@ -38,6 +38,7 @@
   "history": [
     { "timestamp": "2026-05-21T00:00:00.000Z", "command": "/setup", "outcome": "complete" },
     { "timestamp": "2026-05-21T00:01:00.000Z", "command": "/discovery", "outcome": "complete", "student": "Katleho Mohlomi" },
-    { "timestamp": "2026-05-21T00:02:00.000Z", "command": "/score-niches", "outcome": "complete", "finalists": ["sales-agencies", "law-firms", "fintech"] }
+    { "timestamp": "2026-05-21T00:02:00.000Z", "command": "/score-niches", "outcome": "complete", "finalists": ["sales-agencies", "law-firms", "fintech"] },
+    { "timestamp": "2026-05-21T16:00:00.000Z", "command": "/research", "outcome": "complete", "niche": "sales-agencies", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] }
   ]
 }
