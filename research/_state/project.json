@@ -1,8 +1,28 @@
 {
   "studentName": "Katleho Mohlomi",
-  "currentModule": "m1_discovery",
-  "candidateNiches": [],
+  "currentModule": "m2a_scoring",
+  "candidateNiches": [
+    "law-firms",
+    "b2b-saas",
+    "health-wellness",
+    "home-services",
+    "founder-led-service-businesses",
+    "fintech",
+    "recruitment",
+    "sales-agencies",
+    "pe-acquisition-firms",
+    "web-agencies-local-services"
+  ],
   "finalistNiches": [],
   "chosenNiche": null,
-  "lastUpdated": null
+  "lastUpdated": "2026-05-21T00:00:00.000Z",
+  "interviewNotes": {
+    "section1": "Consultative sales and warm lead calling background across legal marketing, PE, web/digital. Founded Millionaire Contracts: two-door model (managed rep placement + systems build) for founder-led businesses. Live divisions: law firms, fintech, B2B, solar. Also runs BD and guest pipeline for QL Strategies / Modern Wellness Podcast. Building sales training platform and AI tooling internally.",
+    "section2": "Inside knowledge: legal intake (iLawyer, Martino Law Group, Starcast Group), PE deal sourcing (Eads Bridge), sales infrastructure for founder-led businesses (MC core), B2B/SaaS outbound, health and wellness (Medellin Health, McLifestyle). Wellness/QL Strategies is process familiarity only (1 month).",
+    "section3": "Six hard-won patterns: ICP never detailed enough; businesses don't know where their customer lives; lead qualification too loose or nonexistent; nobody follows up properly; marketing-sales handoff broken; scripts nonexistent or too rigid. Thread: founders build product without sales infrastructure underneath.",
+    "section4": "70% DM response rate. Warm network across 20 named businesses spanning legal, PE, fintech, B2B SaaS, health/wellness, corporate SA, recruitment, web design, podcast/BD. No community/forum presence - all direct relationship-based. Supreme Renov8 = outreach only, not positioning.",
+    "section5": "No paid sales coaching or consulting (Upwork inquiries are free). Inbound Upwork demand for: sales setup, BD, cold/warm calling, scriptwriting. Five revenue leaks identified: broken follow-up (revenue recovery framing), bad websites on referral-dependent service businesses, unscripted pitches that fail at scale, no lead qualification, no pipeline visibility.",
+    "section6": "Will work with: growth-minded, adaptable, patient on timelines. Won't work with: rigid, resistant, wants overnight results. Open to blue-collar/white-collar, online/offline, no regional preference.",
+    "section7": "Time: 4 hrs/day (~28 hrs/week). Capital: R1,000/month tools. Skills: design 5/5, sales 5/5, SEO 3/5, content 2/5. Target: $50,000/month USD in 12 months."
+  }
 }
