@@ -25,7 +25,7 @@
   "credentials": {
     "anthropic": true,
     "apify": true,
-    "supabase": false,
+    "supabase": true,
     "vercel": false,
     "assemblyAi": false,
     "github": false
