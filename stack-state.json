@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "module": "m1_discovery",
+  "module": "m2b_research",
   "niche": null,
   "studentName": "Katleho Mohlomi",
   "gates": {
@@ -39,6 +39,8 @@
     { "timestamp": "2026-05-21T00:00:00.000Z", "command": "/setup", "outcome": "complete" },
     { "timestamp": "2026-05-21T00:01:00.000Z", "command": "/discovery", "outcome": "complete", "student": "Katleho Mohlomi" },
     { "timestamp": "2026-05-21T00:02:00.000Z", "command": "/score-niches", "outcome": "complete", "finalists": ["sales-agencies", "law-firms", "fintech"] },
-    { "timestamp": "2026-05-21T16:00:00.000Z", "command": "/research", "outcome": "complete", "niche": "sales-agencies", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] }
+    { "timestamp": "2026-05-21T16:00:00.000Z", "command": "/research", "outcome": "complete", "niche": "sales-agencies", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] },
+    { "timestamp": "2026-05-21T16:01:00.000Z", "command": "/research", "outcome": "complete", "niche": "law-firms", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] },
+    { "timestamp": "2026-05-21T16:02:00.000Z", "command": "/research", "outcome": "complete", "niche": "fintech", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] }
   ]
 }
