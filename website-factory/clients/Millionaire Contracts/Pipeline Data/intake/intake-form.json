@@ -1,0 +1,17 @@
+{
+  "businessName": "Millionaire Contracts",
+  "websiteUrl": "https://www.millionairecontracts.com",
+  "phone": null,
+  "phoneNormalised": null,
+  "phoneNote": "Intentionally omitted. Discovery-call model. No phone renders on site.",
+  "email": "neo@millionairecontracts.com",
+  "ownerName": "Katleho Mohlomi",
+  "address": null,
+  "city": null,
+  "state": null,
+  "addressNote": "Remote-first business. No physical address renders on site.",
+  "niche": "sales-agencies",
+  "skipStage13Proposal": true,
+  "skipStage13Reason": "agency.brandLocked=false -- run /setup-agency to enable proposals on future client builds",
+  "submittedAt": "2026-05-22T01:00:00.000Z"
+}

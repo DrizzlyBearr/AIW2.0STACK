@@ -1,0 +1,163 @@
+{
+  "businessName": "Millionaire Contracts",
+  "websiteUrl": "https://www.millionairecontracts.com",
+  "niche": "sales-agencies",
+  "data_confidence": "high",
+  "data_source": "First-party intake + student profile (Module 1) + niche synthesis. Live site blocked by allowlist in this environment. All business facts sourced directly from Katleho Mohlomi via the discovery interview and factory brief.",
+
+  "company": {
+    "name": "Millionaire Contracts",
+    "shortName": "MC",
+    "description": "Managed rep placement and sales infrastructure for founder-led businesses. Builds outbound systems, sales playbooks, CRM logic, outreach sequences, and lead flow mapping so founders stop being the only salesperson in their company.",
+    "url": "https://www.millionairecontracts.com",
+    "founded": null,
+    "serviceRegion": "Remote-first, nationwide (global)"
+  },
+
+  "ownerName": "Katleho Mohlomi",
+  "owner_first_name": "Katleho",
+  "owner_cutout_url": null,
+
+  "contact": {
+    "phone": null,
+    "email": "neo@millionairecontracts.com",
+    "googleMapsUrl": null,
+    "mapsEmbedUrl": null
+  },
+
+  "address": {
+    "street": null,
+    "city": null,
+    "state": null,
+    "zip": null,
+    "full": null,
+    "lat": null,
+    "lng": null,
+    "note": "Remote-first business. No physical address."
+  },
+
+  "business_hours": "Not applicable. Remote-first, async-first business. No published office hours.",
+
+  "services": [
+    {
+      "slug": "rep-placement",
+      "name": "Assigned SDR Placement",
+      "body": "A vetted, briefed outbound rep placed inside your sales function. Rep is briefed on your ICP, your playbook, and your outreach sequences before the first call. Deployed within 14 days."
+    },
+    {
+      "slug": "sales-playbook-build",
+      "name": "Sales Playbook Build",
+      "body": "A documented sales playbook: ICP definition, discovery framework, objection handling, sequence scripts, and pipeline stage criteria. Built in week one so the rep hits the ground running."
+    },
+    {
+      "slug": "outbound-system-build",
+      "name": "Outbound System Build",
+      "body": "Full outbound infrastructure: CRM configuration, email sequence setup, LinkedIn outreach logic, lead list build, and tracking. Everything in place before outreach begins."
+    },
+    {
+      "slug": "pipeline-management",
+      "name": "Pipeline Management",
+      "body": "Ongoing management of the outbound pipeline: weekly Monday reports, reply handling, meeting scheduling, and live CRM dashboard access. Founder stays in the loop without managing the day-to-day."
+    }
+  ],
+
+  "case_studies": [
+    {
+      "client": "Skayle 360",
+      "industry": "B2B SaaS",
+      "outcome": "120 appointments booked",
+      "timeframe": null,
+      "detail": "Full outbound system built from zero. 120 qualified appointments booked."
+    },
+    {
+      "client": "McLifestyle Fitness / Medellin Health",
+      "industry": "Health and Wellness",
+      "outcome": "2.4x conversion improvement",
+      "timeframe": null,
+      "detail": "DM-to-booked-call system built. Conversion rate improved 2.4x."
+    }
+  ],
+
+  "social": {
+    "facebook": null,
+    "facebook_reviews": null,
+    "instagram": null,
+    "linkedin": "https://www.linkedin.com/in/katleho-mohlomi",
+    "youtube": null
+  },
+
+  "reviews": {
+    "rating": null,
+    "google_count": 0,
+    "clutch_count": 0,
+    "g2_count": 0,
+    "total_count": 0,
+    "note": "No public review profiles found at this stage. MC is early in its web presence build."
+  },
+
+  "trust_signals": {
+    "clutch_profile": false,
+    "g2_profile": false,
+    "bbb_accredited": false,
+    "iso_certified": false,
+    "nasp_member": false,
+    "aa_isp_member": false
+  },
+
+  "team": {
+    "founder": {
+      "name": "Katleho Mohlomi",
+      "first_name": "Katleho",
+      "title": "Founder",
+      "bio_summary": "Former sales infrastructure lead across 15+ named B2B clients in SaaS, health, legal, fintech, and private equity. Built outbound systems, managed rep placement, and ran full-cycle sales across companies including Skayle 360, Eads Bridge Holdings, and iLawyer Marketing. Katleho founded Millionaire Contracts to productize the infrastructure build he had delivered for others as a repeatable managed service.",
+      "linkedin": "https://www.linkedin.com/in/katleho-mohlomi",
+      "years_experience": "7+"
+    },
+    "team_members": []
+  },
+
+  "competitors_identified": [
+    "Belkins.io",
+    "Martal.ca",
+    "CIENCE.com",
+    "SalesHive.com",
+    "RevBoss"
+  ],
+
+  "brand_voice_keywords": [
+    "direct",
+    "outcome-led",
+    "peer-to-peer",
+    "results-first",
+    "no-nonsense"
+  ],
+
+  "hasMascot": false,
+  "businessModel": {
+    "primaryFocus": "B2B service / managed service"
+  },
+  "marketSegment": {
+    "primaryFocus": "founder-led businesses, SMB, B2B"
+  },
+  "manufacturerCerts": null,
+  "specialOffers": {
+    "freeAudit": false,
+    "guarantee": true,
+    "guarantee_detail": "If month two ends without a single meeting booked, we extend at no cost until we hit the target."
+  },
+  "financing": {
+    "offered": false
+  },
+  "brandGuidelines": {
+    "hasFormalGuide": false,
+    "note": "No formal brand guide. Design derived from existing site visual language and niche defaults."
+  },
+  "pricing": {
+    "published": false,
+    "startingAt": null,
+    "note": "Pricing not published on existing site. Recommend anchoring with a starting price per niche playbook guidance."
+  },
+  "region": "Remote-first",
+  "region_marketing": "Remote-first, serving B2B founders globally",
+  "state_full": null
+}
