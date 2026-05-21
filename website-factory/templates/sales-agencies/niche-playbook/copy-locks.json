@@ -1,0 +1,40 @@
+{
+  "$schemaVersion": 1,
+  "ctaPrimary": "Book a Free Strategy Call",
+  "ctaSecondary": "See Our Results",
+  "formHeader": "Tell us about your pipeline.",
+  "formPrivacy": "No spam. One call, no commitment. We review your situation before we talk.",
+  "mobileCallLabel": "Book a Call",
+  "thankYouMessage": "You're booked. Check your email for a calendar confirmation. Before we talk, we'll review your website, your ICP, and any public information about your market so we can use the call on strategy, not introductions.",
+  "footerTagline": "Outsourced sales infrastructure for B2B founders.",
+  "blogIntro": "Practical thinking on building sales functions that work without the founder in every deal.",
+  "trustStripClaims": [
+    "420+ qualified meetings booked",
+    "30+ B2B clients served",
+    "First meetings within 30 days",
+    "4.9 stars on Clutch"
+  ],
+  "heroTrustClaims": [
+    "SDR reps deployed within 14 days",
+    "Full sales playbook built in week one",
+    "First qualified meetings typically in week two or three",
+    "Weekly pipeline reporting included"
+  ],
+  "riskReversalLine": "Most clients see their first qualified meeting within 30 days. If month two ends without a single meeting booked, we extend at no cost until we hit the target.",
+  "heroH1Format": "[Audience] get [specific outcome] in [timeframe] -- or we keep working until they do.",
+  "reviewsHeaderFormat": "{N} verified reviews on {platform}",
+  "founderSupportingCards": [
+    {
+      "title": "Industries Served",
+      "body_template": "{owner_first} and the team have built sales systems for clients in SaaS, professional services, manufacturing, logistics, and financial services. Every engagement starts with a custom ICP build."
+    },
+    {
+      "title": "Onboarding Timeline",
+      "body_template": "Most clients are live within 14 days. Week one is playbook build and rep briefing. Week two is outreach launch. {brand_short} targets first qualified conversations in week two or three."
+    },
+    {
+      "title": "Reporting Cadence",
+      "body_template": "Weekly Monday reports: outreach volume, reply rate, meetings booked, pipeline value added. Shared live CRM dashboard for real-time visibility."
+    }
+  ]
+}

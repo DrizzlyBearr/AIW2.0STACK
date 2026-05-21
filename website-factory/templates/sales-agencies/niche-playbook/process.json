@@ -1,0 +1,25 @@
+{
+  "$schemaVersion": 1,
+  "stepCount": 3,
+  "sectionHeading": "How We Build Your Pipeline",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Audit and Onboarding",
+      "description": "We learn your ICP, buying triggers, and competitive landscape in week one. We document the playbook your reps will use on every call and brief them on the top five objections your buyers raise.",
+      "iconHint": "clipboard-check"
+    },
+    {
+      "n": 2,
+      "title": "Build and Launch",
+      "description": "Your SDR team goes live. Outreach starts within 14 days. First qualified conversations typically appear in week two or three across cold email and LinkedIn.",
+      "iconHint": "rocket"
+    },
+    {
+      "n": 3,
+      "title": "Scale and Refine",
+      "description": "Weekly reporting, A/B testing of sequences, and pipeline reviews. You see every metric. We adjust the playbook until the system is predictable and the pipeline is consistent.",
+      "iconHint": "chart-up"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "$schemaVersion": 1,
+  "pages": [
+    {
+      "id": "homepage",
+      "title": "Homepage",
+      "url": "/",
+      "tier": "root",
+      "sections": {
+        "sections": [
+          { "name": "Hero", "description": "Authority headline with dual CTA and trust chips. Sets the offer and qualification immediately above the fold.", "tag": "Convert" },
+          { "name": "Stats Bar", "description": "Four scannable metrics: meetings booked, clients served, industries, and Clutch rating. Anchors credibility below the hero.", "tag": "Stat" },
+          { "name": "Problem / Agitate", "description": "Named founder pain cards. Identifies the sole-salesperson trap and failed-hire cost before presenting the solution.", "tag": "Trust" },
+          { "name": "Solution", "description": "Split-screen positioning with three service cards: assigned SDR reps, playbook build, and pipeline management.", "tag": "Pitch" },
+          { "name": "How It Works", "description": "Three-step numbered process: Audit, Build, Scale. Removes the 'black box' fear before commitment.", "tag": "Process" },
+          { "name": "Case Studies", "description": "Card grid with outcome stats, industry tags, and client context. Every card leads with a specific number.", "tag": "Proof" },
+          { "name": "Objection Handling", "description": "Three named objection cards addressing market understanding, risk of no results, and management overhead.", "tag": "Trust" },
+          { "name": "Testimonials", "description": "Video embed slot plus two pull-quotes from named founder clients. Video triggers faster trust than text alone.", "tag": "Proof" },
+          { "name": "Risk Reversal", "description": "Accent-stripe guarantee section. States what happens if month two produces no meetings. Unique to this template.", "tag": "Trust" },
+          { "name": "Pricing Anchor", "description": "Anchor price with inclusion list. Sets expectations before the form. Not a full pricing page.", "tag": "Info" },
+          { "name": "FAQ", "description": "Six operational questions covering onboarding time, industries, reporting, and cancellation terms.", "tag": "AEO" },
+          { "name": "Lead Form", "description": "Five-field strategy call form. First name, email, company, revenue range, biggest challenge. Inline confirmation.", "tag": "Convert" }
+        ]
+      }
+    },
+    {
+      "id": "services",
+      "title": "Services",
+      "url": "/services",
+      "tier": "pillar",
+      "hasSilos": "service",
+      "sections": {
+        "sections": [
+          { "name": "Services Hero", "description": "Page-specific dark hero with H1 and single CTA.", "tag": "Pitch" },
+          { "name": "Service Detail", "description": "Expanded three-column service cards with full copy per offering.", "tag": "Pitch" },
+          { "name": "How It Works", "description": "Reused process section providing the execution story.", "tag": "Process" },
+          { "name": "Case Studies", "description": "Evidence that the services produce measurable outcomes.", "tag": "Proof" },
+          { "name": "Lead Form", "description": "Primary conversion form anchored at base of page.", "tag": "Convert" }
+        ]
+      }
+    },
+    {
+      "id": "case-studies",
+      "title": "Case Studies",
+      "url": "/case-studies",
+      "tier": "pillar",
+      "sections": {
+        "sections": [
+          { "name": "Case Studies Hero", "description": "Results-led hero with aggregate pipeline and meeting totals from all engagements.", "tag": "Proof" },
+          { "name": "Stats Bar", "description": "Aggregate metrics across all client engagements.", "tag": "Stat" },
+          { "name": "Full Case Study Grid", "description": "All available case studies with full six-field spec per card.", "tag": "Proof" },
+          { "name": "Testimonials", "description": "Video and pull-quotes from founder clients.", "tag": "Trust" },
+          { "name": "Lead Form", "description": "Conversion form for visitors who arrived via the results page.", "tag": "Convert" }
+        ]
+      }
+    },
+    {
+      "id": "about",
+      "title": "About",
+      "url": "/about",
+      "tier": "core",
+      "sections": {
+        "sections": [
+          { "name": "About Hero", "description": "Dark hero introducing the team and their background.", "tag": "Story" },
+          { "name": "Founder", "description": "Founder photo, narrative, vision, and mission. Builds personal trust.", "tag": "Team" },
+          { "name": "Team", "description": "Individual member cards with specific sales credentials.", "tag": "Team" },
+          { "name": "Values", "description": "Three operating principles: outcomes first, radical transparency, buyers first.", "tag": "Trust" },
+          { "name": "Lead Form", "description": "Primary conversion form at base of about page.", "tag": "Convert" }
+        ]
+      }
+    },
+    {
+      "id": "contact",
+      "title": "Contact",
+      "url": "/contact",
+      "tier": "core",
+      "sections": {
+        "sections": [
+          { "name": "Contact Hero", "description": "Call-focused hero with phone and email contact details visible above the fold.", "tag": "Convert" },
+          { "name": "Lead Form", "description": "Primary five-field strategy call form.", "tag": "Convert" },
+          { "name": "FAQ", "description": "Pre-call FAQ addressing final objections.", "tag": "AEO" }
+        ]
+      }
+    }
+  ],
+  "perServicePageTemplate": {
+    "sections": [
+      { "name": "{service_name} Hero", "description": "Dark hero focused on the specific service with outcome-led H1.", "tag": "Pitch" },
+      { "name": "Service Detail", "description": "Full description of the {service_name} offering, what is included, and how it works.", "tag": "Pitch" },
+      { "name": "Relevant Case Studies", "description": "Case studies from clients who bought this specific service.", "tag": "Proof" },
+      { "name": "Lead Form", "description": "Conversion form specific to {service_name} inquiry.", "tag": "Convert" }
+    ]
+  },
+  "aliasPages": [
+    {
+      "id": "outsourced-sales",
+      "title": "Outsourced Sales",
+      "tier": "pillar",
+      "urlFromService": ["outsourced", "full-service", "assigned"],
+      "fallbackUrl": "/services",
+      "sections": {
+        "sections": [
+          { "name": "Outsourced Sales Hero", "description": "Full-service outsourced sales positioning page.", "tag": "Pitch" },
+          { "name": "Service Detail", "description": "What outsourced sales means, what you get, what you don't manage.", "tag": "Pitch" },
+          { "name": "Case Studies", "description": "Results from outsourced sales engagements specifically.", "tag": "Proof" },
+          { "name": "Lead Form", "description": "Primary conversion action.", "tag": "Convert" }
+        ]
+      }
+    },
+    {
+      "id": "fractional-sales",
+      "title": "Fractional Sales Leadership",
+      "tier": "pillar",
+      "urlFromService": ["fractional", "advisory", "vp", "leadership"],
+      "fallbackUrl": "/services",
+      "sections": {
+        "sections": [
+          { "name": "Fractional Sales Hero", "description": "Fractional VP of Sales positioning for companies not ready for a full-time hire.", "tag": "Pitch" },
+          { "name": "Service Detail", "description": "What a fractional sales leader does vs. a full-time hire.", "tag": "Pitch" },
+          { "name": "Lead Form", "description": "Fractional engagement inquiry form.", "tag": "Convert" }
+        ]
+      }
+    },
+    {
+      "id": "sdr-services",
+      "title": "SDR Services",
+      "tier": "pillar",
+      "urlFromService": ["sdr", "outbound", "prospecting", "appointment"],
+      "fallbackUrl": "/services",
+      "sections": {
+        "sections": [
+          { "name": "SDR Services Hero", "description": "SDR placement and management page.", "tag": "Pitch" },
+          { "name": "How SDR Engagement Works", "description": "ICP to outreach to meeting in three steps.", "tag": "Process" },
+          { "name": "SDR Case Studies", "description": "Meeting volume and pipeline results from SDR-led campaigns.", "tag": "Proof" },
+          { "name": "Lead Form", "description": "SDR inquiry form.", "tag": "Convert" }
+        ]
+      }
+    }
+  ]
+}

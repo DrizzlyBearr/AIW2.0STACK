@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "module": "m2c_niche_decision",
+  "module": "m2d_template_built",
   "niche": "sales-agencies",
   "studentName": "Katleho Mohlomi",
   "gates": {
@@ -10,7 +10,7 @@
     "m2a.scoresLocked": true,
     "m2b.researchComplete": true,
     "m2c.nicheDecided": true,
-    "m2d.templateBuilt": false,
+    "m2d.templateBuilt": true,
     "m3.offerLocked": false,
     "m4.factoryStructureLoaded": false,
     "m5.factoryBriefLocked": false,
@@ -20,7 +20,7 @@
     "m7.engineBriefLocked": false,
     "engine.deployed": false,
     "engine.contextPasted": false,
-    "factory.generated": false
+    "factory.generated": true
   },
   "credentials": {
     "anthropic": true,
@@ -36,12 +36,113 @@
   },
   "factoryRuns": [],
   "history": [
-    { "timestamp": "2026-05-21T00:00:00.000Z", "command": "/setup", "outcome": "complete" },
-    { "timestamp": "2026-05-21T00:01:00.000Z", "command": "/discovery", "outcome": "complete", "student": "Katleho Mohlomi" },
-    { "timestamp": "2026-05-21T00:02:00.000Z", "command": "/score-niches", "outcome": "complete", "finalists": ["sales-agencies", "law-firms", "fintech"] },
-    { "timestamp": "2026-05-21T16:00:00.000Z", "command": "/research", "outcome": "complete", "niche": "sales-agencies", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] },
-    { "timestamp": "2026-05-21T16:01:00.000Z", "command": "/research", "outcome": "complete", "niche": "law-firms", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] },
-    { "timestamp": "2026-05-21T16:02:00.000Z", "command": "/research", "outcome": "complete", "niche": "fintech", "files": ["01-agencies.md", "02-customer-voice.md", "03-copy-patterns.md", "04-cro-patterns.md", "05-trust-signals.md", "06-seo-landscape.md", "07-money-math.md", "synthesis.md"] },
-    { "timestamp": "2026-05-21T16:03:00.000Z", "command": "/pick-niche", "outcome": "complete", "chosenNiche": "sales-agencies", "dropped": ["fintech"], "secondary": ["law-firms"] }
+    {
+      "timestamp": "2026-05-21T00:00:00.000Z",
+      "command": "/setup",
+      "outcome": "complete"
+    },
+    {
+      "timestamp": "2026-05-21T00:01:00.000Z",
+      "command": "/discovery",
+      "outcome": "complete",
+      "student": "Katleho Mohlomi"
+    },
+    {
+      "timestamp": "2026-05-21T00:02:00.000Z",
+      "command": "/score-niches",
+      "outcome": "complete",
+      "finalists": [
+        "sales-agencies",
+        "law-firms",
+        "fintech"
+      ]
+    },
+    {
+      "timestamp": "2026-05-21T16:00:00.000Z",
+      "command": "/research",
+      "outcome": "complete",
+      "niche": "sales-agencies",
+      "files": [
+        "01-agencies.md",
+        "02-customer-voice.md",
+        "03-copy-patterns.md",
+        "04-cro-patterns.md",
+        "05-trust-signals.md",
+        "06-seo-landscape.md",
+        "07-money-math.md",
+        "synthesis.md"
+      ]
+    },
+    {
+      "timestamp": "2026-05-21T16:01:00.000Z",
+      "command": "/research",
+      "outcome": "complete",
+      "niche": "law-firms",
+      "files": [
+        "01-agencies.md",
+        "02-customer-voice.md",
+        "03-copy-patterns.md",
+        "04-cro-patterns.md",
+        "05-trust-signals.md",
+        "06-seo-landscape.md",
+        "07-money-math.md",
+        "synthesis.md"
+      ]
+    },
+    {
+      "timestamp": "2026-05-21T16:02:00.000Z",
+      "command": "/research",
+      "outcome": "complete",
+      "niche": "fintech",
+      "files": [
+        "01-agencies.md",
+        "02-customer-voice.md",
+        "03-copy-patterns.md",
+        "04-cro-patterns.md",
+        "05-trust-signals.md",
+        "06-seo-landscape.md",
+        "07-money-math.md",
+        "synthesis.md"
+      ]
+    },
+    {
+      "timestamp": "2026-05-21T16:03:00.000Z",
+      "command": "/pick-niche",
+      "outcome": "complete",
+      "chosenNiche": "sales-agencies",
+      "dropped": [
+        "fintech"
+      ],
+      "secondary": [
+        "law-firms"
+      ]
+    },
+    {
+      "ts": "2026-05-21T21:56:15.550412+00:00",
+      "event": "factory.generated",
+      "niche": "sales-agencies"
+    },
+    {
+      "ts": "2026-05-21T23:59:00.000000+00:00",
+      "command": "/build-niche-template",
+      "event": "m2d.templateBuilt",
+      "niche": "sales-agencies",
+      "outcome": "complete",
+      "gates": {
+        "gate1": "PASS",
+        "gate2": "PASS",
+        "gate3": "PASS",
+        "gate4": "WARN",
+        "gate5": "PASS",
+        "gate6": "PASS"
+      },
+      "templatePath": "website-factory/templates/sales-agencies",
+      "components": 13,
+      "pages": 6,
+      "playbook_files": 15,
+      "sops": 8,
+      "agents": 10,
+      "checklists": 2
+    }
   ]
 }

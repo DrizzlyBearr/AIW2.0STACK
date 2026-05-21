@@ -1,0 +1,62 @@
+{
+  "$schemaVersion": 1,
+  "trustStripCount": 4,
+  "placements": [
+    "hero",
+    "floating-strip",
+    "reviews",
+    "footer"
+  ],
+  "badges": [
+    {
+      "id": "clutch-top-b2b-sales",
+      "name": "Clutch Top B2B Sales Outsourcing Company",
+      "matchKeywords": ["clutch", "b2b sales outsourcing", "top company"],
+      "filename": "clutch-top-b2b-sales.svg",
+      "issuer": "Clutch.co",
+      "issuerUrl": "https://clutch.co/b2b/sales/outsourcing",
+      "tier": "premium",
+      "isMultiColor": true
+    },
+    {
+      "id": "g2-high-performer",
+      "name": "G2 High Performer",
+      "matchKeywords": ["g2", "high performer", "g2 crowd"],
+      "filename": "g2-high-performer.svg",
+      "issuer": "G2",
+      "issuerUrl": "https://www.g2.com",
+      "tier": "mid",
+      "isMultiColor": true
+    },
+    {
+      "id": "hubspot-partner",
+      "name": "HubSpot Partner",
+      "matchKeywords": ["hubspot", "partner", "crm"],
+      "filename": "hubspot-partner.svg",
+      "issuer": "HubSpot",
+      "issuerUrl": "https://www.hubspot.com/partners",
+      "tier": "mid",
+      "isMultiColor": true
+    },
+    {
+      "id": "salesforce-partner",
+      "name": "Salesforce Partner",
+      "matchKeywords": ["salesforce", "partner", "sfdc"],
+      "filename": "salesforce-partner.svg",
+      "issuer": "Salesforce",
+      "issuerUrl": "https://partners.salesforce.com",
+      "tier": "elite",
+      "isMultiColor": true
+    },
+    {
+      "id": "soc2-compliant",
+      "name": "SOC 2 Compliant",
+      "matchKeywords": ["soc 2", "soc2", "compliance", "aicpa"],
+      "filename": "soc2-compliant.svg",
+      "issuer": "AICPA",
+      "issuerUrl": "https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/sorhome",
+      "tier": "elite",
+      "isMultiColor": false
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "$schemaVersion": 1,
+  "categories": [
+    {
+      "slug": "logo",
+      "label": "Agency Logo",
+      "minCount": 1,
+      "preferredFormats": ["svg", "png"],
+      "dimensions": { "minWidth": 200, "minHeight": 40 },
+      "lightingHint": "Flat logo mark. Full-color and white-on-transparent versions required.",
+      "notes": "Logo must be provided as SVG or high-resolution PNG. White variant needed for dark backgrounds."
+    },
+    {
+      "slug": "founder",
+      "label": "Founder Headshot",
+      "minCount": 1,
+      "preferredFormats": ["jpg", "webp"],
+      "dimensions": { "minWidth": 600, "minHeight": 600, "aspectRatio": "1:1" },
+      "lightingHint": "Clean professional portrait. Studio or office background. Even lighting, no harsh shadows. Professional but approachable.",
+      "notes": "Used in the About page founder section and optionally in the hero. Square crop for card components, portrait crop for hero."
+    },
+    {
+      "slug": "team",
+      "label": "Team Member Photos",
+      "minCount": 0,
+      "preferredFormats": ["jpg", "webp"],
+      "dimensions": { "minWidth": 400, "minHeight": 400, "aspectRatio": "1:1" },
+      "lightingHint": "Consistent lighting style across all team photos. White or neutral background preferred for card consistency.",
+      "notes": "Optional. Used in About page team grid if available. Minimum 2 for the grid to look credible."
+    },
+    {
+      "slug": "client-logos",
+      "label": "Named Client Logos",
+      "minCount": 0,
+      "preferredFormats": ["svg", "png"],
+      "dimensions": { "minWidth": 100, "minHeight": 30 },
+      "lightingHint": "Grayscale or single-color version. Consistent height at 32px rendered.",
+      "notes": "Displayed in stats bar or hero social proof strip. Grayscale treatment applied at render time. No silhouettes."
+    },
+    {
+      "slug": "trust-badges",
+      "label": "Third-Party Trust Badges",
+      "minCount": 0,
+      "preferredFormats": ["svg", "png"],
+      "dimensions": { "minWidth": 80, "minHeight": 40 },
+      "lightingHint": "Official badge from Clutch, G2, HubSpot, or Salesforce. Do not alter colors.",
+      "notes": "Drop files into public/badges/. MANUAL-DROP-NEEDED.md lists required badges. Stage 4 looks for these on the client site."
+    },
+    {
+      "slug": "case-study-graphics",
+      "label": "Case Study Supporting Images",
+      "minCount": 0,
+      "preferredFormats": ["jpg", "webp"],
+      "dimensions": { "minWidth": 400, "minHeight": 300 },
+      "lightingHint": "Screenshots of dashboards, pipeline reports, or client interface that show results. Not stock photography.",
+      "notes": "Optional. Used as supporting visuals in expanded case study cards if permitted by the client."
+    }
+  ]
+}

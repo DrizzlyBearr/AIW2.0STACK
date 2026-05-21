@@ -1,0 +1,69 @@
+{
+  "$schemaVersion": 1,
+  "sectionNames": {
+    "hero": "Hero",
+    "stats-bar": "Key Metrics",
+    "problem-agitate": "Sound Familiar",
+    "solution": "Our Services",
+    "how-it-works": "How We Build Your Pipeline",
+    "case-studies": "Client Results",
+    "objection-handling": "What You're Probably Thinking",
+    "testimonials": "What Our Clients Say",
+    "risk-reversal": "Our Guarantee",
+    "pricing-anchor": "Investment",
+    "faq": "Frequently Asked Questions",
+    "cta-section": "Book a Strategy Call",
+    "footer": "Footer",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "navLabels": {
+    "/services": "Services",
+    "/case-studies": "Case Studies",
+    "/about": "About",
+    "/contact": "Book a Call"
+  },
+  "ctaVerbs": [
+    "Book",
+    "Start",
+    "Get",
+    "Build",
+    "Claim"
+  ],
+  "audienceNouns": {
+    "endCustomer": "founder",
+    "endCustomerPlural": "founders",
+    "endCustomerPossessive": "your pipeline"
+  },
+  "categoryNouns": {
+    "service": "service",
+    "offering": "engagement",
+    "result": "qualified meeting",
+    "outcome": "pipeline"
+  },
+  "nicheTermsToUse": [
+    "pipeline",
+    "qualified leads",
+    "SDR",
+    "outbound",
+    "discovery call",
+    "booked meetings",
+    "close rate",
+    "revenue",
+    "ICP",
+    "playbook"
+  ],
+  "nicheTermsToAvoid": [
+    "synergy",
+    "leverage",
+    "robust",
+    "seamless",
+    "game-changer",
+    "cutting-edge",
+    "innovative",
+    "holistic",
+    "best-in-class",
+    "world-class"
+  ]
+}

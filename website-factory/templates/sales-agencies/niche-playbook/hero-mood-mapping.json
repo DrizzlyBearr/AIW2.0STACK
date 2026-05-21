@@ -1,0 +1,37 @@
+{
+  "$schemaVersion": 1,
+  "defaultMood": "authority_dark",
+  "moods": {
+    "authority_dark": {
+      "lightingBrief": "Deep navy background with subtle geometric grid texture at low opacity. Single radial glow in sky-blue at 3 percent opacity at the top center. High contrast white text. Professional-aggressive aesthetic. No warm tones.",
+      "skyDescriptor": "Dark near-black (#0F1923) with faint grid pattern overlay",
+      "shadowDescriptor": "No dramatic cast shadows. Subtle drop-shadows on card components only.",
+      "colorWarmth": "cool"
+    },
+    "founder_portrait": {
+      "lightingBrief": "Clean studio or office lighting on a single founder subject. Left-side gradient fade from the dark background blending into the founder photo on the right half. Natural professional clothing. Confident posture. No smile required.",
+      "skyDescriptor": "Clean studio background or blurred office interior at far right",
+      "shadowDescriptor": "Soft directional side-lighting. No harsh shadows on face.",
+      "colorWarmth": "neutral"
+    },
+    "geometric_precision": {
+      "lightingBrief": "Abstract geometric grid or data-visualization pattern at 8 percent opacity over the dark background. Accent color lines (#0EA5E9) at very low opacity. Signals precision and systems thinking. No organic shapes.",
+      "skyDescriptor": "None -- pure dark background with SVG pattern overlay",
+      "shadowDescriptor": "No shadows -- pattern is flat",
+      "colorWarmth": "cool"
+    },
+    "bright_midday_clean": {
+      "lightingBrief": "Clean, bright office or neutral background with even lighting. Used for about-page founder portrait or team photos. White walls, natural window light, professional setting.",
+      "skyDescriptor": "White or light gray neutral background",
+      "shadowDescriptor": "Minimal soft shadows from window light",
+      "colorWarmth": "neutral"
+    },
+    "overcast_calm": {
+      "lightingBrief": "Overcast diffused light. Calm, professional. Used for team photos in outdoor or semi-outdoor settings. Even skin tones, no harsh shadows.",
+      "skyDescriptor": "Overcast sky or neutral gray background",
+      "shadowDescriptor": "Very soft diffuse shadows only",
+      "colorWarmth": "neutral"
+    }
+  },
+  "regionalOverrides": []
+}

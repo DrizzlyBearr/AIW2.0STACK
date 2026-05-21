@@ -1,0 +1,86 @@
+{
+  "niche": "sales-agencies",
+  "version": 1,
+  "generatedAt": "2026-05-21",
+  "routes": [
+    {
+      "path": "/",
+      "page": "HomePage",
+      "title": "Outsourced Sales Agency for B2B Founders",
+      "sections": [
+        "hero",
+        "stats-bar",
+        "problem-agitate",
+        "solution",
+        "how-it-works",
+        "case-studies",
+        "objection-handling",
+        "testimonials",
+        "risk-reversal",
+        "pricing-anchor",
+        "faq",
+        "cta-section",
+        "footer"
+      ]
+    },
+    {
+      "path": "/services",
+      "page": "ServicesPage",
+      "title": "Our Sales Services",
+      "sections": [
+        "hero",
+        "solution",
+        "how-it-works",
+        "case-studies",
+        "cta-section",
+        "footer"
+      ]
+    },
+    {
+      "path": "/case-studies",
+      "page": "CaseStudiesPage",
+      "title": "Client Results",
+      "sections": [
+        "hero",
+        "stats-bar",
+        "case-studies",
+        "testimonials",
+        "cta-section",
+        "footer"
+      ]
+    },
+    {
+      "path": "/about",
+      "page": "AboutPage",
+      "title": "About Us",
+      "sections": [
+        "hero",
+        "founder",
+        "team",
+        "values",
+        "cta-section",
+        "footer"
+      ]
+    },
+    {
+      "path": "/contact",
+      "page": "ContactPage",
+      "title": "Book a Strategy Call",
+      "sections": [
+        "hero",
+        "cta-section",
+        "faq",
+        "footer"
+      ]
+    },
+    {
+      "path": "*",
+      "page": "NotFoundPage",
+      "title": "Page Not Found",
+      "sections": [
+        "not-found",
+        "footer"
+      ]
+    }
+  ]
+}

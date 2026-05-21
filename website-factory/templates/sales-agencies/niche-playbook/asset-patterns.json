@@ -1,0 +1,53 @@
+{
+  "$schemaVersion": 1,
+  "categories": [
+    {
+      "slug": "logo",
+      "altKeywords": ["logo", "brand", "company name", "wordmark"],
+      "filenameKeywords": ["logo", "brand", "mark", "wordmark"],
+      "selectorHints": ["header img", "nav img", ".logo img", "#logo", "a[href='/'] img"],
+      "exclude": ["avatar", "profile", "badge", "icon-small"],
+      "priority": 1
+    },
+    {
+      "slug": "founder",
+      "altKeywords": ["founder", "owner", "ceo", "president", "managing director", "headshot", "portrait"],
+      "filenameKeywords": ["founder", "owner", "ceo", "headshot", "portrait", "team-lead"],
+      "selectorHints": [".founder img", ".about-hero img", ".team-founder img"],
+      "exclude": ["stock", "generic", "placeholder"],
+      "priority": 2
+    },
+    {
+      "slug": "team",
+      "altKeywords": ["team", "staff", "employee", "member", "our team", "sdr", "sales rep"],
+      "filenameKeywords": ["team", "staff", "member", "person", "rep"],
+      "selectorHints": [".team img", ".team-card img", ".team-member img"],
+      "exclude": ["logo", "badge", "client"],
+      "priority": 3
+    },
+    {
+      "slug": "client-logos",
+      "altKeywords": ["client", "partner", "customer logo", "trusted by", "we work with"],
+      "filenameKeywords": ["client", "partner", "logo-", "customer", "trust"],
+      "selectorHints": [".clients img", ".logos img", ".trusted-by img", ".partner-logos img"],
+      "exclude": ["badge", "certification", "team"],
+      "priority": 4
+    },
+    {
+      "slug": "trust-badges",
+      "altKeywords": ["clutch", "g2", "hubspot partner", "salesforce partner", "soc 2", "verified", "certified", "award"],
+      "filenameKeywords": ["clutch", "g2", "badge", "award", "cert", "hubspot", "salesforce", "soc2"],
+      "selectorHints": [".badges img", ".certifications img", ".trust-badges img", ".awards img"],
+      "exclude": ["logo", "team", "client"],
+      "priority": 5
+    },
+    {
+      "slug": "case-study-graphics",
+      "altKeywords": ["dashboard", "pipeline", "results", "report", "chart", "metrics", "crm"],
+      "filenameKeywords": ["dashboard", "report", "result", "chart", "metrics", "case-study"],
+      "selectorHints": [".case-study img", ".results img", ".proof img"],
+      "exclude": ["logo", "badge", "team", "portrait"],
+      "priority": 6
+    }
+  ]
+}
