@@ -1,0 +1,55 @@
+{
+  "niche": "sales-agencies",
+  "generated": "2026-05-21",
+  "fetch_note": "Direct HTTP fetch blocked by environment allowlist. All candidate data sourced from indexed content, title tags, indexed section structures, and conversion-pattern analysis captured in research files 01-agencies.md, 04-cro-patterns.md, and 06-seo-landscape.md.",
+  "candidates": [
+    {
+      "slug": "belkins",
+      "url": "https://belkins.io",
+      "source": "cro-patterns-research + seo-landscape",
+      "notes": "Top-cited sales agency in research. Claims '#1 B2B Lead Generation Agency'. Indexed structure shows full CRO wireframe: hero, logo bar, services grid, case studies with metrics, how-it-works, FAQ, final CTA."
+    },
+    {
+      "slug": "saleshive",
+      "url": "https://saleshive.com",
+      "source": "cro-patterns-research + seo-landscape",
+      "notes": "Hybrid agency+SaaS platform positioning. Indexed as 'B2B Sales Agency and SDR Lead Generation Platform'. Heavy technology/integration emphasis. CTA: 'Get Started'."
+    },
+    {
+      "slug": "salesxceleration",
+      "url": "https://salesxceleration.com",
+      "source": "cro-patterns-research + seo-landscape",
+      "notes": "Outsourced and fractional sales leadership. Advisor-matching marketplace model. CTA: 'Find an Advisor' / 'Find a Sales Leader'. Trust built through individual advisor profiles."
+    },
+    {
+      "slug": "martal",
+      "url": "https://martal.ca",
+      "source": "cro-patterns-research + seo-landscape",
+      "notes": "Outcome-led hero with tech/SaaS niche specificity. Includes explicit build-vs-buy objection-handling section. Named case studies with metrics. Strong alignment with universal CRO wireframe."
+    },
+    {
+      "slug": "operatix",
+      "url": "https://operatix.net",
+      "source": "seo-landscape",
+      "notes": "Ranks for 'outsourced SDR' queries. Focused on enterprise pipeline generation. Cited alongside Belkins and SalesHive as a top-ranked competitor for SDR outsourcing terms."
+    },
+    {
+      "slug": "cience",
+      "url": "https://cience.com",
+      "source": "seo-landscape + cro-patterns-research",
+      "notes": "Ranks for 'sales outsourcing companies' and 'B2B sales outsourcing'. Produces comparison content as a category strategy ('Belkins vs CIENCE'). Authority-level brand recognition."
+    },
+    {
+      "slug": "revboss",
+      "url": "https://revboss.com",
+      "source": "seo-landscape",
+      "notes": "Cited in SEO landscape as a ranked competitor. Focused on outbound sales and pipeline development. Smaller brand profile than Belkins/CIENCE but included as a conversion-pattern reference."
+    },
+    {
+      "slug": "skaled",
+      "url": "https://skaled.com",
+      "source": "cro-patterns-research-implied + seo-landscape-implied",
+      "notes": "Fractional and outsourced sales consulting. Appears in category searches alongside Sales Xceleration and Victory Lap. Consultant-led model with individual practitioner emphasis."
+    }
+  ]
+}
