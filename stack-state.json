@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "module": "m2d_template_built",
+  "module": "m3_offer_locked",
   "niche": "sales-agencies",
   "studentName": "Katleho Mohlomi",
   "gates": {
@@ -11,7 +11,7 @@
     "m2b.researchComplete": true,
     "m2c.nicheDecided": true,
     "m2d.templateBuilt": true,
-    "m3.offerLocked": false,
+    "m3.offerLocked": true,
     "m4.factoryStructureLoaded": false,
     "m5.factoryBriefLocked": false,
     "factory.tailored": false,
@@ -121,6 +121,17 @@
       "ts": "2026-05-21T21:56:15.550412+00:00",
       "event": "factory.generated",
       "niche": "sales-agencies"
+    },
+    {
+      "ts": "2026-05-22T00:30:00.000000+00:00",
+      "command": "/craft-offer",
+      "event": "m3.offerLocked",
+      "niche": "sales-agencies",
+      "outcome": "complete",
+      "stage": 3,
+      "priceTiers": [3500, 5500, 8000],
+      "prospectsReady": 5,
+      "dmVersions": 3
     },
     {
       "ts": "2026-05-21T23:59:00.000000+00:00",
