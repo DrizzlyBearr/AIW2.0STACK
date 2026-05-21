@@ -1,0 +1,21 @@
+{
+  "niche": "sales-agencies",
+  "pickedAt": "2026-05-21T16:30:00.000Z",
+  "mode": "mix",
+  "heroFrom": "belkins",
+  "sectionOrderFrom": "martal",
+  "objectionHandlingFrom": "martal",
+  "trustStackFrom": "belkins",
+  "ctaFrom": "belkins",
+  "typographyFrom": "sub-task-8-spec",
+  "colorSystemFrom": "sub-task-8-spec",
+  "navigationFrom": "belkins",
+  "mobilePatternFrom": "martal",
+  "formPatternFrom": "sub-task-8-spec",
+  "rationale": "Belkins hero + trust stack (authority positioning, dual CTA, proof density) combined with Martal section order and objection handling (problem/agitate kept, build-vs-buy block, niche specificity). Design tokens from Sub-task 8 spec (dark navy, Inter, sky blue accent).",
+  "templateGaps": [
+    "Risk-reversal section (none of the candidates had this -- build from scratch)",
+    "Narrative-depth case studies with client context",
+    "Named quotes paired with logos"
+  ]
+}
