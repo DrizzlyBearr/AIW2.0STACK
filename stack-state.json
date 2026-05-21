@@ -24,7 +24,7 @@
   },
   "credentials": {
     "anthropic": true,
-    "apify": false,
+    "apify": true,
     "supabase": false,
     "vercel": false,
     "assemblyAi": false,
