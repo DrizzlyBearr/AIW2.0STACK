@@ -28,7 +28,7 @@
     "supabase": true,
     "vercel": true,
     "assemblyAi": false,
-    "github": false
+    "github": true
   },
   "deployments": {
     "factory": null,
