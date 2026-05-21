@@ -27,7 +27,7 @@
     "apify": true,
     "supabase": true,
     "vercel": true,
-    "assemblyAi": false,
+    "assemblyAi": true,
     "github": true
   },
   "deployments": {
