@@ -39,27 +39,35 @@ const comparison = [
 const services = [
   {
     title: 'Sales Strategy Development',
-    outcome: 'A market-specific playbook your team can execute immediately.',
+    problem: 'You have a product but no repeatable way to sell it.',
+    what: 'We audit your market position, map your buyer journey, and build a sales playbook — pricing strategy, pitch framework, objection responses, and KPIs — specific to your niche and team.',
+    outcome: 'A ready-to-run sales playbook your team executes from day one.',
     to: '/sales-strategy-development',
-    icon: '◎',
+    tag: 'Strategy',
   },
   {
     title: 'Sales Management',
-    outcome: 'End-to-end management of your sales function, fully handled.',
+    problem: 'Your sales team is active but not accountable to a system.',
+    what: 'We step in as your sales management layer — setting targets, running pipeline reviews, coaching reps, and building the reporting infrastructure that keeps performance visible and consistent.',
+    outcome: 'A managed sales operation that hits targets without your constant input.',
     to: '/sales-management',
-    icon: '◈',
+    tag: 'Management',
   },
   {
     title: 'Sales Closing',
-    outcome: 'Expert closers deployed into your pipeline to convert opportunities.',
+    problem: 'Deals stall at the finish line and you are not sure why.',
+    what: 'We deploy trained closers directly into your pipeline. They handle discovery, objection handling, and the final conversion — working as an extension of your team inside active deals.',
+    outcome: 'More deals closed, faster, by people who do this every day.',
     to: '/sales-closing',
-    icon: '◆',
+    tag: 'Closing',
   },
   {
     title: 'Appointment Setting',
-    outcome: 'A steady stream of pre-qualified meetings with decision-makers.',
+    problem: 'Your pipeline is thin because outreach is inconsistent.',
+    what: 'We run your outbound engine — identifying your ideal accounts, crafting the outreach, handling follow-up, and booking qualified meetings directly into your calendar.',
+    outcome: 'A full calendar of decision-maker meetings, every week.',
     to: '/appointment-setting',
-    icon: '◇',
+    tag: 'Outbound',
   },
 ]
 
@@ -226,21 +234,36 @@ export default function Home() {
               Four ways we grow your revenue
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map((s, i) => (
+          <div className="grid sm:grid-cols-2 gap-5">
+            {services.map((s) => (
               <Link
                 key={s.to}
                 to={s.to}
-                className="group bg-white/5 border border-white/10 rounded-xl p-6 hover:border-mc-gold/60 hover:bg-white/8 transition-all duration-200 flex flex-col gap-4"
+                className="group bg-white/5 border border-white/10 rounded-xl p-7 hover:border-mc-gold/50 transition-all duration-200 flex flex-col gap-5"
               >
-                <span className="text-mc-gold text-2xl">{s.icon}</span>
-                <div>
-                  <h3 className="font-headline font-bold text-white text-base mb-2 group-hover:text-mc-gold transition-colors">{s.title}</h3>
-                  <p className="font-body text-gray-400 text-sm leading-relaxed">{s.outcome}</p>
+                {/* Header */}
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="font-headline font-bold text-white text-lg leading-snug group-hover:text-mc-gold transition-colors">{s.title}</h3>
+                  <span className="flex-shrink-0 text-xs font-body font-semibold text-mc-gold border border-mc-gold/40 rounded-full px-3 py-1">{s.tag}</span>
                 </div>
-                <span className="font-body text-xs text-mc-gold mt-auto flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Learn more <span>→</span>
-                </span>
+
+                {/* Problem */}
+                <div>
+                  <p className="text-xs font-body font-semibold uppercase tracking-widest text-gray-500 mb-1">The problem</p>
+                  <p className="font-body text-gray-300 text-sm leading-relaxed">{s.problem}</p>
+                </div>
+
+                {/* What we do */}
+                <div>
+                  <p className="text-xs font-body font-semibold uppercase tracking-widest text-gray-500 mb-1">What we do</p>
+                  <p className="font-body text-gray-400 text-sm leading-relaxed">{s.what}</p>
+                </div>
+
+                {/* Outcome */}
+                <div className="border-t border-white/10 pt-4 mt-auto flex items-center justify-between">
+                  <p className="font-body text-sm text-white font-semibold">{s.outcome}</p>
+                  <span className="text-mc-gold text-lg group-hover:translate-x-1 transition-transform">→</span>
+                </div>
               </Link>
             ))}
           </div>

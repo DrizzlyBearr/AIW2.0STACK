@@ -14,20 +14,20 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
 
-  const linkClass = 'font-body font-semibold text-sm text-gray-300 hover:text-white transition-colors px-3 py-2'
+  const linkClass = 'font-body font-semibold text-sm text-mc-teal hover:text-mc-gold transition-colors px-3 py-2'
 
   return (
-    <nav className="w-full bg-mc-dark border-b border-white/10 sticky top-0 z-50">
+    <nav className="w-full bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
       <div className="max-w-screen-xl mx-auto px-6 flex items-center justify-between h-16">
         <Link to="/home" className="flex-shrink-0">
-          <img src={LOGO} alt="Millionaire Contracts" className="h-8 w-auto" style={{ maxWidth: '200px' }} />
+          <img src={LOGO} alt="Millionaire Contracts" className="h-10 w-auto" style={{ maxWidth: '220px' }} />
         </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
-          <NavLink to="/home" className={({ isActive }) => `${linkClass}${isActive ? ' text-white' : ''}`}>Home</NavLink>
-          <NavLink to="/portfolio" className={({ isActive }) => `${linkClass}${isActive ? ' text-white' : ''}`}>Portfolio</NavLink>
-          <NavLink to="/about-us" className={({ isActive }) => `${linkClass}${isActive ? ' text-white' : ''}`}>About</NavLink>
+          <NavLink to="/home" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Home</NavLink>
+          <NavLink to="/portfolio" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Portfolio</NavLink>
+          <NavLink to="/about-us" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>About</NavLink>
 
           <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
             <button className={`${linkClass} flex items-center gap-1`}>
@@ -37,12 +37,12 @@ export default function Navbar() {
               </svg>
             </button>
             {servicesOpen && (
-              <div className="absolute top-full left-0 bg-mc-teal border border-white/10 rounded-lg min-w-[230px] py-2 shadow-xl">
+              <div className="absolute top-full left-0 bg-white border border-gray-100 rounded-lg min-w-[240px] py-2 shadow-xl">
                 {services.map((s) => (
                   <Link
                     key={s.to}
                     to={s.to}
-                    className="block px-4 py-2.5 text-sm font-body text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+                    className="block px-4 py-2.5 text-sm font-body text-mc-teal hover:text-mc-gold hover:bg-gray-50 transition-colors"
                     onClick={() => setServicesOpen(false)}
                   >
                     {s.label}
@@ -52,7 +52,7 @@ export default function Navbar() {
             )}
           </div>
 
-          <NavLink to="/contact-us" className={({ isActive }) => `${linkClass}${isActive ? ' text-white' : ''}`}>Contact</NavLink>
+          <NavLink to="/contact-us" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Contact</NavLink>
         </div>
 
         <div className="hidden md:block">
@@ -62,7 +62,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile hamburger */}
-        <button className="md:hidden p-2 text-gray-300" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+        <button className="md:hidden p-2 text-mc-teal" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {menuOpen
               ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -73,23 +73,23 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-mc-teal border-t border-white/10 px-6 py-4 flex flex-col gap-1">
-          <Link to="/home" className="font-body text-gray-300 py-2 hover:text-white" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/portfolio" className="font-body text-gray-300 py-2 hover:text-white" onClick={() => setMenuOpen(false)}>Portfolio</Link>
-          <Link to="/about-us" className="font-body text-gray-300 py-2 hover:text-white" onClick={() => setMenuOpen(false)}>About</Link>
+        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-1">
+          <Link to="/home" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/portfolio" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Portfolio</Link>
+          <Link to="/about-us" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>About</Link>
           <div>
-            <button className="font-body text-gray-300 py-2 hover:text-white w-full text-left" onClick={() => setServicesOpen(!servicesOpen)}>Services</button>
+            <button className="font-body text-mc-teal py-2 hover:text-mc-gold w-full text-left" onClick={() => setServicesOpen(!servicesOpen)}>Services</button>
             {servicesOpen && (
               <div className="pl-4 flex flex-col gap-1 pb-2">
                 {services.map((s) => (
-                  <Link key={s.to} to={s.to} className="font-body text-gray-400 py-1.5 text-sm hover:text-white" onClick={() => { setMenuOpen(false); setServicesOpen(false) }}>
+                  <Link key={s.to} to={s.to} className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setServicesOpen(false) }}>
                     {s.label}
                   </Link>
                 ))}
               </div>
             )}
           </div>
-          <Link to="/contact-us" className="font-body text-gray-300 py-2 hover:text-white" onClick={() => setMenuOpen(false)}>Contact</Link>
+          <Link to="/contact-us" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Contact</Link>
           <Link to="/calender" className="btn-primary text-center mt-2 text-sm" onClick={() => setMenuOpen(false)}>Schedule a Call</Link>
         </div>
       )}
