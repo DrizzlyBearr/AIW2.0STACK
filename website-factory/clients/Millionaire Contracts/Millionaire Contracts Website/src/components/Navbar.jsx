@@ -18,9 +18,9 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
-      <div className="max-w-screen-xl mx-auto px-6 flex items-center justify-between h-20">
+      <div className="max-w-screen-xl mx-auto px-6 flex items-center justify-between h-24">
         <Link to="/home" className="flex-shrink-0">
-          <img src={LOGO} alt="Millionaire Contracts" className="h-14 w-auto" style={{ maxWidth: '260px' }} />
+          <img src={LOGO} alt="Millionaire Contracts" className="h-16 w-auto" style={{ maxWidth: '300px' }} />
         </Link>
 
         {/* Desktop nav */}
