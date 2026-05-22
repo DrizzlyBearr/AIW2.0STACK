@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-05-22T00:00:00.000Z",
+  "client": "Millionaire Contracts",
+  "pages": [
+    {
+      "path": "/",
+      "title": "Home",
+      "primaryKeyword": "outsourced sales team for startups",
+      "description": "Homepage. Hero leads with founder pain, stats bar, problem agitate, solution overview, how-it-works, case studies, objection handling, testimonials, risk reversal, pricing anchor, FAQ, and CTA.",
+      "status": "ready"
+    },
+    {
+      "path": "/services",
+      "title": "Services",
+      "primaryKeyword": "managed sales rep placement",
+      "description": "Services overview page. Four service sections: Assigned SDR Placement, Sales Playbook Build, Outbound System Build, Pipeline Management. Each with slug, heading, body, and CTA.",
+      "status": "ready"
+    },
+    {
+      "path": "/case-studies",
+      "title": "Case Studies",
+      "primaryKeyword": "sales infrastructure for founders",
+      "description": "Client results page. Two real case studies (Skayle 360, McLifestyle Fitness / Medellin Health) plus one placeholder card for Katleho to add the next engagement.",
+      "status": "ready"
+    },
+    {
+      "path": "/about",
+      "title": "About",
+      "primaryKeyword": "sales playbook build",
+      "description": "About Katleho Mohlomi and the MC origin story. Founder bio, industries served, onboarding timeline, reporting cadence. LinkedIn link.",
+      "status": "ready"
+    },
+    {
+      "path": "/contact",
+      "title": "Contact",
+      "primaryKeyword": "book a free strategy call",
+      "description": "Contact page with strategy call booking form. Form header, subtext, and submit CTA from copy-locks.json. No phone number.",
+      "status": "ready"
+    },
+    {
+      "path": "/*",
+      "title": "404",
+      "primaryKeyword": null,
+      "description": "404 not found fallback.",
+      "status": "ready"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "primaryKeywords": [
+    "managed sales rep placement",
+    "sales infrastructure for founders",
+    "outsourced sales team for startups",
+    "sales playbook build"
+  ],
+  "secondaryKeywords": [
+    "how to stop being the only salesperson",
+    "sales system for B2B founders",
+    "outbound system for founder-led business",
+    "founder-led sales transition",
+    "outsourced SDR for startups",
+    "sales playbook for founders",
+    "B2B sales outsourcing for small business",
+    "sales consulting for founder-led business"
+  ],
+  "schemaType": "ProfessionalService",
+  "titleTags": {
+    "/": "Millionaire Contracts | Outsourced Sales Infrastructure for Founders",
+    "/services": "Sales Services | Rep Placement, Playbook Build & Pipeline Management | Millionaire Contracts",
+    "/case-studies": "Client Results | Qualified Meetings & Conversion Wins | Millionaire Contracts",
+    "/about": "About Katleho Mohlomi | Founder, Millionaire Contracts",
+    "/contact": "Book a Free Strategy Call | Millionaire Contracts"
+  },
+  "metaDescriptions": {
+    "/": "We place vetted sales reps, build the playbook, and manage the pipeline. Founder-led businesses get their first qualified meetings within 30 days.",
+    "/services": "Four services built for founder-led B2B businesses: assigned SDR placement, sales playbook build, outbound system build, and pipeline management. Deployed within 14 days.",
+    "/case-studies": "120 qualified appointments booked for a B2B SaaS client. 2.4x conversion improvement for a health and wellness client. Real outcomes from real engagements.",
+    "/about": "Katleho Mohlomi built outbound sales systems for 15+ B2B clients across SaaS, health, legal, and fintech before founding Millionaire Contracts.",
+    "/contact": "Book a free strategy call with Millionaire Contracts. No commitment. We review your pipeline and your ICP before we talk."
+  },
+  "contentGaps": [
+    "Founder-specific ROI framework: 'Should I outsource sales or hire?' -- no interactive tool exists targeting founder-led businesses",
+    "Long-form case studies with 4-6 section narrative depth -- current industry standard is one-line metric cards",
+    "'Sales infrastructure' as a concept: no page ranks well for 'what is sales infrastructure for small business'",
+    "Industry-specific outsourced sales content: 'outsourced sales for SaaS founders' and 'outbound system for health and wellness B2B' have minimal competition",
+    "'Sales agency vs fractional sales leader' comparison -- dominated by self-promotional content; a neutral framework would rank well"
+  ],
+  "locationPages": [],
+  "servicePages": ["/services"],
+  "faqSchema": true,
+  "aggregateRatingSchema": false
+}

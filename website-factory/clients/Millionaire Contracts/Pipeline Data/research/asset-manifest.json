@@ -1,0 +1,33 @@
+{
+  "harvestedAt": "2026-05-22T00:00:00.000Z",
+  "sourceUrl": "https://www.millionairecontracts.com",
+  "logoFound": false,
+  "logoPath": null,
+  "logoNote": "Site returned no HTML body in the build environment. Logo could not be extracted. See Millionaire Contracts Assets/logo/MANUAL-NEEDED.md.",
+  "photosFound": [],
+  "badgesFound": [],
+  "teamPhotosFound": [],
+  "manualItemsNeeded": [
+    {
+      "item": "logo",
+      "description": "Primary business logo (SVG or high-res PNG preferred)",
+      "targetPath": "Millionaire Contracts Assets/logo/logo-original.[ext]",
+      "blocking": true,
+      "blocksStages": ["stage_9", "stage_10_1"]
+    },
+    {
+      "item": "founder-photo",
+      "description": "Headshot or cutout photo of Katleho Mohlomi",
+      "targetPath": "Millionaire Contracts Assets/founder-photos/katleho-mohlomi.[ext]",
+      "blocking": false,
+      "blocksStages": ["stage_9"]
+    },
+    {
+      "item": "case-study-assets",
+      "description": "Any screenshots, dashboards, or imagery from the Skayle 360 or McLifestyle Fitness engagements",
+      "targetPath": "Millionaire Contracts Assets/photos/",
+      "blocking": false,
+      "blocksStages": []
+    }
+  ]
+}

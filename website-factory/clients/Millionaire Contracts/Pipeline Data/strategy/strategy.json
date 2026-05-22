@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-05-22T00:00:00.000Z",
+  "client": "Millionaire Contracts",
+  "niche": "sales-agencies",
+  "positioning": "Millionaire Contracts builds the sales function founder-led B2B businesses cannot afford to build wrong. Not a lead-gen service. Not a hired rep. A managed system: ICP definition, playbook, outbound infrastructure, a placed SDR, and ongoing pipeline management delivered as a single engagement. Founders stop being the only salesperson without hiring a full-time head of sales.",
+  "primaryOffer": "Managed sales infrastructure: SDR placement, playbook build, outbound system, and pipeline management in one engagement. First qualified meetings within 30 days.",
+  "services": [
+    {
+      "slug": "rep-placement",
+      "name": "Assigned SDR Placement",
+      "body": "A vetted, briefed outbound rep placed inside your sales function. Rep is briefed on your ICP, your playbook, and your outreach sequences before the first call. Deployed within 14 days."
+    },
+    {
+      "slug": "sales-playbook-build",
+      "name": "Sales Playbook Build",
+      "body": "A documented sales playbook: ICP definition, discovery framework, objection handling, sequence scripts, and pipeline stage criteria. Built in week one so the rep hits the ground running."
+    },
+    {
+      "slug": "outbound-system-build",
+      "name": "Outbound System Build",
+      "body": "Full outbound infrastructure: CRM configuration, email sequence setup, LinkedIn outreach logic, lead list build, and tracking. Everything in place before outreach begins."
+    },
+    {
+      "slug": "pipeline-management",
+      "name": "Pipeline Management",
+      "body": "Ongoing management of the outbound pipeline: weekly Monday reports, reply handling, meeting scheduling, and live CRM dashboard access. Founder stays in the loop without managing the day-to-day."
+    }
+  ],
+  "targetCustomer": "B2B founders with 2-50 employees who are the sole salesperson in their business, have hit a revenue ceiling, and need a repeatable outbound system built and managed without adding a full-time head of sales.",
+  "differentiators": [
+    "Playbook-first model: the sales system is built before the rep goes live, not after",
+    "14-day deployment: fully briefed SDR live within two weeks of engagement start",
+    "Managed service not a marketplace: MC owns the pipeline outcome, not just the placement",
+    "Guarantee: if month two ends without a single meeting booked, engagement extends at no cost",
+    "Founder-to-founder voice: Katleho has built this for 15+ businesses before productising it",
+    "Weekly Monday reporting plus live CRM dashboard: no black-box pipeline management"
+  ],
+  "pricingApproach": "anchor-without-publishing",
+  "contentStrategy": "founder-led-sales-transition",
+  "serviceRegion": "Remote-first. Serving B2B founders globally.",
+  "sitemap": ["/", "/services", "/case-studies", "/about", "/contact"],
+  "processSteps": [
+    {
+      "n": 1,
+      "title": "Audit and Onboarding",
+      "body": "We learn your ICP, your buying triggers, and your competitive landscape in week one. We document the playbook your rep will use on every call and brief them on the top objections your buyers raise."
+    },
+    {
+      "n": 2,
+      "title": "Build and Launch",
+      "body": "Your SDR goes live. Outreach starts within 14 days. First qualified conversations typically appear in week two or three across cold email and LinkedIn."
+    },
+    {
+      "n": 3,
+      "title": "Scale and Refine",
+      "body": "Weekly reporting, sequence testing, and pipeline reviews. You see every metric. We adjust the playbook until the system is predictable and the pipeline is consistent."
+    }
+  ]
+}
