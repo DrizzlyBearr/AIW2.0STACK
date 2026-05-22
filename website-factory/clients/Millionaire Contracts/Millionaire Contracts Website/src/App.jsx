@@ -8,8 +8,7 @@ import SalesStrategy from './pages/SalesStrategy'
 import SalesManagement from './pages/SalesManagement'
 import SalesClosing from './pages/SalesClosing'
 import AppointmentSetting from './pages/AppointmentSetting'
-import KpgMtn from './pages/portfolio/KpgMtn'
-import BasehomeCapital from './pages/portfolio/BasehomeCapital'
+import CaseStudy from './pages/CaseStudy'
 
 export default function App() {
   return (
@@ -25,8 +24,7 @@ export default function App() {
         <Route path="/sales-management" element={<SalesManagement />} />
         <Route path="/sales-closing" element={<SalesClosing />} />
         <Route path="/appointment-setting" element={<AppointmentSetting />} />
-        <Route path="/kpg-mtn" element={<KpgMtn />} />
-        <Route path="/basehome-capital" element={<BasehomeCapital />} />
+        <Route path="/:slug" element={<CaseStudy />} />
       </Routes>
     </BrowserRouter>
   )
