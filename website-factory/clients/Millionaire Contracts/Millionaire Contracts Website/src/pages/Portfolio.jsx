@@ -30,13 +30,13 @@ export default function Portfolio() {
                 key={client.slug}
                 className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-mc-gold/40 transition-all duration-200"
               >
-                <div className="h-40 bg-mc-teal overflow-hidden">
+                <div className="h-40 bg-white flex items-center justify-center p-5 overflow-hidden">
                   <img
                     src={client.image}
                     alt={client.name}
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                    className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                     onError={(e) => {
-                      e.target.parentNode.innerHTML = `<div class="w-full h-full flex items-center justify-center"><span class="font-headline font-bold text-white/30 text-xs text-center px-4">${client.name}</span></div>`
+                      e.target.parentNode.innerHTML = `<div class="w-full h-full flex items-center justify-center"><span class="font-headline font-bold text-gray-300 text-xs text-center px-4">${client.name}</span></div>`
                     }}
                   />
                 </div>
