@@ -324,6 +324,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── AI WEB AGENCY ── */}
+      <section className="bg-mc-dark py-20 px-6">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+            {/* Left */}
+            <div>
+              <span className="section-label mb-3 block">For Sales Businesses</span>
+              <h2 className="font-headline text-4xl md:text-5xl font-black text-white leading-tight mb-6">
+                Your website should close deals<br />
+                <span className="text-mc-gold">before your team picks up the phone.</span>
+              </h2>
+              <p className="font-body text-gray-400 text-base leading-relaxed mb-8">
+                Sales businesses run on credibility. When a prospect visits your site before a call, what they see decides whether they show up ready to buy or ready to interrogate. We build AI-powered websites for sales agencies and sales-driven businesses that convert before the first conversation starts.
+              </p>
+              <Link to="/contact-us" className="btn-primary">Build Your Sales Website</Link>
+            </div>
+
+            {/* Right: benefit cards */}
+            <div className="flex flex-col gap-4">
+              {[
+                {
+                  label: 'Conversion-first architecture',
+                  body: 'Every section is sequenced to move a prospect from curious to confident. No filler, no fluff — only what earns trust and pushes action.',
+                },
+                {
+                  label: 'Built in days, not months',
+                  body: 'AI-assisted development means a fully custom, production-ready site delivered in a fraction of the traditional agency timeline and cost.',
+                },
+                {
+                  label: 'Designed for the sales niche',
+                  body: 'Not a generic template. Built to reflect the authority, proof, and results that decision-makers in sales-driven businesses expect to see.',
+                },
+              ].map((item) => (
+                <div key={item.label} className="bg-white/5 border border-white/10 rounded-xl p-5 flex gap-4 hover:border-mc-gold/40 transition-colors">
+                  <div className="flex-shrink-0 w-1.5 bg-mc-gold rounded-full" />
+                  <div>
+                    <h3 className="font-headline font-bold text-white text-base mb-1">{item.label}</h3>
+                    <p className="font-body text-gray-400 text-sm leading-relaxed">{item.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA STRIP ── */}
       <section className="bg-mc-gold py-16 px-6 text-center">
         <h2 className="font-headline text-4xl md:text-5xl font-black text-white mb-4 leading-tight">
