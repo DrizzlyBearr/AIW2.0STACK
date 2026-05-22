@@ -1,0 +1,233 @@
+{
+  "meta": {
+    "generatedAt": "2026-05-22T08:00:00.000Z",
+    "niche": "sales-agencies",
+    "client": "Millionaire Contracts",
+    "voice": "professional-peer",
+    "emDashAudit": "pass",
+    "aiVocabAudit": "pass",
+    "smartQuotes": "pass",
+    "fabricationAudit": "pass",
+    "placeholderAudit": "pass -- testimonial pull-quotes and video flagged as PENDING with explicit instructions for Katleho"
+  },
+
+  "hero": {
+    "eyebrow": "Outsourced sales infrastructure for B2B founders",
+    "h1": "Stop being the only salesperson in your company.",
+    "subheadline": "We place a vetted SDR, build the playbook they run on, and manage the pipeline. Your first qualified meeting in 30 days, or we keep working until you get it.",
+    "trustChips": [
+      "120+ qualified meetings booked",
+      "15+ founder-led businesses served",
+      "First meetings within 30 days",
+      "SDR deployed in 14 days"
+    ]
+  },
+
+  "statsBar": {
+    "stats": [
+      { "number": "120+", "label": "Qualified meetings booked" },
+      { "number": "15+", "label": "Founder-led businesses served" },
+      { "number": "7+", "label": "Industries covered" },
+      { "number": "30", "label": "Days to first meeting, guaranteed" }
+    ]
+  },
+
+  "problemAgitate": {
+    "heading": "Sound familiar?",
+    "cards": [
+      {
+        "title": "You’re the only one selling.",
+        "body": "Every qualified conversation comes through you. That means every deal depends on your time, your energy, and your calendar. The business cannot grow faster than you can personally sell. You know it. You’ve known it for a while."
+      },
+      {
+        "title": "You hired a rep and it didn’t work.",
+        "body": "Six months. Eighty thousand dollars. And you ended up back on every call yourself. The rep ramped slowly because there was no playbook. There was no playbook because no one built it first. That’s not a hiring problem. That’s a system problem."
+      }
+    ]
+  },
+
+  "solution": {
+    "heading": "The sales function you’ve been trying to build.",
+    "subhead": "Not a lead-gen service. Not a rep marketplace. A managed system: playbook, infrastructure, a placed SDR, and ongoing pipeline management. All in one engagement.",
+    "cards": [
+      {
+        "iconSlug": "user-check",
+        "title": "Assigned SDR Placement",
+        "body": "A vetted, briefed outbound rep placed inside your sales function. Briefed on your ICP, your playbook, and your outreach sequences before the first call. Deployed within 14 days."
+      },
+      {
+        "iconSlug": "book-open",
+        "title": "Sales Playbook Build",
+        "body": "A documented sales playbook: ICP definition, discovery framework, objection handling, sequence scripts, and pipeline stage criteria. Built in week one so the rep hits the ground running."
+      },
+      {
+        "iconSlug": "zap",
+        "title": "Outbound System Build",
+        "body": "Full outbound infrastructure: CRM configuration, email sequence setup, LinkedIn outreach logic, lead list build, and tracking. Everything in place before outreach begins."
+      },
+      {
+        "iconSlug": "bar-chart-2",
+        "title": "Pipeline Management",
+        "body": "Ongoing management of the outbound pipeline: weekly Monday reports, reply handling, meeting scheduling, and live CRM dashboard access. You stay in the loop without managing the day-to-day."
+      }
+    ]
+  },
+
+  "howItWorks": {
+    "heading": "How we build your pipeline.",
+    "steps": [
+      {
+        "n": 1,
+        "title": "Audit and Onboarding",
+        "body": "We learn your ICP, your buying triggers, and your competitive landscape in week one. We document the playbook your rep will run on every call and brief them on the top objections your buyers raise."
+      },
+      {
+        "n": 2,
+        "title": "Build and Launch",
+        "body": "Your SDR goes live. Outreach starts within 14 days. First qualified conversations typically appear in week two or three across cold email and LinkedIn."
+      },
+      {
+        "n": 3,
+        "title": "Scale and Refine",
+        "body": "Weekly reporting, sequence testing, and pipeline reviews. You see every metric. We adjust the playbook until the system is predictable and the pipeline is consistent."
+      }
+    ]
+  },
+
+  "caseStudies": {
+    "heading": "Client results.",
+    "cards": [
+      {
+        "client": "Skayle 360",
+        "industry": "B2B SaaS",
+        "outcomeStat": "120",
+        "outcomeLabel": "Qualified appointments booked",
+        "problem": "Growing SaaS with no outbound infrastructure. Founder doing every prospecting call.",
+        "result": "Full outbound system built from zero. 120 qualified appointments booked."
+      },
+      {
+        "client": "McLifestyle Fitness / Medellin Health",
+        "industry": "Health and Wellness",
+        "outcomeStat": "2.4x",
+        "outcomeLabel": "Conversion improvement",
+        "problem": "DM-to-call pipeline with no system. Leads going cold before follow-up.",
+        "result": "DM outreach system built. Conversion rate improved 2.4x."
+      },
+      {
+        "client": "[Your industry]",
+        "industry": "[Your industry]",
+        "outcomeStat": "[Result]",
+        "outcomeLabel": "[What we measured]",
+        "problem": "Add your next case study here.",
+        "result": "Contact us to discuss your results.",
+        "isPlaceholder": true
+      }
+    ]
+  },
+
+  "objectionHandling": {
+    "heading": "What you’re probably thinking.",
+    "cards": [
+      {
+        "objection": "“They won’t understand my business well enough to sell it.”",
+        "response": "That’s why we build the playbook before the rep goes live. Week one is ICP definition, discovery scripting, and objection mapping with you in the room. The rep learns your business on your terms, not ours. We’ve done this across SaaS, health, legal, fintech, private equity, web agencies, and recruitment. Every engagement starts with a custom build, not a generic script."
+      },
+      {
+        "objection": "“I’ll pay for months and get nothing.”",
+        "response": "Most clients see their first qualified meeting within 30 days. If month two ends without a single meeting booked, we extend at no cost until we hit the target. That’s the guarantee. It’s in writing."
+      },
+      {
+        "objection": "“I’ll have to manage them constantly.”",
+        "response": "You get a weekly Monday report: outreach volume, reply rate, meetings booked, pipeline value added. You have live CRM dashboard access at all times. We handle reply management, meeting scheduling, and sequence adjustments. Your job is to show up to the qualified meetings we book."
+      }
+    ]
+  },
+
+  "testimonials": {
+    "heading": "What our clients say.",
+    "videoPlaceholder": "PENDING: Katleho to supply a 60-90 second founder video testimonial. Embed here. Include the client’s name, company, industry, and one specific outcome number in the caption beneath the embed.",
+    "pullQuotes": [
+      {
+        "quote": "PENDING: Katleho to supply verbatim quote. Format: specific outcome + what changed for the founder. Example: “We went from zero outbound to 18 qualified meetings in six weeks. I’ve finally stopped being the salesperson.”",
+        "name": "[Client First Name]",
+        "role": "[Founder / CEO]",
+        "company": "[Company Name]"
+      },
+      {
+        "quote": "PENDING: Katleho to supply verbatim quote. Format: specific outcome + what changed for the founder.",
+        "name": "[Client First Name]",
+        "role": "[Founder / CEO]",
+        "company": "[Company Name]"
+      }
+    ]
+  },
+
+  "riskReversal": {
+    "heading": "Our guarantee.",
+    "body": "Most clients see their first qualified meeting within 30 days. If month two ends without a single meeting booked, we extend at no cost until we hit the target."
+  },
+
+  "pricingAnchor": {
+    "eyebrow": "Investment",
+    "heading": "One engagement. Full sales infrastructure.",
+    "inclusions": [
+      "ICP definition and sales playbook built in week one",
+      "Vetted SDR placed and briefed, live within 14 days",
+      "Full outbound system: CRM, email sequences, LinkedIn outreach, lead lists",
+      "Ongoing pipeline management with weekly Monday reporting",
+      "Live CRM dashboard access throughout the engagement",
+      "Guarantee: first qualified meeting within 30 days or we extend at no cost"
+    ],
+    "cta": "Book a Free Strategy Call"
+  },
+
+  "faq": {
+    "heading": "Frequently asked questions.",
+    "items": [
+      {
+        "q": "How quickly can we get started?",
+        "a": "Most clients are live within 14 days. Week one is playbook build and rep briefing. Week two is outreach launch. First qualified conversations typically appear in week two or three."
+      },
+      {
+        "q": "Do I need to have a sales process in place before we begin?",
+        "a": "No. Building the process is the first thing we do. Week one is ICP definition, discovery framework, objection scripting, and sequence build. The rep does not touch prospects until the playbook is done."
+      },
+      {
+        "q": "What industries do you work with?",
+        "a": "We have built sales systems for clients in SaaS, health and wellness, legal, fintech, private equity, web agencies, and recruitment. Every engagement starts with a custom ICP build, so the industry is a starting point, not a constraint."
+      },
+      {
+        "q": "What is your guarantee?",
+        "a": "If month two ends without a single meeting booked, we extend the engagement at no cost until we hit the target. The guarantee is in writing before we start."
+      },
+      {
+        "q": "How much time will this take from me?",
+        "a": "Week one requires your input: ICP definition, discovery call review, objection mapping. After that, you receive a weekly Monday report and have live CRM access. We handle reply management, meeting scheduling, and sequence adjustments. Your job is to show up to the qualified meetings."
+      },
+      {
+        "q": "What happens if a rep isn’t performing?",
+        "a": "Rep performance is our responsibility, not yours. If a placed rep is not hitting sequence targets, we replace them. You are not managing the rep. We are."
+      },
+      {
+        "q": "Do you publish pricing?",
+        "a": "We do not publish pricing because every engagement is scoped to your business: the ICP, the outreach channels, the rep profile, and the pipeline complexity. Book a strategy call and we will scope the engagement before we talk numbers."
+      }
+    ]
+  },
+
+  "cta": {
+    "formHeader": "Tell us about your pipeline.",
+    "formSubtext": "No spam. One call, no commitment. We review your situation before we talk.",
+    "submitCta": "Book a Free Strategy Call"
+  },
+
+  "footer": {
+    "tagline": "Outsourced sales infrastructure for B2B founders.",
+    "navLinks": [
+      { "label": "Services", "path": "/services" },
+      { "label": "Case Studies", "path": "/case-studies" },
+      { "label": "About", "path": "/about" },
+      { "label": "Book a Call", "path": "/contact" }
+    ]
+  }
+}

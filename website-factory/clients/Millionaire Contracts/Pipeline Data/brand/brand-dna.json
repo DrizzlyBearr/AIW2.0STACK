@@ -1,0 +1,343 @@
+{
+  "meta": {
+    "title": "Millionaire Contracts | Outsourced Sales Infrastructure for Founders",
+    "description": "We place vetted sales reps, build the playbook, and manage the pipeline. Founder-led businesses get their first qualified meetings within 30 days."
+  },
+
+  "company": {
+    "name": "Millionaire Contracts",
+    "shortName": "MC",
+    "tagline": "Your pipeline. Built and managed.",
+    "url": "https://www.millionairecontracts.com",
+    "licenseNumber": null,
+    "description": "Managed rep placement and sales infrastructure for founder-led businesses. Builds outbound systems, sales playbooks, CRM logic, outreach sequences, and lead flow mapping so founders stop being the only salesperson in their company.",
+    "serviceRegion": "Remote-first, serving B2B founders globally"
+  },
+
+  "contact": {
+    "phone": null,
+    "phoneTelLink": null,
+    "email": "neo@millionairecontracts.com",
+    "googleMapsUrl": null,
+    "mapsEmbedUrl": null
+  },
+
+  "address": {
+    "street": null,
+    "city": null,
+    "state": null,
+    "zip": null,
+    "full": null,
+    "lat": null,
+    "lng": null
+  },
+
+  "hours": null,
+
+  "businessHours": null,
+
+  "social": {
+    "facebook": null,
+    "facebookReviews": null,
+    "instagram": null,
+    "linkedin": "https://www.linkedin.com/in/katleho-mohlomi",
+    "youtube": null
+  },
+
+  "team": {
+    "founder": {
+      "name": "Katleho Mohlomi",
+      "displayName": "Katleho",
+      "title": "Founder",
+      "yearsExp": "7+",
+      "expLabel": "years building outbound sales systems"
+    },
+    "founders": []
+  },
+
+  "team_group_photo": null,
+  "team_members": [],
+
+  "theme_mode": "light",
+  "voice_register": "professional-peer",
+  "shape_motif": "geometric-grid",
+
+  "corner_overlay": {
+    "motif": "geometric-grid",
+    "color": "#0EA5E9",
+    "opacity": 0.08
+  },
+
+  "palette": {
+    "primary": "#0F1923",
+    "primary_dark": "#080E14",
+    "primary_slate": "#1A2535",
+    "accent": "#0EA5E9",
+    "accent_light": "#38BDF8",
+    "accent_dark": "#0284C7",
+    "neutral": "#F8FAFC",
+    "neutral_dim": "#F1F5F9",
+    "silver": "#94A3B8",
+    "ink": "#1E293B"
+  },
+
+  "typography": {
+    "heading": "Inter",
+    "body": "Inter",
+    "headingFontUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+    "bodyFontUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+  },
+
+  "reviews": {
+    "rating": null,
+    "googleCount": 0,
+    "facebookCount": 0,
+    "totalReviewCount": 0,
+    "googleLabel": null,
+    "facebookLabel": null,
+    "googleStat": null,
+    "facebookStat": null,
+    "items": []
+  },
+
+  "services": [
+    {
+      "slug": "rep-placement",
+      "name": "Assigned SDR Placement",
+      "iconSlug": "user-check",
+      "body": "A vetted, briefed outbound rep placed inside your sales function. Briefed on your ICP, your playbook, and your outreach sequences before the first call. Deployed within 14 days."
+    },
+    {
+      "slug": "sales-playbook-build",
+      "name": "Sales Playbook Build",
+      "iconSlug": "book-open",
+      "body": "A documented sales playbook: ICP definition, discovery framework, objection handling, sequence scripts, and pipeline stage criteria. Built in week one so the rep hits the ground running."
+    },
+    {
+      "slug": "outbound-system-build",
+      "name": "Outbound System Build",
+      "iconSlug": "zap",
+      "body": "Full outbound infrastructure: CRM configuration, email sequence setup, LinkedIn outreach logic, lead list build, and tracking. Everything in place before outreach begins."
+    },
+    {
+      "slug": "pipeline-management",
+      "name": "Pipeline Management",
+      "iconSlug": "bar-chart-2",
+      "body": "Ongoing management of the outbound pipeline: weekly Monday reports, reply handling, meeting scheduling, and live CRM dashboard access. Founder stays in the loop without managing the day-to-day."
+    }
+  ],
+
+  "serviceAreas": [],
+  "trust_badges": [],
+  "press_logos": [],
+  "previous_projects": [],
+
+  "copy": {
+    "hero": {
+      "eyebrow": "Outsourced sales infrastructure for B2B founders",
+      "headline": "Stop being the only salesperson in your company.",
+      "subheadline": "We place a vetted SDR, build the playbook they run on, and manage the pipeline. Your first qualified meeting in 30 days, or we keep working until you get it.",
+      "imageAlt": "Sales infrastructure dashboard showing pipeline metrics and booked meetings"
+    },
+
+    "heroTrustChips": [
+      "120+ qualified meetings booked",
+      "15+ founder-led businesses served",
+      "First meetings within 30 days",
+      "SDR deployed in 14 days"
+    ],
+
+    "trustClaims": [
+      "120+ qualified meetings booked",
+      "15+ founder-led businesses served",
+      "7+ industries covered",
+      "First qualified meeting in 30 days, guaranteed"
+    ],
+
+    "formHeader": "Tell us about your pipeline.",
+    "formSubtext": "No spam. One call, no commitment. We review your situation before we talk.",
+    "buttonText": "Book a Free Strategy Call",
+    "submitButton": "Book a Free Strategy Call",
+    "privacyLine": "No spam. One call, no commitment. We review your situation before we talk.",
+    "mobileCallLabel": "Book a Call",
+    "availableNow": null,
+    "footerCta": "Book a Free Strategy Call",
+    "copyright": "© 2026 Millionaire Contracts. All rights reserved.",
+
+    "topBar": {
+      "cta": "Book a Free Strategy Call"
+    },
+
+    "blog": {
+      "label": "Insights",
+      "heading": "Practical thinking on building sales functions.",
+      "body": "Practical thinking on building sales functions that work without the founder in every deal.",
+      "featuredLabel": "Featured"
+    },
+
+    "cta": {
+      "label": "Get started",
+      "heading": "Ready to build the system?",
+      "body": "Book a strategy call. We review your ICP, your current pipeline, and your goals before we talk scope. No commitment on the call."
+    },
+
+    "faq": {
+      "label": "FAQ",
+      "heading": "Frequently asked questions."
+    },
+
+    "founder": {
+      "label": "The founder",
+      "heading": "Katleho Mohlomi",
+      "para1": "Before founding Millionaire Contracts, Katleho built outbound sales infrastructure across more than 15 B2B clients. The engagements covered SaaS, health and wellness, legal, fintech, private equity, web agencies, and recruitment. Clients included Skayle 360, Eads Bridge Holdings, and iLawyer Marketing.",
+      "para2": "Millionaire Contracts is that work, productised as a managed service. The system builds the playbook first, places the rep second, and manages the pipeline throughout. Founders stop being the only salesperson without hiring a full-time head of sales.",
+      "visionLabel": "Why we exist",
+      "vision": "Most founder-led businesses have a ceiling imposed by the founder's personal selling capacity. That ceiling is not a product problem or a market problem. It is a system problem. We remove it.",
+      "missionLabel": "How we work",
+      "mission": "Every engagement starts with the playbook. No rep touches a prospect until the ICP is defined, the discovery framework is documented, and the objection set is mapped. Then the system goes live, the rep is placed, and the pipeline runs."
+    },
+
+    "gallery": {
+      "label": "Our work",
+      "heading": "Client results.",
+      "body": "Real outcomes from real engagements."
+    },
+
+    "offers": {
+      "label": "Investment",
+      "heading": "One engagement. Full sales infrastructure.",
+      "body": "Every engagement covers all four services. The system only works when the playbook, the rep, the infrastructure, and the management move together.",
+      "detail": "Book a strategy call to scope your engagement."
+    },
+
+    "process": {
+      "label": "How it works",
+      "heading": "How we build your pipeline.",
+      "body": "Three steps. Fourteen days to first outreach. First qualified conversations typically in week two or three.",
+      "badgeText": "14 days",
+      "badgeSubtext": "to first outreach"
+    },
+
+    "reviews": {
+      "label": "Client results",
+      "heading": "What our clients say.",
+      "body": "Outcomes from founder-led businesses across seven industries.",
+      "summary": "15+ founder-led businesses served across SaaS, health, legal, fintech, and more."
+    },
+
+    "serviceAreaCard": {
+      "heading": "Remote-first.",
+      "body": "We work with founders globally. No geographic restriction."
+    },
+
+    "serviceAreas": {
+      "label": "Where we work",
+      "heading": "Remote-first, global reach.",
+      "body": "We work with B2B founders across North America, Europe, Africa, and beyond. No office. No geographic restriction."
+    },
+
+    "services": {
+      "label": "What we build",
+      "heading": "The sales function you've been trying to build.",
+      "body": "Not a lead-gen service. Not a rep marketplace. A managed system: playbook, infrastructure, a placed SDR, and ongoing pipeline management. All in one engagement."
+    },
+
+    "whyChoose": {
+      "label": "Why MC",
+      "heading": "Why founder-led businesses choose Millionaire Contracts.",
+      "body": "We build the system before the rep goes live. Every other agency sends the rep first and builds the playbook as a footnote."
+    }
+  },
+
+  "process_steps": [
+    {
+      "n": 1,
+      "title": "Audit and Onboarding",
+      "body": "We learn your ICP, your buying triggers, and your competitive landscape in week one. We document the playbook your rep will run on every call and brief them on the top objections your buyers raise."
+    },
+    {
+      "n": 2,
+      "title": "Build and Launch",
+      "body": "Your SDR goes live. Outreach starts within 14 days. First qualified conversations typically appear in week two or three across cold email and LinkedIn."
+    },
+    {
+      "n": 3,
+      "title": "Scale and Refine",
+      "body": "Weekly reporting, sequence testing, and pipeline reviews. You see every metric. We adjust the playbook until the system is predictable and the pipeline is consistent."
+    }
+  ],
+
+  "why_choose_us": [
+    "Playbook-first: the system is built before the rep goes live, not after",
+    "14-day deployment: fully briefed SDR live within two weeks of engagement start",
+    "Guarantee: if month two ends without a meeting booked, we extend at no cost",
+    "Weekly Monday reporting plus live CRM dashboard",
+    "Founder-to-founder: built from 15+ real engagements, not a theory"
+  ],
+
+  "special_offers": [],
+
+  "faq": [
+    {
+      "q": "How quickly can we get started?",
+      "a": "Most clients are live within 14 days. Week one is playbook build and rep briefing. Week two is outreach launch. First qualified conversations typically appear in week two or three."
+    },
+    {
+      "q": "Do I need to have a sales process in place before we begin?",
+      "a": "No. Building the process is the first thing we do. Week one is ICP definition, discovery framework, objection scripting, and sequence build. The rep does not touch prospects until the playbook is done."
+    },
+    {
+      "q": "What industries do you work with?",
+      "a": "We have built sales systems for clients in SaaS, health and wellness, legal, fintech, private equity, web agencies, and recruitment. Every engagement starts with a custom ICP build, so the industry is a starting point, not a constraint."
+    },
+    {
+      "q": "What is your guarantee?",
+      "a": "If month two ends without a single meeting booked, we extend the engagement at no cost until we hit the target. The guarantee is in writing before we start."
+    },
+    {
+      "q": "How much time will this take from me?",
+      "a": "Week one requires your input: ICP definition, discovery call review, objection mapping. After that, you receive a weekly Monday report and have live CRM access. We handle reply management, meeting scheduling, and sequence adjustments. Your job is to show up to the qualified meetings."
+    },
+    {
+      "q": "What happens if a rep isn't performing?",
+      "a": "Rep performance is our responsibility, not yours. If a placed rep is not hitting sequence targets, we replace them. You are not managing the rep. We are."
+    },
+    {
+      "q": "Do you publish pricing?",
+      "a": "We do not publish pricing because every engagement is scoped to your business: the ICP, the outreach channels, the rep profile, and the pipeline complexity. Book a strategy call and we will scope the engagement before we talk numbers."
+    }
+  ],
+
+  "blog_posts": [],
+  "blog_categories": [],
+  "location_pages": [],
+
+  "pages": {
+    "about": {
+      "eyebrow": "About Millionaire Contracts",
+      "h1": "Built by a founder who had already done this for 15 others.",
+      "subheadline": "Katleho Mohlomi spent seven years building outbound sales systems for other people's businesses. Millionaire Contracts is that work, productised as a managed service."
+    },
+    "serviceAreas": {},
+    "locationDetail": {},
+    "blogPost": {},
+    "blog": {},
+    "contact": {
+      "eyebrow": "Book a strategy call",
+      "h1": "Tell us about your pipeline.",
+      "subheadline": "We review your situation before the call. No introductions on the day, just strategy.",
+      "thankYou": "You're booked. Check your email for a calendar confirmation. Before we talk, we'll review your website, your ICP, and any public information about your market so we can use the call on strategy, not introductions."
+    },
+    "services": {
+      "eyebrow": "What we build for you",
+      "h1": "Four services. One outcome: a pipeline that runs without you.",
+      "subheadline": "Every engagement covers all four. We do not sell them separately. The system only works when the playbook, the rep, the infrastructure, and the management move together."
+    },
+    "financing": {}
+  },
+
+  "credit": {
+    "agency": "Millionaire Contracts",
+    "url": null
+  }
+}
