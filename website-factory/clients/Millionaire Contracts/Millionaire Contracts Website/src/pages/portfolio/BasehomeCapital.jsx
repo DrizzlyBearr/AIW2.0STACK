@@ -38,7 +38,7 @@ export default function BasehomeCapital() {
         <div className="max-w-screen-xl mx-auto max-w-3xl">
           <h2 className="font-headline text-2xl font-bold text-mc-teal mb-4">Business Context</h2>
           <p className="font-body text-gray-700 leading-relaxed mb-3">
-            BaseHome Capital is a private equity firm focused on real estate and infrastructure investment across emerging markets. Growing their investor network required consistent access to qualified institutional partners and family offices — exactly the kind of relationship-sensitive outreach that demands precision.
+            BaseHome Capital is a private equity firm focused on real estate and infrastructure investment across emerging markets. Growing their investor network required consistent access to qualified institutional partners and family offices, exactly the kind of relationship-sensitive outreach that demands precision.
           </p>
           <p className="font-body text-gray-700 leading-relaxed">
             Millionaire Contracts was brought in to build and run an appointment setting function that could open doors at the right level, consistently and professionally.
@@ -81,7 +81,7 @@ export default function BasehomeCapital() {
         <div className="max-w-screen-xl mx-auto max-w-3xl">
           <h2 className="font-headline text-2xl font-bold text-mc-teal mb-4">The Key Insight</h2>
           <p className="font-body text-gray-700 leading-relaxed mb-4">
-            In the world of private equity, access is everything. The difference between a closed fund and an open one often comes down to a single well-placed introduction at the right moment. Our appointment setting function delivered exactly that — qualified, timed, and prepared meetings with investors who were ready to engage.
+            In the world of private equity, access is everything. The difference between a closed fund and an open one often comes down to a single well-placed introduction at the right moment. Our appointment setting function delivered exactly that, qualified, timed, and prepared meetings with investors who were ready to engage.
           </p>
           <p className="font-body text-gray-700 leading-relaxed border-l-4 pl-4" style={{ borderColor: ACCENT }}>
             A 65% meeting success rate in institutional investor outreach is exceptionally high for this space. It reflects the quality of targeting, the professionalism of the outreach, and the precision of the follow-through.

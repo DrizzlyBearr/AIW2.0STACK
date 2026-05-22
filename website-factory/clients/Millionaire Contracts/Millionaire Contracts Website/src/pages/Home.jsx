@@ -30,7 +30,7 @@ const painPoints = [
 const comparison = [
   { label: 'Time to first results', inhouse: '6–12 months', mc: '30 days' },
   { label: 'Monthly cost', inhouse: '$15k+ per rep (salary + benefits)', mc: 'Performance-aligned engagement' },
-  { label: 'Management overhead', inhouse: 'You hire, train, manage, retain', mc: 'Done for you — end to end' },
+  { label: 'Management overhead', inhouse: 'You hire, train, manage, retain', mc: 'Done for you, end to end' },
   { label: 'Ramp time', inhouse: '3–6 months before they produce', mc: 'Operational from day one' },
   { label: 'Results guarantee', inhouse: 'None', mc: 'Results-driven structure' },
   { label: 'Expertise level', inhouse: 'Depends on who you can afford to hire', mc: 'Senior closers and strategists immediately' },
@@ -40,7 +40,7 @@ const services = [
   {
     title: 'Sales Strategy Development',
     problem: 'You have a product but no repeatable way to sell it.',
-    what: 'We audit your market position, map your buyer journey, and build a sales playbook — pricing strategy, pitch framework, objection responses, and KPIs — specific to your niche and team.',
+    what: 'We audit your market position, map your buyer journey, and build a sales playbook, pricing strategy, pitch framework, objection responses, and KPIs, specific to your niche and team.',
     outcome: 'A ready-to-run sales playbook your team executes from day one.',
     to: '/sales-strategy-development',
     tag: 'Strategy',
@@ -48,7 +48,7 @@ const services = [
   {
     title: 'Sales Management',
     problem: 'Your sales team is active but not accountable to a system.',
-    what: 'We step in as your sales management layer — setting targets, running pipeline reviews, coaching reps, and building the reporting infrastructure that keeps performance visible and consistent.',
+    what: 'We step in as your sales management layer, setting targets, running pipeline reviews, coaching reps, and building the reporting infrastructure that keeps performance visible and consistent.',
     outcome: 'A managed sales operation that hits targets without your constant input.',
     to: '/sales-management',
     tag: 'Management',
@@ -56,7 +56,7 @@ const services = [
   {
     title: 'Sales Closing',
     problem: 'Deals stall at the finish line and you are not sure why.',
-    what: 'We deploy trained closers directly into your pipeline. They handle discovery, objection handling, and the final conversion — working as an extension of your team inside active deals.',
+    what: 'We deploy trained closers directly into your pipeline. They handle discovery, objection handling, and the final conversion, working as an extension of your team inside active deals.',
     outcome: 'More deals closed, faster, by people who do this every day.',
     to: '/sales-closing',
     tag: 'Closing',
@@ -64,7 +64,7 @@ const services = [
   {
     title: 'Appointment Setting',
     problem: 'Your pipeline is thin because outreach is inconsistent.',
-    what: 'We run your outbound engine — identifying your ideal accounts, crafting the outreach, handling follow-up, and booking qualified meetings directly into your calendar.',
+    what: 'We run your outbound engine, identifying your ideal accounts, crafting the outreach, handling follow-up, and booking qualified meetings directly into your calendar.',
     outcome: 'A full calendar of decision-maker meetings, every week.',
     to: '/appointment-setting',
     tag: 'Outbound',
@@ -118,13 +118,13 @@ export default function Home() {
 
         <div className="relative z-10 max-w-screen-xl mx-auto px-6 py-24 md:py-32">
           <div className="max-w-3xl">
-            <span className="section-label mb-4 block">Africa's Sales Agency</span>
+            <span className="section-label mb-4 block">Global Sales Agency</span>
             <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6">
               We Build Sales Operations<br />
               <span className="text-mc-gold">That Win.</span>
             </h1>
             <p className="font-body text-gray-400 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-              Strategy, management, closing, and appointment setting — fully deployed into your business so your pipeline never stops producing.
+              Strategy, management, closing, and appointment setting, fully deployed into your business so your pipeline never stops producing.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/calender" className="btn-primary">Schedule a Call</Link>
@@ -152,15 +152,16 @@ export default function Home() {
           <p className="font-body text-xs uppercase tracking-widest text-gray-400 text-center mb-8">
             Trusted by ambitious companies
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-10">
+          <div className="flex flex-wrap justify-center items-center gap-6">
             {partnerLogos.map((p) => (
-              <img
-                key={p.name}
-                src={p.image}
-                alt={p.name}
-                className="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                onError={(e) => { e.target.style.display = 'none' }}
-              />
+              <div key={p.name} className="bg-white border border-gray-100 rounded-xl px-6 py-4 flex items-center justify-center h-20 w-44 shadow-sm hover:shadow-md transition-shadow">
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  onError={(e) => { e.target.parentNode.style.display = 'none' }}
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -346,7 +347,7 @@ export default function Home() {
               {[
                 {
                   label: 'Conversion-first architecture',
-                  body: 'Every section is sequenced to move a prospect from curious to confident. No filler, no fluff — only what earns trust and pushes action.',
+                  body: 'Every section is sequenced to move a prospect from curious to confident. No filler, no fluff, only what earns trust and pushes action.',
                 },
                 {
                   label: 'Built in days, not months',

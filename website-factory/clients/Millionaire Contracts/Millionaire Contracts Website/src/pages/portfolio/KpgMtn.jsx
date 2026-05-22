@@ -40,7 +40,7 @@ export default function KpgMtn() {
             KPG is a technology solutions provider operating across Southern Africa. They needed to expand their commercial presence within MTN Zambia, one of the continent's largest telecoms, and required both a strategic go-to-market approach and the sales execution capacity to back it up.
           </p>
           <p className="font-body text-gray-700 leading-relaxed">
-            Millionaire Contracts was engaged to design and execute the full sales cycle — from strategy through to closing — within the MTN Zambia enterprise accounts.
+            Millionaire Contracts was engaged to design and execute the full sales cycle, from strategy through to closing, within the MTN Zambia enterprise accounts.
           </p>
         </div>
       </section>
@@ -102,7 +102,7 @@ export default function KpgMtn() {
         <div className="max-w-screen-xl mx-auto max-w-3xl">
           <h2 className="font-headline text-2xl font-bold text-mc-teal mb-4">Why This Case Matters</h2>
           <p className="font-body text-gray-700 leading-relaxed mb-4">
-            The KPG / MTN engagement demonstrates what is possible when a dedicated sales team operates with strategic clarity inside a large enterprise environment. We proved that an outsourced sales function, when done right, can outperform a traditional in-house team — at a fraction of the cost.
+            The KPG / MTN engagement demonstrates what is possible when a dedicated sales team operates with strategic clarity inside a large enterprise environment. We proved that an outsourced sales function, when done right, can outperform a traditional in-house team, at a fraction of the cost.
           </p>
           <p className="font-body text-gray-700 leading-relaxed">
             This case is a reference point for any technology business looking to penetrate a tier-one corporate account in Africa.

@@ -18,13 +18,13 @@ export default function SalesManagement() {
 
           <div className="space-y-5 font-body text-gray-700 text-base leading-relaxed">
             <p>
-              At Millionaire Contracts, we are the undisputed experts in sales management. We do not simply oversee sales processes — we engineer high-performance sales operations that deliver results. Our Sales Management Service transforms your team from ordinary to elite, building a culture of accountability, precision, and consistent achievement.
+              At Millionaire Contracts, we are the undisputed experts in sales management. We do not simply oversee sales processes, we engineer high-performance sales operations that deliver results. Our Sales Management Service transforms your team from ordinary to elite, building a culture of accountability, precision, and consistent achievement.
             </p>
             <p>
               Our approach is both intelligent and relentless. We structure, optimize, and manage your entire sales operation with precision, ensuring each step, from lead generation to closing, is flawlessly executed. We implement proven systems, coach your team to peak performance, and continuously track and refine every metric that drives revenue.
             </p>
             <p>
-              By choosing Millionaire Contracts, you are investing in a results-driven sales engine that ensures your team meets and exceeds targets every time. We do not just manage your sales — we elevate your entire revenue function.
+              By choosing Millionaire Contracts, you are investing in a results-driven sales engine that ensures your team meets and exceeds targets every time. We do not just manage your sales, we elevate your entire revenue function.
             </p>
             <p>
               Millionaire Contracts: The pioneers of sales management excellence. Let us take your sales team to the top.

@@ -21,10 +21,10 @@ export default function AppointmentSetting() {
               Our Appointment Setting service is designed to keep your sales pipeline flowing with high-quality leads, allowing your team to focus on closing deals while we handle the outreach. We connect you with the right decision-makers at the right time.
             </p>
             <p>
-              Using a strategic approach, we target and qualify leads, ensuring that each appointment is set with someone who fits your ideal customer profile. Every prospect we book has been vetted for intent, budget, and fit — so your team walks into meetings that are worth their time.
+              Using a strategic approach, we target and qualify leads, ensuring that each appointment is set with someone who fits your ideal customer profile. Every prospect we book has been vetted for intent, budget, and fit, so your team walks into meetings that are worth their time.
             </p>
             <p>
-              With our appointment setting service, you will experience a steady flow of pre-qualified prospects, allowing your team to focus on what they do best — closing deals and growing your business. Stop chasing cold contacts and start having real conversations.
+              With our appointment setting service, you will experience a steady flow of pre-qualified prospects, allowing your team to focus on what they do best, closing deals and growing your business. Stop chasing cold contacts and start having real conversations.
             </p>
           </div>
 

@@ -34,7 +34,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right — GHL form embed */}
+          {/* Right, GHL form embed */}
           <div>
             <iframe
               src={`https://api.leadconnectorhq.com/widget/form/${FORM_ID}`}

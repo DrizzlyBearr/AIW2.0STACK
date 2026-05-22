@@ -4,7 +4,7 @@ export const caseStudies = {
     category: 'Technology / Telecoms',
     tagline: 'Driving enterprise sales growth into one of Africa\'s largest telecoms.',
     context: [
-      'KPG is a technology solutions provider operating across Southern Africa. They needed to expand their commercial footprint inside MTN Zambia — one of the continent\'s largest telecoms — and required both a strategic go-to-market approach and the sales execution capacity to back it up.',
+      'KPG is a technology solutions provider operating across Southern Africa. They needed to expand their commercial footprint inside MTN Zambia, one of the continent\'s largest telecoms, and required both a strategic go-to-market approach and the sales execution capacity to back it up.',
       'Millionaire Contracts was engaged to design and run the full sales cycle, from strategy through to closing, across MTN Zambia\'s enterprise accounts. The engagement covered every layer: identifying the right decision-makers, getting in the room, and closing the contracts.',
     ],
     services: ['Sales Strategy', 'Appointment Setting', 'Sales Closing', 'Sales Management'],
@@ -22,7 +22,7 @@ export const caseStudies = {
       { value: '70%', label: 'Meeting success rate' },
     ],
     outcome: 'The KPG / MTN engagement proves what is possible when a dedicated sales team operates with strategic clarity inside a large enterprise environment. An outsourced sales function, built and run correctly, consistently outperformed what a traditional in-house team could achieve at a fraction of the cost and ramp time.',
-    insight: 'Enterprise telecoms move slowly — until they trust you. The whole engagement turned on building credibility at the right level early, then letting pipeline discipline do the rest. The 70% meeting rate was a direct product of that targeting precision.',
+    insight: 'Enterprise telecoms move slowly, until they trust you. The whole engagement turned on building credibility at the right level early, then letting pipeline discipline do the rest. The 70% meeting rate was a direct product of that targeting precision.',
   },
 
   'basehome-capital': {
@@ -30,7 +30,7 @@ export const caseStudies = {
     category: 'Private Equity / Real Estate',
     tagline: 'Opening institutional investor relationships for a private equity firm in emerging markets.',
     context: [
-      'BaseHome Capital is a private equity firm focused on real estate and infrastructure investment across emerging markets. Growing their investor network required consistent access to qualified institutional partners and family offices — exactly the kind of relationship-sensitive outreach that demands precision and professionalism.',
+      'BaseHome Capital is a private equity firm focused on real estate and infrastructure investment across emerging markets. Growing their investor network required consistent access to qualified institutional partners and family offices, exactly the kind of relationship-sensitive outreach that demands precision and professionalism.',
       'Millionaire Contracts was brought in to build and run an appointment setting function that could open doors at the right level. The mandate was simple: get BaseHome in front of investors who were genuinely qualified to have the conversation, not just warm bodies on a calendar.',
     ],
     services: ['Appointment Setting', 'Sales Strategy'],
@@ -48,7 +48,7 @@ export const caseStudies = {
       { value: '8+', label: 'Strategic partnerships formed' },
       { value: '3x', label: 'Pipeline growth' },
     ],
-    outcome: 'In private equity, access is everything. The difference between a closed fund and an open one often comes down to a single well-placed introduction at the right moment. The appointment setting function we built delivered exactly that — qualified, timed, and prepared meetings with investors who were ready to engage.',
+    outcome: 'In private equity, access is everything. The difference between a closed fund and an open one often comes down to a single well-placed introduction at the right moment. The appointment setting function we built delivered exactly that, qualified, timed, and prepared meetings with investors who were ready to engage.',
     insight: 'A 65% meeting success rate in institutional investor outreach is exceptionally high for this space. It reflects the quality of the targeting, the professionalism of the outreach, and the precision of the follow-through on every contact.',
   },
 
@@ -57,7 +57,7 @@ export const caseStudies = {
     category: 'Staffing & Talent',
     tagline: 'Building a repeatable pipeline of corporate retainer clients for a specialist staffing firm.',
     context: [
-      'Keen People is a specialist staffing firm placing high-calibre talent across professional services, finance, and technology sectors. Despite strong delivery and a solid reputation, their new-business pipeline relied almost entirely on referrals — a ceiling that limited how fast they could grow.',
+      'Keen People is a specialist staffing firm placing high-calibre talent across professional services, finance, and technology sectors. Despite strong delivery and a solid reputation, their new-business pipeline relied almost entirely on referrals, a ceiling that limited how fast they could grow.',
       'Millionaire Contracts was engaged to install an outbound appointment setting function and a sales strategy built around converting corporate HR decision-makers into long-term retainer clients.',
     ],
     services: ['Appointment Setting', 'Sales Strategy'],
@@ -74,8 +74,8 @@ export const caseStudies = {
       { value: '60%', label: 'Meeting acceptance rate' },
       { value: '2x', label: 'Retainer revenue growth' },
     ],
-    outcome: 'Staffing firms win on relationships. The engagement gave Keen People a repeatable process for building those relationships at scale — replacing a referral-dependent pipeline with one they could forecast and control.',
-    insight: 'Most staffing firms sell backwards. They lead with capability when corporate clients care about understanding first. Repositioning the outreach around the client\'s talent problem — not Keen People\'s service — doubled response rates almost immediately.',
+    outcome: 'Staffing firms win on relationships. The engagement gave Keen People a repeatable process for building those relationships at scale, replacing a referral-dependent pipeline with one they could forecast and control.',
+    insight: 'Most staffing firms sell backwards. They lead with capability when corporate clients care about understanding first. Repositioning the outreach around the client\'s talent problem, not Keen People\'s service, doubled response rates almost immediately.',
   },
 
   'eads-bridge-holdings': {
@@ -83,7 +83,7 @@ export const caseStudies = {
     category: 'Investment & Corporate Development',
     tagline: 'Generating qualified deal flow and partnership conversations for a holding company.',
     context: [
-      'Eads Bridge Holdings is a corporate investment and development firm engaged in strategic acquisitions, joint ventures, and institutional partnership across multiple sectors. Their challenge was not credibility — it was deal flow. The right conversations were not happening fast enough or at the right level.',
+      'Eads Bridge Holdings is a corporate investment and development firm engaged in strategic acquisitions, joint ventures, and institutional partnership across multiple sectors. Their challenge was not credibility, it was deal flow. The right conversations were not happening fast enough or at the right level.',
       'Millionaire Contracts was engaged to build an outreach function that would get Eads Bridge in front of the counterparties that matter: acquisition targets, co-investors, and institutional development partners.',
     ],
     services: ['Sales Strategy', 'Appointment Setting'],
@@ -100,8 +100,8 @@ export const caseStudies = {
       { value: '55%', label: 'Meeting acceptance rate' },
       { value: '4x', label: 'Deal flow improvement' },
     ],
-    outcome: 'Investment firms compete on deal flow. Getting in front of the right counterparties first — before the opportunity is widely known — is the edge. That requires a disciplined outreach function, not networking alone.',
-    insight: 'Corporate development conversations are won or lost before the first meeting. The framing of the initial outreach — why this firm, why now, why this specific person — determines whether the door opens at all.',
+    outcome: 'Investment firms compete on deal flow. Getting in front of the right counterparties first, before the opportunity is widely known, is the edge. That requires a disciplined outreach function, not networking alone.',
+    insight: 'Corporate development conversations are won or lost before the first meeting. The framing of the initial outreach, why this firm, why now, why this specific person, determines whether the door opens at all.',
   },
 
   'sigma-health-technologies': {
@@ -110,7 +110,7 @@ export const caseStudies = {
     tagline: 'Taking a health technology platform from early traction to an active enterprise sales pipeline.',
     context: [
       'Sigma Health Technologies develops software solutions for clinical operations, patient engagement, and health data management. They had strong early adopters and product-market fit signals, but lacked the sales infrastructure to convert that into a scalable enterprise pipeline.',
-      'Millionaire Contracts was engaged to build the go-to-market strategy and provide closing support for enterprise accounts — hospital groups, clinic networks, and health system procurement teams.',
+      'Millionaire Contracts was engaged to build the go-to-market strategy and provide closing support for enterprise accounts, hospital groups, clinic networks, and health system procurement teams.',
     ],
     services: ['Sales Strategy', 'Sales Closing'],
     scope: [
@@ -126,7 +126,7 @@ export const caseStudies = {
       { value: '50%', label: 'Proposal-to-close rate' },
       { value: '40%', label: 'Reduction in average sales cycle' },
     ],
-    outcome: 'Health technology sales is complex — procurement committees, clinical champions, compliance review, IT security assessments. The engagement built a sales process that moves deals through those layers efficiently, without losing momentum at any stage.',
+    outcome: 'Health technology sales is complex, procurement committees, clinical champions, compliance review, IT security assessments. The engagement built a sales process that moves deals through those layers efficiently, without losing momentum at any stage.',
     insight: 'In health tech, the person who approves the budget is rarely the person who feels the problem. The sales strategy that works gets both the clinical champion and the procurement lead aligned before the final conversation.',
   },
 
@@ -135,7 +135,7 @@ export const caseStudies = {
     category: 'Marketing & Growth',
     tagline: 'Installing a managed sales layer for a full-service marketing agency.',
     context: [
-      'Skayle 360 is a full-service marketing and growth agency serving mid-market businesses across multiple verticals. Like most agencies, their own sales function was an afterthought — founders handled new business between client work, creating a feast-or-famine cycle that made planning impossible.',
+      'Skayle 360 is a full-service marketing and growth agency serving mid-market businesses across multiple verticals. Like most agencies, their own sales function was an afterthought, founders handled new business between client work, creating a feast-or-famine cycle that made planning impossible.',
       'Millionaire Contracts was brought in to install a managed sales layer: structure, accountability, and consistent outbound activity that would fill the pipeline without pulling the founders away from delivery.',
     ],
     services: ['Sales Management', 'Appointment Setting'],
@@ -152,7 +152,7 @@ export const caseStudies = {
       { value: '45 days', label: 'Average deal cycle' },
       { value: '3', label: 'Reps managed and performing' },
     ],
-    outcome: 'Marketing agencies that market themselves well are the ones that scale. Skayle\'s pipeline went from reactive and referral-dependent to proactive and forecastable — giving the founders space to grow delivery without worrying about where the next client would come from.',
+    outcome: 'Marketing agencies that market themselves well are the ones that scale. Skayle\'s pipeline went from reactive and referral-dependent to proactive and forecastable, giving the founders space to grow delivery without worrying about where the next client would come from.',
     insight: 'Agency founders are often the best salespeople in the room, which is exactly the problem. When business development depends on the founder\'s availability, the pipeline stalls every time a big project demands their attention.',
   },
 
@@ -161,7 +161,7 @@ export const caseStudies = {
     category: 'Software / SaaS',
     tagline: 'Building the outbound engine that turned product traction into a predictable B2B pipeline.',
     context: [
-      'SaaS Lead Flow had a product that worked — early users were getting results and the NPS scores proved it. What they lacked was a scalable process for converting that evidence into paying customers through outbound. Their lead generation was ad-hoc and their demo-to-paid conversion was untested at volume.',
+      'SaaS Lead Flow had a product that worked, early users were getting results and the NPS scores proved it. What they lacked was a scalable process for converting that evidence into paying customers through outbound. Their lead generation was ad-hoc and their demo-to-paid conversion was untested at volume.',
       'Millionaire Contracts was engaged to define the ICP, build the outbound sequences, and run the appointment setting function that would generate the qualified demo volume needed to stress-test and improve conversion.',
     ],
     services: ['Sales Strategy', 'Appointment Setting'],
@@ -179,7 +179,7 @@ export const caseStudies = {
       { value: '28%', label: 'Reduction in cost per acquisition' },
     ],
     outcome: 'SaaS companies burn cash on product and infrastructure but starve the go-to-market function. A focused appointment setting engine gave SaaS Lead Flow the qualified demo volume needed to learn fast, iterate the conversion process, and build a pipeline they could actually forecast.',
-    insight: 'In B2B SaaS, the demo is not the close — it is the audition. The goal of the outbound function is to fill the calendar with the right people. Everything downstream gets easier from there.',
+    insight: 'In B2B SaaS, the demo is not the close, it is the audition. The goal of the outbound function is to fill the calendar with the right people. Everything downstream gets easier from there.',
   },
 
   'vertigo': {
@@ -187,7 +187,7 @@ export const caseStudies = {
     category: 'Real Estate Investment',
     tagline: 'Opening capital conversations for a real estate investment firm raising its next fund.',
     context: [
-      'Vertigo Real Estate Ventures is an investment firm focused on residential and commercial property acquisition across high-growth markets. Ahead of a new capital raise, they needed a structured way to get in front of qualified investors — family offices, HNW individuals, and private wealth managers — without relying on their existing network alone.',
+      'Vertigo Real Estate Ventures is an investment firm focused on residential and commercial property acquisition across high-growth markets. Ahead of a new capital raise, they needed a structured way to get in front of qualified investors, family offices, HNW individuals, and private wealth managers, without relying on their existing network alone.',
       'Millionaire Contracts was engaged to build and run the investor outreach function: identifying the right targets, crafting the positioning, and booking qualified meetings with people who had the capital and the mandate to participate.',
     ],
     services: ['Appointment Setting', 'Sales Strategy'],
@@ -204,7 +204,7 @@ export const caseStudies = {
       { value: '60%', label: 'Investor engagement rate' },
       { value: '2x', label: 'Target capital conversations vs. prior raise' },
     ],
-    outcome: 'Real estate capital raises live or die on the quality of the investor conversation. The engagement opened relationships that would have taken years to develop through networking alone — and compressed that timeline into a few months of focused, structured outreach.',
+    outcome: 'Real estate capital raises live or die on the quality of the investor conversation. The engagement opened relationships that would have taken years to develop through networking alone, and compressed that timeline into a few months of focused, structured outreach.',
     insight: 'Investor conversations are not sales calls. The tone, the pacing, and the framing are different. Getting that right from the first contact was what made the 60% engagement rate possible.',
   },
 
@@ -213,7 +213,7 @@ export const caseStudies = {
     category: 'AI & Digital Growth',
     tagline: 'Installing a closing and management layer for a fast-moving AI growth agency.',
     context: [
-      'Demand Growth AI is a growth agency specialising in AI-driven marketing and demand generation for mid-market and enterprise clients. They had strong inbound interest and a compelling product, but deals were stalling before they closed — and without a sales management layer, it was hard to know where or why.',
+      'Demand Growth AI is a growth agency specialising in AI-driven marketing and demand generation for mid-market and enterprise clients. They had strong inbound interest and a compelling product, but deals were stalling before they closed, and without a sales management layer, it was hard to know where or why.',
       'Millionaire Contracts was engaged to install a closing discipline and management overlay: a consistent process for moving qualified opportunities from interest to signed contract, with a rep accountability structure to maintain execution.',
     ],
     services: ['Sales Closing', 'Sales Management'],
@@ -231,7 +231,7 @@ export const caseStudies = {
       { value: '30 days', label: 'Time to full sales function ramp' },
     ],
     outcome: 'Growth agencies often have great delivery but leaky pipelines. Installing a closing discipline and management layer transformed Demand Growth AI\'s pipeline from a collection of warm conversations into a structured, moving funnel with a predictable conversion rate.',
-    insight: 'Enterprise buyers for AI services are more skeptical than most. They have heard too many promises. The closing process that works is the one that addresses that skepticism directly and early — not by overselling, but by showing exactly how the outcome is achieved.',
+    insight: 'Enterprise buyers for AI services are more skeptical than most. They have heard too many promises. The closing process that works is the one that addresses that skepticism directly and early, not by overselling, but by showing exactly how the outcome is achieved.',
   },
 
   'highsail-marketing': {
@@ -239,7 +239,7 @@ export const caseStudies = {
     category: 'Marketing Agency',
     tagline: 'Turning a referral-dependent agency into a proactive, outbound-driven business.',
     context: [
-      'HighSail Marketing is a performance marketing agency running campaigns across paid media, SEO, and content for e-commerce and direct-to-consumer brands. Strong delivery reputation — but their pipeline was almost entirely referral-driven, which meant growth was subject to how happy existing clients were, not how good their outreach was.',
+      'HighSail Marketing is a performance marketing agency running campaigns across paid media, SEO, and content for e-commerce and direct-to-consumer brands. Strong delivery reputation, but their pipeline was almost entirely referral-driven, which meant growth was subject to how happy existing clients were, not how good their outreach was.',
       'Millionaire Contracts was engaged to build the outbound infrastructure: ICP definition, outreach sequences, and appointment setting targeting marketing directors and CMOs at brands that fit their sweet spot.',
     ],
     services: ['Appointment Setting', 'Sales Strategy'],
@@ -256,8 +256,8 @@ export const caseStudies = {
       { value: '55%', label: 'Outreach acceptance rate' },
       { value: '90 days', label: 'Payback period on engagement investment' },
     ],
-    outcome: 'Marketing agencies that actively market themselves are the ones that scale. HighSail\'s pipeline went from waiting on referrals to generating qualified conversations on demand — a shift that fundamentally changed how the principals thought about their own growth.',
-    insight: 'Agency outreach fails when it reads like a pitch. The conversations that convert start with a specific observation about the prospect\'s current marketing — something that proves you have done your homework before asking for their time.',
+    outcome: 'Marketing agencies that actively market themselves are the ones that scale. HighSail\'s pipeline went from waiting on referrals to generating qualified conversations on demand, a shift that fundamentally changed how the principals thought about their own growth.',
+    insight: 'Agency outreach fails when it reads like a pitch. The conversations that convert start with a specific observation about the prospect\'s current marketing, something that proves you have done your homework before asking for their time.',
   },
 
   'starbrite-ortho': {
@@ -266,7 +266,7 @@ export const caseStudies = {
     tagline: 'Building referral partnerships and corporate wellness contracts for a specialist ortho practice.',
     context: [
       'Starbrite Ortho is a specialist orthodontics practice with multiple locations. Beyond direct patient acquisition, their growth opportunity lay in two areas: formal referral partnerships with general dental practitioners and pediatricians, and corporate wellness agreements with employers looking to add orthodontic benefits for staff.',
-      'Millionaire Contracts was engaged to build a structured outreach function for both tracks — turning informal referral goodwill into committed referral partners, and opening corporate wellness conversations with HR and benefits managers.',
+      'Millionaire Contracts was engaged to build a structured outreach function for both tracks, turning informal referral goodwill into committed referral partners, and opening corporate wellness conversations with HR and benefits managers.',
     ],
     services: ['Sales Strategy', 'Appointment Setting'],
     scope: [
@@ -283,7 +283,7 @@ export const caseStudies = {
       { value: '65%', label: 'GP partner meeting acceptance rate' },
     ],
     outcome: 'Healthcare practices that build referral networks systematically rather than passively grow faster and more predictably. The engagement gave Starbrite a structured, professional way to build both the professional referral base and the corporate client relationships that drive consistent volume.',
-    insight: 'Most practices handle referral relationships informally. Formalising them — with a clear structure, mutual benefit, and consistent communication — turns a thank-you culture into a business development engine.',
+    insight: 'Most practices handle referral relationships informally. Formalising them, with a clear structure, mutual benefit, and consistent communication, turns a thank-you culture into a business development engine.',
   },
 
   'unified-communications': {
@@ -291,7 +291,7 @@ export const caseStudies = {
     category: 'Telecoms / B2B Technology',
     tagline: 'Winning enterprise contracts in a crowded, price-competitive communications market.',
     context: [
-      'Unified Communications provides managed communication and collaboration solutions to mid-market and enterprise businesses. The market is competitive and price-sensitive — most buyers evaluate on cost first, and the sales challenge is shifting that conversation to value before it becomes a commodity negotiation.',
+      'Unified Communications provides managed communication and collaboration solutions to mid-market and enterprise businesses. The market is competitive and price-sensitive, most buyers evaluate on cost first, and the sales challenge is shifting that conversation to value before it becomes a commodity negotiation.',
       'Millionaire Contracts was engaged to build a sales strategy and provide closing support that could win enterprise contracts on the strength of the solution, not the price.',
     ],
     services: ['Sales Strategy', 'Sales Closing'],
@@ -309,7 +309,7 @@ export const caseStudies = {
       { value: '$500K+', label: 'ARR added in engagement period' },
     ],
     outcome: 'B2B telecoms is a crowded market where most providers fight on price. Winning on value required a sharper sales narrative and closers who could hold the room when procurement tried to reduce the conversation to a cost comparison.',
-    insight: 'The moment a sales conversation becomes about price, you have already lost the positioning war. The strategy that worked kept the conversation anchored on the cost of the problem — which made the solution price irrelevant by comparison.',
+    insight: 'The moment a sales conversation becomes about price, you have already lost the positioning war. The strategy that worked kept the conversation anchored on the cost of the problem, which made the solution price irrelevant by comparison.',
   },
 
   'thutse': {
@@ -317,7 +317,7 @@ export const caseStudies = {
     category: 'Fashion & Lifestyle',
     tagline: 'Opening retail and wholesale partnerships for an emerging lifestyle brand.',
     context: [
-      'Thutsé is an emerging fashion and lifestyle brand with a distinctive aesthetic and a growing direct-to-consumer presence. The next growth stage required moving into wholesale and retail distribution — which meant getting in front of buyers who see hundreds of brand pitches and have limited shelf space to allocate.',
+      'Thutsé is an emerging fashion and lifestyle brand with a distinctive aesthetic and a growing direct-to-consumer presence. The next growth stage required moving into wholesale and retail distribution, which meant getting in front of buyers who see hundreds of brand pitches and have limited shelf space to allocate.',
       'Millionaire Contracts was engaged to build a structured wholesale outreach strategy and run the appointment setting function that would get Thutsé\'s product in front of the right retail buyers and distribution partners.',
     ],
     services: ['Sales Strategy', 'Appointment Setting'],
@@ -334,7 +334,7 @@ export const caseStudies = {
       { value: '50%', label: 'Buyer response rate' },
       { value: '2', label: 'New regional markets entered' },
     ],
-    outcome: 'Fashion brands with great product but no wholesale pipeline rely on trade shows and luck. The engagement gave Thutsé a structured, professional approach to opening buyer relationships — one that could be repeated across new seasons and new markets.',
+    outcome: 'Fashion brands with great product but no wholesale pipeline rely on trade shows and luck. The engagement gave Thutsé a structured, professional approach to opening buyer relationships, one that could be repeated across new seasons and new markets.',
     insight: 'Retail buyers respond to confidence and specificity. A pitch that says "we think you would like our brand" loses to one that says "here is exactly why your customer will buy this and how we support the sell-through." We built the second version.',
   },
 
@@ -343,7 +343,7 @@ export const caseStudies = {
     category: 'Management Consulting',
     tagline: 'Building a proactive business development function for a management consulting firm.',
     context: [
-      'Atlas Management is a management consulting firm advising mid-market and corporate clients on operational transformation, leadership, and strategic growth. Like most consulting practices, their business development was almost entirely relationship-driven — which meant pipeline growth was slow and unpredictable.',
+      'Atlas Management is a management consulting firm advising mid-market and corporate clients on operational transformation, leadership, and strategic growth. Like most consulting practices, their business development was almost entirely relationship-driven, which meant pipeline growth was slow and unpredictable.',
       'Millionaire Contracts was engaged to build an outbound appointment setting strategy that would get Atlas in front of C-suite and transformation leads at target accounts, creating a proactive pipeline alongside the referral base.',
     ],
     services: ['Sales Strategy', 'Appointment Setting'],
@@ -360,8 +360,8 @@ export const caseStudies = {
       { value: '60%', label: 'Executive meeting acceptance rate' },
       { value: '40%', label: 'Reduction in sales cycle length' },
     ],
-    outcome: 'Management consulting is sold through relationships — but relationships have to start somewhere. Building a proactive pipeline of executive conversations fundamentally changed Atlas\'s growth trajectory from reactive to intentional.',
-    insight: 'Consulting buyers do not respond to generic outreach. The conversations that convert begin with a specific, credible observation about the prospect\'s operational situation — not a firm capability brochure dressed up as a cold email.',
+    outcome: 'Management consulting is sold through relationships, but relationships have to start somewhere. Building a proactive pipeline of executive conversations fundamentally changed Atlas\'s growth trajectory from reactive to intentional.',
+    insight: 'Consulting buyers do not respond to generic outreach. The conversations that convert begin with a specific, credible observation about the prospect\'s operational situation, not a firm capability brochure dressed up as a cold email.',
   },
 
   'mclifestyle-fitness': {
@@ -369,7 +369,7 @@ export const caseStudies = {
     category: 'Health & Wellness',
     tagline: 'Building corporate wellness contracts to create recurring B2B revenue for a fitness brand.',
     context: [
-      'McLifestyle Fitness delivers personal training, group fitness, and wellness programming. Like most fitness businesses, their revenue was almost entirely consumer-facing — which made it volatile. Corporate wellness contracts offered a path to recurring, scalable revenue that individual memberships could not.',
+      'McLifestyle Fitness delivers personal training, group fitness, and wellness programming. Like most fitness businesses, their revenue was almost entirely consumer-facing, which made it volatile. Corporate wellness contracts offered a path to recurring, scalable revenue that individual memberships could not.',
       'Millionaire Contracts was engaged to build the B2B strategy and appointment setting function that would get McLifestyle in front of HR directors and benefits managers at companies large enough to commit to a corporate wellness programme.',
     ],
     services: ['Sales Strategy', 'Appointment Setting'],
@@ -387,8 +387,8 @@ export const caseStudies = {
       { value: '35%', label: 'HR decision-maker response rate' },
       { value: '3x', label: 'B2B revenue growth' },
     ],
-    outcome: 'Individual clients have limits — capacity, seasonality, price sensitivity. Corporate contracts provide predictable, recurring revenue that individual memberships never can. The engagement gave McLifestyle a repeatable system for winning and growing those relationships.',
-    insight: 'HR directors do not buy fitness — they buy proof that the programme will be used and that employees will thank them for it. The pitch that won led with utilisation data and employee satisfaction metrics from existing programmes, not class schedules.',
+    outcome: 'Individual clients have limits, capacity, seasonality, price sensitivity. Corporate contracts provide predictable, recurring revenue that individual memberships never can. The engagement gave McLifestyle a repeatable system for winning and growing those relationships.',
+    insight: 'HR directors do not buy fitness, they buy proof that the programme will be used and that employees will thank them for it. The pitch that won led with utilisation data and employee satisfaction metrics from existing programmes, not class schedules.',
   },
 
   'ilawyer-marketing': {
@@ -397,7 +397,7 @@ export const caseStudies = {
     tagline: 'Sales management and closing infrastructure for a specialist legal marketing agency.',
     context: [
       'iLawyer Marketing is a specialist digital marketing agency serving law firms and legal service providers. With a small sales team and a strong service offering, the challenge was converting qualified leads at a reliable rate and managing the team to maintain consistent pipeline activity without founder involvement in every deal.',
-      'Millionaire Contracts was engaged to provide sales management oversight and closing support — giving the team a process, accountability structure, and live assistance on high-value opportunities.',
+      'Millionaire Contracts was engaged to provide sales management oversight and closing support, giving the team a process, accountability structure, and live assistance on high-value opportunities.',
     ],
     services: ['Sales Management', 'Sales Closing'],
     scope: [
@@ -413,8 +413,8 @@ export const caseStudies = {
       { value: '2', label: 'Sales reps managed and performing to target' },
       { value: '25%', label: 'Reduction in average sales cycle' },
     ],
-    outcome: 'Legal marketing agencies serve clients who are cautious by nature — lawyers buy slowly and scrutinise everything. Building a closing process that addressed that cautious buyer profile, while managing a small team to execute it consistently, drove reliable growth without founder dependency.',
-    insight: 'Law firm decision-makers do not respond to urgency. The close that works in this market is the patient one — where every question is answered, every concern is acknowledged, and the final ask feels like the natural conclusion of the conversation, not a push.',
+    outcome: 'Legal marketing agencies serve clients who are cautious by nature, lawyers buy slowly and scrutinise everything. Building a closing process that addressed that cautious buyer profile, while managing a small team to execute it consistently, drove reliable growth without founder dependency.',
+    insight: 'Law firm decision-makers do not respond to urgency. The close that works in this market is the patient one, where every question is answered, every concern is acknowledged, and the final ask feels like the natural conclusion of the conversation, not a push.',
   },
 
   'td-markets': {
@@ -422,7 +422,7 @@ export const caseStudies = {
     category: 'Financial Markets',
     tagline: 'Institutional client acquisition strategy for a financial markets platform.',
     context: [
-      'TD Markets operates a trading and market analytics platform serving institutional and professional trading clients. Growing their institutional user base required getting in front of portfolio managers, proprietary trading desks, and financial technology buyers — a sophisticated audience with low tolerance for weak outreach.',
+      'TD Markets operates a trading and market analytics platform serving institutional and professional trading clients. Growing their institutional user base required getting in front of portfolio managers, proprietary trading desks, and financial technology buyers, a sophisticated audience with low tolerance for weak outreach.',
       'Millionaire Contracts was engaged to build the institutional acquisition strategy and run the appointment setting function that would get TD Markets the right conversations with the right buyers.',
     ],
     services: ['Appointment Setting', 'Sales Strategy'],
@@ -439,8 +439,8 @@ export const caseStudies = {
       { value: '65%', label: 'Meeting success rate' },
       { value: '2x', label: 'Pipeline value from institutional segment' },
     ],
-    outcome: 'Financial market platforms are sold to people with no patience for weak positioning. Getting the right meetings required credibility in the outreach itself — not just the product. The engagement delivered both the meetings and the conversation quality that made them count.',
-    insight: 'Institutional buyers pre-qualify everything before they engage. The outreach that opened doors led with specific, data-aware language that signalled familiarity with how their business actually works — not a generic fintech pitch.',
+    outcome: 'Financial market platforms are sold to people with no patience for weak positioning. Getting the right meetings required credibility in the outreach itself, not just the product. The engagement delivered both the meetings and the conversation quality that made them count.',
+    insight: 'Institutional buyers pre-qualify everything before they engage. The outreach that opened doors led with specific, data-aware language that signalled familiarity with how their business actually works, not a generic fintech pitch.',
   },
 
   'morecorp': {
@@ -448,7 +448,7 @@ export const caseStudies = {
     category: 'Corporate Services',
     tagline: 'Installing a sales management function to take growth beyond what the founder could carry.',
     context: [
-      'Morecorp provides corporate services — compliance, administrative support, and business operations consulting — to SME and mid-market clients. The business had grown steadily on the back of its founder\'s relationships, but had reached the point where informal sales could not scale further without a proper structure behind it.',
+      'Morecorp provides corporate services, compliance, administrative support, and business operations consulting, to SME and mid-market clients. The business had grown steadily on the back of its founder\'s relationships, but had reached the point where informal sales could not scale further without a proper structure behind it.',
       'Millionaire Contracts was engaged to install the sales management infrastructure: KPIs, pipeline process, team accountability, and the ICP clarity needed to focus outbound activity on the right targets.',
     ],
     services: ['Sales Management', 'Sales Strategy'],
@@ -465,8 +465,8 @@ export const caseStudies = {
       { value: '40%', label: 'Improvement in pipeline velocity' },
       { value: '3x', label: 'Forecasting accuracy improvement' },
     ],
-    outcome: 'Founder-led sales is not a strategy — it is a ceiling. Installing a real sales management function, with structure, targets, and coaching, gave Morecorp the foundation to grow beyond what its founder could carry alone and to plan with confidence for the first time.',
-    insight: 'The most common mistake in corporate services sales is treating every prospect the same. Defining who the right client actually is — by industry, size, buying trigger — and focusing activity there exclusively was what unlocked the velocity improvement.',
+    outcome: 'Founder-led sales is not a strategy, it is a ceiling. Installing a real sales management function, with structure, targets, and coaching, gave Morecorp the foundation to grow beyond what its founder could carry alone and to plan with confidence for the first time.',
+    insight: 'The most common mistake in corporate services sales is treating every prospect the same. Defining who the right client actually is, by industry, size, buying trigger, and focusing activity there exclusively was what unlocked the velocity improvement.',
   },
 
   'medellin-health': {
@@ -474,7 +474,7 @@ export const caseStudies = {
     category: 'Health Services',
     tagline: 'Building a referral partner network to drive international health service enquiries.',
     context: [
-      'Medellin Health provides specialist health services including wellness programmes, preventive care, and medical consultations to both local and international patients. Scaling international patient volume required active relationships with the intermediaries who drive those referrals — international insurers, wellness coordinators, and referring physician networks abroad.',
+      'Medellin Health provides specialist health services including wellness programmes, preventive care, and medical consultations to both local and international patients. Scaling international patient volume required active relationships with the intermediaries who drive those referrals, international insurers, wellness coordinators, and referring physician networks abroad.',
       'Millionaire Contracts was engaged to build the outreach strategy and appointment setting function that would systematically develop those referral partner relationships.',
     ],
     services: ['Appointment Setting', 'Sales Strategy'],
@@ -491,8 +491,8 @@ export const caseStudies = {
       { value: '45%', label: 'International inquiry growth' },
       { value: '3', label: 'New international referral networks active' },
     ],
-    outcome: 'Health service businesses serving international patients need more than a great website — they need active relationships with the intermediaries who drive referrals. The engagement built that partner network systematically, replacing opportunistic inbound with a structured, relationship-driven pipeline.',
-    insight: 'International health referrals are built on trust and specificity. Partners refer patients when they know exactly what to expect — the quality of care, the communication back to the referring physician, the patient experience. The outreach that worked led with all three.',
+    outcome: 'Health service businesses serving international patients need more than a great website, they need active relationships with the intermediaries who drive referrals. The engagement built that partner network systematically, replacing opportunistic inbound with a structured, relationship-driven pipeline.',
+    insight: 'International health referrals are built on trust and specificity. Partners refer patients when they know exactly what to expect, the quality of care, the communication back to the referring physician, the patient experience. The outreach that worked led with all three.',
   },
 
   'martino-law': {
@@ -500,7 +500,7 @@ export const caseStudies = {
     category: 'Legal Services',
     tagline: 'Building a proactive business development function for a corporate law firm.',
     context: [
-      'Martino Law Group is a corporate law firm advising businesses on employment law, commercial contracts, and regulatory compliance. Their growth had relied on reputation and word-of-mouth — which is a strong foundation but a slow one. New client relationships were coming in at the pace of referrals, not at the pace of opportunity.',
+      'Martino Law Group is a corporate law firm advising businesses on employment law, commercial contracts, and regulatory compliance. Their growth had relied on reputation and word-of-mouth, which is a strong foundation but a slow one. New client relationships were coming in at the pace of referrals, not at the pace of opportunity.',
       'Millionaire Contracts was engaged to build a business development strategy and appointment setting function that would create a proactive pipeline of corporate client conversations alongside the existing referral base.',
     ],
     services: ['Appointment Setting', 'Sales Strategy'],
@@ -517,7 +517,7 @@ export const caseStudies = {
       { value: '50%', label: 'Referral partner engagement rate' },
       { value: '6 months', label: 'Time from zero pipeline to active funnel' },
     ],
-    outcome: 'Law firms that rely on reputation alone limit their growth to the pace of word-of-mouth. Building a proactive business development function gave Martino Law Group a repeatable way to open new client relationships — without waiting for an introduction.',
-    insight: 'Corporate legal buyers are busy and risk-averse. The outreach that cuts through is the one that demonstrates familiarity with a specific legal challenge they are likely facing right now — not a general "we can help with legal matters" approach.',
+    outcome: 'Law firms that rely on reputation alone limit their growth to the pace of word-of-mouth. Building a proactive business development function gave Martino Law Group a repeatable way to open new client relationships, without waiting for an introduction.',
+    insight: 'Corporate legal buyers are busy and risk-averse. The outreach that cuts through is the one that demonstrates familiarity with a specific legal challenge they are likely facing right now, not a general "we can help with legal matters" approach.',
   },
 }

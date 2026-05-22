@@ -18,13 +18,13 @@ export default function SalesClosing() {
 
           <div className="space-y-5 font-body text-gray-700 text-base leading-relaxed">
             <p>
-              At Millionaire Contracts, we do not just provide advice — we send in the experts to close deals on your behalf. Our Sales Closing service is designed to integrate our highly skilled closers directly into your sales operations, bringing the expertise and execution power needed to turn prospects into paying clients.
+              At Millionaire Contracts, we do not just provide advice, we send in the experts to close deals on your behalf. Our Sales Closing service is designed to integrate our highly skilled closers directly into your sales operations, bringing the expertise and execution power needed to turn prospects into paying clients.
             </p>
             <p>
               Our team specializes in guiding prospects through the final, most crucial stages of the sales cycle. We leverage proven strategies, handle objections with precision, and apply the right pressure at the right moment to convert high-value opportunities into revenue.
             </p>
             <p>
-              By deploying our personnel into your closing operations, we guarantee results, optimizing your sales funnel and driving revenue growth. Our closers become part of your team — aligned to your targets and committed to your outcomes.
+              By deploying our personnel into your closing operations, we guarantee results, optimizing your sales funnel and driving revenue growth. Our closers become part of your team, aligned to your targets and committed to your outcomes.
             </p>
             <p>
               With Millionaire Contracts, you can be confident that your sales opportunities turn into measurable wins, fueling your business's growth.
