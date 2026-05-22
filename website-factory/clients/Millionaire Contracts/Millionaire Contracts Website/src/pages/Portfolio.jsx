@@ -5,58 +5,58 @@ import { portfolioClients } from '../data/portfolio'
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-mc-dark">
       <Navbar />
 
       {/* Hero */}
-      <div className="relative bg-mc-teal py-20 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80)',
-            opacity: 0.3,
-          }}
-        />
-        <div className="relative z-10 text-center px-6">
-          <h2 className="text-4xl font-headline font-bold text-white">Portfolio of Winners!</h2>
+      <div className="bg-mc-dark border-b border-white/10 py-20 px-6">
+        <div className="max-w-screen-xl mx-auto">
+          <span className="section-label mb-3 block">Our Work</span>
+          <h1 className="font-headline text-5xl md:text-6xl font-black text-white leading-tight mb-4">
+            Portfolio of Winners
+          </h1>
+          <p className="font-body text-gray-400 text-lg max-w-xl">
+            Twenty companies. Real engagements. Measurable results.
+          </p>
         </div>
       </div>
 
       {/* Grid */}
-      <section className="bg-white py-14 px-6 flex-grow">
+      <section className="flex-grow py-14 px-6">
         <div className="max-w-screen-xl mx-auto">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {portfolioClients.map((client) => (
-              <div key={client.slug} className="border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                <div className="h-40 bg-gray-100 overflow-hidden">
+              <div
+                key={client.slug}
+                className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-mc-gold/40 transition-all duration-200"
+              >
+                <div className="h-40 bg-mc-teal overflow-hidden">
                   <img
                     src={client.image}
                     alt={client.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                     onError={(e) => {
-                      e.target.src = `https://via.placeholder.com/400x200/132b2f/ffffff?text=${encodeURIComponent(client.name)}`
+                      e.target.parentNode.innerHTML = `<div class="w-full h-full flex items-center justify-center"><span class="font-headline font-bold text-white/30 text-xs text-center px-4">${client.name}</span></div>`
                     }}
                   />
                 </div>
-                <div className="p-4 flex flex-col flex-grow gap-3">
-                  <h3 className="font-portfolio font-semibold text-mc-teal text-sm leading-tight">{client.name}</h3>
-                  <div className="mt-auto">
-                    {client.internal ? (
-                      <Link
-                        to={`/${client.slug}`}
-                        className="block text-center bg-mc-gold text-white text-sm font-headline font-bold py-2 px-4 rounded hover:bg-amber-600 transition-colors"
-                      >
-                        View Case Study
-                      </Link>
-                    ) : (
-                      <Link
-                        to="/contact-us"
-                        className="block text-center bg-mc-gold text-white text-sm font-headline font-bold py-2 px-4 rounded hover:bg-amber-600 transition-colors"
-                      >
-                        Get Started
-                      </Link>
-                    )}
-                  </div>
+                <div className="p-4 flex flex-col gap-3">
+                  <h3 className="font-body font-semibold text-white text-sm leading-tight">{client.name}</h3>
+                  {client.internal ? (
+                    <Link
+                      to={`/${client.slug}`}
+                      className="block text-center bg-mc-gold text-white text-xs font-headline font-bold py-2 px-4 rounded hover:bg-mc-gold-light transition-colors"
+                    >
+                      View Case Study
+                    </Link>
+                  ) : (
+                    <Link
+                      to="/contact-us"
+                      className="block text-center border border-mc-gold text-mc-gold text-xs font-headline font-bold py-2 px-4 rounded hover:bg-mc-gold hover:text-white transition-colors"
+                    >
+                      Get Started
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

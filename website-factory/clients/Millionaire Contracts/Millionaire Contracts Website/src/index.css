@@ -3,47 +3,34 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-body text-gray-900;
+  * {
+    box-sizing: border-box;
   }
-
-  h1, h2, h3, h4, h5, h6 {
+  body {
+    @apply font-body text-gray-900 antialiased;
+  }
+  h1, h2, h3, h4 {
     @apply font-headline;
   }
 }
 
 @layer components {
-  .btn-gold {
-    @apply bg-mc-gold text-white font-headline font-bold px-6 py-3 rounded-lg hover:bg-amber-600 transition-colors duration-200;
+  .btn-primary {
+    @apply inline-block bg-mc-gold text-white font-headline font-bold px-7 py-4 rounded-lg hover:bg-mc-gold-light transition-all duration-200 text-base;
   }
-
-  .btn-gold-outline {
-    @apply border-2 border-mc-gold text-mc-gold font-headline font-bold px-6 py-3 rounded-lg hover:bg-mc-gold hover:text-white transition-colors duration-200;
+  .btn-secondary {
+    @apply inline-block border-2 border-white text-white font-headline font-bold px-7 py-4 rounded-lg hover:bg-white hover:text-mc-teal transition-all duration-200 text-base;
   }
-
-  .service-hero {
-    @apply relative py-24 overflow-hidden;
+  .btn-outline-gold {
+    @apply inline-block border-2 border-mc-gold text-mc-gold font-headline font-bold px-7 py-4 rounded-lg hover:bg-mc-gold hover:text-white transition-all duration-200 text-base;
   }
-
-  .service-hero-bg {
-    @apply absolute inset-0 bg-cover bg-center;
-    background-image: url('https://assets.cdn.filesafe.space/53xa8GNUC7iIG663uQgX/media/64dda8e589a07557f7f46450.jpeg');
-    opacity: 0.3;
+  .section-label {
+    @apply text-xs font-body font-semibold uppercase tracking-[0.2em] text-mc-gold;
   }
-
-  .faq-item {
-    @apply rounded-lg overflow-hidden mb-3;
+  .stat-number {
+    @apply font-headline text-5xl font-black text-mc-gold leading-none;
   }
-
-  .faq-question {
-    @apply w-full text-left p-4 font-body font-semibold text-gray-900 bg-white flex justify-between items-center;
-  }
-
-  .faq-question.open {
-    @apply bg-mc-teal text-white;
-  }
-
-  .faq-answer {
-    @apply bg-white p-4 font-body text-gray-700 border-t border-gray-100;
+  .stat-label {
+    @apply font-body text-sm text-gray-400 mt-1 leading-snug;
   }
 }

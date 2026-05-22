@@ -4,55 +4,15 @@ import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 
 const LOGO = 'https://assets.cdn.filesafe.space/A8PmgiSa8bKb0J1mBeLF/media/66fe6791c6d28935508f7ce5.png'
-const TEAM_IMG = 'https://images.pexels.com/photos/7876502/pexels-photo-7876502.jpeg'
 
-const services = [
-  {
-    title: 'Sales Strategy Development',
-    to: '/sales-strategy-development',
-    desc: 'We craft winning, data-driven sales strategies tailored to your market, your team, and your growth targets.',
-  },
-  {
-    title: 'Sales Management',
-    to: '/sales-management',
-    desc: 'End-to-end management of your sales operation — structured, optimized, and relentlessly executed.',
-  },
-  {
-    title: 'Sales Closing',
-    to: '/sales-closing',
-    desc: 'We deploy expert closers directly into your pipeline to seal deals and drive measurable revenue growth.',
-  },
-  {
-    title: 'Appointment Setting',
-    to: '/appointment-setting',
-    desc: 'High-quality, pre-qualified appointments delivered consistently so your team focuses on closing.',
-  },
+const stats = [
+  { value: '65%', label: 'Meeting success rate' },
+  { value: '20+', label: 'Companies scaled' },
+  { value: '3x', label: 'Average pipeline growth' },
+  { value: '8+', label: 'Strategic partnerships closed' },
 ]
 
-const testimonials = [
-  {
-    quote: 'Millionaire Contracts transformed our entire sales operation. Their strategic approach gave us the structure and pipeline discipline we were missing. The results have been outstanding.',
-    name: 'Dallen S.',
-    company: 'Eads Bridge Holdings',
-  },
-  {
-    quote: 'The appointment setting service exceeded every expectation. They delivered qualified leads consistently and their team integrated seamlessly with ours from day one.',
-    name: 'Alex M.',
-    company: 'MTN Zambia',
-  },
-  {
-    quote: 'Working with Millionaire Contracts on our private equity outreach was a game-changing decision. Their closing team drove a 65% meeting success rate across targeted investor accounts.',
-    name: 'Jamil V.',
-    company: 'BaseHome Capital',
-  },
-  {
-    quote: 'From strategy to execution, the Millionaire Contracts team delivered a level of sales intelligence we had not experienced before. They truly operate like an extension of our business.',
-    name: 'Haroon I.',
-    company: 'Sigma Health Technologies',
-  },
-]
-
-const partners = [
+const partnerLogos = [
   { name: 'MTN Zambia', image: 'https://assets.cdn.filesafe.space/A8PmgiSa8bKb0J1mBeLF/media/69538090e889d355d2fbdd82.jpg' },
   { name: 'BaseHome Capital', image: 'https://assets.cdn.filesafe.space/A8PmgiSa8bKb0J1mBeLF/media/6953809073a5e015a8b56b76.png' },
   { name: 'Eads Bridge Holdings', image: 'https://assets.cdn.filesafe.space/A8PmgiSa8bKb0J1mBeLF/media/69538090e2519585d9da3509.webp' },
@@ -60,109 +20,298 @@ const partners = [
   { name: 'Keen People', image: 'https://assets.cdn.filesafe.space/A8PmgiSa8bKb0J1mBeLF/media/69538090a61a7eda49cbfd75.png' },
 ]
 
+const painPoints = [
+  { heading: 'Your reps are busy but revenue is flat', body: 'Activity without a system produces noise, not results. Effort alone does not close enterprise deals.' },
+  { heading: 'You built a team but not a process', body: 'Hiring salespeople without sales infrastructure is like buying cars with no roads. Speed without direction.' },
+  { heading: 'You are losing deals you should be winning', body: 'The best product does not always win. The best-sold product does. Objection handling and closing discipline decide the outcome.' },
+  { heading: 'Outreach is inconsistent', body: 'Without a repeatable appointment-setting engine, your pipeline depends on who showed up energized this week.' },
+]
+
+const comparison = [
+  { label: 'Time to first results', inhouse: '6–12 months', mc: '30 days' },
+  { label: 'Monthly cost', inhouse: '$15k+ per rep (salary + benefits)', mc: 'Performance-aligned engagement' },
+  { label: 'Management overhead', inhouse: 'You hire, train, manage, retain', mc: 'Done for you — end to end' },
+  { label: 'Ramp time', inhouse: '3–6 months before they produce', mc: 'Operational from day one' },
+  { label: 'Results guarantee', inhouse: 'None', mc: 'Results-driven structure' },
+  { label: 'Expertise level', inhouse: 'Depends on who you can afford to hire', mc: 'Senior closers and strategists immediately' },
+]
+
+const services = [
+  {
+    title: 'Sales Strategy Development',
+    outcome: 'A market-specific playbook your team can execute immediately.',
+    to: '/sales-strategy-development',
+    icon: '◎',
+  },
+  {
+    title: 'Sales Management',
+    outcome: 'End-to-end management of your sales function, fully handled.',
+    to: '/sales-management',
+    icon: '◈',
+  },
+  {
+    title: 'Sales Closing',
+    outcome: 'Expert closers deployed into your pipeline to convert opportunities.',
+    to: '/sales-closing',
+    icon: '◆',
+  },
+  {
+    title: 'Appointment Setting',
+    outcome: 'A steady stream of pre-qualified meetings with decision-makers.',
+    to: '/appointment-setting',
+    icon: '◇',
+  },
+]
+
+const caseResults = [
+  { client: 'KPG / MTN Zambia', metric: '12+', label: 'Enterprise deals closed', slug: '/kpg-mtn' },
+  { client: 'BaseHome Capital', metric: '65%', label: 'Meeting success rate', slug: '/basehome-capital' },
+  { client: 'Sigma Health Technologies', metric: '3x', label: 'Pipeline growth', slug: '/portfolio' },
+  { client: 'Eads Bridge Holdings', metric: '100%', label: 'Client satisfaction', slug: '/portfolio' },
+]
+
+const testimonials = [
+  {
+    quote: 'Millionaire Contracts transformed our entire sales operation. Their strategic approach gave us the structure and pipeline discipline we were missing. The results have been outstanding.',
+    name: 'Dallen S.',
+    company: 'Eads Bridge Holdings',
+    initials: 'DS',
+  },
+  {
+    quote: 'The appointment setting service exceeded every expectation. They delivered qualified leads consistently and their team integrated seamlessly with ours from day one.',
+    name: 'Alex M.',
+    company: 'MTN Zambia',
+    initials: 'AM',
+  },
+  {
+    quote: 'Working with Millionaire Contracts on our private equity outreach was a decision that paid off immediately. Their closing team drove a 65% meeting success rate across targeted investor accounts.',
+    name: 'Jamil V.',
+    company: 'BaseHome Capital',
+    initials: 'JV',
+  },
+  {
+    quote: 'From strategy to execution, the Millionaire Contracts team delivered a level of sales intelligence we had not experienced before. They operate like an extension of our business.',
+    name: 'Haroon I.',
+    company: 'Sigma Health Technologies',
+    initials: 'HI',
+  },
+]
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Hero */}
-      <section className="bg-mc-teal text-white py-28 px-6 text-center">
-        <p className="font-headline text-mc-gold text-lg font-semibold tracking-widest uppercase mb-3">WELCOME!</p>
-        <h1 className="font-headline text-5xl md:text-6xl font-bold text-white mb-6">We are Millionaire Contracts</h1>
-        <p className="font-body text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-          We engineer high-performance sales operations that convert conversations into decisions, and demand into revenue.
-        </p>
-        <Link to="/contact-us" className="btn-gold text-base px-8 py-4">
-          Reach Out to Us
-        </Link>
-      </section>
+      {/* ── HERO ── */}
+      <section className="bg-mc-dark relative overflow-hidden">
+        {/* subtle grid overlay */}
+        <div className="absolute inset-0 opacity-[0.04]"
+          style={{ backgroundImage: 'linear-gradient(#d8920e 1px, transparent 1px), linear-gradient(90deg, #d8920e 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-      {/* Trusted Partners */}
-      <section className="bg-white py-14 px-6">
-        <div className="max-w-screen-xl mx-auto text-center">
-          <h2 className="font-headline text-2xl font-bold text-mc-teal mb-8">Trusted Partners</h2>
-          <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
-            {partners.map((p) => (
-              <div key={p.name} className="flex items-center justify-center">
-                <img
-                  src={p.image}
-                  alt={p.name}
-                  className="h-16 w-24 object-contain grayscale hover:grayscale-0 transition-all"
-                  onError={(e) => {
-                    e.target.style.display = 'none'
-                    e.target.nextSibling.style.display = 'block'
-                  }}
-                />
-                <span className="hidden text-sm font-body font-semibold text-gray-500">{p.name}</span>
+        <div className="relative z-10 max-w-screen-xl mx-auto px-6 py-24 md:py-32">
+          <div className="max-w-3xl">
+            <span className="section-label mb-4 block">Africa's Sales Agency</span>
+            <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6">
+              We Build Sales Operations<br />
+              <span className="text-mc-gold">That Win.</span>
+            </h1>
+            <p className="font-body text-gray-400 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
+              Strategy, management, closing, and appointment setting — fully deployed into your business so your pipeline never stops producing.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/calender" className="btn-primary">Schedule a Call</Link>
+              <Link to="/portfolio" className="btn-secondary">View Our Work</Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats bar */}
+        <div className="relative z-10 border-t border-white/10">
+          <div className="max-w-screen-xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <div className="stat-number">{s.value}</div>
+                <div className="stat-label">{s.label}</div>
               </div>
             ))}
           </div>
-          <Link to="/portfolio" className="btn-gold-outline">See Our Portfolio Here</Link>
         </div>
       </section>
 
-      {/* About */}
-      <section className="bg-mc-cream py-16 px-6">
-        <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="font-headline text-3xl font-bold text-mc-teal mb-4">About Millionaire Contracts</h2>
-            <p className="font-body text-gray-700 mb-4">
-              Millionaire Contracts was built out of necessity. We saw businesses with real potential held back by broken sales processes, poorly trained teams, and strategies that had no teeth. We stepped in to fix it.
-            </p>
-            <p className="font-body text-gray-700 mb-6">
-              Today we partner with ambitious organizations across Africa and beyond to build sales operations that perform under pressure. We are not consultants who hand you a report and leave. We work inside your business until the results are real.
-            </p>
-            <ul className="space-y-3">
-              {['Strategic Insights', 'Operational Efficiency', 'Organizational Development'].map((item) => (
-                <li key={item} className="flex items-center gap-3 font-body font-semibold text-mc-teal">
-                  <span className="w-2 h-2 rounded-full bg-mc-gold flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-xl overflow-hidden shadow-lg">
-            <img src={TEAM_IMG} alt="Millionaire Contracts team" className="w-full h-72 object-cover" />
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="bg-white py-16 px-6">
+      {/* ── TRUSTED BY ── */}
+      <section className="bg-white border-b border-gray-100 py-12 px-6">
         <div className="max-w-screen-xl mx-auto">
-          <h2 className="font-headline text-3xl font-bold text-mc-teal text-center mb-10">Our Services</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s) => (
+          <p className="font-body text-xs uppercase tracking-widest text-gray-400 text-center mb-8">
+            Trusted by ambitious companies
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-10">
+            {partnerLogos.map((p) => (
+              <img
+                key={p.name}
+                src={p.image}
+                alt={p.name}
+                className="h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                onError={(e) => { e.target.style.display = 'none' }}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PROBLEM / AGITATE ── */}
+      <section className="bg-mc-teal py-20 px-6">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="max-w-2xl mb-14">
+            <span className="section-label mb-3 block">The Real Problem</span>
+            <h2 className="font-headline text-4xl md:text-5xl font-black text-white leading-tight">
+              Most companies don't have a sales problem.<br />
+              <span className="text-mc-gold">They have a systems problem.</span>
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {painPoints.map((p) => (
+              <div key={p.heading} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-mc-gold/40 transition-colors">
+                <div className="w-1.5 h-8 bg-mc-gold rounded-full mb-4" />
+                <h3 className="font-headline font-bold text-white text-lg mb-2">{p.heading}</h3>
+                <p className="font-body text-gray-400 text-sm leading-relaxed">{p.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── BUILD VS BUY ── */}
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="section-label mb-3 block">Build vs. Buy</span>
+            <h2 className="font-headline text-4xl md:text-5xl font-black text-mc-teal leading-tight">
+              Why companies choose us over building in-house
+            </h2>
+          </div>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+            <table className="w-full min-w-[600px]">
+              <thead>
+                <tr>
+                  <th className="text-left px-6 py-4 font-body font-semibold text-gray-500 text-sm bg-gray-50 w-1/3">Capability</th>
+                  <th className="text-left px-6 py-4 font-body font-semibold text-gray-400 text-sm bg-gray-50">In-house sales team</th>
+                  <th className="text-left px-6 py-4 font-headline font-bold text-mc-teal text-sm bg-mc-gold/10">Millionaire Contracts</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparison.map((row, i) => (
+                  <tr key={row.label} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
+                    <td className="px-6 py-4 font-body font-semibold text-mc-teal text-sm">{row.label}</td>
+                    <td className="px-6 py-4 font-body text-gray-500 text-sm">{row.inhouse}</td>
+                    <td className="px-6 py-4 font-body font-semibold text-mc-teal text-sm bg-mc-gold/5">
+                      <span className="flex items-center gap-2">
+                        <span className="text-mc-gold font-bold">✓</span>
+                        {row.mc}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SERVICES ── */}
+      <section className="bg-mc-dark py-20 px-6">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="max-w-xl mb-14">
+            <span className="section-label mb-3 block">What We Do</span>
+            <h2 className="font-headline text-4xl md:text-5xl font-black text-white leading-tight">
+              Four ways we grow your revenue
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {services.map((s, i) => (
               <Link
                 key={s.to}
                 to={s.to}
-                className="bg-mc-gold rounded-xl p-6 text-white hover:bg-amber-600 transition-colors flex flex-col gap-3"
+                className="group bg-white/5 border border-white/10 rounded-xl p-6 hover:border-mc-gold/60 hover:bg-white/8 transition-all duration-200 flex flex-col gap-4"
               >
-                <h3 className="font-headline font-bold text-lg leading-tight">{s.title}</h3>
-                <p className="font-body text-sm text-amber-50 flex-grow">{s.desc}</p>
-                <span className="font-body font-bold text-sm underline">Learn more</span>
+                <span className="text-mc-gold text-2xl">{s.icon}</span>
+                <div>
+                  <h3 className="font-headline font-bold text-white text-base mb-2 group-hover:text-mc-gold transition-colors">{s.title}</h3>
+                  <p className="font-body text-gray-400 text-sm leading-relaxed">{s.outcome}</p>
+                </div>
+                <span className="font-body text-xs text-mc-gold mt-auto flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Learn more <span>→</span>
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="bg-mc-teal py-16 px-6">
+      {/* ── CASE STUDY RESULTS ── */}
+      <section className="bg-mc-teal-light py-20 px-6">
         <div className="max-w-screen-xl mx-auto">
-          <h2 className="font-headline text-3xl font-bold text-white text-center mb-10">What Our Clients Say</h2>
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="section-label mb-3 block">Proven Results</span>
+            <h2 className="font-headline text-4xl md:text-5xl font-black text-white leading-tight">
+              Numbers from real engagements
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {caseResults.map((r) => (
+              <Link
+                key={r.client}
+                to={r.slug}
+                className="group bg-mc-dark/60 border border-white/10 rounded-xl p-6 hover:border-mc-gold/40 transition-all text-center"
+              >
+                <div className="font-headline text-5xl font-black text-mc-gold mb-2">{r.metric}</div>
+                <div className="font-body text-sm text-gray-300 mb-1">{r.label}</div>
+                <div className="font-body text-xs text-gray-500">{r.client}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ── */}
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="text-center max-w-xl mx-auto mb-14">
+            <span className="section-label mb-3 block">Client Feedback</span>
+            <h2 className="font-headline text-4xl font-black text-mc-teal leading-tight">
+              What our clients say
+            </h2>
+          </div>
           <div className="grid sm:grid-cols-2 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 flex flex-col gap-4">
-                <p className="font-body text-gray-700 text-sm leading-relaxed italic">"{t.quote}"</p>
-                <div>
-                  <p className="font-body font-bold text-mc-teal">{t.name}</p>
-                  <p className="font-body text-gray-500 text-sm">{t.company}</p>
+            {testimonials.map((t) => (
+              <div key={t.name} className="border border-gray-200 rounded-xl p-7 flex flex-col gap-4 hover:border-mc-gold/40 hover:shadow-md transition-all">
+                <div className="text-mc-gold text-3xl font-headline font-black leading-none">"</div>
+                <p className="font-body text-gray-700 text-sm leading-relaxed flex-grow">{t.quote}</p>
+                <div className="flex items-center gap-3 pt-2 border-t border-gray-100">
+                  <div className="w-9 h-9 rounded-full bg-mc-teal flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                    {t.initials}
+                  </div>
+                  <div>
+                    <div className="font-body font-semibold text-mc-teal text-sm">{t.name}</div>
+                    <div className="font-body text-gray-400 text-xs">{t.company}</div>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ── CTA STRIP ── */}
+      <section className="bg-mc-gold py-16 px-6 text-center">
+        <h2 className="font-headline text-4xl md:text-5xl font-black text-white mb-4 leading-tight">
+          Ready to build a sales operation<br className="hidden md:block" /> that actually delivers?
+        </h2>
+        <p className="font-body text-amber-100 text-lg mb-8 max-w-lg mx-auto">
+          One call is enough to show you where your revenue is leaking and how we fix it.
+        </p>
+        <Link to="/calender" className="inline-block bg-white text-mc-teal font-headline font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-base">
+          Book Your Free Strategy Call
+        </Link>
       </section>
 
       <FAQ />

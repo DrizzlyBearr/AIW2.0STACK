@@ -5,40 +5,37 @@ function FAQItem({ item }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="faq-item">
+    <div className={`rounded-lg overflow-hidden border transition-colors ${open ? 'border-mc-gold/40' : 'border-white/10'}`}>
       <button
-        className={`faq-question ${open ? 'open' : ''}`}
+        className="w-full text-left px-5 py-4 flex justify-between items-center gap-4"
         onClick={() => setOpen(!open)}
       >
-        <span>{item.question}</span>
-        <svg
-          className={`w-5 h-5 flex-shrink-0 transition-transform ${open ? 'rotate-180' : ''}`}
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-        </svg>
+        <span className="font-body font-semibold text-sm text-white leading-snug">{item.question}</span>
+        <span className={`text-mc-gold text-lg flex-shrink-0 transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>+</span>
       </button>
-      {open && <div className="faq-answer">{item.answer}</div>}
+      {open && (
+        <div className="px-5 pb-5 font-body text-sm text-gray-400 leading-relaxed border-t border-white/10 pt-4">
+          {item.answer}
+        </div>
+      )}
     </div>
   )
 }
 
 export default function FAQ() {
   return (
-    <section className="bg-mc-gold py-12">
-      <div className="max-w-screen-xl mx-auto px-6">
-        <h2 className="text-3xl font-headline font-bold text-white text-center mb-8">FAQS</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="flex flex-col gap-0">
-            {faqLeft.map((item) => (
-              <FAQItem key={item.id} item={item} />
-            ))}
+    <section className="bg-mc-dark py-20 px-6">
+      <div className="max-w-screen-xl mx-auto">
+        <div className="text-center max-w-xl mx-auto mb-12">
+          <span className="section-label mb-3 block">FAQ</span>
+          <h2 className="font-headline text-4xl font-black text-white">Common questions</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="flex flex-col gap-3">
+            {faqLeft.map((item) => <FAQItem key={item.id} item={item} />)}
           </div>
-          <div className="flex flex-col gap-0">
-            {faqRight.map((item) => (
-              <FAQItem key={item.id} item={item} />
-            ))}
+          <div className="flex flex-col gap-3">
+            {faqRight.map((item) => <FAQItem key={item.id} item={item} />)}
           </div>
         </div>
       </div>
