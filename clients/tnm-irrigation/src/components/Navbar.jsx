@@ -31,8 +31,8 @@ export default function Navbar() {
             {scrolled ? (
               <img src="/logo.jpeg" alt="TNM Irrigation Projects" className="h-10 w-auto" />
             ) : (
-              <div className="flex items-center gap-2">
-                <img src="/logo.jpeg" alt="TNM Irrigation Projects" className="h-10 w-auto rounded-md" style={{ filter: 'brightness(0) invert(1)' }} />
+              <div className="bg-white rounded-lg p-1 inline-flex">
+                <img src="/logo.jpeg" alt="TNM Irrigation Projects" className="h-8 w-auto" />
               </div>
             )}
           </a>

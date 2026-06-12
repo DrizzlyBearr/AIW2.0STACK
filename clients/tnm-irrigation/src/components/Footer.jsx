@@ -23,7 +23,9 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img src="/logo.jpeg" alt="TNM Irrigation Projects" className="h-10 w-auto mb-4 rounded" style={{ filter: 'brightness(0) invert(1)' }} />
+            <div className="bg-white rounded-lg p-1.5 inline-flex mb-4">
+              <img src="/logo.jpeg" alt="TNM Irrigation Projects" className="h-9 w-auto" />
+            </div>
             <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Professional irrigation design, installation, and maintenance for residential and commercial properties. We also handle plumbing.
             </p>

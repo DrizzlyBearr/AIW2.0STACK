@@ -46,13 +46,14 @@ export default function Hero() {
           {/* Copy */}
           <div>
             {/* Logo on dark hero */}
-            <div className="mb-8">
-              <img
-                src="/logo.jpeg"
-                alt="TNM Irrigation Projects"
-                className="h-14 w-auto rounded-lg"
-                style={{ filter: 'brightness(0) invert(1)' }}
-              />
+            <div className="mb-8 inline-flex">
+              <div className="bg-white rounded-xl p-2 inline-flex">
+                <img
+                  src="/logo.jpeg"
+                  alt="TNM Irrigation Projects"
+                  className="h-12 w-auto"
+                />
+              </div>
             </div>
 
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
