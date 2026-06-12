@@ -3,62 +3,56 @@ import { MapPin } from 'lucide-react'
 
 const projects = [
   {
-    title: 'Residential Garden Drip System',
+    title: 'Residential Lawn Sprinkler System',
     category: 'Residential',
-    location: 'Pretoria',
-    size: '1 200 m2',
-    description: 'Full drip irrigation installation for a large residential property. Automated controller, rain sensor, and zoned scheduling for lawn, flower beds, and vegetable garden.',
-    gradient: 'linear-gradient(135deg, #0F4848, #2E9D9D)',
-    emoji: '🏡',
+    location: 'Cape Town',
+    description: 'Full pop-up sprinkler system across a large residential garden. Multiple zones covering the lawn and flower beds with even distribution and zero dry patches.',
+    image: '/projects/lawn-sprinklers-wide.jpg',
+    alt: 'Residential lawn with pop-up sprinklers running across garden beds',
   },
   {
-    title: 'Commercial Office Park Irrigation',
-    category: 'Commercial',
-    location: 'Johannesburg',
-    size: '8 500 m2',
-    description: 'Multi-zone sprinkler system for a corporate campus. Pop-up rotary heads, centralised smart controller, and monthly service contract.',
-    gradient: 'linear-gradient(135deg, #2A334D, #566280)',
-    emoji: '🏢',
+    title: 'Pump & Tank System Installation',
+    category: 'Pump Systems',
+    location: 'Cape Town',
+    description: 'Complete pump control system with pressure tank, storage tanks, and automated pump controller. Full pipe manifold, isolation valves, and pressure regulation installed.',
+    image: '/projects/pump-system.jpg',
+    alt: 'Pump control unit with water storage tanks and pipe manifold',
   },
   {
-    title: 'Agricultural Orchard System',
-    category: 'Agricultural',
-    location: 'Mpumalanga',
-    size: '5 ha',
-    description: 'Drip tape and micro-jet system across a 5-hectare fruit orchard. Borehole source, filtration bank, and fertigation capability.',
-    gradient: 'linear-gradient(135deg, #1A7070, #45BFBF)',
-    emoji: '🌳',
+    title: 'Smart Timer Controller Install',
+    category: 'Smart Controls',
+    location: 'Cape Town',
+    description: 'Valticino digital timer fitted to an existing outdoor tap. Automated scheduling with programmable run times — no manual watering needed.',
+    image: '/projects/smart-timer.jpg',
+    alt: 'Valticino digital water timer mounted on outdoor brass tap',
   },
   {
-    title: 'Sports Field Sprinkler System',
-    category: 'Sports',
-    location: 'Limpopo',
-    size: '7 200 m2',
-    description: 'Full-coverage underground pop-up system for a community football field. Designed for uniform distribution and quick dry-down.',
-    gradient: 'linear-gradient(135deg, #0F4848, #566280)',
-    emoji: '⚽',
+    title: 'Garden Bed Sprinkler Zone',
+    category: 'Residential',
+    location: 'Cape Town',
+    description: 'Dedicated sprinkler zone for an established garden bed border. Pop-up heads positioned for precise coverage of plants without over-spraying the path.',
+    image: '/projects/sprinkler-closeup.jpg',
+    alt: 'Close-up of pop-up sprinkler head irrigating a garden bed',
   },
   {
-    title: 'School Grounds Irrigation',
-    category: 'Institutional',
-    location: 'Tshwane',
-    size: '3 400 m2',
-    description: 'Timed drip and sprinkler system for school grounds and food garden. Integrated with municipal water supply and overflow tank.',
-    gradient: 'linear-gradient(135deg, #2A334D, #2E9D9D)',
-    emoji: '🏫',
+    title: 'Front Garden Irrigation',
+    category: 'Residential',
+    location: 'Cape Town',
+    description: 'Front garden and verge irrigation system with full lawn and border coverage. Even spray pattern across the full width of the property down to the street edge.',
+    image: '/projects/lawn-sprinklers-street.jpg',
+    alt: 'Sprinkler system running across front garden down to street edge',
   },
   {
-    title: 'Wine Estate Vineyard Drip',
-    category: 'Agricultural',
-    location: 'Limpopo',
-    size: '12 ha',
-    description: 'Precision drip irrigation for a 12-hectare vineyard. Row-by-row zoning, soil moisture sensors, and fertigation manifold.',
-    gradient: 'linear-gradient(135deg, #1A2035, #3D4A6B)',
-    emoji: '🍇',
+    title: 'Your Project Here',
+    category: 'Enquire',
+    location: 'Cape Town',
+    description: 'We take on residential, commercial, and agricultural irrigation projects across Cape Town. Get in touch and tell us what you need.',
+    image: null,
+    alt: '',
   },
 ]
 
-const categories = ['All', 'Residential', 'Commercial', 'Agricultural', 'Sports', 'Institutional']
+const categories = ['All', 'Residential', 'Pump Systems', 'Smart Controls']
 
 export default function Projects() {
   const [active, setActive] = useState('All')
@@ -69,9 +63,9 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="section-label mb-3">Our Work</p>
-          <h2 className="section-title mb-4">Projects We Are Proud Of</h2>
+          <h2 className="section-title mb-4">Real Projects. Real Results.</h2>
           <p className="text-gray-500 max-w-xl mx-auto text-lg">
-            Every project is different. Every solution is custom. Here is a sample of work across residential, commercial, and agricultural sectors.
+            Every photo below is a completed TNM installation. Cape Town homes and properties, properly watered.
           </p>
         </div>
 
@@ -97,31 +91,47 @@ export default function Projects() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((p) => (
             <div key={p.title} className="card overflow-hidden group">
-              <div
-                className="h-44 flex items-center justify-center relative overflow-hidden"
-                style={{ background: p.gradient }}
-              >
-                <span className="text-6xl opacity-60">{p.emoji}</span>
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
-                <span className="absolute top-3 left-3 text-white text-xs font-semibold px-2.5 py-1 rounded-full" style={{ backgroundColor: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)' }}>
+              {/* Image or CTA placeholder */}
+              <div className="h-56 overflow-hidden relative">
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={p.alt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div
+                    className="w-full h-full flex flex-col items-center justify-center"
+                    style={{ background: 'linear-gradient(135deg, #0F4848, #2E9D9D)' }}
+                  >
+                    <span className="text-5xl mb-2">📸</span>
+                    <span className="text-white/70 text-sm">Your project photo</span>
+                  </div>
+                )}
+                <span
+                  className="absolute top-3 left-3 text-white text-xs font-semibold px-2.5 py-1 rounded-full"
+                  style={{ backgroundColor: 'rgba(15,72,72,0.75)', backdropFilter: 'blur(4px)' }}
+                >
                   {p.category}
                 </span>
               </div>
+
               <div className="p-6">
                 <div className="flex items-center gap-1.5 text-gray-400 text-xs mb-2">
                   <MapPin className="w-3.5 h-3.5" />
-                  {p.location} &bull; {p.size}
+                  {p.location}
                 </div>
                 <h3 className="font-display font-bold text-lg mb-2" style={{ color: '#2A334D' }}>{p.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{p.description}</p>
+                {!p.image && (
+                  <a href="#contact" className="mt-4 inline-block text-sm font-semibold" style={{ color: '#45BFBF' }}>
+                    Get a quote &rarr;
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
-
-        <p className="text-center text-gray-400 text-sm mt-10">
-          Photos available on request. Contact us for a portfolio walk-through.
-        </p>
       </div>
     </section>
   )
