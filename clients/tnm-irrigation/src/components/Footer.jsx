@@ -8,12 +8,11 @@ const navLinks = [
 ]
 
 const serviceLinks = [
-  'Drip Irrigation',
-  'Sprinkler Systems',
-  'Borehole & Pump',
-  'Plumbing Services',
-  'Maintenance',
-  'Irrigation Design',
+  'Irrigation Installation',
+  'Irrigation Management',
+  'Landscaping',
+  'Painting',
+  'Paving',
 ]
 
 export default function Footer() {
@@ -27,7 +26,7 @@ export default function Footer() {
               <img src="/logo.jpeg" alt="TNM Irrigation Projects" className="h-9 w-auto" />
             </div>
             <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Professional irrigation design, installation, and maintenance for residential and commercial properties. We also handle plumbing.
+              Professional irrigation installation and management for residential and commercial properties. We also cover landscaping, paving, and painting.
             </p>
             <div className="flex gap-3">
               {[Facebook, Instagram].map((Icon, i) => (

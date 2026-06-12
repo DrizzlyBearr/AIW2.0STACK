@@ -3,8 +3,8 @@ import { Shield, Clock, Award, Users, Leaf, HeadphonesIcon } from 'lucide-react'
 const reasons = [
   {
     icon: Award,
-    title: 'Licensed Professionals',
-    body: 'Every installation is carried out by trained, licensed irrigation technicians. We follow best practice standards on every project, no shortcuts.',
+    title: 'Quality Workmanship',
+    body: 'Every installation is carried out with care and precision. We follow best practice on every project — no shortcuts, no comebacks.',
   },
   {
     icon: Shield,

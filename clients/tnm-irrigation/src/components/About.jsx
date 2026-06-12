@@ -5,7 +5,7 @@ const milestones = [
   { year: '2016', event: 'First commercial project: Office park, Johannesburg' },
   { year: '2019', event: 'Expanded into agricultural irrigation' },
   { year: '2022', event: '500th project completed' },
-  { year: '2024', event: 'Smart controller & plumbing services added' },
+  { year: '2024', event: 'Expanded into landscaping, paving, and painting' },
 ]
 
 const values = [
@@ -27,7 +27,7 @@ export default function About() {
             <h2 className="section-title mb-6">A Decade of Irrigation Excellence</h2>
 
             <p className="text-gray-500 text-lg leading-relaxed mb-6">
-              TNM Irrigation Projects was founded by Trymore Nyamupfukudza with a single aim: to bring professional-grade irrigation and plumbing services to properties of every size. Starting with residential garden systems, the business grew steadily by doing clean work and standing behind it.
+              TNM Irrigation Projects was founded by Trymore Nyamupfukudza with a single aim: to bring professional-grade irrigation services to properties of every size. Starting with residential garden systems, the business grew steadily by doing clean work and standing behind it.
             </p>
             <p className="text-gray-500 text-lg leading-relaxed mb-8">
               Today we work across domestic and commercial sectors, covering everything from small garden drip systems to large-scale commercial installations. Every project is built to the same standard: the right system, properly installed, properly maintained, at a fair price.

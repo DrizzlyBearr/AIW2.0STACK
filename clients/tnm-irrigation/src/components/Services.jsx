@@ -1,47 +1,40 @@
-import { Droplets, Sprout, Wrench, Gauge, Map, PipetteIcon } from 'lucide-react'
+import { Droplets, Sprout, PaintBucket, Shovel } from 'lucide-react'
 
 const services = [
   {
     icon: Droplets,
-    title: 'Drip Irrigation Systems',
+    title: 'Irrigation Installation',
     description:
-      'Precision water delivery direct to plant roots. Ideal for gardens, orchards, and vegetable beds. Reduces water usage by up to 60% vs conventional watering.',
-    highlight: 'Up to 60% water savings',
+      'Full irrigation system design and installation for residential and commercial properties. Pop-up sprinklers, drip lines, solenoid valves, and pump integration. Built to last.',
+    highlight: 'Residential & commercial',
   },
   {
     icon: Sprout,
-    title: 'Sprinkler Systems',
+    title: 'Irrigation Management',
     description:
-      'Pop-up and rotary sprinkler systems for lawns, sports fields, and large open areas. Programmed for full coverage with minimal overlap and zero dry spots.',
-    highlight: 'Full-coverage design',
+      'Ongoing system management, seasonal tune-ups, leak detection, and emergency callouts. We also install and program smart controllers so your system runs itself.',
+    highlight: 'Smart scheduling included',
   },
   {
-    icon: Gauge,
-    title: 'Borehole & Pump Systems',
+    icon: Shovel,
+    title: 'Landscaping',
     description:
-      'Complete borehole pump installation, pressure tank setup, and water source integration. We handle the full supply chain from source to sprinkler head.',
-    highlight: 'End-to-end supply chain',
+      'Garden design and landscaping to complement your irrigation setup. We shape outdoor spaces that look great and work with your water system from day one.',
+    highlight: 'Design to completion',
   },
   {
-    icon: Map,
-    title: 'Irrigation Design',
+    icon: PaintBucket,
+    title: 'Painting',
     description:
-      'Custom hydraulic design for any site. We survey your land, map water pressure, calculate flow rates, and produce a scaled irrigation plan before a single pipe is laid.',
-    highlight: 'Site-specific hydraulic plans',
+      'Interior and exterior painting for residential and commercial properties. Clean prep work, quality finishes, and reliable timelines.',
+    highlight: 'Interior & exterior',
   },
   {
-    icon: Wrench,
-    title: 'Maintenance & Repairs',
+    icon: Shovel,
+    title: 'Paving',
     description:
-      'Annual service contracts, seasonal tune-ups, leak detection, and emergency callouts. We also install smart controllers and app-based scheduling to automate your system.',
-    highlight: 'Annual service contracts',
-  },
-  {
-    icon: PipetteIcon,
-    title: 'Plumbing Services',
-    description:
-      'Domestic and commercial plumbing alongside irrigation. Supply line installation, water storage, pressure systems, and leak repairs. One team handles it all.',
-    highlight: 'Domestic & commercial',
+      'Driveway, pathway, and patio paving. Properly laid, properly finished. We handle groundwork through to final surface so the job is done right.',
+    highlight: 'Driveways & patios',
   },
 ]
 

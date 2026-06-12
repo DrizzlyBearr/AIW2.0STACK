@@ -1,9 +1,9 @@
 import { ArrowRight, CheckCircle2, Phone } from 'lucide-react'
 
 const trust = [
-  'Licensed & Insured',
   'Free Site Assessments',
   '5-Year Workmanship Warranty',
+  'Cape Town Based',
 ]
 
 export default function Hero() {
@@ -52,7 +52,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-white/75 text-lg leading-relaxed mb-8 max-w-lg">
-              Cape Town's irrigation specialists. TNM Irrigation Projects designs, installs, and maintains water-efficient irrigation systems for residential and commercial properties. We also handle plumbing. Done right. Built to last.
+              Cape Town's irrigation specialists. TNM Irrigation Projects designs, installs, and maintains water-efficient irrigation systems for residential and commercial properties. We also cover landscaping, paving, and painting. Done right. Built to last.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-10">

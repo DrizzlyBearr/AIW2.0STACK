@@ -9,11 +9,11 @@ const contactDetails = [
 ]
 
 const services = [
-  'Drip Irrigation',
-  'Sprinkler System',
-  'Borehole / Pump',
-  'Plumbing',
-  'Maintenance',
+  'Irrigation Installation',
+  'Irrigation Management',
+  'Landscaping',
+  'Painting',
+  'Paving',
   'Other / Not sure',
 ]
 
