@@ -88,11 +88,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@tnmirrigation.co.za" className="flex items-start gap-3 text-sm transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
+                <a href="mailto:trymore@tnmirrigation.co.za" className="flex items-start gap-3 text-sm transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
                   onMouseEnter={e => e.currentTarget.style.color = '#45BFBF'}
                   onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}>
                   <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                  info@tnmirrigation.co.za
+                  trymore@tnmirrigation.co.za
                 </a>
               </li>
               <li>
