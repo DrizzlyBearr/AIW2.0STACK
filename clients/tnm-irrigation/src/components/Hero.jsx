@@ -45,17 +45,6 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Copy */}
           <div>
-            {/* Logo on dark hero */}
-            <div className="mb-8 inline-flex">
-              <div className="bg-white rounded-xl p-2 inline-flex">
-                <img
-                  src="/logo.jpeg"
-                  alt="TNM Irrigation Projects"
-                  className="h-12 w-auto"
-                />
-              </div>
-            </div>
-
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
               Keep Every Plant
               <span className="block" style={{ color: '#6DD0D0' }}> Thriving.</span>
