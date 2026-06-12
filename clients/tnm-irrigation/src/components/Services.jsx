@@ -81,7 +81,7 @@ export default function Services() {
         {/* CTA strip */}
         <div className="mt-14 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6" style={{ backgroundColor: '#E8F8F8' }}>
           <div>
-            <p className="font-display font-bold text-xl" style={{ color: '#2A334D' }}>Not sure what system you need?</p>
+            <p className="font-display font-bold text-xl" style={{ color: '#2A334D' }}>Not sure where to start?</p>
             <p className="text-gray-500 mt-1">We offer free site assessments. We visit, we assess, we advise.</p>
           </div>
           <a href="#contact" className="btn-primary shrink-0">

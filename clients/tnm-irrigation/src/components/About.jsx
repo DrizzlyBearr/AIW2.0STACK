@@ -2,8 +2,8 @@ import { CheckCircle2 } from 'lucide-react'
 
 const milestones = [
   { year: '2014', event: 'TNM Irrigation Projects founded by Trymore Nyamupfukudza' },
-  { year: '2016', event: 'First commercial project: Office park, Johannesburg' },
-  { year: '2019', event: 'Expanded into agricultural irrigation' },
+  { year: '2016', event: 'First commercial project completed in Cape Town' },
+  { year: '2019', event: 'Expanded into full residential and commercial irrigation across Cape Town' },
   { year: '2022', event: '500th project completed' },
   { year: '2024', event: 'Expanded into landscaping, paving, and painting' },
 ]
@@ -82,9 +82,8 @@ export default function About() {
             {/* Logo showcase */}
             <div className="mt-10 rounded-2xl border p-8 flex flex-col items-center text-center" style={{ backgroundColor: '#F8FAFA', borderColor: '#E8F8F8' }}>
               <img src="/logo.jpeg" alt="TNM Irrigation Projects" className="h-16 w-auto mb-3" />
-              <p className="text-sm" style={{ color: '#566280' }}>
-                Add your team and site photos by replacing this section.
-              </p>
+              <p className="text-sm font-medium" style={{ color: '#2A334D' }}>Serving Cape Town since 2014</p>
+              <p className="text-xs mt-1" style={{ color: '#566280' }}>Maitland, Cape Town, 7405</p>
             </div>
           </div>
         </div>
