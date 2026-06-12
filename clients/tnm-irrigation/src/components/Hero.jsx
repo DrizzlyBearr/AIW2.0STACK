@@ -62,7 +62,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-white/75 text-lg leading-relaxed mb-8 max-w-lg">
-              TNM Irrigation Projects designs, installs, and maintains water-efficient irrigation systems for residential and commercial properties. We also handle plumbing. Done right. Built to last.
+              Cape Town's irrigation specialists. TNM Irrigation Projects designs, installs, and maintains water-efficient irrigation systems for residential and commercial properties. We also handle plumbing. Done right. Built to last.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-10">
@@ -85,7 +85,7 @@ export default function Hero() {
                 Get a Free Quote
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="tel:+27000000000" className="btn-outline text-base px-8 py-4">
+              <a href="tel:+27646437107" className="btn-outline text-base px-8 py-4">
                 <Phone className="w-5 h-5" />
                 Call Us Now
               </a>

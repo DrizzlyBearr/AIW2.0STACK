@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react'
 
 const contactDetails = [
-  { icon: Phone,  label: 'Phone',        value: '+27 (0) 00 000 0000',            href: 'tel:+27000000000' },
-  { icon: Mail,   label: 'Email',        value: 'info@tnmirrigation.co.za',        href: 'mailto:info@tnmirrigation.co.za' },
-  { icon: MapPin, label: 'Service Area', value: 'Gauteng, Limpopo & Mpumalanga',   href: null },
-  { icon: Clock,  label: 'Hours',        value: 'Mon - Fri: 7am - 5pm | Sat: 8am - 1pm', href: null },
+  { icon: Phone,  label: 'Phone',   value: '064 643 7107',                              href: 'tel:+27646437107' },
+  { icon: Mail,   label: 'Email',   value: 'info@tnmirrigation.co.za',                  href: 'mailto:info@tnmirrigation.co.za' },
+  { icon: MapPin, label: 'Address', value: '18 Janssens Rd, Maitland, Cape Town, 7405', href: 'https://maps.google.com/?q=18+Janssens+Rd+Maitland+Cape+Town' },
+  { icon: Clock,  label: 'Hours',   value: 'Mon - Sat: Open until 6pm',                 href: null },
 ]
 
 const services = [
@@ -39,7 +39,7 @@ export default function Contact() {
           {/* Info panel */}
           <div className="lg:col-span-2 rounded-2xl p-8 text-white" style={{ background: 'linear-gradient(135deg, #0F4848, #1A2035)' }}>
             <h3 className="font-display font-bold text-xl mb-2">Contact Information</h3>
-            <p className="text-sm mb-8" style={{ color: '#6DD0D0' }}>We respond to all enquiries within one business day.</p>
+            <p className="text-sm mb-8" style={{ color: '#6DD0D0' }}>Based in Maitland, Cape Town. Serving the Western Cape.</p>
 
             <div className="space-y-6">
               {contactDetails.map((d) => {

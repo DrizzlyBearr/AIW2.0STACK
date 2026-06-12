@@ -24,7 +24,7 @@ const reasons = [
   {
     icon: Users,
     title: 'Local Team, Deep Roots',
-    body: 'We are a local business. We understand local soil, climate, and water supply conditions. No one-size-fits-all solutions here.',
+    body: 'We are based in Maitland, Cape Town. We understand Western Cape soil, climate, and water supply conditions. No one-size-fits-all solutions here.',
   },
   {
     icon: HeadphonesIcon,

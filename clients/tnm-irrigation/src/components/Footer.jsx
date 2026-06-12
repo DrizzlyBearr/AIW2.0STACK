@@ -78,11 +78,11 @@ export default function Footer() {
             <h4 className="font-display font-semibold text-white mb-4">Contact</h4>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+27000000000" className="flex items-start gap-3 text-sm transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
+                <a href="tel:+27646437107" className="flex items-start gap-3 text-sm transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
                   onMouseEnter={e => e.currentTarget.style.color = '#45BFBF'}
                   onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}>
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" />
-                  +27 (0) 00 000 0000
+                  064 643 7107
                 </a>
               </li>
               <li>
@@ -94,10 +94,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                <a href="https://maps.google.com/?q=18+Janssens+Rd+Maitland+Cape+Town" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-sm transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}
+                  onMouseEnter={e => e.currentTarget.style.color = '#45BFBF'}
+                  onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}>
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                  Gauteng, Limpopo &amp; Mpumalanga
-                </span>
+                  18 Janssens Rd, Maitland, Cape Town
+                </a>
               </li>
             </ul>
           </div>

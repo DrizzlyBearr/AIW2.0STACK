@@ -52,8 +52,8 @@ export default function Testimonials() {
             <div className="flex">
               {[1,2,3,4,5].map((i) => <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />)}
             </div>
-            <span className="font-semibold" style={{ color: '#6DD0D0' }}>4.9/5</span>
-            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>based on client feedback</span>
+            <span className="font-semibold" style={{ color: '#6DD0D0' }}>5.0 / 5</span>
+            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>on Google Business &bull; 4 reviews</span>
           </div>
         </div>
 
