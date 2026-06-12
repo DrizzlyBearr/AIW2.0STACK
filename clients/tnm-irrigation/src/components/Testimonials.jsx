@@ -2,28 +2,28 @@ import { Star, Quote } from 'lucide-react'
 
 const reviews = [
   {
-    name: 'Sipho M.',
-    role: 'Homeowner, Pretoria',
+    name: 'Verified Client',
+    role: 'Kandua Review',
     stars: 5,
-    text: 'TNM installed a full drip system for our garden. The team was professional, tidy, and finished on time. Our water bill dropped significantly within the first month. Very happy.',
+    text: 'More than 10 years I use his support. Always perfect, reliable, honesty and hard working. With big pleasure I gave him 5 stars.',
   },
   {
-    name: 'Nkosi T.',
-    role: 'Property Manager, Johannesburg',
+    name: 'Verified Client',
+    role: 'Kandua Review',
     stars: 5,
-    text: 'We have used TNM for our office park irrigation for three years. Their service contract gives us peace of mind. Whenever there is a fault they are on site within 24 hours.',
+    text: 'He installed an irrigation system for me. He also does garden service at my house. I have used his services for about 3 years, and I am always happy with his work. He is very reliable and skilful. His work is value for money, and I have no negative comments about his work. His working ethics are very good, and I will definitely recommend him to others.',
   },
   {
-    name: 'Thandi L.',
-    role: 'Farm Owner, Mpumalanga',
+    name: 'Verified Client',
+    role: 'Kandua Review',
     stars: 5,
-    text: 'The team surveyed our land thoroughly before designing the system. The drip layout for our orchard is excellent. First season after installation was our best yield in years.',
+    text: 'He repaired my irrigation system. He is an exceptional service provider who is very good at his job. He figured out the broken parts on the system and he fixed them.',
   },
   {
-    name: 'Johan V.',
-    role: 'Sports Club Chair, Limpopo',
+    name: 'Verified Client',
+    role: 'Kandua Review',
     stars: 5,
-    text: 'Our football field had dry patches for years. TNM designed and installed a new underground system and the field has been perfect ever since. Highly recommend.',
+    text: 'He installed an irrigation system in my garden. He did a marvellous job, and I was satisfied with his work. He is very reliable and hardworking. His work is value for money, and it does not have any comebacks. It was a pleasure working with him, and I highly recommend him.',
   },
 ]
 
@@ -53,7 +53,7 @@ export default function Testimonials() {
               {[1,2,3,4,5].map((i) => <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />)}
             </div>
             <span className="font-semibold" style={{ color: '#6DD0D0' }}>5.0 / 5</span>
-            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>on Google Business &bull; 4 reviews</span>
+            <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>Verified Kandua reviews &bull; 4 reviews</span>
           </div>
         </div>
 
