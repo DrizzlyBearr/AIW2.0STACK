@@ -32,7 +32,7 @@ const services = [
   'Drip Irrigation',
   'Sprinkler System',
   'Borehole / Pump',
-  'Smart Controller',
+  'Plumbing',
   'Maintenance',
   'Other / Not sure',
 ]

@@ -1,4 +1,4 @@
-import { Droplets, Sprout, Wrench, Gauge, Map, Zap } from 'lucide-react'
+import { Droplets, Sprout, Wrench, Gauge, Map, PipetteIcon } from 'lucide-react'
 
 const services = [
   {
@@ -33,15 +33,15 @@ const services = [
     icon: Wrench,
     title: 'Maintenance & Repairs',
     description:
-      'Annual service contracts, seasonal tune-ups, leak detection, and emergency repairs. We keep existing systems running at peak efficiency year-round.',
+      'Annual service contracts, seasonal tune-ups, leak detection, and emergency callouts. We also install smart controllers, rain sensors, and app-based scheduling to automate your system.',
     highlight: 'Annual service contracts',
   },
   {
-    icon: Zap,
-    title: 'Smart Controllers & Automation',
+    icon: PipetteIcon,
+    title: 'Plumbing Services',
     description:
-      'Wi-Fi enabled controllers, rain sensors, soil-moisture probes, and app-based scheduling. Water the right amount at the right time, automatically.',
-    highlight: 'App-controlled watering',
+      'Domestic and commercial plumbing alongside irrigation. Supply line installation, water storage, pressure systems, and leak repairs. One team handles it all.',
+    highlight: 'Domestic & commercial',
   },
 ]
 

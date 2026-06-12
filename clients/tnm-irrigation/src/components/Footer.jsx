@@ -11,7 +11,7 @@ const serviceLinks = [
   'Drip Irrigation',
   'Sprinkler Systems',
   'Borehole & Pump',
-  'Smart Controllers',
+  'Plumbing Services',
   'Maintenance',
   'Irrigation Design',
 ]

@@ -55,7 +55,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-green-100/80 text-lg leading-relaxed mb-8 max-w-lg">
-              T.N.M Irrigation Projects designs and installs water-efficient irrigation systems for residential gardens, commercial landscapes, farms, and sports fields. Done right. Built to last.
+              T.N.M Irrigation Projects designs, installs, and maintains water-efficient irrigation systems for residential and commercial properties. We also handle plumbing. Done right. Built to last.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-10">

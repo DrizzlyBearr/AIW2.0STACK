@@ -28,11 +28,23 @@ export default function About() {
               A Decade of Irrigation Excellence
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed mb-6">
-              T.N.M Irrigation Projects was founded with a single aim: to bring professional-grade irrigation engineering to properties of every size. We started small, doing residential garden systems, and grew steadily by doing clean work and standing behind it.
+              T.N.M Irrigation Projects was founded by Trymore Nyamupfukudza with a single aim: to bring professional-grade irrigation and plumbing services to properties of every size. Starting with residential garden systems, the business grew steadily by doing clean work and standing behind it.
             </p>
             <p className="text-gray-500 text-lg leading-relaxed mb-8">
-              Today we work across residential, commercial, agricultural, and institutional sectors. Our team of licensed technicians has completed more than 500 projects. Every one of them built to the same standard: the right system, properly installed, properly maintained.
+              Today we work across domestic and commercial sectors, covering everything from small garden drip systems to large-scale commercial installations. Every project is built to the same standard: the right system, properly installed, properly maintained, at a fair price.
             </p>
+
+            {/* Founder card */}
+            <div className="flex items-center gap-4 p-5 bg-green-50 rounded-xl border border-green-100 mb-8">
+              <div className="w-14 h-14 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl shrink-0">
+                T
+              </div>
+              <div>
+                <p className="font-display font-bold text-gray-900">Trymore Nyamupfukudza</p>
+                <p className="text-green-700 text-sm font-medium">Founder &amp; Lead Irrigation Specialist</p>
+                <p className="text-gray-500 text-xs mt-0.5">Hands-on. On every project.</p>
+              </div>
+            </div>
 
             <h3 className="font-display font-bold text-gray-900 text-lg mb-4">What we stand for</h3>
             <ul className="space-y-3">
