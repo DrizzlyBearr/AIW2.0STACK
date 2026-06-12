@@ -35,24 +35,27 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24" style={{ backgroundColor: '#F8FAFA' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: heading + intro */}
+          {/* Left: heading */}
           <div>
-            <p className="section-label mb-3">Why Choose T.N.M</p>
+            <p className="section-label mb-3">Why Choose TNM</p>
             <h2 className="section-title mb-6">
               Irrigation Done Right.<br />
-              <span className="text-green-600">Every Single Time.</span>
+              <span style={{ color: '#45BFBF' }}>Every Single Time.</span>
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed mb-8">
               We have been designing and installing irrigation systems for over a decade. Our reputation is built on doing precise, clean work that lasts and treating every client's property with care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="btn-primary">Get Your Free Quote</a>
-              <a href="#projects" className="inline-flex items-center gap-2 text-green-700 font-semibold hover:text-green-800 transition-colors">
-                View Our Projects
-                <span className="text-lg">&rarr;</span>
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-2 font-semibold transition-colors"
+                style={{ color: '#2E9D9D' }}
+              >
+                View Our Projects <span className="text-lg">&rarr;</span>
               </a>
             </div>
           </div>
@@ -62,11 +65,17 @@ export default function WhyUs() {
             {reasons.map((r) => {
               const Icon = r.icon
               return (
-                <div key={r.title} className="bg-white rounded-xl p-5 border border-gray-100 hover:border-green-200 hover:shadow-md transition-all duration-200">
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-5 h-5 text-green-600" />
+                <div
+                  key={r.title}
+                  className="bg-white rounded-xl p-5 border border-gray-100 hover:shadow-md transition-all duration-200"
+                  style={{ borderColor: '' }}
+                  onMouseEnter={e => e.currentTarget.style.borderColor = '#45BFBF'}
+                  onMouseLeave={e => e.currentTarget.style.borderColor = ''}
+                >
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: '#E8F8F8' }}>
+                    <Icon className="w-5 h-5" style={{ color: '#45BFBF' }} />
                   </div>
-                  <h3 className="font-display font-semibold text-gray-900 mb-2">{r.title}</h3>
+                  <h3 className="font-display font-semibold mb-2" style={{ color: '#2A334D' }}>{r.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{r.body}</p>
                 </div>
               )

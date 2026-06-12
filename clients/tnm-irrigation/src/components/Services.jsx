@@ -33,7 +33,7 @@ const services = [
     icon: Wrench,
     title: 'Maintenance & Repairs',
     description:
-      'Annual service contracts, seasonal tune-ups, leak detection, and emergency callouts. We also install smart controllers, rain sensors, and app-based scheduling to automate your system.',
+      'Annual service contracts, seasonal tune-ups, leak detection, and emergency callouts. We also install smart controllers and app-based scheduling to automate your system.',
     highlight: 'Annual service contracts',
   },
   {
@@ -52,9 +52,7 @@ export default function Services() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="section-label mb-3">What We Do</p>
-          <h2 className="section-title mb-4">
-            Complete Irrigation Services
-          </h2>
+          <h2 className="section-title mb-4">Complete Irrigation Services</h2>
           <p className="text-gray-500 max-w-xl mx-auto text-lg leading-relaxed">
             From initial design to final commissioning and ongoing maintenance, we handle every aspect of your irrigation project.
           </p>
@@ -66,12 +64,20 @@ export default function Services() {
             const Icon = s.icon
             return (
               <div key={s.title} className="card p-7 group">
-                <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-green-600 transition-colors duration-300">
-                  <Icon className="w-6 h-6 text-green-600 group-hover:text-white transition-colors duration-300" />
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300"
+                  style={{ backgroundColor: '#E8F8F8' }}
+                  onMouseEnter={e => e.currentTarget.style.backgroundColor = '#45BFBF'}
+                  onMouseLeave={e => e.currentTarget.style.backgroundColor = '#E8F8F8'}
+                >
+                  <Icon className="w-6 h-6 transition-colors duration-300" style={{ color: '#45BFBF' }} />
                 </div>
-                <h3 className="font-display font-bold text-xl text-gray-900 mb-3">{s.title}</h3>
+                <h3 className="font-display font-bold text-xl mb-3" style={{ color: '#2A334D' }}>{s.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">{s.description}</p>
-                <span className="inline-block bg-green-50 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">
+                <span
+                  className="inline-block text-xs font-semibold px-3 py-1 rounded-full"
+                  style={{ backgroundColor: '#E8F8F8', color: '#2E9D9D' }}
+                >
                   {s.highlight}
                 </span>
               </div>
@@ -80,9 +86,9 @@ export default function Services() {
         </div>
 
         {/* CTA strip */}
-        <div className="mt-14 bg-green-50 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-14 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6" style={{ backgroundColor: '#E8F8F8' }}>
           <div>
-            <p className="font-display font-bold text-xl text-gray-900">Not sure what system you need?</p>
+            <p className="font-display font-bold text-xl" style={{ color: '#2A334D' }}>Not sure what system you need?</p>
             <p className="text-gray-500 mt-1">We offer free site assessments. We visit, we assess, we advise.</p>
           </div>
           <a href="#contact" className="btn-primary shrink-0">

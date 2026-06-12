@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Droplets } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const links = [
   { label: 'Services', href: '#services' },
@@ -25,20 +25,16 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 py-4">
+        <div className="flex items-center justify-between py-3">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 bg-green-600 rounded-lg flex items-center justify-center group-hover:bg-green-700 transition-colors">
-              <Droplets className="w-5 h-5 text-white" />
-            </div>
-            <div className="leading-tight">
-              <span className={`font-display font-bold text-lg transition-colors ${scrolled ? 'text-gray-900' : 'text-white'}`}>
-                T.N.M
-              </span>
-              <span className={`block text-xs font-medium transition-colors ${scrolled ? 'text-green-600' : 'text-green-300'}`}>
-                Irrigation Projects
-              </span>
-            </div>
+          <a href="#home" className="flex items-center">
+            {scrolled ? (
+              <img src="/logo.jpeg" alt="TNM Irrigation Projects" className="h-10 w-auto" />
+            ) : (
+              <div className="flex items-center gap-2">
+                <img src="/logo.jpeg" alt="TNM Irrigation Projects" className="h-10 w-auto rounded-md" style={{ filter: 'brightness(0) invert(1)' }} />
+              </div>
+            )}
           </a>
 
           {/* Desktop nav */}
@@ -47,9 +43,12 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className={`text-sm font-medium transition-colors hover:text-green-500 ${
-                  scrolled ? 'text-gray-700' : 'text-white/90'
+                className={`text-sm font-medium transition-colors ${
+                  scrolled
+                    ? 'text-gray-700 hover:text-brand-teal'
+                    : 'text-white/90 hover:text-white'
                 }`}
+                style={scrolled ? {} : {}}
               >
                 {l.label}
               </a>
@@ -68,11 +67,10 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
-            {open ? (
-              <X className={scrolled ? 'text-gray-900' : 'text-white'} />
-            ) : (
-              <Menu className={scrolled ? 'text-gray-900' : 'text-white'} />
-            )}
+            {open
+              ? <X className={scrolled ? 'text-gray-900' : 'text-white'} />
+              : <Menu className={scrolled ? 'text-gray-900' : 'text-white'} />
+            }
           </button>
         </div>
       </div>
@@ -86,7 +84,10 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-gray-700 font-medium py-3 px-2 rounded-lg hover:bg-green-50 hover:text-green-700 transition-colors"
+                className="text-gray-700 font-medium py-3 px-2 rounded-lg transition-colors"
+                style={{}}
+                onMouseEnter={e => e.currentTarget.style.backgroundColor = '#E8F8F8'}
+                onMouseLeave={e => e.currentTarget.style.backgroundColor = ''}
               >
                 {l.label}
               </a>
