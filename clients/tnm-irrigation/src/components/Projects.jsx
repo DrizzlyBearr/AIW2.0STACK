@@ -65,6 +65,41 @@ const projects = [
     image: '/projects/lawn-sprinklers-street.jpg',
     alt: 'Full front garden sprinkler coverage down to street',
   },
+  {
+    title: 'Technician Wiring Valve Manifold',
+    category: 'Installation',
+    description: 'Trymore on site wiring the solenoid valve manifold alongside the pump. Every connection made by hand — no shortcuts, no guesswork.',
+    image: '/projects/technician-wiring-wide.jpg',
+    alt: 'Technician wiring solenoid valve manifold with pump nearby',
+  },
+  {
+    title: 'Rain Bird ESP-RZXe Controller',
+    category: 'Smart Controls',
+    description: 'Rain Bird ESP-RZXe smart controller wall-mounted and programmed. Wi-Fi ready, multi-zone scheduling, seasonal adjustment. Set once, runs automatically.',
+    image: '/projects/esp-rzxe-wall.jpg',
+    alt: 'Rain Bird ESP-RZXe irrigation controller mounted on wall',
+  },
+  {
+    title: 'Controller & Manifold — Completed',
+    category: 'Installation',
+    description: 'Finished installation: Rain Bird controller box mounted above a multi-zone valve manifold, wired and conduit-run. Clean, weather-protected, ready to run.',
+    image: '/projects/completed-controller-install.jpg',
+    alt: 'Completed Rain Bird controller and solenoid valve manifold installation',
+  },
+  {
+    title: 'RC2 Controller — Zone Wiring',
+    category: 'Smart Controls',
+    description: 'RC2 smart controller open showing zone terminal wiring. Each zone independently connected — the heart of a fully automated multi-zone system.',
+    image: '/projects/rc2-controller-open.jpg',
+    alt: 'RC2 irrigation controller open showing zone wiring and pipe connections',
+  },
+  {
+    title: 'Full System Install in Progress',
+    category: 'Installation',
+    description: 'Mid-installation view showing the pump, valve manifold, and controller all being set up together. Everything planned, everything in the right place.',
+    image: '/projects/pump-manifold-install.jpg',
+    alt: 'Pump, valve manifold and controller during full system installation',
+  },
 ]
 
 const categories = ['All', 'Residential', 'Pump Systems', 'Smart Controls', 'Installation']
