@@ -1,4 +1,4 @@
-import { Droplets, Sprout, PaintBucket, Shovel } from 'lucide-react'
+import { Droplets, Sprout, PaintBucket, Shovel, Container, Waves, Filter, Leaf } from 'lucide-react'
 
 const services = [
   {
@@ -14,6 +14,34 @@ const services = [
     description:
       'Ongoing system management, seasonal tune-ups, leak detection, and emergency callouts. We also install and program smart controllers so your system runs itself.',
     highlight: 'Smart scheduling included',
+  },
+  {
+    icon: Container,
+    title: 'Tank Installation',
+    description:
+      'Water storage tank installation for residential and commercial properties. Rainwater harvesting, borehole storage, and municipal backup systems — sized and installed correctly.',
+    highlight: 'Storage & supply solutions',
+  },
+  {
+    icon: Waves,
+    title: 'Water Feature Installation',
+    description:
+      'Design and installation of water features for gardens and outdoor spaces. Ponds, fountains, and decorative water elements installed to complement your landscape.',
+    highlight: 'Garden & outdoor features',
+  },
+  {
+    icon: Filter,
+    title: 'Water Filtration Systems',
+    description:
+      'Installation of water filtration systems for clean, safe water supply. Sediment filters, UV purification, and whole-property filtration for homes and commercial sites.',
+    highlight: 'Clean water guaranteed',
+  },
+  {
+    icon: Leaf,
+    title: 'Grass Laying',
+    description:
+      'Supply and laying of lawn turf for new gardens, renovations, and sports areas. Properly prepared ground, properly laid grass — ready to water with your new system.',
+    highlight: 'New lawns & renovations',
   },
   {
     icon: Shovel,
@@ -45,9 +73,9 @@ export default function Services() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="section-label mb-3">What We Do</p>
-          <h2 className="section-title mb-4">Complete Irrigation Services</h2>
+          <h2 className="section-title mb-4">Everything Your Property Needs</h2>
           <p className="text-gray-500 max-w-xl mx-auto text-lg leading-relaxed">
-            From initial design to final commissioning and ongoing maintenance, we handle every aspect of your irrigation project.
+            Irrigation is our core — but we handle far more. From tank and filtration installs to grass laying, paving, and painting, one team covers it all.
           </p>
         </div>
 

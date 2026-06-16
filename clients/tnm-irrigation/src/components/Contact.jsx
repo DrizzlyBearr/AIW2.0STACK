@@ -11,6 +11,10 @@ const contactDetails = [
 const services = [
   'Irrigation Installation',
   'Irrigation Management',
+  'Tank Installation',
+  'Water Feature',
+  'Water Filtration',
+  'Grass Laying',
   'Landscaping',
   'Painting',
   'Paving',

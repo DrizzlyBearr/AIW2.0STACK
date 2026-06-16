@@ -10,6 +10,10 @@ const navLinks = [
 const serviceLinks = [
   'Irrigation Installation',
   'Irrigation Management',
+  'Tank Installation',
+  'Water Features',
+  'Water Filtration',
+  'Grass Laying',
   'Landscaping',
   'Painting',
   'Paving',
