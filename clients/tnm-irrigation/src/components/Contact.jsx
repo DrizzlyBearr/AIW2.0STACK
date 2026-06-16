@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react'
 
 const contactDetails = [
-  { icon: Phone,  label: 'Phone',   value: '064 643 7107',                              href: 'tel:+27646437107' },
+  { icon: Phone,  label: 'Phone',   value: '062 791 7059 / 064 643 7107',               href: 'tel:+27627917059' },
   { icon: Mail,   label: 'Email',   value: 'trymore@tnmirrigation.co.za',               href: 'mailto:trymore@tnmirrigation.co.za' },
   { icon: MapPin, label: 'Address',      value: '18 Janssens Rd, Maitland, Cape Town, 7405', href: 'https://maps.google.com/?q=18+Janssens+Rd+Maitland+Cape+Town' },
   { icon: Clock,  label: 'Hours',   value: 'Mon - Sat: Open until 6pm',                 href: null },

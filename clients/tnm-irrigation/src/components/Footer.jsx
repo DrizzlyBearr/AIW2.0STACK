@@ -87,7 +87,7 @@ export default function Footer() {
                   onMouseEnter={e => e.currentTarget.style.color = '#45BFBF'}
                   onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}>
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" />
-                  064 643 7107
+                  062 791 7059 / 064 643 7107
                 </a>
               </li>
               <li>
