@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Loader2 } from 'lucide-react'
+
+const FORMSPREE_ID = 'YOUR_FORM_ID'
 
 const contactDetails = [
   { icon: Phone,  label: 'Phone',   value: '062 791 7059 / 064 643 7107',               href: 'tel:+27627917059' },
@@ -24,9 +26,30 @@ const services = [
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
-  const handleSubmit = (e) => { e.preventDefault(); setSent(true) }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setSubmitting(true)
+
+    // Send to Formspree (email to trymore@tnmirrigation.co.za)
+    try {
+      await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+    } catch (_) {}
+
+    // Open WhatsApp with pre-filled message
+    const waText = `Hi TNM Irrigation, I would like to enquire about your services.\n\nName: ${form.name}\nPhone: ${form.phone}${form.email ? `\nEmail: ${form.email}` : ''}${form.service ? `\nService: ${form.service}` : ''}${form.message ? `\nDetails: ${form.message}` : ''}`
+    window.open(`https://wa.me/27646437107?text=${encodeURIComponent(waText)}`, '_blank')
+
+    setSubmitting(false)
+    setSent(true)
+  }
 
   return (
     <section id="contact" className="py-24" style={{ backgroundColor: '#F8FAFA' }}>
@@ -137,9 +160,9 @@ export default function Contact() {
                     onFocus={e => e.target.style.boxShadow = '0 0 0 2px #45BFBF'} onBlur={e => e.target.style.boxShadow = ''} />
                 </div>
 
-                <button type="submit" className="btn-primary w-full justify-center text-base py-4">
-                  <Send className="w-5 h-5" />
-                  Send My Request
+                <button type="submit" disabled={submitting} className="btn-primary w-full justify-center text-base py-4 disabled:opacity-70">
+                  {submitting ? <Loader2 className="w-5 h-5 animate-spin" /> : <Send className="w-5 h-5" />}
+                  {submitting ? 'Sending...' : 'Send My Request'}
                 </button>
                 <p className="text-center text-gray-400 text-xs">No spam. We will only use your details to respond to your enquiry.</p>
               </form>
