@@ -15,7 +15,7 @@ export default function WhatsAppButton() {
       aria-label="Chat with us on WhatsApp"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 shadow-xl transition-all duration-300"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center shadow-xl transition-all duration-300"
       style={{
         backgroundColor: '#25D366',
         borderRadius: hovered ? '40px' : '50%',
@@ -41,6 +41,7 @@ export default function WhatsAppButton() {
         style={{
           maxWidth: hovered ? '160px' : '0px',
           opacity: hovered ? 1 : 0,
+          marginLeft: hovered ? '8px' : '0px',
         }}
       >
         Chat on WhatsApp

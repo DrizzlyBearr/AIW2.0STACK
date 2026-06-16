@@ -4,7 +4,7 @@ const reasons = [
   {
     icon: Award,
     title: 'Quality Workmanship',
-    body: 'Every installation is carried out with care and precision. We follow best practice on every project — no shortcuts, no comebacks.',
+    body: 'Every installation is carried out with care and precision. We follow best practice on every project. No shortcuts, no comebacks.',
   },
   {
     icon: Shield,

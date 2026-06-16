@@ -19,7 +19,7 @@ const services = [
     icon: Container,
     title: 'Tank Installation',
     description:
-      'Water storage tank installation for residential and commercial properties. Rainwater harvesting, borehole storage, and municipal backup systems — sized and installed correctly.',
+      'Water storage tank installation for residential and commercial properties. Rainwater harvesting, borehole storage, and municipal backup systems. Sized and installed correctly.',
     highlight: 'Storage & supply solutions',
   },
   {
@@ -40,7 +40,7 @@ const services = [
     icon: Leaf,
     title: 'Grass Laying',
     description:
-      'Supply and laying of lawn turf for new gardens, renovations, and sports areas. Properly prepared ground, properly laid grass — ready to water with your new system.',
+      'Supply and laying of lawn turf for new gardens, renovations, and sports areas. Properly prepared ground, properly laid grass, ready to water with your new system.',
     highlight: 'New lawns & renovations',
   },
   {
@@ -75,7 +75,7 @@ export default function Services() {
           <p className="section-label mb-3">What We Do</p>
           <h2 className="section-title mb-4">Everything Your Property Needs</h2>
           <p className="text-gray-500 max-w-xl mx-auto text-lg leading-relaxed">
-            Irrigation is our core — but we handle far more. From tank and filtration installs to grass laying, paving, and painting, one team covers it all.
+            Irrigation is our core, but we handle far more. From tank and filtration installs to grass laying, paving, and painting, one team covers it all.
           </p>
         </div>
 
