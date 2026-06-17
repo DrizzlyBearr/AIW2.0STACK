@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
 import AboutUs from './pages/AboutUs'
@@ -11,9 +12,20 @@ import AppointmentSetting from './pages/AppointmentSetting'
 import CaseStudy from './pages/CaseStudy'
 import Comparison from './pages/Comparison'
 
+function RouteTracker() {
+  const location = useLocation()
+  useEffect(() => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', { page_path: location.pathname + location.search })
+    }
+  }, [location])
+  return null
+}
+
 export default function App() {
   return (
     <BrowserRouter>
+      <RouteTracker />
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home />} />
