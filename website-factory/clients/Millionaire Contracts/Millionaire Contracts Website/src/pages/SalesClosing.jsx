@@ -50,6 +50,27 @@ export default function SalesClosing() {
           <div className="mt-10">
             <Link to="/calender" className="btn-gold">Schedule a Consultation</Link>
           </div>
+
+          <div className="mt-16 pt-10 border-t border-gray-100">
+            <h2 className="font-headline text-xl font-black text-mc-teal mb-6">Related reading</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'Including the sign most businesses miss: a healthy close rate but not enough conversations.' },
+                { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model explained with what drives the number.' },
+                { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'Side-by-side comparison including time to first results.' },
+                { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you hire any external sales provider.' },
+              ].map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-mc-gold/40 transition-colors group"
+                >
+                  <p className="font-headline font-bold text-mc-teal text-sm mb-1 group-hover:text-mc-gold transition-colors">{link.label}</p>
+                  <p className="font-body text-gray-500 text-xs">{link.desc}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

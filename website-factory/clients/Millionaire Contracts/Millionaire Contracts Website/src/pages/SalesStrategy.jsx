@@ -50,6 +50,27 @@ export default function SalesStrategy() {
           <div className="mt-10">
             <Link to="/calender" className="btn-gold">Schedule a Consultation</Link>
           </div>
+
+          <div className="mt-16 pt-10 border-t border-gray-100">
+            <h2 className="font-headline text-xl font-black text-mc-teal mb-6">Related reading</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Six steps to a repeatable process that generates consistent pipeline.' },
+                { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The four engagement models and how to choose the right fit.' },
+                { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'Diagnostic guide for businesses with a working offer but inconsistent pipeline.' },
+                { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'Full number breakdown comparing both options.' },
+              ].map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-mc-gold/40 transition-colors group"
+                >
+                  <p className="font-headline font-bold text-mc-teal text-sm mb-1 group-hover:text-mc-gold transition-colors">{link.label}</p>
+                  <p className="font-body text-gray-500 text-xs">{link.desc}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

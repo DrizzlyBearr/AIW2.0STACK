@@ -47,6 +47,27 @@ export default function AppointmentSetting() {
           <div className="mt-10">
             <Link to="/calender" className="btn-gold">Schedule a Consultation</Link>
           </div>
+
+          <div className="mt-16 pt-10 border-t border-gray-100">
+            <h2 className="font-headline text-xl font-black text-mc-teal mb-6">Related reading</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you hire an appointment setting provider.' },
+                { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'Diagnostic guide for knowing when outsourced is the right move.' },
+                { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The four models explained and how to choose the right fit.' },
+                { to: '/why-sales-outsourcing-partnerships-fail', label: 'Why Most Sales Outsourcing Partnerships Fail', desc: 'Five failure points and how to avoid them before you sign.' },
+              ].map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="block bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-mc-gold/40 transition-colors group"
+                >
+                  <p className="font-headline font-bold text-mc-teal text-sm mb-1 group-hover:text-mc-gold transition-colors">{link.label}</p>
+                  <p className="font-body text-gray-500 text-xs">{link.desc}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
