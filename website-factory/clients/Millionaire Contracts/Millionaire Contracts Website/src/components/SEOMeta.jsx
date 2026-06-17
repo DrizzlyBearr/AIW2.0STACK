@@ -7,6 +7,22 @@ export default function SEOMeta({ title, description, path = '', schema = null, 
   const canonical = `${SITE}${path}`
   const fullTitle = title.includes('Millionaire Contracts') ? title : `${title} | Millionaire Contracts`
 
+  // Sitewide BreadcrumbList. Skip the homepage and any page that already
+  // supplies its own breadcrumb (e.g. case studies) to avoid duplicates.
+  const schemaList = schema ? (Array.isArray(schema) ? schema : [schema]) : []
+  const hasOwnBreadcrumb = schemaList.some((s) => s && s['@type'] === 'BreadcrumbList')
+  let breadcrumbSchema = null
+  if (path && path !== '/' && path !== '/home' && !hasOwnBreadcrumb) {
+    const crumbs = [{ name: 'Home', item: `${SITE}/home` }]
+    if (type === 'article') crumbs.push({ name: 'Resources', item: `${SITE}/resources` })
+    crumbs.push({ name: title, item: canonical })
+    breadcrumbSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })),
+    }
+  }
+
   return (
     <Helmet>
       <title>{fullTitle}</title>
@@ -34,6 +50,13 @@ export default function SEOMeta({ title, description, path = '', schema = null, 
       {schema && (
         <script type="application/ld+json">
           {JSON.stringify(schema)}
+        </script>
+      )}
+
+      {/* Sitewide breadcrumb schema */}
+      {breadcrumbSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       )}
     </Helmet>
