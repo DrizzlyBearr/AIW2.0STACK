@@ -16,6 +16,7 @@ import HowItWorks from './pages/HowItWorks'
 import HowToChooseAppointmentSetting from './pages/articles/HowToChooseAppointmentSetting'
 import WhatDoesOutsourcedSalesCost from './pages/articles/WhatDoesOutsourcedSalesCost'
 import FiveSignsYouNeedOutsourcedSales from './pages/articles/FiveSignsYouNeedOutsourcedSales'
+import WhySalesOutsourcingFails from './pages/articles/WhySalesOutsourcingFails'
 
 function RouteTracker() {
   const location = useLocation()
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/how-to-choose-an-appointment-setting-company" element={<HowToChooseAppointmentSetting />} />
         <Route path="/what-does-outsourced-sales-cost" element={<WhatDoesOutsourcedSalesCost />} />
         <Route path="/five-signs-you-need-outsourced-sales" element={<FiveSignsYouNeedOutsourcedSales />} />
+        <Route path="/why-sales-outsourcing-partnerships-fail" element={<WhySalesOutsourcingFails />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />
