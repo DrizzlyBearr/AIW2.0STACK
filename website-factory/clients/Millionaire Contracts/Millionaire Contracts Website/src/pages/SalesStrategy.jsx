@@ -3,10 +3,26 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import ServicePageHero from '../components/ServicePageHero'
+import SEOMeta from '../components/SEOMeta'
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Sales Strategy Development',
+  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
+  description: 'We build precise, market-specific sales strategies and execution-ready playbooks that turn your sales function into a competitive weapon.',
+  areaServed: ['US', 'GB', 'ZA', 'SG'],
+}
 
 export default function SalesStrategy() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOMeta
+        title="Sales Strategy Development"
+        description="No repeatable way to sell your product? Millionaire Contracts builds sales playbooks, pricing strategy, pitch frameworks, and KPIs your team executes from day one."
+        path="/sales-strategy-development"
+        schema={schema}
+      />
       <Navbar />
       <ServicePageHero title="Sales Strategy Development" />
 

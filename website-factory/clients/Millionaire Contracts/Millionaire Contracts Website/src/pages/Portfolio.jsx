@@ -2,10 +2,16 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { portfolioClients } from '../data/portfolio'
+import SEOMeta from '../components/SEOMeta'
 
 export default function Portfolio() {
   return (
     <div className="min-h-screen flex flex-col bg-mc-dark">
+      <SEOMeta
+        title="Client Case Studies"
+        description="Twenty real engagements. Enterprise telecoms, private equity, health technology, and more. See the results Millionaire Contracts delivers for ambitious businesses."
+        path="/portfolio"
+      />
       <Navbar />
 
       {/* Hero */}

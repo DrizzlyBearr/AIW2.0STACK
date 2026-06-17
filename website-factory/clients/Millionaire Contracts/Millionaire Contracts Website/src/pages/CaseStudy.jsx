@@ -1,6 +1,7 @@
 import { Link, useParams, Navigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import SEOMeta from '../components/SEOMeta'
 import { caseStudies } from '../data/caseStudies'
 import { portfolioClients } from '../data/portfolio'
 
@@ -12,8 +13,24 @@ export default function CaseStudy() {
 
   const client = portfolioClients.find((c) => c.slug === slug)
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://millionairecontracts.com/home' },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://millionairecontracts.com/portfolio' },
+      { '@type': 'ListItem', position: 3, name: data.name, item: `https://millionairecontracts.com/${slug}` },
+    ],
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <SEOMeta
+        title={`${data.name} Case Study`}
+        description={`${data.tagline} See how Millionaire Contracts delivered results for ${data.name}: ${data.metrics.map(m => `${m.value} ${m.label}`).join(', ')}.`}
+        path={`/${slug}`}
+        schema={schema}
+      />
       <Navbar />
 
       {/* Hero */}

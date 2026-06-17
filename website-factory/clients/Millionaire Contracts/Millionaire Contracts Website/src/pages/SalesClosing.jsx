@@ -3,10 +3,26 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import ServicePageHero from '../components/ServicePageHero'
+import SEOMeta from '../components/SEOMeta'
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Sales Closing',
+  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
+  description: 'We deploy trained closers directly into your pipeline to handle discovery, objection handling, and final conversion on high-value deals.',
+  areaServed: ['US', 'GB', 'ZA', 'SG'],
+}
 
 export default function SalesClosing() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOMeta
+        title="Sales Closing Services"
+        description="Deals stalling at the finish line? Millionaire Contracts deploys trained closers directly into your pipeline to convert high-value prospects into paying clients."
+        path="/sales-closing"
+        schema={schema}
+      />
       <Navbar />
       <ServicePageHero title="Sales Closing" />
 

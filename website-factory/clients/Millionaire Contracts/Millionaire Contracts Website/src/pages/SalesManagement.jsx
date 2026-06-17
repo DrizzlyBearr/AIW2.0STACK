@@ -3,10 +3,26 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import ServicePageHero from '../components/ServicePageHero'
+import SEOMeta from '../components/SEOMeta'
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Sales Management',
+  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
+  description: 'We step in as your fractional sales management layer: setting targets, running pipeline reviews, coaching reps, and building reporting infrastructure.',
+  areaServed: ['US', 'GB', 'ZA', 'SG'],
+}
 
 export default function SalesManagement() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOMeta
+        title="Sales Management Services"
+        description="Sales team active but not hitting targets? Millionaire Contracts steps in as your sales management layer: pipeline reviews, rep coaching, and accountability that drives consistent results."
+        path="/sales-management"
+        schema={schema}
+      />
       <Navbar />
       <ServicePageHero title="Sales Management" />
 

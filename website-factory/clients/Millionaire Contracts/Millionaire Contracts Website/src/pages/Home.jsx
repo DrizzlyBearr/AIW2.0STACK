@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
+import SEOMeta from '../components/SEOMeta'
 
 const LOGO = 'https://assets.cdn.filesafe.space/A8PmgiSa8bKb0J1mBeLF/media/66fe6791c6d28935508f7ce5.png'
 
@@ -108,6 +109,11 @@ const testimonials = [
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOMeta
+        title="Sales Strategy, Closing and Appointment Setting | Millionaire Contracts"
+        description="Millionaire Contracts builds sales operations that win. Strategy, management, closing, and appointment setting fully deployed into your business. 65% meeting success rate, 20+ companies scaled."
+        path="/home"
+      />
       <Navbar />
 
       {/* ── HERO ── */}

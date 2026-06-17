@@ -2,12 +2,18 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import ServicePageHero from '../components/ServicePageHero'
+import SEOMeta from '../components/SEOMeta'
 
 const CALENDAR_ID = '9Kr2oElVpUJaJAq02dl1'
 
 export default function Calendar() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOMeta
+        title="Book a Strategy Call"
+        description="Book a free strategy call with Millionaire Contracts. We will show you where your revenue is leaking and what it will take to fix it. No pitch, no fluff."
+        path="/calender"
+      />
       <Navbar />
       <ServicePageHero title="Calendar" />
 

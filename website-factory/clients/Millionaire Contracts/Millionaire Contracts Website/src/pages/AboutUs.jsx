@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
+import SEOMeta from '../components/SEOMeta'
 
 const HANDSHAKE = 'https://images.pexels.com/photos/7876502/pexels-photo-7876502.jpeg'
 const MC_LOGO = 'https://cdn.gamma.app/dk6oknpm67llad7/280fcab067574360b8e6a5cc574b1bdd/original/Add-a-heading-1.png'
@@ -45,6 +46,11 @@ export default function AboutUs() {
 
   return (
     <div className="min-h-screen flex flex-col font-body">
+      <SEOMeta
+        title="About Us"
+        description="Millionaire Contracts was built to fix broken sales processes. We partner with ambitious businesses to build sales operations that perform under pressure. Meet the team."
+        path="/about-us"
+      />
       <Navbar />
 
       {/* Hero */}

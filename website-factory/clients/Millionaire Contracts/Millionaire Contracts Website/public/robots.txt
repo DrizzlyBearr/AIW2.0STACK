@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://millionairecontracts.com/sitemap.xml

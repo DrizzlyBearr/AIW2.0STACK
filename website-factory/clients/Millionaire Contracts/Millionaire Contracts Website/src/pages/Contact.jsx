@@ -2,12 +2,18 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import ServicePageHero from '../components/ServicePageHero'
+import SEOMeta from '../components/SEOMeta'
 
 const FORM_ID = '3UOsb9RonEACTOuRjaKW'
 
 export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOMeta
+        title="Contact Us"
+        description="Get in touch with Millionaire Contracts. Talk to our team about sales strategy, closing, appointment setting, or building your sales operation from the ground up."
+        path="/contact-us"
+      />
       <Navbar />
       <ServicePageHero title="Contact Us" />
 

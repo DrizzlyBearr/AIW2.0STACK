@@ -3,10 +3,26 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import ServicePageHero from '../components/ServicePageHero'
+import SEOMeta from '../components/SEOMeta'
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Appointment Setting',
+  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
+  description: 'We run your outbound engine, identifying ideal accounts, crafting outreach, and booking qualified decision-maker meetings directly into your calendar every week.',
+  areaServed: ['US', 'GB', 'ZA', 'SG'],
+}
 
 export default function AppointmentSetting() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOMeta
+        title="Appointment Setting Services"
+        description="Thin pipeline? Millionaire Contracts runs your outbound engine and books qualified decision-maker meetings directly into your calendar every week. 65% average meeting success rate."
+        path="/appointment-setting"
+        schema={schema}
+      />
       <Navbar />
       <ServicePageHero title="Appointment Setting" />
 

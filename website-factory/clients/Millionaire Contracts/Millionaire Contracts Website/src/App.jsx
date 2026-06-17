@@ -9,6 +9,7 @@ import SalesManagement from './pages/SalesManagement'
 import SalesClosing from './pages/SalesClosing'
 import AppointmentSetting from './pages/AppointmentSetting'
 import CaseStudy from './pages/CaseStudy'
+import Comparison from './pages/Comparison'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/sales-management" element={<SalesManagement />} />
         <Route path="/sales-closing" element={<SalesClosing />} />
         <Route path="/appointment-setting" element={<AppointmentSetting />} />
+        <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/:slug" element={<CaseStudy />} />
       </Routes>
     </BrowserRouter>
