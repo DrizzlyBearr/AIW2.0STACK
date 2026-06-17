@@ -74,6 +74,18 @@ const articles = [
     title: 'How to Build a B2B Sales Process from Scratch',
     desc: 'Six steps that turn individual sales effort into a system that produces consistent, predictable pipeline.',
   },
+  {
+    to: '/inconsistent-revenue',
+    category: 'Symptom',
+    title: 'Why Your Revenue Is Inconsistent and What to Do About It',
+    desc: 'Unpredictable revenue is not random. Here is the pattern, why the usual fixes miss it, and what actually stabilizes revenue.',
+  },
+  {
+    to: '/sales-stall-without-you',
+    category: 'Symptom',
+    title: 'Why Sales Stall Every Time You Step Back from Them',
+    desc: 'When the founder is the sales process, any absence stops the pipeline. Why that dependency forms and how to break it.',
+  },
 ]
 
 export default function Resources() {
