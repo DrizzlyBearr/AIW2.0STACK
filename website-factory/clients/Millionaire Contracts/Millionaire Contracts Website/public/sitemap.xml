@@ -9,6 +9,13 @@
   </url>
 
   <url>
+    <loc>https://millionairecontracts.com/how-it-works</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-06-17</lastmod>
+  </url>
+
+  <url>
     <loc>https://millionairecontracts.com/portfolio</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

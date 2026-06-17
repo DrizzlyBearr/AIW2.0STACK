@@ -28,6 +28,7 @@ export default function Navbar() {
           <NavLink to="/home" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Home</NavLink>
           <NavLink to="/portfolio" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Portfolio</NavLink>
           <NavLink to="/about-us" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>About</NavLink>
+          <NavLink to="/how-it-works" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>How It Works</NavLink>
 
           <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
             <button className={`${linkClass} flex items-center gap-1`}>
@@ -89,6 +90,7 @@ export default function Navbar() {
               </div>
             )}
           </div>
+          <Link to="/how-it-works" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>How It Works</Link>
           <Link to="/contact-us" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Contact</Link>
           <Link to="/calender" className="btn-primary text-center mt-2 text-sm" onClick={() => setMenuOpen(false)}>Schedule a Call</Link>
         </div>
