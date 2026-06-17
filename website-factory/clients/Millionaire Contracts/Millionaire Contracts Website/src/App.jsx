@@ -14,6 +14,7 @@ import Comparison from './pages/Comparison'
 import NotFound from './pages/NotFound'
 import HowItWorks from './pages/HowItWorks'
 import HowToChooseAppointmentSetting from './pages/articles/HowToChooseAppointmentSetting'
+import WhatDoesOutsourcedSalesCost from './pages/articles/WhatDoesOutsourcedSalesCost'
 
 function RouteTracker() {
   const location = useLocation()
@@ -43,6 +44,7 @@ export default function App() {
         <Route path="/appointment-setting" element={<AppointmentSetting />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/how-to-choose-an-appointment-setting-company" element={<HowToChooseAppointmentSetting />} />
+        <Route path="/what-does-outsourced-sales-cost" element={<WhatDoesOutsourcedSalesCost />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />
