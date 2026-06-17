@@ -129,6 +129,7 @@ export default function HowToBuildB2BSalesProcess() {
         title="How to Build a B2B Sales Process from Scratch"
         description="A practical guide to building a B2B sales process that generates consistent pipeline. Six steps covering ICP definition, outreach sequencing, qualification criteria, pipeline stages, and reporting."
         path="/how-to-build-a-b2b-sales-process"
+        type="article"
         schema={[schema, faqSchema]}
       />
       <Navbar />

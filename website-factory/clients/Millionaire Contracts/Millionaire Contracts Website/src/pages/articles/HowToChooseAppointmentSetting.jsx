@@ -154,6 +154,7 @@ export default function HowToChooseAppointmentSetting() {
         title="How to Choose an Appointment Setting Company: 7 Questions to Ask Before You Hire"
         description="Before you hire an appointment setting company, ask these 7 questions. They separate the agencies with real qualification discipline from the ones running volume plays on your brand."
         path="/how-to-choose-an-appointment-setting-company"
+        type="article"
         schema={[schema, faqSchema]}
       />
       <Navbar />

@@ -119,6 +119,7 @@ export default function WhySalesOutsourcingFails() {
         title="Why Most Sales Outsourcing Partnerships Fail (And How to Avoid It)"
         description="Most outsourced sales engagements that fail do so for predictable reasons. The five most common failure points and what separates partnerships that deliver from ones that disappoint."
         path="/why-sales-outsourcing-partnerships-fail"
+        type="article"
         schema={[schema, faqSchema]}
       />
       <Navbar />

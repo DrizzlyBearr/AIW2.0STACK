@@ -97,6 +97,7 @@ export default function WhatIsSalesOutsourcing() {
         title="What Is Sales Outsourcing and Is It Right for Your Business?"
         description="Sales outsourcing explained: what it means, the different forms it takes, who it works for, who it does not, and how to make the decision for your specific situation."
         path="/what-is-sales-outsourcing"
+        type="article"
         schema={[schema, faqSchema]}
       />
       <Navbar />

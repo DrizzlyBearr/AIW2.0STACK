@@ -69,6 +69,7 @@ export default function Comparison() {
         title="In-House Sales Team vs Outsourced Sales: The Real Cost"
         description="Thinking of hiring an in-house SDR? Compare the true cost of building vs buying your sales function. Real numbers, South African cost arbitrage, and a clear framework for the decision."
         path="/in-house-vs-outsourced-sales"
+        type="article"
         schema={[schema, faqSchema]}
       />
       <Navbar />

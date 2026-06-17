@@ -119,6 +119,7 @@ export default function FiveSignsYouNeedOutsourcedSales() {
         title="5 Signs Your Business Needs an Outsourced Sales Team"
         description="Most businesses that need outsourced sales do not realise it until they have spent months trying to fix the wrong problem. These five signs tell you where the issue actually sits."
         path="/five-signs-you-need-outsourced-sales"
+        type="article"
         schema={[schema, faqSchema]}
       />
       <Navbar />

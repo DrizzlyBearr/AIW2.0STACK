@@ -101,6 +101,7 @@ export default function WhatDoesOutsourcedSalesCost() {
         title="What Does Outsourced Sales Actually Cost? (2026 Pricing Guide)"
         description="A breakdown of outsourced sales pricing models, what you should expect to pay, and how to evaluate whether the cost makes sense for your business stage."
         path="/what-does-outsourced-sales-cost"
+        type="article"
         schema={[schema, faqSchema]}
       />
       <Navbar />
