@@ -21,7 +21,7 @@ const faqSchema = {
       name: 'How do you define a qualified appointment?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A qualified appointment should meet defined criteria around role seniority, company size, industry fit, and buying intent. Any agency that cannot give you a precise answer to this question is not qualifying leads — they are booking meetings and calling them qualified.',
+        text: 'A qualified appointment should meet defined criteria around role seniority, company size, industry fit, and buying intent. Any agency that cannot give you a precise answer to this question is not qualifying leads: they are booking meetings and calling them qualified.',
       },
     },
     {
@@ -82,7 +82,7 @@ const questions = [
     body: [
       'This is the most important question on the list. The word "qualified" does the most work in appointment setting, and most agencies use it loosely.',
       'A qualified appointment should meet specific criteria before it lands in your calendar: the right seniority level, the right company profile, the right industry, and some signal of buying intent or relevant pain. Not just someone who agreed to a call.',
-      'Ask the agency to describe, in exact terms, what makes a meeting qualified by their standard. If they cannot give you a precise answer — if they talk around it with phrases like "decision-makers" or "interested prospects" without specifics — that is your answer. They are booking meetings and calling them qualified.',
+      'Ask the agency to describe, in exact terms, what makes a meeting qualified by their standard. If they talk around it with phrases like "decision-makers" or "interested prospects" without specifics, that is your answer. They are booking meetings and calling them qualified.',
       'The best agencies will be able to tell you the exact job title range, company size band, and intent signals they use as entry criteria. Some will build the ICP with you before a single outreach sequence starts.',
     ],
   },
@@ -90,7 +90,7 @@ const questions = [
     number: '02',
     question: 'What outreach channels do you use and how do you sequence them?',
     body: [
-      'Single-channel outreach is a volume play. Sending 500 cold emails per day is not appointment setting — it is spray and pray. The conversion rates are poor and the reputational risk to your domain is real.',
+      'Single-channel outreach is a volume play. Sending 500 cold emails per day is not appointment setting: it is spray and pray. The conversion rates are poor and the reputational risk to your domain is real.',
       'A serious appointment setting agency uses a multi-channel approach: email, LinkedIn, and phone, sequenced based on prospect behaviour. Someone who opens your email three times without replying gets a different follow-up than someone who has not opened at all. Someone who visits your website mid-sequence should trigger a different step.',
       'Ask specifically how they sequence outreach. Ask what happens after a prospect opens but does not reply. Ask how they use LinkedIn alongside email. If their answer is "we send a follow-up email on day three", you are looking at a template-based volume shop.',
     ],
@@ -101,7 +101,7 @@ const questions = [
     body: [
       'No-shows tell you everything about how well meetings were actually qualified.',
       'A meeting booked with a prospect who had genuine intent, understood the context, and confirmed the time shows up. A meeting booked because someone said yes to end a conversation does not.',
-      'Agencies with real qualification discipline replace no-shows without argument. They stand behind the quality of what they booked. Agencies that are booking meetings to hit a number will find reasons why the no-show is your problem — the prospect was hard to reach, your team did not send a reminder, the timing was not ideal.',
+      'Agencies with real qualification discipline replace no-shows without argument. They stand behind the quality of what they booked. Agencies that are booking meetings to hit a number will find reasons why the no-show is your problem. The prospect was hard to reach, your team did not send a reminder, the timing was not ideal.',
       'Ask this question directly and watch how they answer. Confidence and clarity here means accountability. Hedging means volume.',
     ],
   },
@@ -110,7 +110,7 @@ const questions = [
     question: 'How long before we see the first meetings?',
     body: [
       'Ramp time matters. Every week without meetings is a week of pipeline you are not building.',
-      'A well-structured appointment setting agency should be operational quickly. ICP definition, sequence build, outreach launch — none of this should take months. A serious provider should be able to show you the first meetings within two to three weeks of engagement start.',
+      'A well-structured appointment setting agency should be operational quickly. ICP definition, sequence build, outreach launch: none of this should take months. A serious provider should be able to show you the first meetings within two to three weeks of engagement start.',
       'Be cautious of agencies that quote four to six week onboarding periods. That is often a sign of internal bottlenecks, not a signal of thoroughness. The best operators have refined processes that move fast because they have done this hundreds of times.',
       'Ask for the typical timeline from contract signed to first meeting booked. Then ask what the record is. Both answers tell you something useful.',
     ],

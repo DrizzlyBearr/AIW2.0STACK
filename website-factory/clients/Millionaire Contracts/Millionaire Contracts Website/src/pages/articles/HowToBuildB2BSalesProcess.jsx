@@ -21,7 +21,7 @@ const faqSchema = {
       name: 'What is a B2B sales process?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A B2B sales process is a defined, repeatable sequence of steps that moves a prospect from first contact to closed deal. It covers who you target, how you reach them, how you qualify them, how you run the sales conversation, and how you measure performance at each stage. Without a defined process, results depend on individual effort and luck rather than a system that compounds over time.',
+        text: 'A B2B sales process is a defined, repeatable sequence of steps that moves a prospect from first contact to closed deal. It covers who you target, how you reach them, how you qualify them, and how you measure performance at each stage. Without a defined process, results depend on individual effort and luck rather than a system that compounds over time.',
       },
     },
     {
@@ -37,7 +37,7 @@ const faqSchema = {
       name: 'How long does it take to build a B2B sales process?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The core architecture of a B2B sales process can be built in two to four weeks. The ICP definition, outreach sequences, qualification criteria, and pipeline stages can all be documented and ready to run within that window. What takes longer is iteration: adjusting the ICP based on response data, refining the messaging based on what resonates, and calibrating qualification criteria based on which meetings actually close.',
+        text: 'The core architecture of a B2B sales process can be built in two to four weeks: ICP definition, outreach sequences, qualification criteria, and pipeline stages. What takes longer is iteration, adjusting the ICP based on response data, refining messaging based on what resonates, and calibrating qualification criteria based on which meetings close.',
       },
     },
     {
@@ -53,7 +53,7 @@ const faqSchema = {
       name: 'Should I build a B2B sales process myself or outsource it?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Building the process yourself is worth doing if you have the time and sales experience to do it well. The risk is spending three to six months learning what works through trial and error while your pipeline stays thin. An outsourced sales team brings a proven process from day one and generates pipeline while the learning happens. Many businesses find that outsourcing first and building in-house once the playbook is proven is the faster and lower-risk path.',
+        text: 'Building it yourself is worth doing if you have the time and sales experience. The risk is three to six months of trial and error while your pipeline stays thin. An outsourced team brings a proven process from day one and generates pipeline while the learning happens. Many businesses outsource first, then build in-house once the playbook is proven.',
       },
     },
   ],

@@ -248,7 +248,7 @@ export default function WhatDoesOutsourcedSalesCost() {
           </p>
           <div className="space-y-5">
             {[
-              { factor: 'Scope of service', detail: 'Appointment setting only is cheaper than full sales operation. The more of the sales function you outsource, the higher the engagement cost — and the higher the output.' },
+              { factor: 'Scope of service', detail: 'Appointment setting only is cheaper than full sales operation. The more of the sales function you outsource, the higher the engagement cost, and the higher the output.' },
               { factor: 'Target market complexity', detail: 'Enterprise outreach with multi-stakeholder decision processes requires more sophisticated qualification and longer sequences. SMB outreach is faster and cheaper to run.' },
               { factor: 'Deal size and sales cycle', detail: 'Higher deal values justify higher acquisition costs. An agency charging $5,000 per month to bring in $50,000 deals is delivering clear ROI. The same cost to bring in $2,000 deals is not.' },
               { factor: 'Number of reps deployed', detail: 'A single SDR engagement costs less than a team. Scaling the number of active reps scales the retainer accordingly.' },
