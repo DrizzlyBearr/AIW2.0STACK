@@ -21,6 +21,18 @@ const articles = [
     featured: true,
   },
   {
+    to: '/why-your-pipeline-empties-when-you-get-busy',
+    category: 'Symptom',
+    title: 'Why Your Pipeline Empties Every Time You Get Busy',
+    desc: 'The feast or famine cycle is structural, not a discipline problem. Why it happens and the fix that ends it.',
+  },
+  {
+    to: '/founder-led-sales-stops-working',
+    category: 'Symptom',
+    title: 'Founder-Led Sales: Why It Stops Working',
+    desc: 'The thing that built the business becomes the thing that caps it. How to move past it when every deal still runs through you.',
+  },
+  {
     to: '/five-signs-you-need-outsourced-sales',
     category: 'Diagnostic',
     title: '5 Signs Your Business Needs an Outsourced Sales Team',
