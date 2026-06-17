@@ -53,9 +53,11 @@ export default function AppointmentSetting() {
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you hire an appointment setting provider.' },
+                { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model explained with what drives the number.' },
                 { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'Diagnostic guide for knowing when outsourced is the right move.' },
-                { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The four models explained and how to choose the right fit.' },
                 { to: '/why-sales-outsourcing-partnerships-fail', label: 'Why Most Sales Outsourcing Partnerships Fail', desc: 'Five failure points and how to avoid them before you sign.' },
+                { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Six steps to a repeatable process that generates consistent pipeline.' },
+                { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The four models explained and how to choose the right fit.' },
               ].map((link) => (
                 <Link
                   key={link.to}

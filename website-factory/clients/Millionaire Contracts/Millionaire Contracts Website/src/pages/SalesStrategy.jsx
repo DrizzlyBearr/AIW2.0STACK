@@ -57,8 +57,10 @@ export default function SalesStrategy() {
               {[
                 { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Six steps to a repeatable process that generates consistent pipeline.' },
                 { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The four engagement models and how to choose the right fit.' },
+                { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you hire any external sales provider.' },
+                { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model explained with what drives the number.' },
                 { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'Diagnostic guide for businesses with a working offer but inconsistent pipeline.' },
-                { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'Full number breakdown comparing both options.' },
+                { to: '/why-sales-outsourcing-partnerships-fail', label: 'Why Most Sales Outsourcing Partnerships Fail', desc: 'Five failure points and how to avoid them before you sign.' },
               ].map((link) => (
                 <Link
                   key={link.to}

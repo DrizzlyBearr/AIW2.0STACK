@@ -56,9 +56,11 @@ export default function SalesManagement() {
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 { to: '/why-sales-outsourcing-partnerships-fail', label: 'Why Most Sales Outsourcing Partnerships Fail', desc: 'Five failure points and what separates partnerships that deliver.' },
-                { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'What a fully loaded in-house sales hire actually costs versus outsourced.' },
-                { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'The six steps to a process that produces predictable pipeline.' },
                 { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The four models explained and who each one is right for.' },
+                { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you hire any external sales provider.' },
+                { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model explained with what drives the number.' },
+                { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'Diagnostic guide for knowing when outsourced is the right move.' },
+                { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'The six steps to a process that produces predictable pipeline.' },
               ].map((link) => (
                 <Link
                   key={link.to}
