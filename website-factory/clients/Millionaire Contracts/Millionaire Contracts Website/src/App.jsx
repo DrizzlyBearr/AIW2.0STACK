@@ -46,7 +46,7 @@ export default function App() {
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/how-to-choose-an-appointment-setting-company" element={<HowToChooseAppointmentSetting />} />
         <Route path="/what-does-outsourced-sales-cost" element={<WhatDoesOutsourcedSalesCost />} />
-        <Route path="/5-signs-your-business-needs-outsourced-sales" element={<FiveSignsYouNeedOutsourcedSales />} />
+        <Route path="/five-signs-you-need-outsourced-sales" element={<FiveSignsYouNeedOutsourcedSales />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />
