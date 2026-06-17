@@ -218,7 +218,9 @@ export default function PipelineEmptiesWhenBusy() {
           <h2 className="font-headline text-xl font-black text-mc-teal mb-6">Related reading</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
+              { to: '/inconsistent-revenue', label: 'Why Your Revenue Is Inconsistent and What to Do About It', desc: 'The revenue swings this cycle produces, and the fix.' },
               { to: '/founder-led-sales-stops-working', label: 'Founder-Led Sales: Why It Stops Working', desc: 'What to do when every deal still runs through you.' },
+              { to: '/sales-stall-without-you', label: 'Why Sales Stall Every Time You Step Back from Them', desc: 'Why the pipeline halts the moment your attention shifts.' },
               { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'The patterns that point to a sales execution gap.' },
               { to: '/cost-of-building-a-sales-team', label: 'In-House Sales Team Cost Calculator', desc: 'What building the function yourself would cost.' },
               { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'The system that makes pipeline repeatable.' },

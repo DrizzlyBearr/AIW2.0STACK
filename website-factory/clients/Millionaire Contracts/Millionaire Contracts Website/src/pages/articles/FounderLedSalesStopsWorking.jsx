@@ -194,7 +194,9 @@ export default function FounderLedSalesStopsWorking() {
           <h2 className="font-headline text-xl font-black text-mc-teal mb-6">Related reading</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
+              { to: '/sales-stall-without-you', label: 'Why Sales Stall Every Time You Step Back from Them', desc: 'The bottleneck this creates and how to remove it.' },
               { to: '/why-your-pipeline-empties-when-you-get-busy', label: 'Why Your Pipeline Empties Every Time You Get Busy', desc: 'The feast or famine cycle and how to end it.' },
+              { to: '/inconsistent-revenue', label: 'Why Your Revenue Is Inconsistent and What to Do About It', desc: 'The pattern behind revenue that swings month to month.' },
               { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'The patterns that point to a sales execution gap.' },
               { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Turn what you do into a system a team can run.' },
               { to: '/how-it-works', label: 'How Millionaire Contracts Works', desc: 'The engagement model and what you get.' },

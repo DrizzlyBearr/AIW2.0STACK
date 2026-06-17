@@ -56,6 +56,8 @@ export default function SalesStrategy() {
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Six steps to a repeatable process that generates consistent pipeline.' },
+                { to: '/inconsistent-revenue', label: 'Why Your Revenue Is Inconsistent and What to Do About It', desc: 'Why revenue swings month to month and what stabilizes it.' },
+                { to: '/why-your-pipeline-empties-when-you-get-busy', label: 'Why Your Pipeline Empties Every Time You Get Busy', desc: 'The feast or famine cycle and the structural fix that ends it.' },
                 { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The four engagement models and how to choose the right fit.' },
                 { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you hire any external sales provider.' },
                 { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model explained with what drives the number.' },

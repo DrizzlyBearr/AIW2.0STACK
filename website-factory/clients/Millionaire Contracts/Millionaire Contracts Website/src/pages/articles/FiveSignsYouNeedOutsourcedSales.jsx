@@ -251,10 +251,12 @@ export default function FiveSignsYouNeedOutsourcedSales() {
           <h2 className="font-headline text-xl font-black text-mc-teal mb-6">Related reading</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
+              { to: '/why-your-pipeline-empties-when-you-get-busy', label: 'Why Your Pipeline Empties Every Time You Get Busy', desc: 'The feast or famine cycle and how to end it.' },
+              { to: '/inconsistent-revenue', label: 'Why Your Revenue Is Inconsistent and What to Do About It', desc: 'The pattern behind revenue that swings month to month.' },
+              { to: '/sales-stall-without-you', label: 'Why Sales Stall Every Time You Step Back from Them', desc: 'When you are the bottleneck and how to remove it.' },
               { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost Comparison', desc: 'The full number breakdown for both options.' },
               { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model explained with what drives the number.' },
               { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you sign.' },
-              { to: '/how-it-works', label: 'How Millionaire Contracts Works', desc: 'The engagement model and what you get.' },
             ].map((link) => (
               <Link
                 key={link.to}
