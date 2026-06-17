@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Testimonials from '../components/Testimonials'
 import SEOMeta from '../components/SEOMeta'
 
 const schema = {
@@ -243,8 +244,11 @@ export default function HowItWorks() {
         </div>
       </section>
 
+      {/* Social proof */}
+      <Testimonials heading="Trusted by the companies we scale" label="Client Feedback" />
+
       {/* Guarantees */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-screen-xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="section-label mb-3 block" style={{ color: '#d8920e' }}>Our commitment</span>
