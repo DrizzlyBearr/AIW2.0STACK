@@ -80,6 +80,27 @@ const caseResults = [
   { client: 'Eads Bridge Holdings', metric: '100%', label: 'Client satisfaction', slug: '/portfolio' },
 ]
 
+const featuredGuides = [
+  {
+    to: '/what-is-sales-outsourcing',
+    category: 'Start here',
+    title: 'What Is Sales Outsourcing and Is It Right for Your Business?',
+    desc: 'The definition, the four engagement models, and a framework for deciding whether it fits where you are.',
+  },
+  {
+    to: '/five-signs-you-need-outsourced-sales',
+    category: 'Diagnostic',
+    title: '5 Signs Your Business Needs an Outsourced Sales Team',
+    desc: 'The patterns that show up in businesses with a working offer that are not growing at the pace they should be.',
+  },
+  {
+    to: '/what-does-outsourced-sales-cost',
+    category: 'Pricing',
+    title: 'What Does Outsourced Sales Actually Cost?',
+    desc: 'Every pricing model explained, the factors that drive the number, and how to think about return.',
+  },
+]
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -278,6 +299,48 @@ export default function Home() {
 
       {/* ── TESTIMONIALS ── */}
       <Testimonials />
+
+      {/* ── RESOURCES STRIP ── */}
+      <section className="bg-gray-50 py-20 px-6 border-t border-gray-100">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+            <div className="max-w-xl">
+              <span className="section-label mb-3 block">Resources</span>
+              <h2 className="font-headline text-4xl font-black text-mc-teal leading-tight">
+                Deciding how to grow your pipeline?
+              </h2>
+              <p className="font-body text-gray-500 text-base leading-relaxed mt-3">
+                Straight answers on outsourced sales, pricing, and building a process that works. No pitch.
+              </p>
+            </div>
+            <Link to="/resources" className="font-headline font-bold text-mc-gold inline-flex items-center gap-2 flex-shrink-0 hover:gap-3 transition-all">
+              View all guides
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {featuredGuides.map((g) => (
+              <Link
+                key={g.to}
+                to={g.to}
+                className="flex flex-col bg-white rounded-xl p-7 border border-gray-100 hover:border-mc-gold/40 hover:shadow-md transition-all group"
+              >
+                <span className="inline-block self-start bg-mc-teal/5 border border-mc-teal/10 text-mc-teal text-xs font-bold rounded-full px-3 py-1 mb-4">{g.category}</span>
+                <h3 className="font-headline text-lg font-black text-mc-teal leading-snug mb-3 group-hover:text-mc-gold transition-colors">{g.title}</h3>
+                <p className="font-body text-gray-500 text-sm leading-relaxed mb-5 flex-grow">{g.desc}</p>
+                <span className="font-headline font-bold text-mc-gold text-sm inline-flex items-center gap-2 mt-auto">
+                  Read the guide
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── AI WEB AGENCY ── */}
       <section className="bg-mc-dark py-20 px-6">
