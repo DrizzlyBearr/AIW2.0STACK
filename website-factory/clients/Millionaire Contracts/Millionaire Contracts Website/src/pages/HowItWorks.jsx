@@ -6,9 +6,9 @@ import SEOMeta from '../components/SEOMeta'
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Sales Outsourcing Engagements',
+  name: 'Sales and Website Engagements',
   provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
-  description: 'Millionaire Contracts offers three engagement models: Appointment Setting, Sales Closing, and Full Sales Operation. All engagements are results-driven with no long-term lock-in.',
+  description: 'Millionaire Contracts offers website audit and rebuild, appointment setting, sales closing, and full sales operation. Services can be taken individually or as a complete build.',
 }
 
 const steps = [
@@ -109,7 +109,7 @@ export default function HowItWorks() {
               <span className="text-mc-gold">With You</span>
             </h1>
             <p className="font-body text-gray-400 text-lg leading-relaxed max-w-2xl">
-              Three engagement models built around your stage and goals. No guesswork, no generic retainers. We design the right engagement on the strategy call and deploy from day one.
+              Most businesses come to us with the same problem: a website that does not convert and a sales process that cannot close. We fix both. Each service can be taken on its own or as a complete build, depending on where you are starting from.
             </p>
           </div>
         </div>
@@ -157,11 +157,55 @@ export default function HowItWorks() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-screen-xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="section-label mb-3 block" style={{ color: '#d8920e' }}>Pick your model</span>
+            <span className="section-label mb-3 block" style={{ color: '#d8920e' }}>Pick your starting point</span>
             <h2 className="font-headline text-3xl md:text-4xl font-black text-mc-teal leading-tight">
-              Three engagement models
+              Every service, standalone or complete
             </h2>
+            <p className="font-body text-gray-500 mt-4 text-base">
+              Take one service or let us build the whole system. Most clients start with the website and scale into sales from there.
+            </p>
           </div>
+
+          {/* Website foundation card */}
+          <div className="bg-mc-dark rounded-2xl border border-mc-gold/30 overflow-hidden mb-6">
+            <div className="grid lg:grid-cols-2 gap-0">
+              <div className="px-8 py-8 border-b lg:border-b-0 lg:border-r border-white/10">
+                <span className="text-xs font-body font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block bg-mc-gold/20 text-mc-gold">
+                  Foundation
+                </span>
+                <h3 className="font-headline text-2xl font-black text-white mb-3">Website Audit and Rebuild</h3>
+                <p className="font-body text-gray-400 text-sm leading-relaxed mb-4">
+                  Most businesses lose deals before the sales conversation even starts. A slow, unconvincing, or outdated website kills credibility before your team picks up the phone. We audit what you have, identify where it is costing you, and rebuild it to convert.
+                </p>
+                <p className="font-body text-gray-500 text-xs italic">
+                  The natural starting point for businesses whose website is not pulling its weight.
+                </p>
+              </div>
+              <div className="px-8 py-8">
+                <p className="font-body text-xs font-semibold uppercase tracking-wider mb-4 text-mc-gold">What is included</p>
+                <ul className="space-y-2.5 mb-6">
+                  {[
+                    'Full website audit and conversion review',
+                    'Custom design built for your market and audience',
+                    'Copy written to convert, not just inform',
+                    'SEO structure, schema markup, and sitemap',
+                    'Speed optimisation and mobile-first build',
+                    'Handoff with full ownership of code and assets',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-mc-gold flex-shrink-0 mt-2" />
+                      <span className="font-body text-sm text-gray-300">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/calender" className="inline-block bg-mc-gold text-white font-headline font-bold text-sm py-3 px-6 rounded-lg hover:bg-mc-gold-light transition-colors">
+                  Book a Strategy Call
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Sales service cards */}
           <div className="grid lg:grid-cols-3 gap-6">
             {engagements.map((e, i) => (
               <div key={e.name} className={`rounded-2xl overflow-hidden flex flex-col ${i === 2 ? 'border-2 border-mc-gold' : 'border border-gray-200'}`}>
