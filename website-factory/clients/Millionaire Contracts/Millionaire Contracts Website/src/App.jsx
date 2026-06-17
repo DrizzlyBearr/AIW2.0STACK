@@ -18,6 +18,7 @@ import WhatDoesOutsourcedSalesCost from './pages/articles/WhatDoesOutsourcedSale
 import FiveSignsYouNeedOutsourcedSales from './pages/articles/FiveSignsYouNeedOutsourcedSales'
 import WhySalesOutsourcingFails from './pages/articles/WhySalesOutsourcingFails'
 import HowToBuildB2BSalesProcess from './pages/articles/HowToBuildB2BSalesProcess'
+import WhatIsSalesOutsourcing from './pages/articles/WhatIsSalesOutsourcing'
 
 function RouteTracker() {
   const location = useLocation()
@@ -51,6 +52,7 @@ export default function App() {
         <Route path="/five-signs-you-need-outsourced-sales" element={<FiveSignsYouNeedOutsourcedSales />} />
         <Route path="/why-sales-outsourcing-partnerships-fail" element={<WhySalesOutsourcingFails />} />
         <Route path="/how-to-build-a-b2b-sales-process" element={<HowToBuildB2BSalesProcess />} />
+        <Route path="/what-is-sales-outsourcing" element={<WhatIsSalesOutsourcing />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />
