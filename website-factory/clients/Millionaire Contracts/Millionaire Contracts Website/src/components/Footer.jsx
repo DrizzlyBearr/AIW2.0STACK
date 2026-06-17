@@ -6,6 +6,8 @@ const links = [
   { label: 'Home', to: '/home' },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'About Us', to: '/about-us' },
+  { label: 'How It Works', to: '/how-it-works' },
+  { label: 'Resources', to: '/resources' },
   { label: 'Contact', to: '/contact-us' },
 ]
 

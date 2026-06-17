@@ -13,6 +13,7 @@ import CaseStudy from './pages/CaseStudy'
 import Comparison from './pages/Comparison'
 import NotFound from './pages/NotFound'
 import HowItWorks from './pages/HowItWorks'
+import Resources from './pages/Resources'
 import HowToChooseAppointmentSetting from './pages/articles/HowToChooseAppointmentSetting'
 import WhatDoesOutsourcedSalesCost from './pages/articles/WhatDoesOutsourcedSalesCost'
 import FiveSignsYouNeedOutsourcedSales from './pages/articles/FiveSignsYouNeedOutsourcedSales'
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/sales-closing" element={<SalesClosing />} />
         <Route path="/appointment-setting" element={<AppointmentSetting />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/resources" element={<Resources />} />
         <Route path="/how-to-choose-an-appointment-setting-company" element={<HowToChooseAppointmentSetting />} />
         <Route path="/what-does-outsourced-sales-cost" element={<WhatDoesOutsourcedSalesCost />} />
         <Route path="/five-signs-you-need-outsourced-sales" element={<FiveSignsYouNeedOutsourcedSales />} />

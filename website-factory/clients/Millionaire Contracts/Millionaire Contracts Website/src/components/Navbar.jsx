@@ -53,6 +53,7 @@ export default function Navbar() {
             )}
           </div>
 
+          <NavLink to="/resources" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Resources</NavLink>
           <NavLink to="/contact-us" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Contact</NavLink>
         </div>
 
@@ -91,6 +92,7 @@ export default function Navbar() {
             )}
           </div>
           <Link to="/how-it-works" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>How It Works</Link>
+          <Link to="/resources" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Resources</Link>
           <Link to="/contact-us" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Contact</Link>
           <Link to="/calender" className="btn-primary text-center mt-2 text-sm" onClick={() => setMenuOpen(false)}>Schedule a Call</Link>
         </div>
