@@ -7,7 +7,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'In-House Sales Team vs Outsourced Sales: The Real Cost Comparison',
-  description: 'A detailed breakdown of what it actually costs to build an in-house sales team versus outsourcing your sales function, including the South African cost arbitrage advantage.',
+  description: 'A detailed breakdown of what it actually costs to build an in-house sales team versus outsourcing your sales function, with the real numbers and a clear framework for the decision.',
   publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
   mainEntityOfPage: 'https://millionairecontracts.com/in-house-vs-outsourced-sales',
 }
@@ -67,7 +67,7 @@ export default function Comparison() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEOMeta
         title="In-House Sales Team vs Outsourced Sales: The Real Cost"
-        description="Thinking of hiring an in-house SDR? Compare the true cost of building vs buying your sales function. Real numbers, South African cost arbitrage, and a clear framework for the decision."
+        description="Thinking of hiring an in-house SDR? Compare the true cost of building versus buying your sales function. Real numbers and a clear framework for making the decision."
         path="/in-house-vs-outsourced-sales"
         type="article"
         schema={[schema, faqSchema]}
