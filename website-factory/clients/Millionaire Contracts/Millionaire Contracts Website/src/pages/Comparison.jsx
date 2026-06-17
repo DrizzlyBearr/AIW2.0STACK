@@ -29,7 +29,7 @@ const faqSchema = {
       name: 'What does outsourced sales cost compared to in-house?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Outsourced sales functions typically run $42,000 to $55,000 per year for comparable output, representing a 30 to 50 percent reduction against a fully loaded in-house hire. South African-based sales reps offer an even deeper cost arbitrage: native English, professional sales training, and significantly lower total engagement cost.',
+        text: 'Outsourced sales functions typically run $42,000 to $55,000 per year for comparable output, representing a 30 to 50 percent reduction against a fully loaded in-house hire. You get senior sales professionals, end-to-end process management, and performance accountability without the overhead of a full-time hire.',
       },
     },
     {
@@ -178,25 +178,25 @@ export default function Comparison() {
         </div>
       </section>
 
-      {/* The SA angle */}
+      {/* What sets the team apart */}
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto">
-          <span className="section-label mb-4 block" style={{ color: '#d8920e' }}>The angle most comparisons miss</span>
-          <h2 className="font-headline text-3xl font-black text-mc-teal mb-6">The South African sales rep advantage</h2>
+          <span className="section-label mb-4 block" style={{ color: '#d8920e' }}>What sets our team apart</span>
+          <h2 className="font-headline text-3xl font-black text-mc-teal mb-6">A different level of sales execution</h2>
           <p className="font-body text-gray-700 leading-relaxed mb-5">
-            Most outsourced sales comparisons benchmark against US or Western European providers. Millionaire Contracts operates with sales professionals from South Africa, a market that produces exceptionally strong commercial talent: native or near-native English, formal business education, aggressive work ethic, and a professional sales culture that matches the best global markets.
+            Most outsourced sales providers give you a script and a dialler. Millionaire Contracts gives you a sales operation. Our team is built from commercially sharp professionals who have operated in competitive B2B environments across multiple markets. They do not learn on your pipeline.
           </p>
           <p className="font-body text-gray-700 leading-relaxed mb-5">
-            The cost arbitrage is real and significant. You get the same calibre of sales execution at a fraction of what a US or UK equivalent would cost. Not because of a quality compromise, but because of a structural wage difference between markets.
+            The difference shows in the numbers. A 65% average meeting success rate is not the result of volume. It is the result of preparation, qualification discipline, and sales professionals who understand that a bad meeting costs more than no meeting at all.
           </p>
           <p className="font-body text-gray-700 leading-relaxed mb-8">
-            This is the same model that technology companies have used with Indian and Eastern European engineering talent for two decades. It is now available for sales.
+            When you engage Millionaire Contracts, you are not getting a vendor. You are getting a team that operates like an internal sales function, with the accountability and performance standards to match.
           </p>
           <div className="grid sm:grid-cols-3 gap-5">
             {[
-              { heading: 'Native English', body: 'South African professionals communicate with clarity and confidence in English-speaking markets.' },
-              { heading: 'Professional calibre', body: 'Formally trained, commercially sharp, and experienced in competitive B2B sales environments.' },
-              { heading: 'Real cost arbitrage', body: 'Significantly lower engagement cost than US or UK equivalents, with no compromise on output quality.' },
+              { heading: 'Communication excellence', body: 'Our team communicates with clarity and commercial confidence across English-speaking markets globally.' },
+              { heading: 'Professional calibre', body: 'Formally trained, commercially sharp, and experienced in competitive B2B sales environments across multiple industries.' },
+              { heading: 'Proven track record', body: '20+ companies scaled. 65% average meeting success rate. Results built on repeatable process, not luck.' },
             ].map((c) => (
               <div key={c.heading} className="bg-mc-dark rounded-xl p-6 border border-white/10">
                 <div className="w-1.5 h-8 bg-mc-gold rounded-full mb-4" />
