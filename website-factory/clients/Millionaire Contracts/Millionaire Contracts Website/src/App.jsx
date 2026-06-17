@@ -11,6 +11,7 @@ import SalesClosing from './pages/SalesClosing'
 import AppointmentSetting from './pages/AppointmentSetting'
 import CaseStudy from './pages/CaseStudy'
 import Comparison from './pages/Comparison'
+import NotFound from './pages/NotFound'
 
 function RouteTracker() {
   const location = useLocation()
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/appointment-setting" element={<AppointmentSetting />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/:slug" element={<CaseStudy />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
