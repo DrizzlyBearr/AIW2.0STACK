@@ -86,7 +86,7 @@ export default function Comparison() {
               <span className="text-mc-gold">The Real Cost Comparison</span>
             </h1>
             <p className="font-body text-gray-400 text-lg leading-relaxed max-w-2xl">
-              Most founders hire a sales rep before they understand what that decision actually costs. This page gives you the honest numbers, the framework for the decision, and the one angle most cost comparisons leave out.
+              Most founders hire a sales rep before they understand what that decision actually costs. This page gives you the honest numbers, the framework for the decision, and a clear view of what a ready-built sales operation delivers instead.
             </p>
           </div>
         </div>
@@ -139,6 +139,12 @@ export default function Comparison() {
           <p className="font-body text-gray-500 text-sm mt-3">
             And that assumes the hire works. A wrong hire costs you 6 to 9 months of that investment before you can recover.
           </p>
+          <Link to="/cost-of-building-a-sales-team" className="mt-6 inline-flex items-center gap-2 font-headline font-bold text-mc-gold hover:gap-3 transition-all">
+            Run your own numbers in the calculator
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
       </section>
 

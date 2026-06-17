@@ -39,6 +39,12 @@ const articles = [
     desc: 'Every pricing model explained, the factors that drive the number, and how to think about return.',
   },
   {
+    to: '/cost-of-building-a-sales-team',
+    category: 'Free Tool',
+    title: 'In-House Sales Team Cost Calculator',
+    desc: 'Set your headcount and salary and see the fully loaded cost of building in-house, plus what you spend during ramp before the first deal closes.',
+  },
+  {
     to: '/how-to-choose-an-appointment-setting-company',
     category: "Buyer's Guide",
     title: 'How to Choose an Appointment Setting Company',

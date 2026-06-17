@@ -11,6 +11,7 @@ import SalesClosing from './pages/SalesClosing'
 import AppointmentSetting from './pages/AppointmentSetting'
 import CaseStudy from './pages/CaseStudy'
 import Comparison from './pages/Comparison'
+import SalesTeamCostCalculator from './pages/SalesTeamCostCalculator'
 import NotFound from './pages/NotFound'
 import HowItWorks from './pages/HowItWorks'
 import Resources from './pages/Resources'
@@ -56,6 +57,7 @@ export default function App() {
         <Route path="/how-to-build-a-b2b-sales-process" element={<HowToBuildB2BSalesProcess />} />
         <Route path="/what-is-sales-outsourcing" element={<WhatIsSalesOutsourcing />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
+        <Route path="/cost-of-building-a-sales-team" element={<SalesTeamCostCalculator />} />
         <Route path="/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
