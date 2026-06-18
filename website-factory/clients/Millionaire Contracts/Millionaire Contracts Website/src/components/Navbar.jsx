@@ -16,6 +16,7 @@ const industries = [
   { label: 'Private Equity and M&A', to: '/outsourced-sales-for-private-equity' },
   { label: 'Marketing Agencies', to: '/outsourced-sales-for-marketing-agencies' },
   { label: 'Financial Services', to: '/outsourced-sales-for-financial-services' },
+  { label: 'Healthcare', to: '/outsourced-sales-for-healthcare' },
 ]
 
 export default function Navbar() {

@@ -30,6 +30,7 @@ import ProfessionalServices from './pages/ProfessionalServices'
 import PrivateEquity from './pages/PrivateEquity'
 import MarketingAgencies from './pages/MarketingAgencies'
 import FinancialServices from './pages/FinancialServices'
+import Healthcare from './pages/Healthcare'
 
 function RouteTracker() {
   const location = useLocation()
@@ -74,6 +75,7 @@ export default function App() {
         <Route path="/outsourced-sales-for-private-equity" element={<PrivateEquity />} />
         <Route path="/outsourced-sales-for-marketing-agencies" element={<MarketingAgencies />} />
         <Route path="/outsourced-sales-for-financial-services" element={<FinancialServices />} />
+        <Route path="/outsourced-sales-for-healthcare" element={<Healthcare />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/cost-of-building-a-sales-team" element={<SalesTeamCostCalculator />} />
         <Route path="/:slug" element={<CaseStudy />} />

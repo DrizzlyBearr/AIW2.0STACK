@@ -116,6 +116,12 @@ const articles = [
     title: 'Outsourced Sales for Financial Services and Fintech Companies',
     desc: 'How Millionaire Contracts builds trust-led sales pipelines for financial services and fintech companies where credibility and compliance matter as much as conversion.',
   },
+  {
+    to: '/outsourced-sales-for-healthcare',
+    category: 'Vertical',
+    title: 'Outsourced Sales for Healthcare and Health Services Businesses',
+    desc: 'How Millionaire Contracts builds proactive patient acquisition and sales systems for healthcare businesses that have outgrown referrals and passive word of mouth.',
+  },
 ]
 
 export default function Resources() {
