@@ -94,12 +94,12 @@ const proofCards = [
   {
     name: 'Keen People',
     category: 'Staffing & Talent',
-    tagline: 'Building a repeatable pipeline of corporate retainer clients for a specialist staffing firm.',
+    tagline: 'Growing key client accounts and improving hiring outcomes for a specialist recruitment firm.',
     metrics: [
-      { value: '40+', label: 'Corporate meetings booked' },
-      { value: '5', label: 'New retainer clients won' },
-      { value: '60%', label: 'Meeting acceptance rate' },
-      { value: '2x', label: 'Retainer revenue growth' },
+      { value: '33%+', label: 'Key account revenue growth' },
+      { value: '21%', label: 'Reduction in time-to-hire' },
+      { value: '3', label: 'Consecutive quarters exceeding targets' },
+      { value: 'High', label: 'Client retention and satisfaction' },
     ],
     slug: 'keen-people',
   },
