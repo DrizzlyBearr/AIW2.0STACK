@@ -40,10 +40,21 @@ const howWeWork = [
   { step: 4, heading: 'Scale what works', body: 'Once a system proves itself, we build the infrastructure to run it at scale without losing performance.' },
 ]
 
-const pills = ['About', 'What we do', 'Team', 'Why we exist']
+const pills = [
+  { label: 'About', id: 'about' },
+  { label: 'What we do', id: 'what-we-do' },
+  { label: 'Team', id: 'team' },
+  { label: 'Why we exist', id: 'why-we-exist' },
+]
 
 export default function AboutUs() {
   const [activePill, setActivePill] = useState('About')
+
+  const scrollToSection = (id, label) => {
+    setActivePill(label)
+    const el = document.getElementById(id)
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   return (
     <div className="min-h-screen flex flex-col font-body">
@@ -70,16 +81,16 @@ export default function AboutUs() {
       </div>
 
       {/* Pill nav */}
-      <div className="bg-white border-b border-gray-100 px-6 py-3 flex justify-center gap-3 flex-wrap">
+      <div className="bg-white border-b border-gray-100 px-6 py-3 flex justify-center gap-3 flex-wrap sticky top-24 z-40">
         {pills.map((p) => (
           <button
-            key={p}
-            onClick={() => setActivePill(p)}
+            key={p.id}
+            onClick={() => scrollToSection(p.id, p.label)}
             className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-colors ${
-              activePill === p ? 'bg-mc-teal text-white' : 'bg-gray-100 text-mc-teal hover:bg-gray-200'
+              activePill === p.label ? 'bg-mc-teal text-white' : 'bg-gray-100 text-mc-teal hover:bg-gray-200'
             }`}
           >
-            {p}
+            {p.label}
           </button>
         ))}
       </div>
@@ -101,7 +112,7 @@ export default function AboutUs() {
       </section>
 
       {/* About band */}
-      <section className="bg-mc-teal py-14 px-6">
+      <section id="about" className="bg-mc-teal py-14 px-6 scroll-mt-40">
         <div className="max-w-screen-xl mx-auto max-w-3xl">
           <h2 className="font-headline text-2xl font-bold text-white mb-4">About</h2>
           <p className="font-body text-gray-300 leading-relaxed mb-4">
@@ -114,7 +125,7 @@ export default function AboutUs() {
       </section>
 
       {/* What We Actually Do */}
-      <section className="bg-white py-16 px-6">
+      <section id="what-we-do" className="bg-white py-16 px-6 scroll-mt-40">
         <div className="max-w-screen-xl mx-auto">
           <h2 className="font-headline text-3xl font-bold text-mc-teal text-center mb-10">What We Actually Do</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -151,7 +162,7 @@ export default function AboutUs() {
       </section>
 
       {/* Team */}
-      <section className="bg-white py-16 px-6">
+      <section id="team" className="bg-white py-16 px-6 scroll-mt-40">
         <div className="max-w-screen-xl mx-auto">
           <h2 className="font-headline text-3xl font-bold text-mc-teal text-center mb-10">The Team</h2>
           <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
@@ -192,7 +203,7 @@ export default function AboutUs() {
       </section>
 
       {/* CTA */}
-      <section className="bg-mc-teal py-14 px-6 text-center">
+      <section id="why-we-exist" className="bg-mc-teal py-14 px-6 text-center scroll-mt-40">
         <h2 className="font-headline text-3xl font-bold text-white mb-4">Why We Exist</h2>
         <p className="font-body text-gray-300 mb-6 max-w-xl mx-auto">
           We exist to make sure that the best products and services in the world are not lost to poor sales execution.
