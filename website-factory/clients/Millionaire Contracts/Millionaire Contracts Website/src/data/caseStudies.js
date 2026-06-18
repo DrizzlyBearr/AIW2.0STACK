@@ -4,8 +4,8 @@ export const caseStudies = {
     category: 'Technology / Telecoms',
     tagline: 'Leading the rollout of a device financing platform across MTN Zambia.',
     context: [
-      'Knight Prince Group (KPG) was engaged to deploy a device financing platform for MTN Zambia, enabling customers to finance mobile devices instead of paying upfront. The objective was to reduce purchase friction, speed up approvals, and increase device sales. Before the platform, customers faced multi-day bank approval processes and frequent drop-off before completing a purchase.',
-      'Millionaire Contracts led the business development, commercial coordination, and implementation side of the 12-month rollout, acting as the bridge between commercial goals, technical execution, and real-world deployment across MTN Zambia\'s operations.',
+      'Knight Prince Group (KPG) built a device financing platform and signed a deal with MTN Zambia to integrate the technology into their device sales operation. The platform let customers finance mobile devices instead of paying upfront, reducing purchase friction and increasing device sales. Before integration, customers faced multi-day bank approval processes and frequent drop-off before completing a purchase.',
+      'Millionaire Contracts led the business development, commercial coordination, and implementation side of the 12-month engagement, acting as the bridge between KPG, MTN Zambia leadership, technical teams, and financial partners to land the deal and get the platform working in the real world.',
     ],
     services: ['Sales Strategy', 'Sales Management'],
     scope: [
