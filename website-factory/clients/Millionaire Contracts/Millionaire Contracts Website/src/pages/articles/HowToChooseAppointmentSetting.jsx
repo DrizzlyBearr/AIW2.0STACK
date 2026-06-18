@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEOMeta from '../../components/SEOMeta'
+import ArticleCTA from '../../components/ArticleCTA'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -225,6 +226,11 @@ export default function HowToChooseAppointmentSetting() {
           ))}
         </div>
       </section>
+
+      <ArticleCTA
+        heading="Want to put these questions to us directly?"
+        body="We welcome every one of them. One call is enough to see how we qualify meetings, what we report on, and how we stand behind the appointments we book."
+      />
 
       {/* Summary */}
       <section className="py-16 px-6 bg-gray-50">

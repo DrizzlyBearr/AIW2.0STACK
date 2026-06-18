@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEOMeta from '../../components/SEOMeta'
+import ArticleCTA from '../../components/ArticleCTA'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -213,6 +214,11 @@ export default function WhySalesOutsourcingFails() {
           </div>
         </div>
       </section>
+
+      <ArticleCTA
+        heading="Want a partner that avoids these failure points?"
+        body="Defined ICP, clear qualification, real accountability. One call is enough to see how we structure an engagement that delivers."
+      />
 
       {/* Questions to ask before signing */}
       <section className="py-16 px-6">

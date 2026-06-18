@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEOMeta from '../../components/SEOMeta'
+import ArticleCTA from '../../components/ArticleCTA'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -161,6 +162,11 @@ export default function InconsistentRevenue() {
           </div>
         </div>
       </section>
+
+      <ArticleCTA
+        heading="Want revenue you can actually forecast?"
+        body="Consistent revenue starts with consistent sales input. One call is enough to map what that would take for your business."
+      />
 
       {/* The actual fix */}
       <section className="py-16 px-6">

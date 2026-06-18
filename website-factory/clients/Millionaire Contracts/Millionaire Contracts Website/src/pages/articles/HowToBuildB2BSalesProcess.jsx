@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEOMeta from '../../components/SEOMeta'
+import ArticleCTA from '../../components/ArticleCTA'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -200,6 +201,11 @@ export default function HowToBuildB2BSalesProcess() {
           ))}
         </div>
       </section>
+
+      <ArticleCTA
+        heading="Rather not spend six months building this yourself?"
+        body="We bring a proven B2B sales process from day one and generate pipeline while it is tuned to your market. One call is enough to see how it would work for you."
+      />
 
       {/* Build vs outsource */}
       <section className="py-16 px-6 bg-gray-50">

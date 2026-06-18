@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEOMeta from '../../components/SEOMeta'
+import ArticleCTA from '../../components/ArticleCTA'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -265,6 +266,11 @@ export default function WhatDoesOutsourcedSalesCost() {
           </div>
         </div>
       </section>
+
+      <ArticleCTA
+        heading="Want a real number for your situation?"
+        body="Cost depends on scope, market, and deal size. One call is enough to scope what an engagement would actually cost for your business."
+      />
 
       {/* ROI framework */}
       <section className="py-16 px-6">

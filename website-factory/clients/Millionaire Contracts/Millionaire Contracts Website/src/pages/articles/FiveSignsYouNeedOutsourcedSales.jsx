@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEOMeta from '../../components/SEOMeta'
+import ArticleCTA from '../../components/ArticleCTA'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -190,6 +191,11 @@ export default function FiveSignsYouNeedOutsourcedSales() {
           ))}
         </div>
       </section>
+
+      <ArticleCTA
+        heading="Recognize more than one of these?"
+        body="If two or more of these signs describe your business, the gap is execution, not strategy. One call is enough to tell you whether outsourced sales is the right fix."
+      />
 
       {/* When outsourced is NOT the answer */}
       <section className="py-16 px-6 bg-gray-50">

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEOMeta from '../../components/SEOMeta'
+import ArticleCTA from '../../components/ArticleCTA'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -160,6 +161,11 @@ export default function SalesStallWithoutYou() {
           </div>
         </div>
       </section>
+
+      <ArticleCTA
+        heading="Ready to take yourself out of the bottleneck?"
+        body="Outreach, qualification, and meeting generation can run without you. One call is enough to work out how that would look for your business."
+      />
 
       {/* How to move past it */}
       <section className="py-16 px-6">
