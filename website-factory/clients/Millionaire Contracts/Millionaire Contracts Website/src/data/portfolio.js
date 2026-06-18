@@ -11,7 +11,7 @@ export const portfolioClients = [
   { name: 'Vertigo Real Estate Ventures', slug: 'vertigo', image: `${CDN}69538090a61a7e3bbfcbfd76.jpg`, internal: true },
   { name: 'Demand Growth AI', slug: 'demand-growth-ai', image: `${CDN}69538090e889d38167fbdd7f.jpg`, internal: true },
   { name: 'HighSail Marketing', slug: 'highsail-marketing', image: `${CDN}69538090e251957624da350a.jpg`, internal: true },
-  { name: 'Starbrite Ortho', slug: 'starbrite-ortho', image: `${CDN}69538090e889d375effbdd81.jpg`, internal: true },
+  { name: 'StarBrite Orthodontics', slug: 'starbrite-ortho', image: `${CDN}69538090e889d375effbdd81.jpg`, internal: true },
   { name: 'Unified Communications', slug: 'unified-communications', image: `${CDN}69538090e2519515a5da350b.webp`, internal: true },
   { name: 'Thutsé', slug: 'thutse', image: `${CDN}69538491e25195111ada90be.png`, internal: true },
   { name: 'Atlas Management', slug: 'atlas-management', image: `${CDN}69539366ec06c552589ccb80.png`, internal: true },

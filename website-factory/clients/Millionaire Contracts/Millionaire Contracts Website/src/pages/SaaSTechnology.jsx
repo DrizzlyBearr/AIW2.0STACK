@@ -93,13 +93,13 @@ const challenges = [
 const proofCards = [
   {
     name: 'SaaS Lead Flow',
-    category: 'Software / SaaS',
-    tagline: 'Building the outbound engine that turned product traction into a predictable B2B pipeline.',
+    category: 'B2B SaaS / Lead Generation',
+    tagline: 'Building a clean, qualified pipeline that actually converts.',
     metrics: [
-      { value: '50+', label: 'Qualified demos booked' },
-      { value: '35%', label: 'Demo-to-trial conversion' },
-      { value: '3x', label: 'Monthly qualified lead volume' },
-      { value: '28%', label: 'Reduction in cost per acquisition' },
+      { value: '65%', label: 'Meeting success rate' },
+      { value: '20%', label: 'Increase in quality leads in 2 months' },
+      { value: 'Decision-maker', label: 'Every meeting with a real buyer' },
+      { value: 'Cleaner', label: 'More predictable pipeline' },
     ],
     slug: 'saas-lead-flow',
   },
