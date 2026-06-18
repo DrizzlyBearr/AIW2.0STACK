@@ -32,7 +32,7 @@ import MarketingAgencies from './pages/MarketingAgencies'
 import FinancialServices from './pages/FinancialServices'
 import Healthcare from './pages/Healthcare'
 
-function RouteTracker() {
+function AnimatedRoutes() {
   const location = useLocation()
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -40,14 +40,9 @@ function RouteTracker() {
       window.gtag('event', 'page_view', { page_path: location.pathname + location.search })
     }
   }, [location])
-  return null
-}
-
-export default function App() {
   return (
-    <BrowserRouter>
-      <RouteTracker />
-      <Routes>
+    <div key={location.pathname} className="page-fade">
+      <Routes location={location}>
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
@@ -81,6 +76,14 @@ export default function App() {
         <Route path="/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+    </div>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AnimatedRoutes />
     </BrowserRouter>
   )
 }
