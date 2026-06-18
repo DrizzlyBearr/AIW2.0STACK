@@ -92,6 +92,12 @@ const articles = [
     title: 'Outsourced Sales for SaaS and Technology Companies',
     desc: 'How Millionaire Contracts builds pipeline for software and technology businesses, from outbound to enterprise closing.',
   },
+  {
+    to: '/outsourced-sales-for-professional-services',
+    category: 'Vertical',
+    title: 'Outsourced Sales for Professional Services Firms',
+    desc: 'How Millionaire Contracts builds a proactive pipeline for consulting, legal, staffing, and corporate services firms beyond referrals.',
+  },
 ]
 
 export default function Resources() {

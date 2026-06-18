@@ -26,6 +26,7 @@ import FounderLedSalesStopsWorking from './pages/articles/FounderLedSalesStopsWo
 import InconsistentRevenue from './pages/articles/InconsistentRevenue'
 import SalesStallWithoutYou from './pages/articles/SalesStallWithoutYou'
 import SaaSTechnology from './pages/SaaSTechnology'
+import ProfessionalServices from './pages/ProfessionalServices'
 
 function RouteTracker() {
   const location = useLocation()
@@ -66,6 +67,7 @@ export default function App() {
         <Route path="/inconsistent-revenue" element={<InconsistentRevenue />} />
         <Route path="/sales-stall-without-you" element={<SalesStallWithoutYou />} />
         <Route path="/outsourced-sales-for-saas" element={<SaaSTechnology />} />
+        <Route path="/outsourced-sales-for-professional-services" element={<ProfessionalServices />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/cost-of-building-a-sales-team" element={<SalesTeamCostCalculator />} />
         <Route path="/:slug" element={<CaseStudy />} />
