@@ -22,16 +22,16 @@ const schema = {
 
 const whatYouGet = [
   {
-    label: 'Something real happening',
-    body: 'Not recycled takes on the same five topics every sales newsletter covers. We write about what is actually moving. A shift in trade, in infrastructure, in who has money and where they are putting it. The things most people in sales are not reading.',
+    label: 'The thing most people are not reading',
+    body: 'We do not cover the same five sales topics as everyone else. We write about what is actually moving in the world. Trade routes, infrastructure, capital flows, the industries being built from scratch in markets most sales newsletters have never mentioned.',
   },
   {
-    label: 'Why it touches your business',
-    body: 'We do not just report the news. We sit with it and ask what a founder or a revenue leader should actually do with this information. That translation is the whole point.',
+    label: 'What a founder should do with it',
+    body: 'Anyone can forward a headline. We sit with the information and ask what a person trying to grow revenue should actually make of it. That translation is the point of the whole thing.',
   },
   {
-    label: 'One thing to do about it',
-    body: 'Every issue ends with a move. Not a framework. Not a list. One thing you can act on this week if the issue resonated. Take it or leave it, but it is always there.',
+    label: 'One move, not a framework',
+    body: 'Every issue ends with something concrete. Not a system to install. One thing worth doing this week if the issue landed. Take it or leave it.',
   },
 ]
 
@@ -60,14 +60,14 @@ export default function PipelineAndPower() {
           <div className="max-w-3xl">
             <span className="section-label mb-4 block">Pipeline &amp; Power</span>
             <h1 className="font-headline text-4xl md:text-6xl font-black text-white leading-tight mb-6">
-              What is happening in the world<br />
-              <span className="text-mc-gold">and what it means for your revenue</span>
+              The world is moving.<br />
+              <span className="text-mc-gold">Most sales content has not noticed.</span>
             </h1>
             <p className="font-body text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mb-6">
-              Every fortnight we write one note. It covers something real shifting in global business, explains what it means for people trying to grow revenue, and ends with one move worth considering.
+              Every fortnight we write one note. Something real is shifting out there, in trade, in energy, in who has money and where they are building. We explain what it means for your revenue and hand you one move. That is the whole thing.
             </p>
             <p className="font-body text-gray-400 text-base leading-relaxed max-w-2xl">
-              That is it. Short, direct, and written by people who work inside businesses every day.
+              Short, direct, and written by people who work inside businesses every day.
             </p>
           </div>
         </div>
@@ -110,18 +110,18 @@ export default function PipelineAndPower() {
           <div className="max-w-2xl mb-10">
             <span className="section-label mb-3 block">Why we write it</span>
             <h2 className="font-headline text-3xl md:text-4xl font-black text-white leading-tight">
-              Most sales content is written as if the world stopped changing
+              We are tired of sales content that lives in a vacuum
             </h2>
           </div>
           <div className="max-w-3xl space-y-5">
             <p className="font-body text-gray-400 text-base md:text-lg leading-relaxed">
-              It covers the same objections, the same pipeline tips, the same cold email formats. None of it accounts for what is actually happening out there. We wanted to write something different.
+              Open most sales newsletters and you would think the world outside does not exist. Same cold email tips. Same objection handles. Same frameworks that were already stale when someone first wrote them down.
             </p>
             <p className="font-body text-gray-400 text-base md:text-lg leading-relaxed">
-              Across Africa right now, fibre is going into the ground, data centres are being built closer to the people using them, solar is giving businesses access to reliable power for the first time, and payment systems are reaching people the traditional banks never figured out how to serve. Manufacturing is relocating. New supply chains are forming. New buyers are appearing in markets that did not exist for most companies five years ago.
+              Meanwhile, fibre is going into the ground across Africa. Data centres are being built closer to the people using them. Solar is giving businesses reliable power for the first time. Payment systems are reaching people the traditional banks never figured out how to serve. New supply chains are forming. New buyers are appearing in markets that did not exist for most companies five years ago.
             </p>
             <p className="font-body text-gray-400 text-base md:text-lg leading-relaxed">
-              We work inside these markets. We see what is happening before it lands in the mainstream press. Pipeline &amp; Power is how we share it.
+              We work inside these markets. We see the shifts before they land in the mainstream press. This newsletter is how we share them.
             </p>
           </div>
         </div>
@@ -134,13 +134,13 @@ export default function PipelineAndPower() {
           <div>
             <span className="section-label mb-3 block">Who it is for</span>
             <h2 className="font-headline text-3xl md:text-4xl font-black text-mc-teal leading-tight mb-5">
-              Anyone who thinks about where their market is heading
+              For the people who already read widely and want one more thing worth their time
             </h2>
             <p className="font-body text-gray-600 text-base leading-relaxed mb-4">
-              Most of our readers are founders or the people running revenue at growing companies. They tend to be curious, they read widely, and they are already thinking past the next quarter.
+              Most of our readers are founders or the people running revenue at growing companies. They are curious, they think past the current quarter, and they are already suspicious of content that treats business as if it exists in a box.
             </p>
             <p className="font-body text-gray-600 text-base leading-relaxed">
-              If a global shift in trade, energy, or technology reaching your inbox every two weeks sounds useful, this is for you.
+              If you are one of those people, you will probably find this useful.
             </p>
           </div>
 
