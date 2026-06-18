@@ -98,6 +98,12 @@ const articles = [
     title: 'Outsourced Sales for Professional Services Firms',
     desc: 'How Millionaire Contracts builds a proactive pipeline for consulting, legal, staffing, and corporate services firms beyond referrals.',
   },
+  {
+    to: '/outsourced-sales-for-private-equity',
+    category: 'Vertical',
+    title: 'Outsourced Sales and Deal Origination for Private Equity and M&A',
+    desc: 'How Millionaire Contracts builds proprietary deal flow for private equity firms and acquirers by reaching business owners directly, beyond brokered auctions.',
+  },
 ]
 
 export default function Resources() {
