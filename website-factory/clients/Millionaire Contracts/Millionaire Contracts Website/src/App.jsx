@@ -31,6 +31,7 @@ import PrivateEquity from './pages/PrivateEquity'
 import MarketingAgencies from './pages/MarketingAgencies'
 import FinancialServices from './pages/FinancialServices'
 import Healthcare from './pages/Healthcare'
+import PipelineAndPower from './pages/PipelineAndPower'
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -71,6 +72,7 @@ function AnimatedRoutes() {
         <Route path="/outsourced-sales-for-marketing-agencies" element={<MarketingAgencies />} />
         <Route path="/outsourced-sales-for-financial-services" element={<FinancialServices />} />
         <Route path="/outsourced-sales-for-healthcare" element={<Healthcare />} />
+        <Route path="/pipeline-and-power" element={<PipelineAndPower />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/cost-of-building-a-sales-team" element={<SalesTeamCostCalculator />} />
         <Route path="/:slug" element={<CaseStudy />} />

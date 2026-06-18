@@ -122,6 +122,7 @@ export default function Navbar() {
           </div>
 
           <NavItem to="/resources">Resources</NavItem>
+          <NavItem to="/pipeline-and-power">Newsletter</NavItem>
           <NavItem to="/contact-us">Contact</NavItem>
         </div>
 
@@ -173,6 +174,7 @@ export default function Navbar() {
           </div>
           <Link to="/how-it-works" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>How It Works</Link>
           <Link to="/resources" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Resources</Link>
+          <Link to="/pipeline-and-power" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Newsletter</Link>
           <Link to="/contact-us" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Contact</Link>
           <Link to="/calender" className="btn-primary text-center mt-2 text-sm" onClick={() => setMenuOpen(false)}>Schedule a Call</Link>
         </div>
