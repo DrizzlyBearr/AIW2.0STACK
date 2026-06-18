@@ -118,12 +118,12 @@ const proofCards = [
   {
     name: 'Martino Law Group',
     category: 'Legal Services',
-    tagline: 'Building a proactive business development function for a corporate law firm.',
+    tagline: 'Turning anxious legal inquiries into same-day attorney consultations.',
     metrics: [
-      { value: '15+', label: 'Corporate client meetings secured' },
-      { value: '3', label: 'Retainer agreements initiated' },
-      { value: '50%', label: 'Referral partner engagement rate' },
-      { value: '6 months', label: 'Zero pipeline to active funnel' },
+      { value: 'Faster', label: 'Inquiry-to-consultation conversion' },
+      { value: 'Higher', label: 'Quality of attorney conversations' },
+      { value: 'Same-day', label: 'Consultations booked' },
+      { value: 'Fewer', label: 'No-shows and drop-offs' },
     ],
     slug: 'martino-law',
   },
