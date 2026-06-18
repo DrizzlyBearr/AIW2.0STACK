@@ -110,6 +110,12 @@ const articles = [
     title: 'Outsourced Sales for Marketing and Growth Agencies',
     desc: 'How Millionaire Contracts builds the new business pipeline for marketing and growth agencies beyond founder-led sales and inbound luck.',
   },
+  {
+    to: '/outsourced-sales-for-financial-services',
+    category: 'Vertical',
+    title: 'Outsourced Sales for Financial Services and Fintech Companies',
+    desc: 'How Millionaire Contracts builds trust-led sales pipelines for financial services and fintech companies where credibility and compliance matter as much as conversion.',
+  },
 ]
 
 export default function Resources() {
