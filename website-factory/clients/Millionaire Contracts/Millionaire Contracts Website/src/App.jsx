@@ -25,6 +25,7 @@ import PipelineEmptiesWhenBusy from './pages/articles/PipelineEmptiesWhenBusy'
 import FounderLedSalesStopsWorking from './pages/articles/FounderLedSalesStopsWorking'
 import InconsistentRevenue from './pages/articles/InconsistentRevenue'
 import SalesStallWithoutYou from './pages/articles/SalesStallWithoutYou'
+import SaaSTechnology from './pages/SaaSTechnology'
 
 function RouteTracker() {
   const location = useLocation()
@@ -64,6 +65,7 @@ export default function App() {
         <Route path="/founder-led-sales-stops-working" element={<FounderLedSalesStopsWorking />} />
         <Route path="/inconsistent-revenue" element={<InconsistentRevenue />} />
         <Route path="/sales-stall-without-you" element={<SalesStallWithoutYou />} />
+        <Route path="/outsourced-sales-for-saas" element={<SaaSTechnology />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/cost-of-building-a-sales-team" element={<SalesTeamCostCalculator />} />
         <Route path="/:slug" element={<CaseStudy />} />

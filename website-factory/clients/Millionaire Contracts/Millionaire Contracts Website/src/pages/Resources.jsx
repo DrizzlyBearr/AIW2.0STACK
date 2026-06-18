@@ -86,6 +86,12 @@ const articles = [
     title: 'Why Sales Stall Every Time You Step Back from Them',
     desc: 'When the founder is the sales process, any absence stops the pipeline. Why that dependency forms and how to break it.',
   },
+  {
+    to: '/outsourced-sales-for-saas',
+    category: 'Vertical',
+    title: 'Outsourced Sales for SaaS and Technology Companies',
+    desc: 'How Millionaire Contracts builds pipeline for software and technology businesses, from outbound to enterprise closing.',
+  },
 ]
 
 export default function Resources() {
