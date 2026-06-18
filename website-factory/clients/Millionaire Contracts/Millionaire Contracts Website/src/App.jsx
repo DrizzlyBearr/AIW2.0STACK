@@ -28,6 +28,7 @@ import SalesStallWithoutYou from './pages/articles/SalesStallWithoutYou'
 import SaaSTechnology from './pages/SaaSTechnology'
 import ProfessionalServices from './pages/ProfessionalServices'
 import PrivateEquity from './pages/PrivateEquity'
+import MarketingAgencies from './pages/MarketingAgencies'
 
 function RouteTracker() {
   const location = useLocation()
@@ -70,6 +71,7 @@ export default function App() {
         <Route path="/outsourced-sales-for-saas" element={<SaaSTechnology />} />
         <Route path="/outsourced-sales-for-professional-services" element={<ProfessionalServices />} />
         <Route path="/outsourced-sales-for-private-equity" element={<PrivateEquity />} />
+        <Route path="/outsourced-sales-for-marketing-agencies" element={<MarketingAgencies />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/cost-of-building-a-sales-team" element={<SalesTeamCostCalculator />} />
         <Route path="/:slug" element={<CaseStudy />} />

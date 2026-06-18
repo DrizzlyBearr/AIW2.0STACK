@@ -104,6 +104,12 @@ const articles = [
     title: 'Outsourced Sales and Deal Origination for Private Equity and M&A',
     desc: 'How Millionaire Contracts builds proprietary deal flow for private equity firms and acquirers by reaching business owners directly, beyond brokered auctions.',
   },
+  {
+    to: '/outsourced-sales-for-marketing-agencies',
+    category: 'Vertical',
+    title: 'Outsourced Sales for Marketing and Growth Agencies',
+    desc: 'How Millionaire Contracts builds the new business pipeline for marketing and growth agencies beyond founder-led sales and inbound luck.',
+  },
 ]
 
 export default function Resources() {
