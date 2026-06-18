@@ -351,4 +351,18 @@
     <lastmod>2026-06-18</lastmod>
   </url>
 
+  <url>
+    <loc>https://millionairecontracts.com/newsletter-confirm</loc>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+
+  <url>
+    <loc>https://millionairecontracts.com/newsletter-unsubscribe</loc>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+
 </urlset>

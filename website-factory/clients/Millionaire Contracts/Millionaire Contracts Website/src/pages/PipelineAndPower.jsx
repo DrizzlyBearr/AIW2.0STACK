@@ -1,11 +1,12 @@
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
 
-// Paste your GoHighLevel newsletter form ID here to make the signup live.
-// Until then the page shows a clean email fallback so nothing looks broken.
-const NEWSLETTER_FORM_ID = ''
+// Fill in after creating a Cloudflare Turnstile site at dash.cloudflare.com
+const TURNSTILE_SITE_KEY = ''
+const FN_BASE = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -36,6 +37,74 @@ const whatYouGet = [
 ]
 
 export default function PipelineAndPower() {
+  const [email, setEmail] = useState('')
+  const [honeypot, setHoneypot] = useState('')
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const [status, setStatus] = useState('idle')
+  const [errorMsg, setErrorMsg] = useState('')
+  const turnstileRef = useRef(null)
+  const widgetId = useRef(null)
+
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY) return
+
+    function renderWidget() {
+      if (!turnstileRef.current || widgetId.current !== null) return
+      widgetId.current = window.turnstile.render(turnstileRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        callback: (token) => setTurnstileToken(token),
+        'expired-callback': () => setTurnstileToken(''),
+        'error-callback': () => setTurnstileToken(''),
+      })
+    }
+
+    if (window.turnstile) {
+      renderWidget()
+    } else {
+      const script = document.createElement('script')
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'
+      script.onload = renderWidget
+      script.async = true
+      document.head.appendChild(script)
+    }
+
+    return () => {
+      if (widgetId.current !== null && window.turnstile) {
+        window.turnstile.remove(widgetId.current)
+        widgetId.current = null
+      }
+    }
+  }, [])
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    if (status === 'loading') return
+    setStatus('loading')
+    setErrorMsg('')
+
+    try {
+      const res = await fetch(`${FN_BASE}/newsletter-subscribe`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          _hp: honeypot,
+          ...(turnstileToken && { turnstileToken }),
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setStatus('success')
+      } else {
+        setStatus('error')
+        setErrorMsg(data.error || 'Something went wrong. Please try again.')
+      }
+    } catch {
+      setStatus('error')
+      setErrorMsg('Something went wrong. Please try again.')
+    }
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEOMeta
@@ -130,7 +199,7 @@ export default function PipelineAndPower() {
       {/* Who it is for + Subscribe */}
       <section className="bg-white py-20 px-6">
         <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-          {/* Left, who it is for */}
+          {/* Left */}
           <div>
             <span className="section-label mb-3 block">Who it is for</span>
             <h2 className="font-headline text-3xl md:text-4xl font-black text-mc-teal leading-tight mb-5">
@@ -151,29 +220,57 @@ export default function PipelineAndPower() {
               Fortnightly. No spam. Unsubscribe any time.
             </p>
 
-            {NEWSLETTER_FORM_ID ? (
-              <>
-                <iframe
-                  src={`https://api.leadconnectorhq.com/widget/form/${NEWSLETTER_FORM_ID}`}
-                  style={{ width: '100%', height: '420px', border: 'none' }}
-                  id={NEWSLETTER_FORM_ID}
-                  title="Subscribe to Pipeline and Power"
-                  loading="lazy"
-                />
-                <script src="https://link.msgsndr.com/js/form_embed.js" async />
-              </>
-            ) : (
-              <div className="border border-white/10 rounded-lg p-6 text-center">
-                <p className="font-body text-gray-300 text-sm leading-relaxed mb-4">
-                  To join the list, send us a note and we will add you to the next send.
-                </p>
-                <a
-                  href="mailto:neo@millionairecontracts.com?subject=Subscribe%20to%20Pipeline%20and%20Power"
-                  className="btn-primary text-sm"
-                >
-                  Send me the next issue
-                </a>
+            {status === 'success' ? (
+              <div className="text-center py-4">
+                <div className="w-12 h-12 rounded-full bg-mc-gold/10 border border-mc-gold/30 flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-mc-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h4 className="font-headline font-bold text-white text-lg mb-2">Check your inbox</h4>
+                <p className="font-body text-gray-400 text-sm leading-relaxed">We sent you a confirmation link. Click it to complete your subscription.</p>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} noValidate>
+                {/* Honeypot — hidden from real users, visible to bots */}
+                <input
+                  type="text"
+                  name="_hp"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}
+                  aria-hidden="true"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
+                <div className="flex flex-col gap-3">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="your@email.com"
+                    required
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-mc-gold transition-colors"
+                  />
+
+                  {TURNSTILE_SITE_KEY && (
+                    <div ref={turnstileRef} />
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={status === 'loading' || (!!TURNSTILE_SITE_KEY && !turnstileToken)}
+                    className="w-full btn-primary text-sm py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {status === 'loading' ? 'Sending...' : 'Send me the next issue'}
+                  </button>
+                </div>
+
+                {status === 'error' && (
+                  <p className="text-red-400 text-xs mt-3 leading-relaxed">{errorMsg}</p>
+                )}
+              </form>
             )}
           </div>
         </div>
