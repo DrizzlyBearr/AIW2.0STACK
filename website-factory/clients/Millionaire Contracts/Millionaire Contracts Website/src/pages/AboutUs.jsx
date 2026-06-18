@@ -75,6 +75,33 @@ export default function AboutUs() {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
+  useEffect(() => {
+    const sections = pills
+      .map((p) => document.getElementById(p.id))
+      .filter(Boolean)
+    if (sections.length === 0) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const pill = pills.find((p) => p.id === entry.target.id)
+            if (pill) setActivePill(pill.label)
+          }
+        })
+      },
+      {
+        // offset for the sticky navbar (96px) plus the pill bar, and
+        // only treat a section as active once it sits in the upper band
+        rootMargin: '-160px 0px -55% 0px',
+        threshold: 0,
+      }
+    )
+
+    sections.forEach((s) => observer.observe(s))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className="min-h-screen flex flex-col font-body">
       <SEOMeta
