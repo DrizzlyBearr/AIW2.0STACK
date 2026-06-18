@@ -10,9 +10,15 @@ const services = [
   { label: 'Appointment Setting', to: '/appointment-setting' },
 ]
 
+const industries = [
+  { label: 'SaaS and Technology', to: '/outsourced-sales-for-saas' },
+  { label: 'Professional Services', to: '/outsourced-sales-for-professional-services' },
+]
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [industriesOpen, setIndustriesOpen] = useState(false)
 
   const linkClass = 'font-body font-semibold text-sm text-mc-teal hover:text-mc-gold transition-colors px-3 py-2'
 
@@ -53,6 +59,29 @@ export default function Navbar() {
             )}
           </div>
 
+          <div className="relative" onMouseEnter={() => setIndustriesOpen(true)} onMouseLeave={() => setIndustriesOpen(false)}>
+            <button className={`${linkClass} flex items-center gap-1`}>
+              Industries
+              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </button>
+            {industriesOpen && (
+              <div className="absolute top-full left-0 bg-white border border-gray-100 rounded-lg min-w-[240px] py-2 shadow-xl">
+                {industries.map((i) => (
+                  <Link
+                    key={i.to}
+                    to={i.to}
+                    className="block px-4 py-2.5 text-sm font-body text-mc-teal hover:text-mc-gold hover:bg-gray-50 transition-colors"
+                    onClick={() => setIndustriesOpen(false)}
+                  >
+                    {i.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           <NavLink to="/resources" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Resources</NavLink>
           <NavLink to="/contact-us" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Contact</NavLink>
         </div>
@@ -86,6 +115,18 @@ export default function Navbar() {
                 {services.map((s) => (
                   <Link key={s.to} to={s.to} className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setServicesOpen(false) }}>
                     {s.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          <div>
+            <button className="font-body text-mc-teal py-2 hover:text-mc-gold w-full text-left" onClick={() => setIndustriesOpen(!industriesOpen)}>Industries</button>
+            {industriesOpen && (
+              <div className="pl-4 flex flex-col gap-1 pb-2">
+                {industries.map((i) => (
+                  <Link key={i.to} to={i.to} className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setIndustriesOpen(false) }}>
+                    {i.label}
                   </Link>
                 ))}
               </div>
