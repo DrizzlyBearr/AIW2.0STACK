@@ -106,12 +106,12 @@ const proofCards = [
   {
     name: 'iLawyer Marketing',
     category: 'Legal Marketing Agency',
-    tagline: 'Sales management and closing infrastructure for a specialist legal marketing agency.',
+    tagline: 'Turning legal leads into signed cases through intake and conversion.',
     metrics: [
-      { value: '50%', label: 'Close rate on qualified leads' },
-      { value: '8+', label: 'New law firm clients won' },
-      { value: '2', label: 'Sales reps managed and performing to target' },
-      { value: '25%', label: 'Reduction in average sales cycle' },
+      { value: 'Higher', label: 'Lead-to-consultation conversion' },
+      { value: 'Better', label: 'Attorney calendar utilization' },
+      { value: 'Stronger', label: 'Law firm satisfaction and renewals' },
+      { value: 'Fewer', label: 'Lead quality complaints' },
     ],
     slug: 'ilawyer-marketing',
   },
@@ -126,18 +126,6 @@ const proofCards = [
       { value: '6 months', label: 'Zero pipeline to active funnel' },
     ],
     slug: 'martino-law',
-  },
-  {
-    name: 'Morecorp',
-    category: 'Corporate Services',
-    tagline: 'Installing a sales management function to take growth beyond what the founder could carry.',
-    metrics: [
-      { value: '30%', label: 'Revenue growth in engagement' },
-      { value: '2', label: 'Reps ramped and hitting targets' },
-      { value: '40%', label: 'Improvement in pipeline velocity' },
-      { value: '3x', label: 'Forecasting accuracy improvement' },
-    ],
-    slug: 'morecorp',
   },
 ]
 
