@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
@@ -160,7 +161,7 @@ export default function AboutUs() {
                   <img
                     src={member.photo}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                     onError={(e) => { e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=132b2f&color=fff&size=128` }}
                   />
                 </div>
@@ -196,7 +197,7 @@ export default function AboutUs() {
         <p className="font-body text-gray-300 mb-6 max-w-xl mx-auto">
           We exist to make sure that the best products and services in the world are not lost to poor sales execution.
         </p>
-        <a href="/contact-us" className="btn-gold">Get in Touch</a>
+        <Link to="/contact-us" className="btn-gold">Get in Touch</Link>
       </section>
 
       <FAQ />

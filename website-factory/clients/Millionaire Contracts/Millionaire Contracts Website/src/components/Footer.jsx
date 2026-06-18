@@ -70,12 +70,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/5 px-6 py-5 max-w-screen-xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
+      <div className="border-t border-white/5 px-6 py-5 max-w-screen-xl mx-auto flex justify-center">
         <p className="font-body text-gray-600 text-xs">© {new Date().getFullYear()} Millionaire Contracts. All rights reserved.</p>
-        <div className="flex gap-4">
-          <Link to="/terms-and-conditions" className="font-body text-gray-600 text-xs hover:text-gray-400">Terms</Link>
-          <Link to="/privacy-policy" className="font-body text-gray-600 text-xs hover:text-gray-400">Privacy</Link>
-        </div>
       </div>
     </footer>
   )

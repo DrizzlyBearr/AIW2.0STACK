@@ -7,7 +7,7 @@ export default {
         'mc-teal-light': '#1e3d42',
         'mc-gold': '#d8920e',
         'mc-gold-light': '#f0a820',
-        'mc-cream': '#FFEEEF',
+        'mc-cream': '#F5F3EE',
         'mc-dark': '#0a1a1d',
       },
       fontFamily: {
