@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 const LOGO = 'https://assets.cdn.filesafe.space/A8PmgiSa8bKb0J1mBeLF/media/66fe6791c6d28935508f7ce5.png'
@@ -19,15 +19,50 @@ const industries = [
   { label: 'Healthcare', to: '/outsourced-sales-for-healthcare' },
 ]
 
+function NavItem({ to, children }) {
+  return (
+    <NavLink
+      to={to}
+      className={({ isActive }) =>
+        `font-body font-semibold text-sm px-3 py-2 flex flex-col items-center gap-0.5 transition-colors ${
+          isActive ? 'text-mc-gold' : 'text-mc-teal hover:text-mc-gold'
+        }`
+      }
+    >
+      {({ isActive }) => (
+        <>
+          {children}
+          <span
+            className={`h-0.5 rounded-full bg-mc-gold transition-all duration-300 ${
+              isActive ? 'w-4 opacity-100' : 'w-0 opacity-0'
+            }`}
+          />
+        </>
+      )}
+    </NavLink>
+  )
+}
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [industriesOpen, setIndustriesOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
-  const linkClass = 'font-body font-semibold text-sm text-mc-teal hover:text-mc-gold transition-colors px-3 py-2'
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const dropdownLinkClass = 'font-body font-semibold text-sm text-mc-teal hover:text-mc-gold transition-colors px-3 py-2'
 
   return (
-    <nav className="w-full bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
+    <nav
+      className={`w-full bg-white border-b border-gray-100 sticky top-0 z-50 transition-shadow duration-300 ${
+        scrolled ? 'shadow-lg' : 'shadow-sm'
+      }`}
+    >
       <div className="max-w-screen-xl mx-auto px-6 flex items-center justify-between h-24">
         <Link to="/home" className="flex-shrink-0">
           <img src={LOGO} alt="Millionaire Contracts" className="h-16 w-auto" style={{ maxWidth: '300px' }} />
@@ -35,13 +70,13 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
-          <NavLink to="/home" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Home</NavLink>
-          <NavLink to="/portfolio" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Portfolio</NavLink>
-          <NavLink to="/about-us" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>About</NavLink>
-          <NavLink to="/how-it-works" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>How It Works</NavLink>
+          <NavItem to="/home">Home</NavItem>
+          <NavItem to="/portfolio">Portfolio</NavItem>
+          <NavItem to="/about-us">About</NavItem>
+          <NavItem to="/how-it-works">How It Works</NavItem>
 
           <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
-            <button className={`${linkClass} flex items-center gap-1`}>
+            <button className={`${dropdownLinkClass} flex items-center gap-1`}>
               Services
               <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -64,7 +99,7 @@ export default function Navbar() {
           </div>
 
           <div className="relative" onMouseEnter={() => setIndustriesOpen(true)} onMouseLeave={() => setIndustriesOpen(false)}>
-            <button className={`${linkClass} flex items-center gap-1`}>
+            <button className={`${dropdownLinkClass} flex items-center gap-1`}>
               Industries
               <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -86,8 +121,8 @@ export default function Navbar() {
             )}
           </div>
 
-          <NavLink to="/resources" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Resources</NavLink>
-          <NavLink to="/contact-us" className={({ isActive }) => `${linkClass}${isActive ? ' text-mc-gold' : ''}`}>Contact</NavLink>
+          <NavItem to="/resources">Resources</NavItem>
+          <NavItem to="/contact-us">Contact</NavItem>
         </div>
 
         <div className="hidden md:block">

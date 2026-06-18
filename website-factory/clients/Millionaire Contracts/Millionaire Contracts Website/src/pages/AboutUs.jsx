@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -49,6 +49,25 @@ const pills = [
 
 export default function AboutUs() {
   const [activePill, setActivePill] = useState('About')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const pill = pills.find((p) => p.id === entry.target.id)
+            if (pill) setActivePill(pill.label)
+          }
+        })
+      },
+      { rootMargin: '-25% 0px -65% 0px', threshold: 0 }
+    )
+    pills.forEach((p) => {
+      const el = document.getElementById(p.id)
+      if (el) observer.observe(el)
+    })
+    return () => observer.disconnect()
+  }, [])
 
   const scrollToSection = (id, label) => {
     setActivePill(label)
