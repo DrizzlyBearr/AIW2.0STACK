@@ -1,7 +1,10 @@
 import { lazy, Suspense, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import Home from './pages/Home'
+import Navbar from './components/Navbar'
 
-const Home = lazy(() => import('./pages/Home'))
+// Home is eager — it must paint immediately on first load
+// All other pages are lazy — they only download when visited
 const Portfolio = lazy(() => import('./pages/Portfolio'))
 const AboutUs = lazy(() => import('./pages/AboutUs'))
 const Contact = lazy(() => import('./pages/Contact'))
@@ -37,7 +40,11 @@ const NewsletterConfirm = lazy(() => import('./pages/NewsletterConfirm'))
 const NewsletterUnsubscribe = lazy(() => import('./pages/NewsletterUnsubscribe'))
 
 function PageShell() {
-  return <div style={{ minHeight: '100vh' }} />
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+    </div>
+  )
 }
 
 function AnimatedRoutes() {
