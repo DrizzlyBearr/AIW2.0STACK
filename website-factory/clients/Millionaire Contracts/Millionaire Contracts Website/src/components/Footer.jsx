@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const LOGO = 'https://assets.cdn.filesafe.space/A8PmgiSa8bKb0J1mBeLF/media/66fe6791c6d28935508f7ce5.png'
+const LOGO = '/mc-logo.png'
 
 const links = [
   { label: 'Home', to: '/home' },

@@ -5,7 +5,7 @@ import FAQ from '../components/FAQ'
 import Testimonials from '../components/Testimonials'
 import SEOMeta from '../components/SEOMeta'
 
-const LOGO = 'https://assets.cdn.filesafe.space/A8PmgiSa8bKb0J1mBeLF/media/66fe6791c6d28935508f7ce5.png'
+const LOGO = '/mc-logo.png'
 
 const stats = [
   { value: '65%', label: 'Meeting success rate' },
