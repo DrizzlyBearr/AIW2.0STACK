@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
 
 // Fill in after creating a Cloudflare Turnstile site at dash.cloudflare.com
-const TURNSTILE_SITE_KEY = ''
+const TURNSTILE_SITE_KEY = '0x4AAAAAADoMt2UL2VS-CDZ-'
 const FN_BASE = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1'
 
 const schema = {
