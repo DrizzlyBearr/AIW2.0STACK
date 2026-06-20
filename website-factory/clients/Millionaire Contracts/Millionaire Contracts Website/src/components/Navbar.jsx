@@ -47,6 +47,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [industriesOpen, setIndustriesOpen] = useState(false)
+  const [resourcesOpen, setResourcesOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -121,8 +122,24 @@ export default function Navbar() {
             )}
           </div>
 
-          <NavItem to="/resources">Resources</NavItem>
-          <NavItem to="/pipeline-and-power">Newsletter</NavItem>
+          <div className="relative" onMouseEnter={() => setResourcesOpen(true)} onMouseLeave={() => setResourcesOpen(false)}>
+            <button className={`${dropdownLinkClass} flex items-center gap-1`}>
+              Resources
+              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </button>
+            {resourcesOpen && (
+              <div className="absolute top-full left-0 bg-white border border-gray-100 rounded-lg min-w-[200px] py-2 shadow-xl">
+                <Link to="/resources" className="block px-4 py-2.5 text-sm font-body text-mc-teal hover:text-mc-gold hover:bg-gray-50 transition-colors" onClick={() => setResourcesOpen(false)}>
+                  Guides &amp; Articles
+                </Link>
+                <Link to="/pipeline-and-power" className="block px-4 py-2.5 text-sm font-body text-mc-teal hover:text-mc-gold hover:bg-gray-50 transition-colors" onClick={() => setResourcesOpen(false)}>
+                  Pipeline &amp; Power
+                </Link>
+              </div>
+            )}
+          </div>
           <NavItem to="/contact-us">Contact</NavItem>
         </div>
 
@@ -173,8 +190,15 @@ export default function Navbar() {
             )}
           </div>
           <Link to="/how-it-works" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>How It Works</Link>
-          <Link to="/resources" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Resources</Link>
-          <Link to="/pipeline-and-power" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Newsletter</Link>
+          <div>
+            <button className="font-body text-mc-teal py-2 hover:text-mc-gold w-full text-left" onClick={() => setResourcesOpen(!resourcesOpen)}>Resources</button>
+            {resourcesOpen && (
+              <div className="pl-4 flex flex-col gap-1 pb-2">
+                <Link to="/resources" className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setResourcesOpen(false) }}>Guides &amp; Articles</Link>
+                <Link to="/pipeline-and-power" className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setResourcesOpen(false) }}>Pipeline &amp; Power</Link>
+              </div>
+            )}
+          </div>
           <Link to="/contact-us" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Contact</Link>
           <Link to="/calender" className="btn-primary text-center mt-2 text-sm" onClick={() => setMenuOpen(false)}>Schedule a Call</Link>
         </div>
