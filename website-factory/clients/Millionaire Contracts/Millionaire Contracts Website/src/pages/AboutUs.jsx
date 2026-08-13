@@ -19,11 +19,6 @@ const team = [
     role: 'VP Business Development',
     photo: 'https://storage.googleapis.com/msgsndr/A8PmgiSa8bKb0J1mBeLF/media/697a3bdd1927c83cb243a485.png',
   },
-  {
-    name: 'Tokollo Legodi',
-    role: 'Non-Executive Director',
-    photo: 'https://storage.googleapis.com/msgsndr/A8PmgiSa8bKb0J1mBeLF/media/697a3bddf215dab0a54a0320.png',
-  },
 ]
 
 const whatWeDo = [
@@ -211,7 +206,7 @@ export default function AboutUs() {
       <section id="team" className="bg-white py-16 px-6 scroll-mt-40">
         <div className="max-w-screen-xl mx-auto">
           <h2 className="font-headline text-3xl font-bold text-mc-teal text-center mb-10">The Team</h2>
-          <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-8 max-w-xl mx-auto">
             {team.map((member) => (
               <div key={member.name} className="text-center">
                 <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 bg-gray-100">
