@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "module": "not_started",
+  "module": "setup_in_progress",
   "niche": null,
   "studentName": null,
   "gates": {
@@ -25,15 +25,21 @@
   "credentials": {
     "anthropic": false,
     "apify": false,
-    "supabase": false,
-    "vercel": false,
+    "supabase": true,
+    "vercel": true,
     "assemblyAi": false,
-    "github": false
+    "github": true
   },
   "deployments": {
     "factory": null,
     "engine": null
   },
   "factoryRuns": [],
-  "history": []
+  "history": [
+    {
+      "timestamp": "2026-08-20T10:33:27Z",
+      "command": "/setup",
+      "outcome": "partial: github, vercel, supabase verified via connectors. anthropic + apify pending env-config. setup.complete remains false."
+    }
+  ]
 }
