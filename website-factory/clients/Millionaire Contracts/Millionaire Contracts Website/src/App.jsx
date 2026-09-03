@@ -51,7 +51,23 @@ function PageShell() {
 function AnimatedRoutes() {
   const location = useLocation()
   useEffect(() => {
-    window.scrollTo(0, 0)
+    // Honor hash links (e.g. /services#outreach-engine). Retry briefly to
+    // allow lazy-loaded pages to mount before scrolling to the anchor.
+    if (location.hash) {
+      const id = location.hash.slice(1)
+      let tries = 0
+      const tryScroll = () => {
+        const el = document.getElementById(id)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        } else if (tries++ < 20) {
+          setTimeout(tryScroll, 50)
+        }
+      }
+      tryScroll()
+    } else {
+      window.scrollTo(0, 0)
+    }
     if (typeof window.gtag === 'function') {
       window.gtag('event', 'page_view', { page_path: location.pathname + location.search })
     }

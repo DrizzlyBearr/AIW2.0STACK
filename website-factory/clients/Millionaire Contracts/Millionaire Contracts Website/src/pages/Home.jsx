@@ -38,39 +38,12 @@ const comparison = [
   { label: 'Expertise level', inhouse: 'Depends on who you can afford to hire', mc: 'Senior closers and strategists immediately' },
 ]
 
-const services = [
-  {
-    title: 'Sales Strategy Development',
-    problem: 'You have a product but no repeatable way to sell it.',
-    what: 'We audit your market position, map your buyer journey, and build a sales playbook, pricing strategy, pitch framework, objection responses, and KPIs, specific to your niche and team.',
-    outcome: 'A ready-to-run sales playbook your team executes from day one.',
-    to: '/sales-strategy-development',
-    tag: 'Strategy',
-  },
-  {
-    title: 'Sales Management',
-    problem: 'Your sales team is active but not accountable to a system.',
-    what: 'We step in as your sales management layer, setting targets, running pipeline reviews, coaching reps, and building the reporting infrastructure that keeps performance visible and consistent.',
-    outcome: 'A managed sales operation that hits targets without your constant input.',
-    to: '/sales-management',
-    tag: 'Management',
-  },
-  {
-    title: 'Sales Closing',
-    problem: 'Deals stall at the finish line and you are not sure why.',
-    what: 'We deploy trained closers directly into your pipeline. They handle discovery, objection handling, and the final conversion, working as an extension of your team inside active deals.',
-    outcome: 'More deals closed, faster, by people who do this every day.',
-    to: '/sales-closing',
-    tag: 'Closing',
-  },
-  {
-    title: 'Appointment Setting',
-    problem: 'Your pipeline is thin because outreach is inconsistent.',
-    what: 'We run your outbound engine, identifying your ideal accounts, crafting the outreach, handling follow-up, and booking qualified meetings directly into your calendar.',
-    outcome: 'A full calendar of decision-maker meetings, every week.',
-    to: '/appointment-setting',
-    tag: 'Outbound',
-  },
+const pillars = [
+  { name: 'Pre-Qualifying Website', line: 'A site that qualifies enquiries before they ever reach a human.', to: '/services#pre-qualifying-website' },
+  { name: 'Qualification Framework', line: 'The scoring that decides which enquiries deserve your time.', to: '/services#qualification-framework' },
+  { name: 'Scripts and Conversation Flows', line: 'Openers, discovery, objections and closes, written for your market.', to: '/services#scripts-and-conversation-flows' },
+  { name: 'CRM and Pipeline Setup', line: 'The pipeline installed so nothing leaks between quote and close.', to: '/services#crm-and-pipeline-setup' },
+  { name: 'Outreach Engine', line: 'Cadences and channels for consistent outbound volume.', to: '/services#outreach-engine' },
 ]
 
 const caseResults = [
@@ -105,8 +78,8 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOMeta
-        title="Sales Strategy, Closing and Appointment Setting | Millionaire Contracts"
-        description="Millionaire Contracts builds sales operations that win. Strategy, management, closing, and appointment setting fully deployed into your business. 65% meeting success rate, 20+ companies scaled."
+        title="Millionaire Contracts | We Install Your Sales Function"
+        description="Millionaire Contracts installs a complete sales function: a pre-qualifying website, a qualification framework, scripts, CRM and pipeline setup, and an outreach engine, plus a trained rep who works your pipeline daily. 65% meeting success rate, 20+ companies scaled."
         path="/home"
       />
       <Navbar />
@@ -125,10 +98,10 @@ export default function Home() {
               <span className="text-mc-gold">That Win.</span>
             </h1>
             <p className="font-body text-gray-400 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-              Strategy, management, closing, and appointment setting, fully deployed into your business so your pipeline never stops producing.
+              We install a complete sales function, then place a trained rep who works your pipeline every day. Five builds and a person, not another report.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/calender" className="btn-primary">Schedule a Call</Link>
+              <Link to="/services" className="btn-primary">See What We Install</Link>
               <Link to="/portfolio" className="btn-secondary">View Our Work</Link>
             </div>
           </div>
@@ -230,44 +203,45 @@ export default function Home() {
       {/* ── SERVICES ── */}
       <section className="bg-mc-dark py-20 px-6">
         <div className="max-w-screen-xl mx-auto">
-          <div className="max-w-xl mb-14">
-            <span className="section-label mb-3 block">What We Do</span>
-            <h2 className="font-headline text-4xl md:text-5xl font-black text-white leading-tight">
-              Four ways we grow your revenue
+          <div className="max-w-2xl mb-14">
+            <span className="section-label mb-3 block">What We Install</span>
+            <h2 className="font-headline text-4xl md:text-5xl font-black text-white leading-tight mb-5">
+              We install a sales function, then a rep who works it
             </h2>
+            <p className="font-body text-gray-400 text-base md:text-lg leading-relaxed">
+              Five builds that work as one system. A website that qualifies is worth less without scripts that convert and a rep who calls, so we build them together.
+            </p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-5">
-            {services.map((s) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {pillars.map((p, i) => (
               <Link
-                key={s.to}
-                to={s.to}
-                className="group bg-white/5 border border-white/10 rounded-xl p-7 hover:border-mc-gold/50 transition-all duration-200 flex flex-col gap-5"
+                key={p.to}
+                to={p.to}
+                className="group bg-white/5 border border-white/10 rounded-xl p-7 hover:border-mc-gold/50 transition-all duration-200 flex flex-col"
               >
-                {/* Header */}
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="font-headline font-bold text-white text-lg leading-snug group-hover:text-mc-gold transition-colors">{s.title}</h3>
-                  <span className="flex-shrink-0 text-xs font-body font-semibold text-mc-gold border border-mc-gold/40 rounded-full px-3 py-1">{s.tag}</span>
-                </div>
-
-                {/* Problem */}
-                <div>
-                  <p className="text-xs font-body font-semibold uppercase tracking-widest text-gray-500 mb-1">The problem</p>
-                  <p className="font-body text-gray-300 text-sm leading-relaxed">{s.problem}</p>
-                </div>
-
-                {/* What we do */}
-                <div>
-                  <p className="text-xs font-body font-semibold uppercase tracking-widest text-gray-500 mb-1">What we do</p>
-                  <p className="font-body text-gray-400 text-sm leading-relaxed">{s.what}</p>
-                </div>
-
-                {/* Outcome */}
-                <div className="border-t border-white/10 pt-4 mt-auto flex items-center justify-between">
-                  <p className="font-body text-sm text-white font-semibold">{s.outcome}</p>
-                  <span className="text-mc-gold text-lg group-hover:translate-x-1 transition-transform">→</span>
-                </div>
+                <span className="font-headline text-4xl font-black text-mc-gold/25 leading-none mb-4">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h3 className="font-headline font-bold text-white text-lg leading-snug mb-2 group-hover:text-mc-gold transition-colors">{p.name}</h3>
+                <p className="font-body text-gray-400 text-sm leading-relaxed">{p.line}</p>
               </Link>
             ))}
+            {/* The rep + package tile */}
+            <Link
+              to="/services"
+              className="group bg-mc-gold rounded-xl p-7 flex flex-col justify-between hover:bg-mc-gold-light transition-colors"
+            >
+              <div>
+                <h3 className="font-headline font-black text-mc-dark text-lg leading-snug mb-2">Plus a trained rep, and the full package</h3>
+                <p className="font-body text-mc-dark/80 text-sm leading-relaxed">
+                  A rep who works your pipeline daily, paid on what they close. Take one build, or take The Full Stack.
+                </p>
+              </div>
+              <span className="font-headline font-bold text-mc-dark text-sm inline-flex items-center gap-2 mt-6">
+                See the whole system
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </Link>
           </div>
         </div>
       </section>

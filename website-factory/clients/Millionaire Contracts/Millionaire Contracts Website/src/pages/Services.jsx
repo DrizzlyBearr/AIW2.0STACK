@@ -18,26 +18,31 @@ const schema = {
 
 const pillars = [
   {
+    slug: 'pre-qualifying-website',
     name: 'Pre-Qualifying Website',
     what: 'We review your existing site, then rebuild it so enquiries are pre-qualified before they ever reach a human.',
     changes: 'The site asks the questions that decide whether an enquiry is worth an hour, instead of collecting a name and a message.',
   },
   {
+    slug: 'qualification-framework',
     name: 'Qualification Framework',
     what: 'The scoring system that decides which enquiries deserve pursuit, so effort lands on winnable work.',
     changes: 'Revenue fit, decision-maker level, timeline, and explicit disqualifiers, applied the same way every time.',
   },
   {
+    slug: 'scripts-and-conversation-flows',
     name: 'Scripts and Conversation Flows',
     what: 'Openers, discovery, objection handling and closes, written for your market in your buyers’ language.',
     changes: 'Not templates. Written per client, so the words fit the room your rep is walking into.',
   },
   {
+    slug: 'crm-and-pipeline-setup',
     name: 'CRM and Pipeline Setup',
     what: 'The pipeline, stages and logging discipline installed and configured inside your system.',
     changes: 'Nothing leaks between quote and close, because every deal has a place to sit and a next step.',
   },
   {
+    slug: 'outreach-engine',
     name: 'Outreach Engine',
     what: 'Cadences, templates and channel setup for consistent outbound volume.',
     changes: 'New business stops depending on who felt motivated this week.',
@@ -126,7 +131,8 @@ export default function Services() {
             {pillars.map((p, i) => (
               <div
                 key={p.name}
-                className="group bg-mc-dark rounded-xl border border-white/10 p-7 md:p-9 flex flex-col md:flex-row gap-6 md:gap-10 hover:border-mc-gold/40 transition-colors"
+                id={p.slug}
+                className="group bg-mc-dark rounded-xl border border-white/10 p-7 md:p-9 flex flex-col md:flex-row gap-6 md:gap-10 hover:border-mc-gold/40 transition-colors scroll-mt-28"
               >
                 <div className="flex-shrink-0">
                   <span className="font-headline text-5xl md:text-6xl font-black text-mc-gold/25 leading-none">

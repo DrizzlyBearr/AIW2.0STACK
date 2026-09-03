@@ -12,10 +12,12 @@ const links = [
 ]
 
 const services = [
-  { label: 'Sales Strategy', to: '/sales-strategy-development' },
-  { label: 'Sales Management', to: '/sales-management' },
-  { label: 'Sales Closing', to: '/sales-closing' },
-  { label: 'Appointment Setting', to: '/appointment-setting' },
+  { label: 'Pre-Qualifying Website', to: '/services#pre-qualifying-website' },
+  { label: 'Qualification Framework', to: '/services#qualification-framework' },
+  { label: 'Scripts and Conversation Flows', to: '/services#scripts-and-conversation-flows' },
+  { label: 'CRM and Pipeline Setup', to: '/services#crm-and-pipeline-setup' },
+  { label: 'Outreach Engine', to: '/services#outreach-engine' },
+  { label: 'The Full Stack', to: '/services' },
 ]
 
 export default function Footer() {

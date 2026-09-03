@@ -4,10 +4,12 @@ import { Link, NavLink } from 'react-router-dom'
 const LOGO = '/mc-logo.png'
 
 const services = [
-  { label: 'Sales Strategy Development', to: '/sales-strategy-development' },
-  { label: 'Sales Management', to: '/sales-management' },
-  { label: 'Sales Closing', to: '/sales-closing' },
-  { label: 'Appointment Setting', to: '/appointment-setting' },
+  { label: 'Pre-Qualifying Website', to: '/services#pre-qualifying-website' },
+  { label: 'Qualification Framework', to: '/services#qualification-framework' },
+  { label: 'Scripts and Conversation Flows', to: '/services#scripts-and-conversation-flows' },
+  { label: 'CRM and Pipeline Setup', to: '/services#crm-and-pipeline-setup' },
+  { label: 'Outreach Engine', to: '/services#outreach-engine' },
+  { label: 'The Full Stack', to: '/services', highlight: true },
 ]
 
 const industries = [
@@ -84,12 +86,16 @@ export default function Navbar() {
               </svg>
             </button>
             {servicesOpen && (
-              <div className="absolute top-full left-0 bg-white border border-gray-100 rounded-lg min-w-[240px] py-2 shadow-xl">
+              <div className="absolute top-full left-0 bg-white border border-gray-100 rounded-lg min-w-[260px] py-2 shadow-xl">
                 {services.map((s) => (
                   <Link
                     key={s.to}
                     to={s.to}
-                    className="block px-4 py-2.5 text-sm font-body text-mc-teal hover:text-mc-gold hover:bg-gray-50 transition-colors"
+                    className={`block px-4 py-2.5 text-sm font-body transition-colors hover:bg-gray-50 ${
+                      s.highlight
+                        ? 'mt-1 border-t border-gray-100 pt-3 font-bold text-mc-gold'
+                        : 'text-mc-teal hover:text-mc-gold'
+                    }`}
                     onClick={() => setServicesOpen(false)}
                   >
                     {s.label}
