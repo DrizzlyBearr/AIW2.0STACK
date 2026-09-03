@@ -131,24 +131,29 @@ const proofCards = [
 
 const services = [
   {
-    to: '/sales-strategy-development',
-    label: 'Sales Strategy',
-    desc: 'ICP definition, service positioning, target client profile, and the new business playbook your team executes from.',
+    to: '/services#pre-qualifying-website',
+    label: 'Pre-Qualifying Website',
+    desc: 'A site rebuilt so enquiries are qualified before they ever reach a human.',
   },
   {
-    to: '/appointment-setting',
-    label: 'Appointment Setting',
-    desc: 'Qualified new business conversations booked on a consistent weekly cadence, without the founder doing all the prospecting.',
+    to: '/services#qualification-framework',
+    label: 'Qualification Framework',
+    desc: 'The scoring that decides which enquiries deserve pursuit, so effort lands on winnable work.',
   },
   {
-    to: '/sales-closing',
-    label: 'Sales Closing',
-    desc: 'Closing support that turns qualified conversations into signed engagements without defaulting to spec work and RFP responses.',
+    to: '/services#scripts-and-conversation-flows',
+    label: 'Scripts and Conversation Flows',
+    desc: 'Openers, discovery, objection handling and closes, written for your market in your buyers language.',
   },
   {
-    to: '/sales-management',
-    label: 'Sales Management',
-    desc: 'Pipeline visibility, activity accountability, and the forecasting structure that keeps new business on track month to month.',
+    to: '/services#crm-and-pipeline-setup',
+    label: 'CRM and Pipeline Setup',
+    desc: 'The pipeline and logging discipline installed so nothing leaks between quote and close.',
+  },
+  {
+    to: '/services#outreach-engine',
+    label: 'Outreach Engine',
+    desc: 'Cadences, templates and channel setup for consistent outbound volume.',
   },
 ]
 
@@ -383,7 +388,7 @@ export default function MarketingAgencies() {
               What we build for marketing and growth agencies
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s) => (
               <Link
                 key={s.to}

@@ -131,24 +131,29 @@ const proofCards = [
 
 const services = [
   {
-    to: '/sales-strategy-development',
-    label: 'Sales Strategy',
-    desc: 'Buy box definition, target market mapping, origination strategy, and the outreach playbook your team runs from.',
+    to: '/services#pre-qualifying-website',
+    label: 'Pre-Qualifying Website',
+    desc: 'A site rebuilt so enquiries are qualified before they ever reach a human.',
   },
   {
-    to: '/appointment-setting',
-    label: 'Appointment Setting',
-    desc: 'Discovery calls booked directly with business owners and decision-makers who are genuinely open to a conversation.',
+    to: '/services#qualification-framework',
+    label: 'Qualification Framework',
+    desc: 'The scoring that decides which enquiries deserve pursuit, so effort lands on winnable work.',
   },
   {
-    to: '/sales-closing',
-    label: 'Deal Conversation Support',
-    desc: 'Support through seller conversations, from first discovery call to the structured discussions that move a deal forward.',
+    to: '/services#scripts-and-conversation-flows',
+    label: 'Scripts and Conversation Flows',
+    desc: 'Openers, discovery, objection handling and closes, written for your market in your buyers language.',
   },
   {
-    to: '/sales-management',
-    label: 'Sales Management',
-    desc: 'CRM structure, pipeline visibility, origination team accountability, and the forecasting leadership needs to plan.',
+    to: '/services#crm-and-pipeline-setup',
+    label: 'CRM and Pipeline Setup',
+    desc: 'The pipeline and logging discipline installed so nothing leaks between quote and close.',
+  },
+  {
+    to: '/services#outreach-engine',
+    label: 'Outreach Engine',
+    desc: 'Cadences, templates and channel setup for consistent outbound volume.',
   },
 ]
 
@@ -383,7 +388,7 @@ export default function PrivateEquity() {
               What we build for acquisition firms
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s) => (
               <Link
                 key={s.to}

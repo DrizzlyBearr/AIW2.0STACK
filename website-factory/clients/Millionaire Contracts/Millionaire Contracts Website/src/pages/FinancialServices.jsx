@@ -131,24 +131,29 @@ const proofCards = [
 
 const services = [
   {
-    to: '/sales-strategy-development',
-    label: 'Sales Strategy',
-    desc: 'ICP definition, go-to-market design, compliant messaging, and the acquisition playbook built around your specific product and buyer.',
+    to: '/services#pre-qualifying-website',
+    label: 'Pre-Qualifying Website',
+    desc: 'A site rebuilt so enquiries are qualified before they ever reach a human.',
   },
   {
-    to: '/appointment-setting',
-    label: 'Appointment Setting',
-    desc: 'Education-first outreach that qualifies buyers on fit and intent before a single meeting is booked, protecting your team\'s time and your reputation.',
+    to: '/services#qualification-framework',
+    label: 'Qualification Framework',
+    desc: 'The scoring that decides which enquiries deserve pursuit, so effort lands on winnable work.',
   },
   {
-    to: '/sales-management',
-    label: 'Sales Management',
-    desc: 'Pipeline structure, rep accountability, KPIs, and the forecasting visibility financial services leadership needs to plan around.',
+    to: '/services#scripts-and-conversation-flows',
+    label: 'Scripts and Conversation Flows',
+    desc: 'Openers, discovery, objection handling and closes, written for your market in your buyers language.',
   },
   {
-    to: '/sales-closing',
-    label: 'Sales Closing',
-    desc: 'Closing support built for long, considered sales cycles with multiple stakeholders, compliance gatekeepers, and risk-conscious buyers.',
+    to: '/services#crm-and-pipeline-setup',
+    label: 'CRM and Pipeline Setup',
+    desc: 'The pipeline and logging discipline installed so nothing leaks between quote and close.',
+  },
+  {
+    to: '/services#outreach-engine',
+    label: 'Outreach Engine',
+    desc: 'Cadences, templates and channel setup for consistent outbound volume.',
   },
 ]
 
@@ -383,7 +388,7 @@ export default function FinancialServices() {
               What we build for financial services companies
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s) => (
               <Link
                 key={s.to}

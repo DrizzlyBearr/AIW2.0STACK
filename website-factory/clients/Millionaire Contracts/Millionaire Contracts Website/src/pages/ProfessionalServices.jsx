@@ -131,24 +131,29 @@ const proofCards = [
 
 const services = [
   {
-    to: '/sales-strategy-development',
-    label: 'Sales Strategy',
-    desc: 'ICP definition, vertical prioritisation, positioning, and the business development playbook your firm executes from.',
+    to: '/services#pre-qualifying-website',
+    label: 'Pre-Qualifying Website',
+    desc: 'A site rebuilt so enquiries are qualified before they ever reach a human.',
   },
   {
-    to: '/appointment-setting',
-    label: 'Appointment Setting',
-    desc: 'Qualified discovery conversations booked with senior decision-makers on a consistent weekly cadence.',
+    to: '/services#qualification-framework',
+    label: 'Qualification Framework',
+    desc: 'The scoring that decides which enquiries deserve pursuit, so effort lands on winnable work.',
   },
   {
-    to: '/sales-closing',
-    label: 'Sales Closing',
-    desc: 'Closing support tuned to cautious, senior buyers who scrutinise everything before they commit.',
+    to: '/services#scripts-and-conversation-flows',
+    label: 'Scripts and Conversation Flows',
+    desc: 'Openers, discovery, objection handling and closes, written for your market in your buyers language.',
   },
   {
-    to: '/sales-management',
-    label: 'Sales Management',
-    desc: 'KPIs, pipeline visibility, rep accountability, and the forecasting structure leadership needs to plan.',
+    to: '/services#crm-and-pipeline-setup',
+    label: 'CRM and Pipeline Setup',
+    desc: 'The pipeline and logging discipline installed so nothing leaks between quote and close.',
+  },
+  {
+    to: '/services#outreach-engine',
+    label: 'Outreach Engine',
+    desc: 'Cadences, templates and channel setup for consistent outbound volume.',
   },
 ]
 
@@ -383,7 +388,7 @@ export default function ProfessionalServices() {
               What we build for professional services firms
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s) => (
               <Link
                 key={s.to}
