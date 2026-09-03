@@ -43,6 +43,36 @@ const pillars = [
   },
 ]
 
+const seeTheWork = [
+  {
+    heading: 'Your own account, not a status update',
+    body: 'You log in and see your live pipeline, your weekly reports, your invoices and your onboarding questionnaire. You see your account and nothing else. The work is visible, not reported.',
+  },
+  {
+    heading: 'A written report every Friday',
+    body: 'Automatically, covering that week’s activity, pipeline movement and value closed. Ask mid-week and you get that one and Friday’s as well.',
+  },
+  {
+    heading: 'Every build, with a live status',
+    body: 'A library of everything we build for you, per pillar, each marked so you always know where it stands.',
+  },
+]
+
+const buildStatuses = [
+  { label: 'Pre-Qualifying Website', status: 'Approved' },
+  { label: 'Qualification Framework', status: 'Ready for your review' },
+  { label: 'Scripts and Conversation Flows', status: 'In progress' },
+  { label: 'CRM and Pipeline Setup', status: 'In progress' },
+  { label: 'Outreach Engine', status: 'Not started' },
+]
+
+const statusStyle = {
+  'Approved': 'text-mc-gold border-mc-gold/40 bg-mc-gold/10',
+  'Ready for your review': 'text-white border-white/30 bg-white/10',
+  'In progress': 'text-gray-300 border-white/20 bg-white/5',
+  'Not started': 'text-gray-500 border-white/10 bg-transparent',
+}
+
 export default function Services() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -181,6 +211,80 @@ export default function Services() {
           <Link to="/contact-us" className="btn-primary">
             Start the qualifier
           </Link>
+        </div>
+      </section>
+
+      {/* ── HOW YOU SEE THE WORK ── */}
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-screen-xl mx-auto grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
+          <div>
+            <span className="section-label mb-3 block">How You See the Work</span>
+            <h2 className="font-headline text-3xl md:text-4xl font-black text-mc-teal leading-tight mb-8">
+              You watch it get built. You do not wait for a report.
+            </h2>
+            <div className="space-y-7">
+              {seeTheWork.map((item) => (
+                <div key={item.heading} className="flex items-start gap-4">
+                  <span className="w-2 h-2 rounded-full bg-mc-gold flex-shrink-0 mt-2.5" />
+                  <div>
+                    <h3 className="font-headline font-bold text-mc-teal text-lg mb-1.5">{item.heading}</h3>
+                    <p className="font-body text-gray-600 text-base leading-relaxed">{item.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Build library mockup */}
+          <div className="bg-mc-dark rounded-xl border border-white/10 p-6 md:p-8">
+            <div className="flex items-center justify-between mb-6">
+              <p className="font-headline font-bold text-white text-sm">Your builds</p>
+              <p className="font-body text-gray-500 text-xs">Updated this week</p>
+            </div>
+            <div className="space-y-3">
+              {buildStatuses.map((b) => (
+                <div key={b.label} className="flex items-center justify-between gap-4 border-b border-white/5 pb-3 last:border-0 last:pb-0">
+                  <span className="font-body text-gray-300 text-sm">{b.label}</span>
+                  <span className={`flex-shrink-0 font-body text-xs font-semibold border rounded-full px-3 py-1 ${statusStyle[b.status]}`}>
+                    {b.status}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="font-body text-gray-500 text-xs leading-relaxed mt-6 pt-5 border-t border-white/10">
+              An example of what you see inside your account. Every build moves from not started, to in progress, to ready for your review, to approved.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── IN-HOUSE COMPARISON ── */}
+      <section className="bg-mc-teal py-20 px-6">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="max-w-2xl mb-12">
+            <span className="section-label mb-3 block">The Alternative</span>
+            <h2 className="font-headline text-3xl md:text-4xl font-black text-white leading-tight">
+              What one salesperson costs you before they close a thing
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-[auto_1fr] gap-8 md:gap-14 items-center">
+            <div>
+              <div className="font-headline text-6xl md:text-7xl font-black text-mc-gold leading-none mb-3">
+                $112,000
+              </div>
+              <p className="font-body text-gray-400 text-sm leading-relaxed max-w-xs">
+                Fully loaded annual cost of one United States sales hire. On-target earnings around $83,000, loaded 1.35 times for payroll tax, benefits and equipment.
+              </p>
+            </div>
+            <div className="md:border-l md:border-white/10 md:pl-14">
+              <p className="font-body text-gray-300 text-lg leading-relaxed mb-5 max-w-xl">
+                That figure buys you one person, three to six months before they produce, and the risk that the hire is wrong.
+              </p>
+              <p className="font-body text-gray-400 text-base leading-relaxed max-w-xl">
+                The builds are fixed and quoted per market once we understand yours. The rep costs nothing up front, because we are paid a share of what they close.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
