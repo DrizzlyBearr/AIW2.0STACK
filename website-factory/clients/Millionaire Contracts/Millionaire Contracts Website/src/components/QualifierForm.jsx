@@ -59,7 +59,7 @@ export default function QualifierForm() {
     market: '',
     sellers: '',
     whoBuys: '',
-    leadSource: '',
+    leadSource: [],
     dealValue: '',
     budget: '',
     timing: '',
@@ -82,7 +82,7 @@ export default function QualifierForm() {
     3: !!data.market,
     4: !!data.sellers,
     5: data.whoBuys.trim().length > 1,
-    6: !!data.leadSource,
+    6: data.leadSource.length > 0,
     7: !!data.dealValue,
     8: !!data.budget,
     9: !!data.timing,
@@ -108,7 +108,7 @@ export default function QualifierForm() {
           territory: market ? market.label : '',
           sellers: data.sellers,
           whoBuys: data.whoBuys,
-          leadSource: data.leadSource,
+          leadSource: data.leadSource.join(', '),
           dealValue: data.dealValue,
           budget: data.budget,
           timing: data.timing,
@@ -217,11 +217,30 @@ export default function QualifierForm() {
       {step === 6 && (
         <div>
           <h3 className="font-headline text-xl font-black text-white mb-2">Where does new business come from now?</h3>
-          <p className="font-body text-gray-400 text-sm mb-6">Pick the one that brings you the most.</p>
+          <p className="font-body text-gray-400 text-sm mb-6">Select all that apply.</p>
           <div className="space-y-3">
-            {LEAD_SOURCES.map((s) => (
-              <button key={s} type="button" className={optionClass(data.leadSource === s)} onClick={() => set('leadSource', s)}>{s}</button>
-            ))}
+            {LEAD_SOURCES.map((s) => {
+              const selected = data.leadSource.includes(s)
+              return (
+                <button
+                  key={s}
+                  type="button"
+                  className={optionClass(selected)}
+                  onClick={() =>
+                    set('leadSource', selected ? data.leadSource.filter((x) => x !== s) : [...data.leadSource, s])
+                  }
+                >
+                  <span className="flex items-center justify-between">
+                    {s}
+                    {selected && (
+                      <svg className="w-4 h-4 text-mc-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                  </span>
+                </button>
+              )
+            })}
           </div>
         </div>
       )}
