@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-// Posts to a server-side proxy (Supabase edge function) that holds the
-// Command secret and forwards the enquiry. The secret never reaches the browser.
-const FN_BASE = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1'
+// Posts to a same-origin Vercel serverless function that holds the Command
+// secret and forwards the enquiry. The secret never reaches the browser.
+const ENQUIRY_ENDPOINT = '/api/enquiry'
 
 // Country -> currency. The market chosen decides which currency the
 // deal-value and budget bands are shown in. We never convert between them.
@@ -96,7 +96,7 @@ export default function QualifierForm() {
     // Best effort. We never surface an error from the enquiry endpoint to the
     // visitor, so the thank-you shows either way.
     try {
-      await fetch(`${FN_BASE}/qualifier-submit`, {
+      await fetch(ENQUIRY_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
