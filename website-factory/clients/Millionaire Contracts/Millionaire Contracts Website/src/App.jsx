@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 
 // Home is eager — it must paint immediately on first load
 // All other pages are lazy — they only download when visited
+const Services = lazy(() => import('./pages/Services'))
 const Portfolio = lazy(() => import('./pages/Portfolio'))
 const AboutUs = lazy(() => import('./pages/AboutUs'))
 const Contact = lazy(() => import('./pages/Contact'))
@@ -61,6 +62,7 @@ function AnimatedRoutes() {
         <Routes location={location}>
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<Contact />} />
