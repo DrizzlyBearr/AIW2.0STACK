@@ -60,6 +60,9 @@ for (const file of walk(PAGES)) {
   routes.push({ path: routePath, title, description, type: grab('type') || 'website' })
 }
 
+// ── load the server render function (built by `vite build --ssr`) ──
+const { render } = await import(url.pathToFileURL(path.join(ROOT, 'dist-server', 'entry-server.js')).href)
+
 // ── add case-study routes from the data module ──
 const { caseStudies } = await import(url.pathToFileURL(path.join(ROOT, 'src', 'data', 'caseStudies.js')).href)
 for (const [slug, data] of Object.entries(caseStudies)) {
@@ -73,7 +76,9 @@ for (const [slug, data] of Object.entries(caseStudies)) {
 }
 
 // ── write a prerendered file per route ──
-function render({ path: routePath, title, description, type }) {
+// Bakes in per-page meta tags AND the server-rendered page content, so the
+// page has real HTML before any JavaScript runs (fast paint, crawlable).
+function renderPage({ path: routePath, title, description, type }) {
   const ft = fullTitle(title)
   const canonical = `${SITE}${routePath}`
   let html = template
@@ -90,17 +95,31 @@ function render({ path: routePath, title, description, type }) {
   // canonical link is not in the static template; inject one
   html = html.replace(/(<meta name="description"[^>]*\/>)/, `$1\n    <link rel="canonical" href="${canonical}" />`)
 
+  // Render the page content and inject it into the root element.
+  let body = ''
+  try {
+    body = render(routePath).html
+  } catch (err) {
+    console.error(`prerender: content render failed for ${routePath}:`, err.message)
+  }
+  if (body) {
+    html = html.replace(/<div id="root"><\/div>/, `<div id="root">${body}</div>`)
+  }
+
   return html
 }
 
 let count = 0
+let content = 0
 for (const route of routes) {
   const slug = route.path.replace(/^\//, '')
   if (!slug) continue // skip "/" (redirects to /home)
   const outDir = path.join(DIST, slug)
   fs.mkdirSync(outDir, { recursive: true })
-  fs.writeFileSync(path.join(outDir, 'index.html'), render(route))
+  const out = renderPage(route)
+  if (out.includes('<div id="root"><div')) content++
+  fs.writeFileSync(path.join(outDir, 'index.html'), out)
   count++
 }
 
-console.log(`prerender: wrote ${count} routes`)
+console.log(`prerender: wrote ${count} routes (${content} with baked-in content)`)
