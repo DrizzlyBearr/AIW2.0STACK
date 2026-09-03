@@ -7,87 +7,47 @@ import SEOMeta from '../components/SEOMeta'
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Sales and Website Engagements',
+  name: 'Sales Function Installation',
   provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
-  description: 'Millionaire Contracts offers website audit and rebuild, appointment setting, sales closing, and full sales operation. Services can be taken individually or as a complete build.',
+  description:
+    'How Millionaire Contracts installs a sales function: a pre-qualifying website, a qualification framework, scripts, CRM and pipeline setup, and an outreach engine, plus a trained rep who works the pipeline daily with weekly reporting.',
 }
 
 const steps = [
   {
     number: '01',
-    heading: 'Strategy call',
-    body: 'We spend 45 minutes understanding your business, your current sales process, and exactly where revenue is leaking. No pitch. Just diagnosis.',
+    heading: 'The qualifier, then a call',
+    body: 'You answer the qualifier on our site, then we talk. We use the call to confirm which builds you need and what a rep would work, not to pitch you.',
   },
   {
     number: '02',
-    heading: 'Engagement design',
-    body: 'We propose the right engagement model for your stage, your target market, and your goals. You see exactly what we will do, what we will measure, and what success looks like.',
+    heading: 'The build plan',
+    body: 'We map which of the five builds you need and in what order, what the rep will work once it is live, and what success looks like. You see it before we start.',
   },
   {
     number: '03',
-    heading: 'Deployment',
-    body: 'We integrate into your operation. Your calendar starts filling, your pipeline starts moving, or your sales team starts closing. Operational from day one.',
+    heading: 'Installation',
+    body: 'We build. Inside your account you watch each piece move from in progress, to ready for your review, to approved. Nothing happens off to the side.',
   },
   {
     number: '04',
-    heading: 'Optimise and scale',
-    body: 'We measure every outcome, refine what is working, and build the infrastructure to scale what is proven. You own the playbook at the end.',
+    heading: 'Live, and reported',
+    body: 'The rep works your pipeline every day. A written report lands every Friday covering that week’s activity, pipeline movement, and value closed.',
   },
 ]
 
-const engagements = [
-  {
-    name: 'Appointment Setting',
-    tag: 'Outbound',
-    description: 'We run your outbound engine. Target identification, outreach, qualification, and booking. Qualified decision-maker meetings in your calendar every week.',
-    includes: [
-      'Ideal customer profile build',
-      'Multi-channel outreach sequences',
-      'Lead qualification and vetting',
-      'Calendar management and booking',
-      'Weekly pipeline reporting',
-      'Dedicated rep placement where required',
-    ],
-    ideal: 'Best for businesses that need consistent top-of-funnel flow without building an internal SDR team.',
-    to: '/appointment-setting',
-  },
-  {
-    name: 'Sales Closing',
-    tag: 'Revenue',
-    description: 'Senior closers working your pipeline. We join calls, run demos, handle objections, and close deals. Your team focuses on delivery while we focus on revenue.',
-    includes: [
-      'Senior closer deployment',
-      'Call handling and demo execution',
-      'Objection management',
-      'Proposal and follow-up management',
-      'Deal reporting and conversion tracking',
-      'Dedicated rep placement where required',
-    ],
-    ideal: 'Best for businesses with pipeline but poor close rates, or founders who are closing everything themselves.',
-    to: '/sales-closing',
-  },
-  {
-    name: 'Full Sales Operation',
-    tag: 'Complete',
-    description: 'End-to-end sales infrastructure. Strategy, management, outbound, and closing fully deployed into your business. The complete outsourced sales team.',
-    includes: [
-      'Sales strategy and process design',
-      'Pipeline architecture and CRM setup',
-      'Outbound engine and appointment setting',
-      'Closing team deployment',
-      'Dedicated rep placement where required',
-      'Sales management and performance oversight',
-      'Monthly strategy reviews',
-    ],
-    ideal: 'Best for businesses ready to scale revenue without the cost and risk of building an internal sales team.',
-    to: '/sales-strategy-development',
-  },
+const pillars = [
+  { name: 'Pre-Qualifying Website', line: 'A site that qualifies enquiries before they reach a human.', to: '/services#pre-qualifying-website' },
+  { name: 'Qualification Framework', line: 'The scoring that decides which enquiries deserve pursuit.', to: '/services#qualification-framework' },
+  { name: 'Scripts and Conversation Flows', line: 'Openers, discovery, objections and closes, written for your market.', to: '/services#scripts-and-conversation-flows' },
+  { name: 'CRM and Pipeline Setup', line: 'The pipeline installed so nothing leaks between quote and close.', to: '/services#crm-and-pipeline-setup' },
+  { name: 'Outreach Engine', line: 'Cadences and channels for consistent outbound volume.', to: '/services#outreach-engine' },
 ]
 
 const guarantees = [
-  { heading: 'No long-term lock-in', body: 'Engagements are structured around results, not retainer length. You are not locked into a 12-month contract hoping it works.' },
-  { heading: 'Replacement guarantee', body: 'If a rep is not performing, we replace them. No delays, no HR complexity, no lost months waiting for a new hire.' },
-  { heading: 'You own the playbook', body: 'Every process, sequence, and strategy we build is yours. When the engagement ends, your business keeps the infrastructure.' },
+  { heading: 'No long-term lock-in', body: 'Engagements are structured around results, not retainer length. You are not tied into a year and hoping it works.' },
+  { heading: 'Replacement guarantee', body: 'If a rep is not performing, we replace them. No delays, no HR complexity, no lost months waiting on a new hire.' },
+  { heading: 'You own the playbook', body: 'Every build, script and process we install is yours. When an engagement ends, your business keeps the infrastructure.' },
 ]
 
 export default function HowItWorks() {
@@ -95,7 +55,7 @@ export default function HowItWorks() {
     <div className="min-h-screen flex flex-col bg-white">
       <SEOMeta
         title="How It Works"
-        description="Three engagement models. No long-term lock-in. Millionaire Contracts deploys appointment setting, sales closing, or a full sales operation into your business from day one."
+        description="How Millionaire Contracts installs a sales function: the qualifier and a call, a build plan, installation you watch inside your account, then a rep working your pipeline daily with a written report every Friday."
         path="/how-it-works"
         schema={schema}
       />
@@ -107,13 +67,13 @@ export default function HowItWorks() {
           style={{ backgroundImage: 'linear-gradient(#d8920e 1px, transparent 1px), linear-gradient(90deg, #d8920e 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <div className="relative z-10 max-w-screen-xl mx-auto px-6 py-20 md:py-28">
           <div className="max-w-3xl">
-            <span className="section-label mb-4 block">Engagements</span>
+            <span className="section-label mb-4 block">How It Works</span>
             <h1 className="font-headline text-5xl md:text-6xl font-black text-white leading-tight mb-6">
-              How We Work<br />
-              <span className="text-mc-gold">With You</span>
+              You watch us build it,<br />
+              <span className="text-mc-gold">then a rep works it.</span>
             </h1>
             <p className="font-body text-gray-400 text-lg leading-relaxed max-w-2xl">
-              Most businesses come to us with the same problem: a website that does not convert and a sales process that cannot close. We fix both. Each service can be taken on its own or as a complete build, depending on where you are starting from.
+              We install a sales function in a set order and place a trained rep on your account to work it. Every step is visible inside your own account, so you are never waiting on a status update to know where things stand.
             </p>
           </div>
         </div>
@@ -125,8 +85,8 @@ export default function HowItWorks() {
           {[
             { value: '20+', label: 'Companies scaled' },
             { value: '65%', label: 'Average meeting success rate' },
-            { value: 'Day 1', label: 'Operational from' },
-            { value: '4 steps', label: 'From call to deployment' },
+            { value: 'Day 1', label: 'Visible in your account' },
+            { value: 'Weekly', label: 'Written reporting' },
           ].map((s) => (
             <div key={s.label}>
               <div className="font-headline text-3xl font-black text-mc-gold mb-1">{s.value}</div>
@@ -142,7 +102,7 @@ export default function HowItWorks() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="section-label mb-3 block" style={{ color: '#d8920e' }}>The process</span>
             <h2 className="font-headline text-3xl md:text-4xl font-black text-mc-teal leading-tight">
-              From first call to full deployment in days
+              From the qualifier to a working pipeline
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -157,89 +117,43 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* Engagement models */}
+      {/* What gets installed */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-screen-xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="section-label mb-3 block" style={{ color: '#d8920e' }}>Pick your starting point</span>
+            <span className="section-label mb-3 block" style={{ color: '#d8920e' }}>What gets installed</span>
             <h2 className="font-headline text-3xl md:text-4xl font-black text-mc-teal leading-tight">
-              Every service, standalone or complete
+              Five builds, one system, one rep
             </h2>
             <p className="font-body text-gray-500 mt-4 text-base">
-              Take one service or let us build the whole system. Most clients start with the website and scale into sales from there.
+              Take one build on its own, or install the whole function as The Full Stack. Either way, a trained rep can work the pipeline once it is live.
             </p>
           </div>
 
-          {/* Website foundation card */}
-          <div className="bg-mc-dark rounded-2xl border border-mc-gold/30 overflow-hidden mb-6">
-            <div className="grid lg:grid-cols-2 gap-0">
-              <div className="px-8 py-8 border-b lg:border-b-0 lg:border-r border-white/10">
-                <span className="text-xs font-body font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block bg-mc-gold/20 text-mc-gold">
-                  Foundation
-                </span>
-                <h3 className="font-headline text-2xl font-black text-white mb-3">Website Audit and Rebuild</h3>
-                <p className="font-body text-gray-400 text-sm leading-relaxed mb-4">
-                  Most businesses lose deals before the sales conversation even starts. A slow, unconvincing, or outdated website kills credibility before your team picks up the phone. We audit what you have, identify where it is costing you, and rebuild it to convert.
-                </p>
-                <p className="font-body text-gray-500 text-xs italic">
-                  The natural starting point for businesses whose website is not pulling its weight.
-                </p>
-              </div>
-              <div className="px-8 py-8">
-                <p className="font-body text-xs font-semibold uppercase tracking-wider mb-4 text-mc-gold">What is included</p>
-                <ul className="space-y-2.5 mb-6">
-                  {[
-                    'Full website audit and conversion review',
-                    'Custom design built for your market and audience',
-                    'Copy written to convert, not just inform',
-                    'SEO structure, schema markup, and sitemap',
-                    'Speed optimisation and mobile-first build',
-                    'Handoff with full ownership of code and assets',
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-mc-gold flex-shrink-0 mt-2" />
-                      <span className="font-body text-sm text-gray-300">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/calender" className="inline-block bg-mc-gold text-white font-headline font-bold text-sm py-3 px-6 rounded-lg hover:bg-mc-gold-light transition-colors">
-                  Book a Strategy Call
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Sales service cards */}
-          <div className="grid lg:grid-cols-3 gap-6">
-            {engagements.map((e, i) => (
-              <div key={e.name} className={`rounded-2xl overflow-hidden flex flex-col ${i === 2 ? 'border-2 border-mc-gold' : 'border border-gray-200'}`}>
-                <div className={`px-7 py-6 ${i === 2 ? 'bg-mc-dark' : 'bg-white'}`}>
-                  <span className={`text-xs font-body font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block ${i === 2 ? 'bg-mc-gold/20 text-mc-gold' : 'bg-mc-teal/10 text-mc-teal'}`}>
-                    {e.tag}
-                  </span>
-                  <h3 className={`font-headline text-xl font-black mb-3 ${i === 2 ? 'text-white' : 'text-mc-teal'}`}>{e.name}</h3>
-                  <p className={`font-body text-sm leading-relaxed ${i === 2 ? 'text-gray-400' : 'text-gray-600'}`}>{e.description}</p>
-                </div>
-                <div className={`px-7 py-6 flex-grow ${i === 2 ? 'bg-mc-dark/95 border-t border-white/10' : 'bg-white border-t border-gray-100'}`}>
-                  <p className={`font-body text-xs font-semibold uppercase tracking-wider mb-4 ${i === 2 ? 'text-mc-gold' : 'text-mc-teal'}`}>What is included</p>
-                  <ul className="space-y-2.5 mb-6">
-                    {e.includes.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-mc-gold flex-shrink-0 mt-2" />
-                        <span className={`font-body text-sm ${i === 2 ? 'text-gray-300' : 'text-gray-600'}`}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className={`font-body text-xs italic leading-relaxed mb-6 ${i === 2 ? 'text-gray-500' : 'text-gray-400'}`}>{e.ideal}</p>
-                  <Link
-                    to="/calender"
-                    className={`block text-center font-headline font-bold text-sm py-3 px-6 rounded-lg transition-colors ${i === 2 ? 'bg-mc-gold text-white hover:bg-mc-gold-light' : 'border border-mc-teal text-mc-teal hover:bg-mc-teal hover:text-white'}`}
-                  >
-                    Book a Strategy Call
-                  </Link>
-                </div>
-              </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
+            {pillars.map((p, i) => (
+              <Link
+                key={p.to}
+                to={p.to}
+                className="group bg-white rounded-xl border border-gray-200 p-7 hover:border-mc-gold/60 hover:shadow-md transition-all flex flex-col"
+              >
+                <span className="font-headline text-4xl font-black text-mc-gold/25 leading-none mb-4">{String(i + 1).padStart(2, '0')}</span>
+                <h3 className="font-headline font-bold text-mc-teal text-lg leading-snug mb-2 group-hover:text-mc-gold transition-colors">{p.name}</h3>
+                <p className="font-body text-gray-600 text-sm leading-relaxed">{p.line}</p>
+              </Link>
             ))}
+            <Link to="/services" className="group bg-mc-gold rounded-xl p-7 flex flex-col justify-between hover:bg-mc-gold-light transition-colors">
+              <div>
+                <h3 className="font-headline font-black text-mc-dark text-lg leading-snug mb-2">The rep, and The Full Stack</h3>
+                <p className="font-body text-mc-dark/80 text-sm leading-relaxed">
+                  A trained rep who works your pipeline daily, paid on what they close. See the whole system and the package.
+                </p>
+              </div>
+              <span className="font-headline font-bold text-mc-dark text-sm inline-flex items-center gap-2 mt-6">
+                See what we install
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -269,13 +183,13 @@ export default function HowItWorks() {
       {/* CTA */}
       <section className="bg-mc-gold py-16 px-6 text-center">
         <h2 className="font-headline text-4xl font-black text-white mb-4 leading-tight">
-          Not sure which model fits?<br className="hidden md:block" /> The call will tell us both.
+          Start with the qualifier.
         </h2>
         <p className="font-body text-amber-100 text-lg mb-8 max-w-lg mx-auto">
-          One 45-minute conversation is enough to diagnose where your revenue is leaking and which engagement closes the gap.
+          A few questions tell us which builds you need and whether a rep can work on a share of what they close. Then we talk.
         </p>
-        <Link to="/calender" className="inline-block bg-white text-mc-teal font-headline font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors">
-          Book a Free Strategy Call
+        <Link to="/services" className="inline-block bg-white text-mc-teal font-headline font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors">
+          See What We Install
         </Link>
       </section>
 
