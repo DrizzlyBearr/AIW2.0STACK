@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
+import QualifierForm from '../components/QualifierForm'
 
 // Working name for the complete package. Swap in one place when finalised.
 const PACKAGE_NAME = 'The Full Stack'
@@ -208,9 +209,9 @@ export default function Services() {
           <p className="font-body text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
             All five builds and the rep, as one engagement. The website that qualifies, the framework that scores, the scripts that convert, the pipeline that holds, the outreach that fills it, and the person who works it. A sales function, installed and running.
           </p>
-          <Link to="/contact-us" className="btn-primary">
+          <a href="#qualify" className="btn-primary">
             Start the qualifier
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -285,6 +286,30 @@ export default function Services() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── QUALIFYING FORM ── */}
+      <section id="qualify" className="bg-mc-dark py-20 px-6 relative overflow-hidden scroll-mt-24">
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage:
+              'linear-gradient(#d8920e 1px, transparent 1px), linear-gradient(90deg, #d8920e 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+          }}
+        />
+        <div className="relative z-10 max-w-screen-xl mx-auto">
+          <div className="max-w-xl mx-auto text-center mb-12">
+            <span className="section-label mb-3 block">Start Here</span>
+            <h2 className="font-headline text-3xl md:text-4xl font-black text-white leading-tight mb-4">
+              A few questions before we talk
+            </h2>
+            <p className="font-body text-gray-400 text-base leading-relaxed">
+              We sell websites that qualify enquiries before a person is involved, so ours does the same. Answer these and we will already understand your situation before we reply.
+            </p>
+          </div>
+          <QualifierForm />
         </div>
       </section>
 
