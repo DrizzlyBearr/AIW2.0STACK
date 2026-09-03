@@ -14,13 +14,14 @@
   }
 }
 
+/* Slide the content up gently on load. We deliberately do NOT animate
+   opacity from 0: transparent content is not counted as a contentful paint,
+   which makes Lighthouse report NO_FCP even though the page has content. */
 @keyframes pageFadeIn {
   from {
-    opacity: 0;
     transform: translateY(8px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }
