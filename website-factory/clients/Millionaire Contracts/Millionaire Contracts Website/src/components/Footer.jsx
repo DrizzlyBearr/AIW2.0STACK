@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const LOGO = '/mc-logo.png'
 
 const links = [
-  { label: 'Home', to: '/home' },
+  { label: 'Home', to: '/' },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'About Us', to: '/about-us' },
   { label: 'How It Works', to: '/how-it-works' },
@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto px-6 py-14 grid md:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="md:col-span-1">
-          <Link to="/home">
+          <Link to="/">
             <img src={LOGO} alt="Millionaire Contracts" className="h-8 w-auto mb-4" style={{ maxWidth: '180px' }} />
           </Link>
           <p className="font-body text-gray-500 text-sm leading-relaxed mb-4">

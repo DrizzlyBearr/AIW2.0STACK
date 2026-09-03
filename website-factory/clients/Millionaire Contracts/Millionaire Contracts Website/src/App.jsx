@@ -64,8 +64,8 @@ export default function App() {
   return (
     <div key={location.pathname} className="page-fade">
       <Routes location={location}>
-        <Route path="/" element={<Navigate to="/home" replace />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about-us" element={<AboutUs />} />

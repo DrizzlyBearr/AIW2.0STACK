@@ -9,7 +9,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Sales Management',
-  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
+  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   description: 'We step in as your fractional sales management layer: setting targets, running pipeline reviews, coaching reps, and building reporting infrastructure.',
   areaServed: ['US', 'GB', 'ZA', 'SG'],
 }

@@ -9,8 +9,8 @@ const schema = {
   '@type': 'Article',
   headline: 'Why Your Revenue Is Inconsistent and What to Do About It',
   description: 'Unpredictable revenue is not random and it is not seasonal. It is caused by uneven sales input. Here is the pattern, why the usual fixes miss it, and what actually stabilizes revenue.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
-  mainEntityOfPage: 'https://millionairecontracts.com/inconsistent-revenue',
+  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  mainEntityOfPage: 'https://www.millionairecontracts.com/inconsistent-revenue',
 }
 
 const faqSchema = {

@@ -9,7 +9,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Sales Strategy Development',
-  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
+  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   description: 'We build precise, market-specific sales strategies and execution-ready playbooks that turn your sales function into a competitive weapon.',
   areaServed: ['US', 'GB', 'ZA', 'SG'],
 }

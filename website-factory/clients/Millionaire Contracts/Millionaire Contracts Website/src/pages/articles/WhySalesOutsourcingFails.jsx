@@ -9,8 +9,8 @@ const schema = {
   '@type': 'Article',
   headline: 'Why Most Sales Outsourcing Partnerships Fail (And How to Avoid It)',
   description: 'Most outsourced sales engagements that fail do so for predictable reasons. This article explains the five most common failure points and what separates partnerships that deliver from ones that disappoint.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
-  mainEntityOfPage: 'https://millionairecontracts.com/why-sales-outsourcing-partnerships-fail',
+  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  mainEntityOfPage: 'https://www.millionairecontracts.com/why-sales-outsourcing-partnerships-fail',
 }
 
 const faqSchema = {

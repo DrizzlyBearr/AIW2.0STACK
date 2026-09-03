@@ -9,7 +9,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Appointment Setting',
-  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
+  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   description: 'We run your outbound engine, identifying ideal accounts, crafting outreach, and booking qualified decision-maker meetings directly into your calendar every week.',
   areaServed: ['US', 'GB', 'ZA', 'SG'],
 }

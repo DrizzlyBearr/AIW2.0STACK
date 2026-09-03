@@ -9,8 +9,8 @@ const schema = {
   '@type': 'Article',
   headline: 'Why Your Pipeline Empties Every Time You Get Busy',
   description: 'The feast or famine cycle is not a discipline problem. It is a structural one. Here is why pipeline dries up the moment delivery picks up, and the fix that ends the cycle.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
-  mainEntityOfPage: 'https://millionairecontracts.com/why-your-pipeline-empties-when-you-get-busy',
+  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  mainEntityOfPage: 'https://www.millionairecontracts.com/why-your-pipeline-empties-when-you-get-busy',
 }
 
 const faqSchema = {

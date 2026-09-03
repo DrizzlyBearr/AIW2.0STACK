@@ -9,8 +9,8 @@ const schema = {
   '@type': 'Article',
   headline: 'What Is Sales Outsourcing and Is It Right for Your Business?',
   description: 'Sales outsourcing explained: what it means, the different forms it takes, who it works for, who it does not, and how to make the decision for your specific situation.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
-  mainEntityOfPage: 'https://millionairecontracts.com/what-is-sales-outsourcing',
+  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  mainEntityOfPage: 'https://www.millionairecontracts.com/what-is-sales-outsourcing',
 }
 
 const faqSchema = {

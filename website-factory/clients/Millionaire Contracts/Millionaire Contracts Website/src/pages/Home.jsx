@@ -80,7 +80,7 @@ export default function Home() {
       <SEOMeta
         title="Millionaire Contracts | We Install Your Sales Function"
         description="Millionaire Contracts installs a complete sales function: a pre-qualifying website, a qualification framework, scripts, CRM and pipeline setup, and an outreach engine, plus a trained rep who works your pipeline daily. 65% meeting success rate, 20+ companies scaled."
-        path="/home"
+        path="/"
       />
       <Navbar />
 

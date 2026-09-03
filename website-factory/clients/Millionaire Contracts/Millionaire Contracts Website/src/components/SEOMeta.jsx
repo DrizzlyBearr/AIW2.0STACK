@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 
-const SITE = 'https://millionairecontracts.com'
+const SITE = 'https://www.millionairecontracts.com'
 const DEFAULT_IMG = `${SITE}/og-image.png`
 
 export default function SEOMeta({ title, description, path = '', schema = null, type = 'website', image = DEFAULT_IMG }) {
@@ -13,7 +13,7 @@ export default function SEOMeta({ title, description, path = '', schema = null, 
   const hasOwnBreadcrumb = schemaList.some((s) => s && s['@type'] === 'BreadcrumbList')
   let breadcrumbSchema = null
   if (path && path !== '/' && path !== '/home' && !hasOwnBreadcrumb) {
-    const crumbs = [{ name: 'Home', item: `${SITE}/home` }]
+    const crumbs = [{ name: 'Home', item: `${SITE}/` }]
     if (type === 'article') crumbs.push({ name: 'Resources', item: `${SITE}/resources` })
     crumbs.push({ name: title, item: canonical })
     breadcrumbSchema = {

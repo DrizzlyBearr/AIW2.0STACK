@@ -9,7 +9,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Sales Closing',
-  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
+  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   description: 'We deploy trained closers directly into your pipeline to handle discovery, objection handling, and final conversion on high-value deals.',
   areaServed: ['US', 'GB', 'ZA', 'SG'],
 }

@@ -8,8 +8,8 @@ const schema = {
   '@type': 'Article',
   headline: 'In-House Sales Team vs Outsourced Sales: The Real Cost Comparison',
   description: 'A detailed breakdown of what it actually costs to build an in-house sales team versus outsourcing your sales function, with the real numbers and a clear framework for the decision.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
-  mainEntityOfPage: 'https://millionairecontracts.com/in-house-vs-outsourced-sales',
+  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  mainEntityOfPage: 'https://www.millionairecontracts.com/in-house-vs-outsourced-sales',
 }
 
 const faqSchema = {

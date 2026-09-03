@@ -15,7 +15,7 @@ const schema = {
   provider: {
     '@type': 'Organization',
     name: 'Millionaire Contracts',
-    url: 'https://millionairecontracts.com',
+    url: 'https://www.millionairecontracts.com',
   },
   description:
     'Pipeline & Power is a fortnightly newsletter from Millionaire Contracts. Each issue takes one shift in global business, explains what it means for your revenue, and leaves you with one move to make.',

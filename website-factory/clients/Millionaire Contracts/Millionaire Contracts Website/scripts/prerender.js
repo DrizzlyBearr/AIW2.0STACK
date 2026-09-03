@@ -20,7 +20,7 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 const DIST = path.join(ROOT, 'dist')
 const PAGES = path.join(ROOT, 'src', 'pages')
-const SITE = 'https://millionairecontracts.com'
+const SITE = 'https://www.millionairecontracts.com'
 
 const template = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8')
 
@@ -113,12 +113,16 @@ let count = 0
 let content = 0
 for (const route of routes) {
   const slug = route.path.replace(/^\//, '')
-  if (!slug) continue // skip "/" (redirects to /home)
-  const outDir = path.join(DIST, slug)
-  fs.mkdirSync(outDir, { recursive: true })
   const out = renderPage(route)
   if (out.includes('<div id="root"><div')) content++
-  fs.writeFileSync(path.join(outDir, 'index.html'), out)
+  if (!slug) {
+    // homepage lives at the site root
+    fs.writeFileSync(path.join(DIST, 'index.html'), out)
+  } else {
+    const outDir = path.join(DIST, slug)
+    fs.mkdirSync(outDir, { recursive: true })
+    fs.writeFileSync(path.join(outDir, 'index.html'), out)
+  }
   count++
 }
 
@@ -128,7 +132,7 @@ console.log(`prerender: wrote ${count} routes (${content} with baked-in content)
 // Keeps the sitemap complete and in sync automatically, so it can never drift
 // from what is actually on the site.
 function sitemapMeta(p) {
-  if (p === '/home') return { priority: '1.0', changefreq: 'weekly' }
+  if (p === '/') return { priority: '1.0', changefreq: 'weekly' }
   if (p === '/services') return { priority: '0.9', changefreq: 'weekly' }
   if (p.startsWith('/outsourced-sales-for-')) return { priority: '0.9', changefreq: 'monthly' }
   if (p === '/pipeline-and-power') return { priority: '0.8', changefreq: 'weekly' }
@@ -141,7 +145,7 @@ function sitemapMeta(p) {
 
 const today = new Date().toISOString().slice(0, 10)
 const sitemapPaths = [...new Set(routes.map((r) => r.path))]
-  .filter((p) => p && p !== '/')
+  .filter((p) => p)
   .sort()
 
 const sitemapBody = sitemapPaths

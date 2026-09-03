@@ -9,8 +9,8 @@ const schema = {
   '@type': 'Article',
   headline: 'What Does Outsourced Sales Actually Cost? (2026 Pricing Guide)',
   description: 'A breakdown of outsourced sales pricing models, what you should expect to pay, and how to evaluate whether the cost makes sense for your business.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
-  mainEntityOfPage: 'https://millionairecontracts.com/what-does-outsourced-sales-cost',
+  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  mainEntityOfPage: 'https://www.millionairecontracts.com/what-does-outsourced-sales-cost',
 }
 
 const faqSchema = {

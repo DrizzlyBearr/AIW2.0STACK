@@ -17,9 +17,9 @@ export default function CaseStudy() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://millionairecontracts.com/home' },
-      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://millionairecontracts.com/portfolio' },
-      { '@type': 'ListItem', position: 3, name: data.name, item: `https://millionairecontracts.com/${slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.millionairecontracts.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://www.millionairecontracts.com/portfolio' },
+      { '@type': 'ListItem', position: 3, name: data.name, item: `https://www.millionairecontracts.com/${slug}` },
     ],
   }
 

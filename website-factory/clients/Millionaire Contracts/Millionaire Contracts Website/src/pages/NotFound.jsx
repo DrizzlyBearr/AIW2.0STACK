@@ -26,7 +26,7 @@ export default function NotFound() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/home"
+              to="/"
               className="bg-mc-gold text-white font-headline font-bold px-8 py-3 rounded-lg hover:bg-mc-gold-light transition-colors"
             >
               Back to Home

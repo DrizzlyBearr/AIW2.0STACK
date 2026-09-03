@@ -8,7 +8,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Sales Function Installation',
-  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
+  provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   description:
     'How Millionaire Contracts installs a sales function: a pre-qualifying website, a qualification framework, scripts, CRM and pipeline setup, and an outreach engine, plus a trained rep who works the pipeline daily with weekly reporting.',
 }

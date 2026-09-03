@@ -9,8 +9,8 @@ const schema = {
   '@type': 'Article',
   headline: '5 Signs Your Business Needs an Outsourced Sales Team',
   description: 'Most businesses that need outsourced sales do not realise it until they have spent months trying to fix the wrong problem. These five signs tell you where the issue actually sits.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://millionairecontracts.com' },
-  mainEntityOfPage: 'https://millionairecontracts.com/five-signs-you-need-outsourced-sales',
+  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  mainEntityOfPage: 'https://www.millionairecontracts.com/five-signs-you-need-outsourced-sales',
 }
 
 const faqSchema = {

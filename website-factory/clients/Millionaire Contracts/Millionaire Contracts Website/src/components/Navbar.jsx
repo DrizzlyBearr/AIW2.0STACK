@@ -67,13 +67,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-screen-xl mx-auto px-6 flex items-center justify-between h-24">
-        <Link to="/home" className="flex-shrink-0">
+        <Link to="/" className="flex-shrink-0">
           <img src={LOGO} alt="Millionaire Contracts" className="h-16 w-auto" style={{ maxWidth: '300px' }} />
         </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
-          <NavItem to="/home">Home</NavItem>
+          <NavItem to="/">Home</NavItem>
           <NavItem to="/portfolio">Portfolio</NavItem>
           <NavItem to="/about-us">About</NavItem>
           <NavItem to="/how-it-works">How It Works</NavItem>
@@ -168,7 +168,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-1">
-          <Link to="/home" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/portfolio" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>Portfolio</Link>
           <Link to="/about-us" className="font-body text-mc-teal py-2 hover:text-mc-gold" onClick={() => setMenuOpen(false)}>About</Link>
           <div>

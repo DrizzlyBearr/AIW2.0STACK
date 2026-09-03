@@ -12,7 +12,7 @@ const schema = [
     provider: {
       '@type': 'Organization',
       name: 'Millionaire Contracts',
-      url: 'https://millionairecontracts.com',
+      url: 'https://www.millionairecontracts.com',
     },
     description:
       'Millionaire Contracts builds and runs new business development, appointment setting, and closing for marketing and growth agencies that need a consistent client pipeline beyond founder-led sales and inbound luck.',
