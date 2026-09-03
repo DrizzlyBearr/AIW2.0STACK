@@ -1,20 +1,21 @@
 import { useState } from 'react'
 
+// Posts to a server-side proxy (Supabase edge function) that holds the
+// Command secret and forwards the enquiry. The secret never reaches the browser.
 const FN_BASE = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1'
 
-// Country -> currency. The market chosen in step 2 decides which currency
-// the deal-value and budget bands are shown in. We never convert between them.
+// Country -> currency. The market chosen decides which currency the
+// deal-value and budget bands are shown in. We never convert between them.
 const MARKETS = [
-  { code: 'US', label: 'United States', currency: 'USD', symbol: '$' },
-  { code: 'GB', label: 'United Kingdom', currency: 'GBP', symbol: '£' },
-  { code: 'CA', label: 'Canada', currency: 'CAD', symbol: 'C$' },
-  { code: 'AU', label: 'Australia', currency: 'AUD', symbol: 'A$' },
-  { code: 'DE', label: 'Germany', currency: 'EUR', symbol: '€' },
-  { code: 'ZA', label: 'South Africa', currency: 'ZAR', symbol: 'R' },
-  { code: 'OTHER', label: 'Somewhere else', currency: 'USD', symbol: '$' },
+  { code: 'US', label: 'United States', currency: 'USD' },
+  { code: 'GB', label: 'United Kingdom', currency: 'GBP' },
+  { code: 'CA', label: 'Canada', currency: 'CAD' },
+  { code: 'AU', label: 'Australia', currency: 'AUD' },
+  { code: 'DE', label: 'Germany', currency: 'EUR' },
+  { code: 'ZA', label: 'South Africa', currency: 'ZAR' },
+  { code: 'OTHER', label: 'Somewhere else', currency: 'USD' },
 ]
 
-// Deal-value and budget bands per currency. ZAR uses local scale.
 const BANDS = {
   USD: {
     deal: ['Under $1,000', '$1,000 to $5,000', '$5,000 to $25,000', '$25,000 to $100,000', 'More than $100,000'],
@@ -43,21 +44,22 @@ const BANDS = {
 }
 
 const SELLERS = ['Nobody yet', 'One person', 'Two to five', 'More than five']
-const SOURCES = ['Referral', 'Inbound enquiries', 'Paid ads', 'Outbound', 'Not sure']
+const LEAD_SOURCES = ['Referral', 'Inbound enquiries', 'Paid ads', 'Outbound', 'Not sure']
 const TIMING = ['Now', 'This quarter', 'Just exploring']
 
-const TOTAL_STEPS = 9
+const TOTAL_STEPS = 11
 
 export default function QualifierForm() {
   const [step, setStep] = useState(1)
   const [status, setStatus] = useState('idle')
-  const [errorMsg, setErrorMsg] = useState('')
   const [data, setData] = useState({
     company: '',
     website: '',
+    whatYouSell: '',
     market: '',
     sellers: '',
-    source: '',
+    whoBuys: '',
+    leadSource: '',
     dealValue: '',
     budget: '',
     timing: '',
@@ -70,58 +72,59 @@ export default function QualifierForm() {
   const currency = market ? market.currency : 'USD'
   const bands = BANDS[currency] || BANDS.USD
 
-  function set(field, value) {
-    setData((d) => ({ ...d, [field]: value }))
-  }
+  const set = (field, value) => setData((d) => ({ ...d, [field]: value }))
+  const next = () => setStep((s) => Math.min(s + 1, TOTAL_STEPS))
+  const back = () => setStep((s) => Math.max(s - 1, 1))
 
-  function next() {
-    setStep((s) => Math.min(s + 1, TOTAL_STEPS))
-  }
-  function back() {
-    setStep((s) => Math.max(s - 1, 1))
-  }
-
-  // Whether the current step has enough to advance. Steps 8 (tried) is optional.
   const canAdvance = {
     1: data.company.trim().length > 1,
-    2: !!data.market,
-    3: !!data.sellers,
-    4: !!data.source,
-    5: !!data.dealValue,
-    6: !!data.budget,
-    7: !!data.timing,
-    8: true,
-    9: data.name.trim().length > 1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email),
+    2: data.whatYouSell.trim().length > 2,
+    3: !!data.market,
+    4: !!data.sellers,
+    5: data.whoBuys.trim().length > 1,
+    6: !!data.leadSource,
+    7: !!data.dealValue,
+    8: !!data.budget,
+    9: !!data.timing,
+    10: true,
+    11: data.name.trim().length > 1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email),
   }
 
   async function handleSubmit() {
     if (status === 'loading') return
     setStatus('loading')
-    setErrorMsg('')
+    // Best effort. We never surface an error from the enquiry endpoint to the
+    // visitor, so the thank-you shows either way.
     try {
-      const res = await fetch(`${FN_BASE}/qualifier-submit`, {
+      await fetch(`${FN_BASE}/qualifier-submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, currency }),
+        body: JSON.stringify({
+          email: data.email,
+          name: data.name,
+          company: data.company,
+          website: data.website,
+          whatYouSell: data.whatYouSell,
+          territory: market ? market.label : '',
+          sellers: data.sellers,
+          whoBuys: data.whoBuys,
+          leadSource: data.leadSource,
+          dealValue: data.dealValue,
+          budget: data.budget,
+          timing: data.timing,
+          tried: data.tried,
+          currency,
+        }),
       })
-      const json = await res.json()
-      if (json.success) {
-        setStatus('success')
-      } else {
-        setStatus('error')
-        setErrorMsg(json.error || 'Something went wrong. Please try again.')
-      }
     } catch {
-      setStatus('error')
-      setErrorMsg('Something went wrong. Please try again.')
+      // swallow: the visitor still sees a thank-you
     }
+    setStatus('success')
   }
 
   const optionClass = (selected) =>
     `w-full text-left px-5 py-4 rounded-lg border font-body text-sm transition-colors ${
-      selected
-        ? 'border-mc-gold bg-mc-gold/10 text-white'
-        : 'border-white/15 bg-white/5 text-gray-300 hover:border-white/30'
+      selected ? 'border-mc-gold bg-mc-gold/10 text-white' : 'border-white/15 bg-white/5 text-gray-300 hover:border-white/30'
     }`
 
   const inputClass =
@@ -137,7 +140,7 @@ export default function QualifierForm() {
         </div>
         <h3 className="font-headline text-2xl font-black text-white mb-3">We have what we need</h3>
         <p className="font-body text-gray-400 leading-relaxed mb-6">
-          Thank you, {data.name.split(' ')[0]}. We read every answer before we reply, so you hear from a person who already understands your situation. Expect a response within one business day.
+          Thank you, {data.name.split(' ')[0] || 'and thanks'}. We read every answer before we reply, so you hear from a person who already understands your situation. Expect a response within one business day.
         </p>
         <a href="/calender" className="btn-primary">Book a time now instead</a>
       </div>
@@ -149,15 +152,11 @@ export default function QualifierForm() {
       {/* Progress */}
       <div className="flex items-center gap-3 mb-8">
         <div className="flex-grow h-1 rounded-full bg-white/10 overflow-hidden">
-          <div
-            className="h-full bg-mc-gold transition-all duration-300"
-            style={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
-          />
+          <div className="h-full bg-mc-gold transition-all duration-300" style={{ width: `${(step / TOTAL_STEPS) * 100}%` }} />
         </div>
         <span className="font-body text-xs text-gray-500 flex-shrink-0">{step} of {TOTAL_STEPS}</span>
       </div>
 
-      {/* Step 1 — company + website */}
       {step === 1 && (
         <div>
           <h3 className="font-headline text-xl font-black text-white mb-2">Let’s start with your business</h3>
@@ -169,23 +168,33 @@ export default function QualifierForm() {
         </div>
       )}
 
-      {/* Step 2 — market */}
       {step === 2 && (
+        <div>
+          <h3 className="font-headline text-xl font-black text-white mb-2">What do you sell, in one sentence?</h3>
+          <p className="font-body text-gray-400 text-sm mb-6">Plain words. What a customer actually pays you for.</p>
+          <textarea
+            className={`${inputClass} min-h-[90px] resize-none`}
+            placeholder="We sell..."
+            value={data.whatYouSell}
+            onChange={(e) => set('whatYouSell', e.target.value)}
+            autoFocus
+          />
+        </div>
+      )}
+
+      {step === 3 && (
         <div>
           <h3 className="font-headline text-xl font-black text-white mb-2">Which market are you in?</h3>
           <p className="font-body text-gray-400 text-sm mb-6">This sets the currency for the next questions. We never convert between markets.</p>
           <div className="grid grid-cols-2 gap-3">
             {MARKETS.map((m) => (
-              <button key={m.code} type="button" className={optionClass(data.market === m.code)} onClick={() => set('market', m.code)}>
-                {m.label}
-              </button>
+              <button key={m.code} type="button" className={optionClass(data.market === m.code)} onClick={() => set('market', m.code)}>{m.label}</button>
             ))}
           </div>
         </div>
       )}
 
-      {/* Step 3 — sellers */}
-      {step === 3 && (
+      {step === 4 && (
         <div>
           <h3 className="font-headline text-xl font-black text-white mb-2">How many people sell for you today?</h3>
           <p className="font-body text-gray-400 text-sm mb-6">Anyone whose job includes closing business.</p>
@@ -197,21 +206,27 @@ export default function QualifierForm() {
         </div>
       )}
 
-      {/* Step 4 — source */}
-      {step === 4 && (
+      {step === 5 && (
+        <div>
+          <h3 className="font-headline text-xl font-black text-white mb-2">Who signs off on buying it?</h3>
+          <p className="font-body text-gray-400 text-sm mb-6">The role that says yes to the money. A title is fine.</p>
+          <input className={inputClass} placeholder="Owner, CFO, Head of Sales..." value={data.whoBuys} onChange={(e) => set('whoBuys', e.target.value)} autoFocus />
+        </div>
+      )}
+
+      {step === 6 && (
         <div>
           <h3 className="font-headline text-xl font-black text-white mb-2">Where does new business come from now?</h3>
           <p className="font-body text-gray-400 text-sm mb-6">Pick the one that brings you the most.</p>
           <div className="space-y-3">
-            {SOURCES.map((s) => (
-              <button key={s} type="button" className={optionClass(data.source === s)} onClick={() => set('source', s)}>{s}</button>
+            {LEAD_SOURCES.map((s) => (
+              <button key={s} type="button" className={optionClass(data.leadSource === s)} onClick={() => set('leadSource', s)}>{s}</button>
             ))}
           </div>
         </div>
       )}
 
-      {/* Step 5 — deal value */}
-      {step === 5 && (
+      {step === 7 && (
         <div>
           <h3 className="font-headline text-xl font-black text-white mb-2">What is a typical deal worth to you?</h3>
           <p className="font-body text-gray-400 text-sm mb-6">Roughly, in {currency}. One closed contract or customer.</p>
@@ -223,8 +238,7 @@ export default function QualifierForm() {
         </div>
       )}
 
-      {/* Step 6 — budget */}
-      {step === 6 && (
+      {step === 8 && (
         <div>
           <h3 className="font-headline text-xl font-black text-white mb-2">What is your budget for fixing this?</h3>
           <p className="font-body text-gray-400 text-sm mb-6">In {currency}. If you do not know yet, that is a fine answer.</p>
@@ -232,15 +246,12 @@ export default function QualifierForm() {
             {bands.budget.map((b) => (
               <button key={b} type="button" className={optionClass(data.budget === b)} onClick={() => set('budget', b)}>{b}</button>
             ))}
-            <button type="button" className={optionClass(data.budget === 'Not sure yet')} onClick={() => set('budget', 'Not sure yet')}>
-              Not sure yet
-            </button>
+            <button type="button" className={optionClass(data.budget === 'Not sure yet')} onClick={() => set('budget', 'Not sure yet')}>Not sure yet</button>
           </div>
         </div>
       )}
 
-      {/* Step 7 — timing */}
-      {step === 7 && (
+      {step === 9 && (
         <div>
           <h3 className="font-headline text-xl font-black text-white mb-2">When do you want this working?</h3>
           <p className="font-body text-gray-400 text-sm mb-6">Be honest. Exploring is a real answer.</p>
@@ -252,8 +263,7 @@ export default function QualifierForm() {
         </div>
       )}
 
-      {/* Step 8 — tried */}
-      {step === 8 && (
+      {step === 10 && (
         <div>
           <h3 className="font-headline text-xl font-black text-white mb-2">Anything you have tried that did not work?</h3>
           <p className="font-body text-gray-400 text-sm mb-6">Optional, but the most useful thing you can tell us.</p>
@@ -266,8 +276,7 @@ export default function QualifierForm() {
         </div>
       )}
 
-      {/* Step 9 — contact */}
-      {step === 9 && (
+      {step === 11 && (
         <div>
           <h3 className="font-headline text-xl font-black text-white mb-2">Where do we reach you?</h3>
           <p className="font-body text-gray-400 text-sm mb-6">A real person reads your answers before replying.</p>
@@ -275,34 +284,21 @@ export default function QualifierForm() {
             <input className={inputClass} placeholder="Your name" value={data.name} onChange={(e) => set('name', e.target.value)} autoFocus />
             <input className={inputClass} type="email" placeholder="Work email" value={data.email} onChange={(e) => set('email', e.target.value)} />
           </div>
-          {status === 'error' && <p className="text-red-400 text-xs mt-3 leading-relaxed">{errorMsg}</p>}
         </div>
       )}
 
       {/* Nav */}
       <div className="flex items-center justify-between gap-4 mt-8">
         {step > 1 ? (
-          <button type="button" onClick={back} className="font-body text-sm text-gray-400 hover:text-white transition-colors">
-            Back
-          </button>
+          <button type="button" onClick={back} className="font-body text-sm text-gray-400 hover:text-white transition-colors">Back</button>
         ) : <span />}
 
         {step < TOTAL_STEPS ? (
-          <button
-            type="button"
-            onClick={next}
-            disabled={!canAdvance[step]}
-            className="btn-primary text-sm py-3 px-7 disabled:opacity-40 disabled:cursor-not-allowed"
-          >
+          <button type="button" onClick={next} disabled={!canAdvance[step]} className="btn-primary text-sm py-3 px-7 disabled:opacity-40 disabled:cursor-not-allowed">
             Continue
           </button>
         ) : (
-          <button
-            type="button"
-            onClick={handleSubmit}
-            disabled={!canAdvance[9] || status === 'loading'}
-            className="btn-primary text-sm py-3 px-7 disabled:opacity-40 disabled:cursor-not-allowed"
-          >
+          <button type="button" onClick={handleSubmit} disabled={!canAdvance[11] || status === 'loading'} className="btn-primary text-sm py-3 px-7 disabled:opacity-40 disabled:cursor-not-allowed">
             {status === 'loading' ? 'Sending...' : 'Send it through'}
           </button>
         )}
