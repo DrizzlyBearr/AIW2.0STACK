@@ -35,6 +35,23 @@ import Healthcare from './pages/Healthcare'
 import PipelineAndPower from './pages/PipelineAndPower'
 import NewsletterConfirm from './pages/NewsletterConfirm'
 import NewsletterUnsubscribe from './pages/NewsletterUnsubscribe'
+import WhatIsAnSDR from './pages/articles/WhatIsAnSDR'
+import SDRvsBDR from './pages/articles/SDRvsBDR'
+import HowMuchDoesAnSDRCost from './pages/articles/HowMuchDoesAnSDRCost'
+import B2BAppointmentSettingServices from './pages/articles/B2BAppointmentSettingServices'
+import FractionalSalesTeam from './pages/articles/FractionalSalesTeam'
+import HowToWriteAColdEmail from './pages/articles/HowToWriteAColdEmail'
+import LeadQualificationFramework from './pages/articles/LeadQualificationFramework'
+import HowToBuildASalesCadence from './pages/articles/HowToBuildASalesCadence'
+import HowToWriteSalesScripts from './pages/articles/HowToWriteSalesScripts'
+import HowToQualifyLeads from './pages/articles/HowToQualifyLeads'
+import HowToSetUpASalesPipeline from './pages/articles/HowToSetUpASalesPipeline'
+import WebsiteThatQualifiesLeads from './pages/articles/WebsiteThatQualifiesLeads'
+import WhatIsASalesPipeline from './pages/articles/WhatIsASalesPipeline'
+import SalesAsAService from './pages/articles/SalesAsAService'
+import ColdCallingServices from './pages/articles/ColdCallingServices'
+import LeadGenerationVsAppointmentSetting from './pages/articles/LeadGenerationVsAppointmentSetting'
+import CommissionOnlySalesReps from './pages/articles/CommissionOnlySalesReps'
 
 export default function App() {
   const location = useLocation()
@@ -98,6 +115,23 @@ export default function App() {
         <Route path="/newsletter-unsubscribe" element={<NewsletterUnsubscribe />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
         <Route path="/cost-of-building-a-sales-team" element={<SalesTeamCostCalculator />} />
+        <Route path="/what-is-an-sdr" element={<WhatIsAnSDR />} />
+        <Route path="/sdr-vs-bdr" element={<SDRvsBDR />} />
+        <Route path="/how-much-does-an-sdr-cost" element={<HowMuchDoesAnSDRCost />} />
+        <Route path="/b2b-appointment-setting-services" element={<B2BAppointmentSettingServices />} />
+        <Route path="/fractional-sales-team" element={<FractionalSalesTeam />} />
+        <Route path="/how-to-write-a-cold-email" element={<HowToWriteAColdEmail />} />
+        <Route path="/lead-qualification-framework" element={<LeadQualificationFramework />} />
+        <Route path="/how-to-build-a-sales-cadence" element={<HowToBuildASalesCadence />} />
+        <Route path="/how-to-write-sales-scripts" element={<HowToWriteSalesScripts />} />
+        <Route path="/how-to-qualify-leads" element={<HowToQualifyLeads />} />
+        <Route path="/how-to-set-up-a-sales-pipeline" element={<HowToSetUpASalesPipeline />} />
+        <Route path="/website-that-qualifies-leads" element={<WebsiteThatQualifiesLeads />} />
+        <Route path="/what-is-a-sales-pipeline" element={<WhatIsASalesPipeline />} />
+        <Route path="/sales-as-a-service" element={<SalesAsAService />} />
+        <Route path="/cold-calling-services" element={<ColdCallingServices />} />
+        <Route path="/lead-generation-vs-appointment-setting" element={<LeadGenerationVsAppointmentSetting />} />
+        <Route path="/commission-only-sales-reps" element={<CommissionOnlySalesReps />} />
         <Route path="/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
