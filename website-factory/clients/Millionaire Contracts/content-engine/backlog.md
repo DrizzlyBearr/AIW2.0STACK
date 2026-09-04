@@ -10,7 +10,6 @@ Status values: queued, drafted (data file written, status:draft), published.
 
 | Priority | Target keyword | Working title | Angle | Status |
 |---|---|---|---|---|
-| 1 | how to build an ICP | How to Build an Ideal Customer Profile | The practical steps to define an ICP from your best clients, and why vague targeting sinks outreach | queued |
 | 2 | outbound vs inbound sales | Outbound vs Inbound Sales: Which Your Business Needs | The real difference, when each works, and why most B2B needs both | queued |
 | 3 | how to handle sales objections | How to Handle Sales Objections | A framework for the common objections and why objections are buying signals | queued |
 | 4 | discovery call questions | Discovery Call Questions That Qualify and Close | The questions that surface fit, budget, and urgency without interrogating | queued |
