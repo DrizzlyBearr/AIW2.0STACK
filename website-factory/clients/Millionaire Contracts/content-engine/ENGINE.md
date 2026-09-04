@@ -1,8 +1,8 @@
 # Millionaire Contracts Content Engine
 
-How the site produces SEO articles (and, later, newsletter issues) at volume,
-safely. The engine drafts. You approve. Then it ships. Nothing goes live or gets
-sent without your explicit approval.
+How the site produces SEO articles and Pipeline & Power newsletter issues at
+volume, safely. The engine drafts. You approve. Then it ships. Nothing goes live
+or gets sent without your explicit approval.
 
 ## The loop
 
@@ -83,7 +83,72 @@ body sections, a mid-article CTA, related reading, FAQ, and the final CTA.
 
 Never state what Millionaire Contracts pays its own reps.
 
+## Newsletter: Pipeline & Power
+
+The fortnightly newsletter. Each issue takes ONE real shift in global business,
+explains what is happening underneath it, and turns it into one concrete move the
+reader can make for their revenue. Every issue is also a permanent page on the
+site (`/newsletter/<slug>`), so late subscribers can read the back catalogue and
+the content is indexable. The same data file feeds both the on-site page and the
+email.
+
+### The loop (drafting)
+
+1. **Draft** an issue with `/mc-draft-issue "<topic or angle>"` (or ask Claude to
+   draft the next one). It writes a data file with `status: 'draft'`. A draft is
+   invisible to the archive page and the sitemap, and a real send is refused.
+2. **Review** the draft. Read it. Fix anything.
+3. **Publish** the page: change `status: 'draft'` to `status: 'published'`, then
+   deploy. The build auto-discovers it into the archive, the issue page, the
+   prerender, and the sitemap. No route wiring needed.
+
+### The loop (sending)
+
+Sending is a separate, manual, approval-gated step. Run `/mc-send-issue <slug>`.
+It always goes: dry run (count only) -> test email to the owner -> WAIT for
+approval -> real send to all confirmed, active subscribers. See that command and
+`scripts/send-issue.mjs`. The send secret (`NEWSLETTER_SEND_SECRET`) lives in the
+environment and in the Supabase edge-function secrets, never in the repo or chat.
+
+### Issue data schema
+
+Each issue is one file at
+`../Millionaire Contracts Website/src/content/issues/<slug>.js` exporting a
+default object:
+
+```js
+export default {
+  slug: 'issue-NN-short-topic',   // URL path + file name, kebab-case
+  status: 'draft',                // 'draft' (hidden, send refused) or 'published'
+  number: 1,                      // issue number, increments each issue
+  date: 'YYYY-MM-DD',
+  subject: 'Plain, specific email subject line',
+  preview: 'One-sentence inbox preview line.',
+  sections: [                     // body; each body is markdown. Empty heading = no heading.
+    { heading: '', body: 'Welcome / hook paragraph.' },
+    { heading: 'The shift', body: 'What is actually happening.' },
+    { heading: 'Why it matters for your pipeline', body: 'The translation.' },
+    { heading: 'The move', body: 'One concrete thing to do.' },
+    { heading: 'One line to keep', body: 'A memorable close.' },
+  ],
+}
+```
+
+`src/components/IssueTemplate.jsx` renders this on-site; `scripts/send-issue.mjs`
+renders the same `sections` into the branded email. The house structure above
+(hook, The shift, Why it matters, The move, One line to keep) is the default;
+vary it only with reason.
+
+### Newsletter quality bar
+
+- 600 to 900 words across the sections. Shorter than an article on purpose.
+- One shift per issue. Genuinely useful even if the reader never buys.
+- Same hard rules and approved figures as everything else (below). No prices,
+  no rep pay, no invented numbers, no South African cost angle.
+
 ## Quality bar
+
+Applies to articles:
 
 - 1,200 to 1,600 words across the sections.
 - Genuinely useful. A reader should get value even if they never buy.
