@@ -2,7 +2,7 @@
 // auto-discovered by the build. status: 'published' makes it live.
 export default {
   slug: 'outbound-vs-inbound-sales',
-  status: 'draft',
+  status: 'published',
   date: '2026-09-04',
   category: 'Sales Strategy',
   label: 'Sales Strategy',

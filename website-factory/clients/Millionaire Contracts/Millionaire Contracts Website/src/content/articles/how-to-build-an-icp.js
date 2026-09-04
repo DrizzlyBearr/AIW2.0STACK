@@ -2,7 +2,7 @@
 // auto-discovered by the build. status: 'published' makes it live.
 export default {
   slug: 'how-to-build-an-icp',
-  status: 'draft',
+  status: 'published',
   date: '2026-09-03',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
@@ -32,7 +32,7 @@ export default {
     },
     {
       heading: 'The trigger is the field most teams skip',
-      body: 'Fit tells you a company could buy. A trigger tells you they are ready to buy soon. Without it you are guessing at timing, and timing is most of what makes outreach land.\n\nTriggers are specific and observable. A new head of sales in the first ninety days. A recent funding round. A hiring spree for roles your product supports. A merger, a new office, a compliance deadline, a public complaint about the exact problem you solve. These are events you can see from the outside.\n\nFind your triggers the same way you found the profile. Look back at your best deals and ask what was happening at that company right before they engaged. The pattern is usually there. Once you know it, you can watch for the same signal at other accounts and reach out while the window is open instead of hoping you caught them at a good moment.',
+      body: 'Fit tells you a company could buy. A trigger tells you they are ready to buy soon. Without it you are guessing at timing, and timing is most of what makes outreach land.\n\nTriggers are specific and observable. A new head of sales in the first ninety days. A recent funding round. A hiring spree for roles your product supports. A merger, a new office, a compliance deadline, a public complaint about the exact problem you solve. These are events you can see from the outside.\n\nFind your triggers the same way you found the profile. Look back at your best deals and ask what was happening at that company right before they engaged. The pattern is usually there. Once you know it, you can watch for the same signal at other accounts and reach out while the window is open instead of hoping you caught them at a good moment.\n\nThe window is the whole point. A right-fit account with no trigger is a follow-up for later, not a no. A right-fit account with a live trigger is the call to make today. Sorting your list by that one distinction changes what you do this morning.',
     },
     {
       heading: 'Why vague targeting sinks outreach',
@@ -44,7 +44,7 @@ export default {
     },
     {
       heading: 'Put the profile to work',
-      body: 'A profile is only useful if it changes what your team does each day. Use it as the filter on every list you build, so no name enters the pipeline without matching on the core fields. Use it to score inbound leads, so the ones that fit get a fast response and the ones that do not get set aside without draining your calendar.\n\nUse it to focus the message. When you know the size, industry, role, and trigger, you can open with something true for that exact reader instead of a line that could be sent to anyone. That is the whole payoff. The work you put into the profile shows up as outreach that sounds like it was written for one company, because in effect it was.',
+      body: 'A profile is only useful if it changes what your team does each day. Use it as the filter on every list you build, so no name enters the pipeline without matching on the core fields. Use it to score inbound leads, so the ones that fit get a fast response and the ones that do not get set aside without draining your calendar.\n\nThe difference shows up fast. A rep who used to open a list of two hundred names and start dialing now opens a list of thirty that share a size, an industry, a role, and a live trigger, and writes to them like people instead of entries. Same hour of work, a very different quality of conversation at the end of it.\n\nUse it to focus the message. When you know the size, industry, role, and trigger, you can open with something true for that exact reader instead of a line that could be sent to anyone. That is the whole payoff. The work you put into the profile shows up as outreach that sounds like it was written for one company, because in effect it was.',
     },
   ],
   faqs: [
@@ -70,7 +70,7 @@ export default {
     },
     {
       q: 'Can outsourcing help if I do not have a clear ICP yet?',
-      a: 'A good partner will help you build the profile before running any outreach, because targeting the wrong accounts wastes everyone effort. If you have a defined offer and a book of past clients to learn from, that is enough raw material to build a working profile and start. The profile then sharpens as real reply and meeting data comes in.',
+      a: 'A good partner will help you build the profile before running any outreach, because targeting the wrong accounts wastes the effort on both sides. If you have a defined offer and a book of past clients to learn from, that is enough raw material to build a working profile and start. The profile then sharpens as real reply and meeting data comes in.',
     },
   ],
   related: [
