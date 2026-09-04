@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import ArticleTemplate from './components/ArticleTemplate'
-import { articles as contentArticles } from './lib/content'
+import IssueTemplate from './components/IssueTemplate'
+import NewsletterArchive from './pages/NewsletterArchive'
+import { articles as contentArticles, issues as contentIssues } from './lib/content'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import Portfolio from './pages/Portfolio'
@@ -136,6 +138,10 @@ export default function App() {
         <Route path="/commission-only-sales-reps" element={<CommissionOnlySalesReps />} />
         {contentArticles.map((a) => (
           <Route key={a.slug} path={`/${a.slug}`} element={<ArticleTemplate entry={a} />} />
+        ))}
+        <Route path="/newsletter" element={<NewsletterArchive />} />
+        {contentIssues.map((i) => (
+          <Route key={i.slug} path={`/newsletter/${i.slug}`} element={<IssueTemplate entry={i} />} />
         ))}
         <Route path="/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />

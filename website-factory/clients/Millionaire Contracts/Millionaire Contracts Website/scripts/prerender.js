@@ -74,6 +74,16 @@ for (const a of serverBundle.contentArticles || []) {
   })
 }
 
+// ── add newsletter issue pages ──
+for (const issue of serverBundle.contentIssues || []) {
+  routes.push({
+    path: `/newsletter/${issue.slug}`,
+    title: `${issue.subject} | Pipeline & Power`,
+    description: issue.preview,
+    type: 'article',
+  })
+}
+
 // ── add case-study routes from the data module ──
 const { caseStudies } = await import(url.pathToFileURL(path.join(ROOT, 'src', 'data', 'caseStudies.js')).href)
 for (const [slug, data] of Object.entries(caseStudies)) {

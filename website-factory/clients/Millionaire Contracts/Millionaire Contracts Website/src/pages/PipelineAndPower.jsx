@@ -138,6 +138,12 @@ export default function PipelineAndPower() {
             <p className="font-body text-gray-400 text-base leading-relaxed max-w-2xl">
               Short, direct, and written by people who work inside businesses every day.
             </p>
+            <Link to="/newsletter" className="font-headline font-bold text-mc-gold text-sm inline-flex items-center gap-2 mt-6 hover:text-mc-gold-light transition-colors">
+              Read past issues
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
