@@ -59,3 +59,39 @@
     @apply font-body text-sm text-gray-400 mt-1 leading-snug;
   }
 }
+
+/* Rendered markdown body for data-driven articles (ArticleTemplate) */
+.article-prose {
+  font-family: Inter, sans-serif;
+  color: #374151;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+.article-prose p { margin-bottom: 1.25rem; }
+.article-prose h2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 800;
+  color: #132b2f;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+}
+.article-prose h3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  color: #132b2f;
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.75rem;
+}
+.article-prose ul, .article-prose ol { margin: 0 0 1.25rem 1.25rem; }
+.article-prose ul { list-style: disc; }
+.article-prose ol { list-style: decimal; }
+.article-prose li { margin-bottom: 0.5rem; padding-left: 0.25rem; }
+.article-prose strong { color: #132b2f; font-weight: 700; }
+.article-prose a { color: #d8920e; text-decoration: underline; }
+.article-prose blockquote {
+  border-left: 4px solid #d8920e;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #4b5563;
+  font-style: italic;
+}

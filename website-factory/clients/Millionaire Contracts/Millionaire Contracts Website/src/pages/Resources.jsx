@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
+import { articles as contentArticles } from '../lib/content'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -141,10 +142,20 @@ const articles = [
   },
 ]
 
+// Data-driven articles (content-as-data layer) shown alongside the hand-built guides.
+const dataArticles = contentArticles.map((a) => ({
+  to: `/${a.slug}`,
+  category: a.category || 'Guide',
+  title: a.title,
+  desc: a.description,
+}))
+
+const allArticles = [...articles, ...dataArticles]
+
 export default function Resources() {
   const [featured, ...rest] = (() => {
-    const f = articles.find((a) => a.featured)
-    const others = articles.filter((a) => a !== f)
+    const f = allArticles.find((a) => a.featured)
+    const others = allArticles.filter((a) => a !== f)
     return [f, ...others]
   })()
 

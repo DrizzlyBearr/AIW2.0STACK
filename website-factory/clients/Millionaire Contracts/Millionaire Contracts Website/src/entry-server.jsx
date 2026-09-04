@@ -2,6 +2,7 @@ import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom/server'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App.jsx'
+export { articles as contentArticles } from './lib/content'
 
 // Renders the app for a given route to an HTML string. Used by the prerender
 // script at build time. Per-page meta tags are injected separately by the

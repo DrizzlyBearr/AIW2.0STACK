@@ -61,7 +61,18 @@ for (const file of walk(PAGES)) {
 }
 
 // ── load the server render function (built by `vite build --ssr`) ──
-const { render } = await import(url.pathToFileURL(path.join(ROOT, 'dist-server', 'entry-server.js')).href)
+const serverBundle = await import(url.pathToFileURL(path.join(ROOT, 'dist-server', 'entry-server.js')).href)
+const { render } = serverBundle
+
+// ── add data-driven content articles (content-as-data layer) ──
+for (const a of serverBundle.contentArticles || []) {
+  routes.push({
+    path: `/${a.slug}`,
+    title: a.title,
+    description: a.description,
+    type: 'article',
+  })
+}
 
 // ── add case-study routes from the data module ──
 const { caseStudies } = await import(url.pathToFileURL(path.join(ROOT, 'src', 'data', 'caseStudies.js')).href)

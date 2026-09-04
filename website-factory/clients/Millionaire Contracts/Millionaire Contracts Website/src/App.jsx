@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import ArticleTemplate from './components/ArticleTemplate'
+import { articles as contentArticles } from './lib/content'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import Portfolio from './pages/Portfolio'
@@ -132,6 +134,9 @@ export default function App() {
         <Route path="/cold-calling-services" element={<ColdCallingServices />} />
         <Route path="/lead-generation-vs-appointment-setting" element={<LeadGenerationVsAppointmentSetting />} />
         <Route path="/commission-only-sales-reps" element={<CommissionOnlySalesReps />} />
+        {contentArticles.map((a) => (
+          <Route key={a.slug} path={`/${a.slug}`} element={<ArticleTemplate entry={a} />} />
+        ))}
         <Route path="/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
