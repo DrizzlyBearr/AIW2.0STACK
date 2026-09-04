@@ -1,8 +1,10 @@
 import { useState } from 'react'
 
-// Posts to a same-origin Vercel serverless function that holds the Command
-// secret and forwards the enquiry. The secret never reaches the browser.
-const ENQUIRY_ENDPOINT = '/api/enquiry'
+// Posts to a Supabase edge function that holds the Command secret and forwards
+// the enquiry. The secret never reaches the browser. (Moved off a Vercel
+// serverless function because the client folder path contains spaces, which
+// Vercel function names forbid, breaking Git-based deploys.)
+const ENQUIRY_ENDPOINT = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1/enquiry-submit'
 
 // Country -> currency. The market chosen decides which currency the
 // deal-value and budget bands are shown in. We never convert between them.
