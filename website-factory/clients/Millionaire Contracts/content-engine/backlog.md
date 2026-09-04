@@ -8,27 +8,7 @@ Status values: queued, drafted (data file written, status:draft), published.
 
 ## Queued (commercial + high-volume, do first)
 
-Batch two. Each row carries a reframe seed in the Angle column so the draft
-opens on a real perspective, not a definition. None overlap the published set.
-
-| Priority | Target keyword | Working title | Angle (reframe seed) | Status |
-|---|---|---|---|---|
-| 1 | how to close a sale | How to Close a Sale Without a Single Closing Trick | Closing is the absence of open questions, not a technique. If you have to close hard, discovery failed earlier. | queued |
-| 2 | sales prospecting | Sales Prospecting: A Modern Approach That Still Works | Prospecting is a research problem, not a volume one. The quality of the list is the strategy; the outreach is just delivery. | queued |
-| 3 | how to handle price objections | How to Handle the Price Objection | "Too expensive" is almost never about price. It is unproven value. You cannot discount your way past a value gap. | queued |
-| 4 | speed to lead | Speed to Lead: Why the Fastest Reply Wins | Buyers reward the first useful response, not the best pitch. Response time beats polish, and most teams lose on the clock. | queued |
-| 5 | b2b lead generation strategies | B2B Lead Generation Strategies That Fill a Pipeline | Lead gen is not traffic or contacts. It is qualified conversations. Most "leads" are just names that make a dashboard look busy. | queued |
-| 6 | mql vs sql | MQL vs SQL: Where Pipelines Quietly Leak | The handoff definition is where most deals die. The real fight is about who owns the risk of a bad lead. | queued |
-| 7 | enterprise sales | Enterprise Sales: Why Selling to Big Companies Is Different | Enterprise is not bigger deals. It is more people who can say no. You sell to a committee, not a champion. | queued |
-| 8 | how to run a sales demo | How to Run a Sales Demo That Closes | A demo is a confirmation of a problem you already found, not a feature tour. If the demo is doing the discovery, you already lost. | queued |
-| 9 | lead nurturing | Lead Nurturing: Staying in the Game Until They Are Ready | Nurturing is not staying top of mind with noise. It is being useful on the buyer's timeline instead of yours. | queued |
-| 10 | sales forecasting | How to Forecast Sales You Can Actually Trust | A forecast is a set of commitments, not a prediction. You forecast evidence, never hope, and a good one is smaller than the pipeline. | queued |
-| 11 | how to get past the gatekeeper | How to Get Past the Gatekeeper | The gatekeeper is a qualifier, not an obstacle. Treat them as the decision-maker for access and the door opens. | queued |
-| 12 | sales email subject lines | Subject Lines That Get B2B Emails Opened | A subject line is a promise the email must keep. Curiosity the body betrays trains people to ignore you next time. | queued |
-| 13 | what is revops | What Is RevOps, and Do You Need It Yet? | RevOps is not a tool or a team. It is removing friction between marketing, sales, and success. Most small firms need the discipline, not the department. | queued |
-| 14 | selling in a downturn | How to Sell When Budgets Are Frozen | In a downturn buyers do not stop spending. They raise the bar for proof. You sell certainty, not features. | queued |
-| 15 | referral selling | How to Build a Referral Engine, Not Just Ask for Referrals | Referrals are a system, not a favor. The ask is engineered into the work, not hoped for at the end. | queued |
-| 16 | sales and marketing alignment | Sales and Marketing Alignment: Fixing the Handoff | Alignment is not more meetings. It is one shared definition of a good lead and one scoreboard both sides answer to. | queued |
+(empty, batch two is all published. Add new target keywords here.)
 
 ## Drafted (awaiting your review, status: draft)
 
@@ -56,6 +36,22 @@ All to the new bar (one reframe each, 1,300 words plus, verified clean).
 | /follow-up-email-after-no-response | 2026-09-04 |
 | /how-to-run-a-sales-pipeline-review | 2026-09-04 |
 | /pros-and-cons-of-outsourcing-sales | 2026-09-04 |
+| /how-to-close-a-sale | 2026-09-04 (batch two) |
+| /sales-prospecting | 2026-09-04 (batch two) |
+| /how-to-handle-price-objections | 2026-09-04 (batch two) |
+| /speed-to-lead | 2026-09-04 (batch two) |
+| /b2b-lead-generation-strategies | 2026-09-04 (batch two) |
+| /mql-vs-sql | 2026-09-04 (batch two) |
+| /enterprise-sales | 2026-09-04 (batch two) |
+| /how-to-run-a-sales-demo | 2026-09-04 (batch two) |
+| /lead-nurturing | 2026-09-04 (batch two) |
+| /how-to-forecast-sales | 2026-09-04 (batch two) |
+| /how-to-get-past-the-gatekeeper | 2026-09-04 (batch two) |
+| /sales-email-subject-lines | 2026-09-04 (batch two) |
+| /what-is-revops | 2026-09-04 (batch two) |
+| /how-to-sell-in-a-downturn | 2026-09-04 (batch two) |
+| /referral-selling | 2026-09-04 (batch two) |
+| /sales-and-marketing-alignment | 2026-09-04 (batch two) |
 
 ---
 
