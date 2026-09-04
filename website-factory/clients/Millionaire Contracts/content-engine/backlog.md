@@ -10,7 +10,6 @@ Status values: queued, drafted (data file written, status:draft), published.
 
 | Priority | Target keyword | Working title | Angle | Status |
 |---|---|---|---|---|
-| 2 | outbound vs inbound sales | Outbound vs Inbound Sales: Which Your Business Needs | The real difference, when each works, and why most B2B needs both | queued |
 | 3 | how to handle sales objections | How to Handle Sales Objections | A framework for the common objections and why objections are buying signals | queued |
 | 4 | discovery call questions | Discovery Call Questions That Qualify and Close | The questions that surface fit, budget, and urgency without interrogating | queued |
 | 5 | b2b sales funnel stages | The B2B Sales Funnel: Stages and How to Move Deals Through | Each stage, the exit criteria, and where deals stall | queued |
@@ -29,7 +28,8 @@ Status values: queued, drafted (data file written, status:draft), published.
 
 | Slug | Target keyword | Working title |
 |---|---|---|
-| /how-to-build-an-icp | how to build an ICP | How to Build an Ideal Customer Profile |
+| /outbound-vs-inbound-sales | outbound vs inbound sales | Outbound vs Inbound Sales: Which One Your Business Actually Needs (first article to the new bar) |
+| /how-to-build-an-icp | how to build an ICP | How to Build an Ideal Customer Profile (old bar, pre-dates the standard) |
 
 ## Published
 
