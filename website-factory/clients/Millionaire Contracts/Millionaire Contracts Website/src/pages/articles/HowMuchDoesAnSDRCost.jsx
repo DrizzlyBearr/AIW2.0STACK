@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEOMeta from '../../components/SEOMeta'
 import ArticleCTA from '../../components/ArticleCTA'
+import NewsletterSignup from '../../components/NewsletterSignup'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -331,6 +332,7 @@ export default function HowMuchDoesAnSDRCost() {
         </div>
       </section>
 
+      <NewsletterSignup />
       <Footer />
     </div>
   )

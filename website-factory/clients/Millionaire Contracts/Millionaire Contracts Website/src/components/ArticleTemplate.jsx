@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import SEOMeta from './SEOMeta'
 import ArticleCTA from './ArticleCTA'
+import NewsletterSignup from './NewsletterSignup'
 
 const SITE = 'https://www.millionairecontracts.com'
 
@@ -147,6 +148,9 @@ export default function ArticleTemplate({ entry }) {
         </section>
       )}
 
+      {/* Newsletter capture for readers not ready to book a call */}
+      <NewsletterSignup />
+
       {/* Final CTA */}
       <section className="bg-mc-gold py-16 px-6 text-center">
         <h2 className="font-headline text-4xl font-black text-white mb-4 leading-tight">
@@ -159,8 +163,8 @@ export default function ArticleTemplate({ entry }) {
           <Link to="/calender" className="inline-block bg-white text-mc-teal font-headline font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors">
             Book a Free Strategy Call
           </Link>
-          <Link to="/services" className="inline-block border-2 border-white text-white font-headline font-bold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors">
-            See What We Install
+          <Link to="/services#qualify" className="inline-block border-2 border-white text-white font-headline font-bold px-8 py-4 rounded-lg hover:bg-white/10 transition-colors">
+            See If We Are a Fit
           </Link>
         </div>
       </section>

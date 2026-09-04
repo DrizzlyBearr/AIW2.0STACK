@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEOMeta from '../../components/SEOMeta'
 import ArticleCTA from '../../components/ArticleCTA'
+import NewsletterSignup from '../../components/NewsletterSignup'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -311,6 +312,7 @@ export default function HowToBuildB2BSalesProcess() {
         </div>
       </section>
 
+      <NewsletterSignup />
       <Footer />
     </div>
   )
