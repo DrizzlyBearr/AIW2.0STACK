@@ -139,22 +139,59 @@ renders the same `sections` into the branded email. The house structure above
 (hook, The shift, Why it matters, The move, One line to keep) is the default;
 vary it only with reason.
 
-### Newsletter quality bar
+### Newsletter length
 
-- 600 to 900 words across the sections. Shorter than an article on purpose.
-- One shift per issue. Genuinely useful even if the reader never buys.
-- Same hard rules and approved figures as everything else (below). No prices,
-  no rep pay, no invented numbers, no South African cost angle.
+- 700 to 1,000 words across the sections. One shift per issue, taken somewhere
+  the reader would not have gone on their own.
+- Everything in "The bar" below applies to issues too.
 
-## Quality bar
+## The bar: make it worth finishing
 
-Applies to articles:
+Length is not the goal. Getting read to the end and leaving the reader wanting
+more is the goal. Anything that does not serve that gets cut. Every piece the
+engine ships, article or issue, has to clear all six of these.
 
-- 1,200 to 1,600 words across the sections.
-- Genuinely useful. A reader should get value even if they never buy.
-- One clear target search per article. Avoid writing two articles that compete
+1. **Open with a turn, not a definition.** The first two sentences either name
+   something the reader half-knew but never had words for, or overturn something
+   they assumed was true. Never open with "X is..." Never open with throat
+   clearing ("In today's fast-moving world..."). Earn the second paragraph.
+
+2. **One idea they have not heard.** Every piece must contain at least one real
+   reframe: a way of seeing the problem the reader would not have reached alone.
+   If the whole thing could be guessed from the title, it failed. This is the
+   line they screenshot, quote, or forward to a colleague. Find the non-obvious
+   angle before you write, not while you write.
+
+3. **Earn every section.** Each heading answers the exact question the previous
+   section made the reader ask. It reads as one moving argument, not a list of
+   tips. End sections on a small turn or an open loop so the next one pulls.
+
+4. **Concrete beats abstract, every time.** One specific, recognisable situation
+   is worth three claims. Name the moment, the buyer, the room. Numbers only from
+   the approved figures; specificity of situation is free and required.
+
+5. **Density.** No padding, no filler sentences, no restating the heading in the
+   first line of the section. If a sentence does not carry information or move the
+   argument, delete it. A tight piece that ends early beats a padded one that
+   overstays. Length should come from having more to say, never from a target.
+
+6. **Close on an opened door.** End on the next question the reader now has, not a
+   summary. Resolve it just enough to make them want the answer, then point them
+   to the next piece, the archive, or the call. The last line is the one that
+   decides whether they come back. Make it work.
+
+Before shipping, read the whole thing once as the busy operator it is for and ask
+three questions. Would they finish it? Is there one line worth screenshotting?
+Does the ending make them want the next one? If any answer is no, it is not done.
+
+### Article length and SEO
+
+- Aim 1,300 to 1,700 words, dense the whole way. Never pad to hit it; a tight
+  1,300 that keeps momentum beats a bloated 1,800 that loses the reader.
+- One clear target search per article. Do not write two articles that compete
   for the same keyword.
-- Always include FAQs (they win featured snippets and power the FAQ schema).
+- Always include FAQs (they win featured snippets and power the FAQ schema), and
+  hold them to the same bar: real answers, no filler.
 
 ## Publish checklist
 

@@ -14,7 +14,11 @@ Base directory:
 ## Steps
 
 1. Read `content-engine/ENGINE.md` in full. It holds the data schema, the hard
-   rules, the approved figures (the ONLY numbers you may use), and the quality bar.
+   rules, the approved figures (the ONLY numbers you may use), and "The bar: make
+   it worth finishing" (the six craft rules every piece must clear). Before you
+   write, decide the one reframe this article will give the reader (bar rule 2):
+   the non-obvious angle they would not reach on their own. If you cannot name it,
+   pick a sharper angle before drafting.
 2. Read `content-engine/backlog.md`. If the topic is empty or "next", pick the
    top Queued row and use its target keyword, title, and angle.
 3. Read one existing data article as the format reference:
@@ -24,15 +28,21 @@ Base directory:
    qualitatively.
 5. Write the article to
    `Millionaire Contracts Website/src/content/articles/<slug>.js`
-   with `status: 'draft'`, following the schema exactly. 1,200 to 1,600 words
-   across the sections. Include 4 to 6 FAQs. `related` links must point only to
-   routes that exist (check other article files or the Resources page if unsure).
-6. Verify the file is valid JavaScript (balanced braces, no stray apostrophes
+   with `status: 'draft'`, following the schema exactly and clearing all six
+   rules in "The bar." 1,300 to 1,700 words, dense the whole way, never padded to
+   hit the count. Open with a turn, not a definition. Include 4 to 6 FAQs with
+   real answers. `related` links must point only to routes that exist (check other
+   article files or the Resources page if unsure).
+6. Read it back as the busy operator it is for. Confirm they would finish it,
+   there is one line worth screenshotting, and the ending makes them want more.
+   If not, rewrite before saving.
+7. Verify the file is valid JavaScript (balanced braces, no stray apostrophes
    breaking strings, no em dashes anywhere, no emojis).
-7. In `content-engine/backlog.md`, move the topic row from Queued to the Drafted
+8. In `content-engine/backlog.md`, move the topic row from Queued to the Drafted
    section with its slug.
-8. Report: the slug, the file path, a two-line summary, and the exact line the
-   owner changes to publish (`status: 'draft'` to `status: 'published'`).
+9. Report: the slug, the file path, the one reframe the article delivers, a
+   two-line summary, and the exact line the owner changes to publish
+   (`status: 'draft'` to `status: 'published'`).
 
 ## Hard rules (repeat, because breaking them is worse than shipping nothing)
 

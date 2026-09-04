@@ -27,7 +27,11 @@ works. It is useful on its own even if the reader never buys.
 ## Steps
 
 1. Read `content-engine/ENGINE.md` in full: the hard rules, the approved figures
-   (the ONLY numbers you may use), and the newsletter (issue) schema.
+   (the ONLY numbers you may use), the newsletter (issue) schema, and "The bar:
+   make it worth finishing" (the six craft rules). Before you write, decide the
+   one reframe this issue gives the reader (bar rule 2): the non-obvious way of
+   seeing the shift they would not reach on their own. If you cannot name it,
+   pick a sharper shift.
 2. Read the latest existing issue as the format reference:
    `Millionaire Contracts Website/src/content/issues/issue-01-where-growth-is-moving.js`
 3. Pick the next issue `number` (highest existing number plus one) and a slug of
@@ -37,14 +41,19 @@ works. It is useful on its own even if the reader never buys.
    number is in the approved figures list.
 5. Write the issue to
    `Millionaire Contracts Website/src/content/issues/<slug>.js` with
-   `status: 'draft'`, following the schema exactly. 600 to 900 words across the
-   sections. `subject` is the email subject line: plain and specific, no hype.
-   `preview` is the inbox preview line, one sentence.
-6. Verify the file is valid JavaScript (balanced braces, no stray apostrophes
+   `status: 'draft'`, following the schema exactly and clearing all six rules in
+   "The bar." 700 to 1,000 words, dense the whole way, never padded. Open with a
+   turn, not a definition. `subject` is the email subject line: plain, specific,
+   built on curiosity, no hype. `preview` is the inbox preview line, one sentence
+   that earns the open.
+6. Read it back as the busy operator it is for. Confirm they would finish it,
+   there is one line worth screenshotting, and the ending makes them want the
+   next issue. If not, rewrite before saving.
+7. Verify the file is valid JavaScript (balanced braces, no stray apostrophes
    breaking strings, no em dashes anywhere, no emojis).
-7. In `content-engine/backlog.md`, move the idea from the newsletter Queued list
+8. In `content-engine/backlog.md`, move the idea from the newsletter Queued list
    to the newsletter Drafted list with its slug and number.
-8. Report: the slug, the file path, the subject line, a two-line summary, and the
+9. Report: the slug, the file path, the subject line, a two-line summary, and the
    exact line the owner changes to publish (`status: 'draft'` to
    `status: 'published'`), plus a reminder that sending is a separate step
    (`/mc-send-issue`).

@@ -60,7 +60,7 @@ in global business with a clear "so what" for a B2B revenue team. Work top down.
 
 | Slug | Number | Subject |
 |---|---|---|
-| /newsletter/issue-01-where-growth-is-moving | 01 | Where the growth is quietly moving |
+| /newsletter/issue-01-the-market-everyone-left | 01 | The market your competitors quietly left |
 
 ## Sent
 
