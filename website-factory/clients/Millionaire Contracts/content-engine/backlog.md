@@ -8,34 +8,34 @@ Status values: queued, drafted (data file written, status:draft), published.
 
 ## Queued (commercial + high-volume, do first)
 
-| Priority | Target keyword | Working title | Angle | Status |
-|---|---|---|---|---|
-| 3 | how to handle sales objections | How to Handle Sales Objections | A framework for the common objections and why objections are buying signals | queued |
-| 4 | discovery call questions | Discovery Call Questions That Qualify and Close | The questions that surface fit, budget, and urgency without interrogating | queued |
-| 5 | b2b sales funnel stages | The B2B Sales Funnel: Stages and How to Move Deals Through | Each stage, the exit criteria, and where deals stall | queued |
-| 6 | when to hire your first salesperson | When to Hire Your First Salesperson (and When to Outsource Instead) | The signals you are ready, the cost, and the outsource alternative | queued |
-| 7 | how to shorten your sales cycle | How to Shorten Your Sales Cycle | The causes of a slow cycle and the levers that speed it up | queued |
-| 8 | sales KPIs to track | The Sales KPIs Worth Tracking (and the Vanity Ones to Ignore) | Leading vs lagging indicators and what actually predicts revenue | queued |
-| 9 | how to write a value proposition | How to Write a Value Proposition That Sells | A plain framework, with the difference between a value prop and a slogan | queued |
-| 10 | cold email deliverability | Cold Email Deliverability: How to Land in the Inbox | Domain setup, warmup, and the mistakes that get you filtered | queued |
-| 11 | account based selling | Account-Based Selling: What It Is and When to Use It | ABM/ABS explained for teams selling into a small number of high-value accounts | queued |
-| 12 | linkedin outreach strategy | LinkedIn Outreach That Books Meetings | A non-spammy approach to LinkedIn as one channel in a cadence | queued |
-| 13 | follow up email after no response | Follow-Up Emails That Get a Reply | The cadence, the angles, and when to stop | queued |
-| 14 | sales pipeline review | How to Run a Sales Pipeline Review | The weekly review that keeps deals moving and forecasts honest | queued |
-| 15 | outsourcing sales pros and cons | The Pros and Cons of Outsourcing Sales | An honest ledger, and how to tell if it fits your business | queued |
+(empty, the first batch is all published. Add new target keywords here.)
 
 ## Drafted (awaiting your review, status: draft)
 
-| Slug | Target keyword | Working title |
-|---|---|---|
-| /outbound-vs-inbound-sales | outbound vs inbound sales | Outbound vs Inbound Sales: Which One Your Business Actually Needs (first article to the new bar) |
-| /how-to-build-an-icp | how to build an ICP | How to Build an Ideal Customer Profile (old bar, pre-dates the standard) |
+(none)
 
 ## Published
 
+All to the new bar (one reframe each, 1,300 words plus, verified clean).
+
 | Slug | Shipped |
 |---|---|
-| /how-to-book-more-sales-meetings | 2026-09-03 (first data-driven article, foundation proof) |
+| /how-to-book-more-sales-meetings | 2026-09-03, expanded to the new bar 2026-09-04 |
+| /outbound-vs-inbound-sales | 2026-09-04 (reference article for the bar) |
+| /how-to-build-an-icp | 2026-09-04 (upgraded to the bar) |
+| /how-to-handle-sales-objections | 2026-09-04 |
+| /discovery-call-questions | 2026-09-04 |
+| /b2b-sales-funnel-stages | 2026-09-04 |
+| /when-to-hire-your-first-salesperson | 2026-09-04 |
+| /how-to-shorten-your-sales-cycle | 2026-09-04 |
+| /sales-kpis-to-track | 2026-09-04 |
+| /how-to-write-a-value-proposition | 2026-09-04 |
+| /cold-email-deliverability | 2026-09-04 |
+| /account-based-selling | 2026-09-04 |
+| /linkedin-outreach-strategy | 2026-09-04 |
+| /follow-up-email-after-no-response | 2026-09-04 |
+| /how-to-run-a-sales-pipeline-review | 2026-09-04 |
+| /pros-and-cons-of-outsourcing-sales | 2026-09-04 |
 
 ---
 
