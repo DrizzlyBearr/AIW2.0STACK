@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Only Closer Scorecard | Millionaire Contracts</title>
+<meta name="description" content="Twelve things that are true of a business where sales still runs through one person. Tick the ones that describe yours. Nothing is collected.">
+<link rel="icon" href="/mc-logo.png">
+<link rel="canonical" href="https://www.millionairecontracts.com/scorecard.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Only Closer Scorecard">
+<meta property="og:description" content="Twelve things that are true of a business where sales still runs through one person. Tick the ones that describe yours. Nothing is collected.">
+<meta property="og:url" content="https://www.millionairecontracts.com/scorecard.html">
+<meta property="og:image" content="https://www.millionairecontracts.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,500..800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --paper: #eceee9;
+    --sheet: #f6f7f4;
+    --ink: #171a18;
+    --ink-soft: #5c625d;
+    --rule: #ccd1ca;
+    --rule-hard: #9aa39b;
+    --stamp: #9c3024;
+    --stamp-wash: rgba(156, 48, 36, 0.10);
+    --mark: #2c4a3e;
+    --mark-wash: rgba(44, 74, 62, 0.10);
+    --display: "Archivo", "Arial Narrow", Helvetica, sans-serif;
+    --body: "Public Sans", -apple-system, "Segoe UI", Helvetica, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #141715;
+      --sheet: #1c201d;
+      --ink: #e7eae6;
+      --ink-soft: #99a29a;
+      --rule: #2f3531;
+      --rule-hard: #4a534d;
+      --stamp: #e0705f;
+      --stamp-wash: rgba(224, 112, 95, 0.13);
+      --mark: #7fc0a5;
+      --mark-wash: rgba(127, 192, 165, 0.13);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #141715;
+    --sheet: #1c201d;
+    --ink: #e7eae6;
+    --ink-soft: #99a29a;
+    --rule: #2f3531;
+    --rule-hard: #4a534d;
+    --stamp: #e0705f;
+    --stamp-wash: rgba(224, 112, 95, 0.13);
+    --mark: #7fc0a5;
+    --mark-wash: rgba(127, 192, 165, 0.13);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 28px 18px 56px;
+  }
+  .sheet {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--sheet);
+    border: 1px solid var(--rule-hard);
+    padding: 0;
+  }
+
+  /* Head */
+  .head { padding: 30px 30px 22px; border-bottom: 2px solid var(--ink); display: grid; gap: 14px; }
+  .meta {
+    display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  h1 {
+    font-family: var(--display); font-stretch: 68%; font-weight: 800; text-transform: uppercase;
+    font-size: clamp(2.1rem, 7.5vw, 3.4rem); line-height: 0.92; letter-spacing: 0.005em;
+    margin: 0; text-wrap: balance;
+  }
+  .standfirst { font-size: 1.02rem; max-width: 58ch; color: var(--ink); }
+  .howto {
+    font-family: var(--mono); font-size: 12px; line-height: 1.6; color: var(--ink-soft);
+    border-left: 2px solid var(--rule-hard); padding-left: 12px;
+  }
+
+  /* Groups */
+  .group { border-bottom: 1px solid var(--rule); }
+  .group-head {
+    display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+    padding: 20px 30px 10px;
+  }
+  .group-letter {
+    font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--stamp);
+    letter-spacing: 0.1em;
+  }
+  .group-name {
+    font-family: var(--display); font-stretch: 80%; font-weight: 700; text-transform: uppercase;
+    font-size: 1.02rem; letter-spacing: 0.04em; margin: 0;
+  }
+  .group-note { font-size: 0.85rem; color: var(--ink-soft); flex: 1 1 100%; }
+
+  ol.signals { list-style: none; margin: 0; padding: 0 0 12px; }
+  li.signal { border-top: 1px solid var(--rule); }
+  li.signal:first-child { border-top: 0; }
+  .row {
+    display: grid; grid-template-columns: 30px 26px minmax(0, 1fr); gap: 0 14px; align-items: start;
+    width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
+    font: inherit; color: inherit; padding: 14px 30px;
+  }
+  .row:hover { background: var(--mark-wash); }
+  .row:focus-visible { outline: 2px solid var(--stamp); outline-offset: -2px; }
+  .n {
+    font-family: var(--mono); font-size: 12px; color: var(--ink-soft); padding-top: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+  .box {
+    width: 22px; height: 22px; border: 1.5px solid var(--rule-hard); background: transparent;
+    display: grid; place-items: center; margin-top: 1px; flex: none;
+  }
+  .box svg { width: 15px; height: 15px; opacity: 0; }
+  .box svg path { stroke: var(--mark); stroke-width: 2.4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .txt { display: grid; gap: 4px; }
+  .claim { font-weight: 500; line-height: 1.4; }
+  .clar { font-size: 0.87rem; color: var(--ink-soft); line-height: 1.45; }
+
+  li.signal.on .box { border-color: var(--mark); background: var(--mark-wash); }
+  li.signal.on .box svg { opacity: 1; }
+  li.signal.on .claim { color: var(--mark); }
+
+  /* Tally */
+  .tally { padding: 26px 30px 30px; display: grid; gap: 18px; }
+  .tally-top { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .count {
+    font-family: var(--display); font-stretch: 68%; font-weight: 800;
+    font-size: 3.6rem; line-height: 0.85; color: var(--ink); font-variant-numeric: tabular-nums;
+  }
+  .count span { color: var(--ink-soft); font-size: 1.5rem; }
+  .stamp {
+    font-family: var(--display); font-stretch: 74%; font-weight: 800; text-transform: uppercase;
+    font-size: 1.12rem; letter-spacing: 0.04em; line-height: 1.1;
+    color: var(--stamp); border: 2.5px solid var(--stamp); background: var(--stamp-wash);
+    padding: 9px 14px; transform: rotate(-1.6deg); text-wrap: balance; max-width: 30ch;
+  }
+  .verdict { font-size: 1rem; max-width: 60ch; }
+  .verdict b { font-weight: 600; }
+  .bands {
+    font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); line-height: 1.7;
+    border-top: 1px solid var(--rule); padding-top: 14px;
+  }
+  .bands b { color: var(--ink); font-weight: 500; }
+  .actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .reset, .act {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    background: none; border: 1px solid var(--rule-hard); color: var(--ink-soft);
+    padding: 8px 13px; cursor: pointer;
+  }
+  .reset:hover { color: var(--ink); border-color: var(--ink); }
+  .act { border-color: var(--mark); color: var(--mark); font-weight: 500; }
+  .act:hover { background: var(--mark-wash); }
+  .act:focus-visible, .reset:focus-visible { outline: 2px solid var(--stamp); outline-offset: 2px; }
+  .copied { font-family: var(--mono); font-size: 11px; color: var(--mark); }
+  .pasteline { font-size: 0.85rem; color: var(--ink-soft); max-width: 58ch; margin: 0; }
+
+  .foot {
+    border-top: 2px solid var(--ink); padding: 16px 30px 20px;
+    display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  .foot b { color: var(--ink); font-weight: 500; }
+
+  @media (max-width: 560px) {
+    body { padding: 14px 10px 40px; }
+    .head { padding: 22px 18px 18px; }
+    .group-head { padding: 16px 18px 8px; }
+    .row { padding: 13px 18px; grid-template-columns: 24px 24px minmax(0, 1fr); gap: 0 10px; }
+    .tally { padding: 22px 18px 24px; }
+    .foot { padding: 14px 18px 18px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  @media print {
+    body { background: #fff; color: #000; padding: 0; font-size: 11pt; }
+    .sheet { border: 0; max-width: none; background: #fff; }
+    .reset { display: none; }
+    .row:hover { background: none; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header class="head">
+    <div class="meta">
+      <span>Self assessment</span>
+      <span>Twelve signals &middot; Nothing collected</span>
+    </div>
+    <h1>The Only Closer Scorecard</h1>
+    <p class="standfirst">Twelve things that are true of a business where sales still runs through one person. Tick the ones that describe yours. Nothing is sent anywhere, and there is nothing to fill in at the end.</p>
+    <p class="howto">Answer for the last ninety days, not for a good month. Most owners tick more than they expect to, and the ones they hesitate over are usually the useful ones.</p>
+  </header>
+
+  <section class="group">
+    <div class="group-head">
+      <span class="group-letter">A</span>
+      <h2 class="group-name">Who brings the work in</h2>
+      <p class="group-note">Whether new business depends on one person being available.</p>
+    </div>
+    <ol class="signals">
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">01</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="Only person to close in 90 days">You are the only person who has closed a new customer in the last ninety days.</span>
+            <span class="clar">Not the only one who could have. The only one who did.</span>
+          </span>
+        </button>
+      </li>
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">02</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="Pipeline goes quiet when delivering">When you are heads down delivering, the pipeline goes quiet.</span>
+            <span class="clar">The quiet usually arrives about six weeks later, which is why it rarely gets connected to the busy month that caused it.</span>
+          </span>
+        </button>
+      </li>
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">03</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="New work stops if I take two weeks off">You could not take two weeks off without new work stopping.</span>
+            <span class="clar">Delivery would carry on. This is only about work coming in.</span>
+          </span>
+        </button>
+      </li>
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">04</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="Quotes and follow ups happen after hours">Quotes and follow ups get written at night or at the weekend.</span>
+            <span class="clar">Because they are the only part of winning work that can wait until everyone has gone home.</span>
+          </span>
+        </button>
+      </li>
+    </ol>
+  </section>
+
+  <section class="group">
+    <div class="group-head">
+      <span class="group-letter">B</span>
+      <h2 class="group-name">Where the work comes from</h2>
+      <p class="group-note">Whether the source of new business is something you can decide to increase.</p>
+    </div>
+    <ol class="signals">
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">05</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="Over half of new business is referral">More than half of new business arrives by referral or word of mouth.</span>
+            <span class="clar">The best work most people get. Also the only source you cannot decide to have more of this quarter.</span>
+          </span>
+        </button>
+      </li>
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">06</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="Customer list unchanged in two years">Your customer list looks much the same as it did two years ago.</span>
+            <span class="clar">One or two gone, one or two added, and both of the new ones arrived through somebody you already knew.</span>
+          </span>
+        </button>
+      </li>
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">07</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="Nobody's only job is finding new customers">Nobody's only job is finding customers who have never bought from you.</span>
+            <span class="clar">Looking after customers and going and finding them are different jobs. Most businesses only staff the first one.</span>
+          </span>
+        </button>
+      </li>
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">08</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="Could not name the next ten I want">You could not name the next ten businesses you want as customers.</span>
+            <span class="clar">Not a type of business. Ten names.</span>
+          </span>
+        </button>
+      </li>
+    </ol>
+  </section>
+
+  <section class="group">
+    <div class="group-head">
+      <span class="group-letter">C</span>
+      <h2 class="group-name">Whether it could be handed to anyone</h2>
+      <p class="group-note">Whether what you do when you sell exists anywhere outside your head.</p>
+    </div>
+    <ol class="signals">
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">09</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="How we win work is not written down">How you win work is not written down anywhere.</span>
+            <span class="clar">What you say first, what you ask, what you send afterwards. If it is only in your head, it cannot be given to anyone.</span>
+          </span>
+        </button>
+      </li>
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">10</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="Follow up is ad hoc, not scheduled">Follow up happens when somebody remembers, not on a schedule.</span>
+            <span class="clar">Most work that gets lost is lost here rather than at the quote.</span>
+          </span>
+        </button>
+      </li>
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">11</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="Do not know conversations per customer">You do not know how many conversations it takes to land one customer.</span>
+            <span class="clar">Without that number, nobody can be given a target, and you cannot tell a slow month from a broken one.</span>
+          </span>
+        </button>
+      </li>
+      <li class="signal">
+        <button class="row" type="button" aria-pressed="false">
+          <span class="n">12</span>
+          <span class="box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.6 L6.2 12.2 L13.5 4.2"/></svg></span>
+          <span class="txt">
+            <span class="claim" data-short="Hired for sales before, did not work out">You have hired for sales before and it did not work out.</span>
+            <span class="clar">Worth ticking even if you decided it was the person. It usually was not.</span>
+          </span>
+        </button>
+      </li>
+    </ol>
+  </section>
+
+  <section class="tally">
+    <div class="tally-top">
+      <p class="count"><span class="sr">Score </span><b id="score">7</b><span>/12</span></p>
+      <p class="stamp" id="stamp">One point of failure</p>
+    </div>
+    <p class="verdict" id="verdict">Example marks are filled in to show how it reads. Untick them and answer for your own business.</p>
+    <div class="bands">
+      <b>0 to 3</b> &nbsp;Sales does not depend on you being available. Rare, and worth knowing which of the twelve you got right.<br>
+      <b>4 to 7</b> &nbsp;It works, and it has a single point of failure. Usually invisible until a busy month.<br>
+      <b>8 to 12</b> &nbsp;You are the sales function. Growth is capped by your calendar rather than by demand.
+    </div>
+    <div class="actions">
+      <button class="act" type="button" id="copy">Copy my answers</button>
+      <button class="reset" type="button" id="reset">Clear all twelve</button>
+      <span class="copied" id="copied" hidden>Copied. Paste it wherever you like.</span>
+    </div>
+    <p class="pasteline">Nothing leaves this page on its own. If you want to talk it through with someone, copying your answers is the only way they travel.</p>
+  </section>
+
+  <footer class="foot">
+    <span>Millionaire Contracts</span>
+    <span><b>millionairecontracts.com</b></span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var KEY = "mc-only-closer-v1";
+    var items = Array.prototype.slice.call(document.querySelectorAll("li.signal"));
+    var scoreEl = document.getElementById("score");
+    var stampEl = document.getElementById("stamp");
+    var verdictEl = document.getElementById("verdict");
+    var resetEl = document.getElementById("reset");
+    var touched = false;
+
+    var BANDS = [
+      { max: 3, stamp: "Not dependent on you",
+        text: "Sales carries on without you in the room. That is uncommon at this size, and the useful question is which of the twelve you got right, because that is the part worth protecting." },
+      { max: 7, stamp: "One point of failure",
+        text: "It works. It also runs through one person, and that stays invisible until the month you are too busy to sell. The ticks in group C are usually the cheapest ones to fix first." },
+      { max: 12, stamp: "You are the sales function",
+        text: "Growth here is capped by your calendar rather than by demand. Nothing on this page is fixed by working harder in the good months, because the good months are when the ticking stops." }
+    ];
+
+    function save(state) {
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    }
+
+    function render() {
+      var n = 0;
+      items.forEach(function (li) { if (li.classList.contains("on")) n++; });
+      scoreEl.textContent = String(n);
+      var band = BANDS.find(function (b) { return n <= b.max; });
+      stampEl.textContent = band.stamp;
+      verdictEl.textContent = touched
+        ? band.text
+        : "Example marks are filled in to show how it reads. Untick them and answer for your own business.";
+      save(items.map(function (li) { return li.classList.contains("on") ? 1 : 0; }));
+    }
+
+    items.forEach(function (li, i) {
+      var btn = li.querySelector(".row");
+      btn.addEventListener("click", function () {
+        touched = true;
+        li.classList.toggle("on");
+        btn.setAttribute("aria-pressed", li.classList.contains("on") ? "true" : "false");
+        render();
+      });
+    });
+
+    var copyEl = document.getElementById("copy");
+    var copiedEl = document.getElementById("copied");
+
+    function summary() {
+      var lines = [];
+      var n = 0;
+      items.forEach(function (li, i) {
+        if (li.classList.contains("on")) {
+          n++;
+          lines.push("- " + li.querySelector(".claim").getAttribute("data-short"));
+        }
+      });
+      var band = BANDS.find(function (b) { return n <= b.max; });
+      return ["Only Closer Scorecard: " + n + " of 12 (" + band.stamp + ")", ""]
+        .concat(lines.length ? lines : ["- none ticked"]).join("
+");
+    }
+
+    copyEl.addEventListener("click", function () {
+      var text = summary();
+      function done() {
+        copiedEl.hidden = false;
+        setTimeout(function () { copiedEl.hidden = true; }, 4000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+      function fallback() {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+
+    resetEl.addEventListener("click", function () {
+      touched = true;
+      items.forEach(function (li) {
+        li.classList.remove("on");
+        li.querySelector(".row").setAttribute("aria-pressed", "false");
+      });
+      render();
+    });
+
+    var restored = null;
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (raw) restored = JSON.parse(raw);
+    } catch (e) {}
+
+    if (restored && restored.length === items.length) {
+      touched = true;
+      items.forEach(function (li, i) {
+        if (restored[i]) {
+          li.classList.add("on");
+          li.querySelector(".row").setAttribute("aria-pressed", "true");
+        }
+      });
+    } else {
+      [0, 1, 3, 4, 6, 8, 9].forEach(function (i) {
+        items[i].classList.add("on");
+        items[i].querySelector(".row").setAttribute("aria-pressed", "true");
+      });
+    }
+    render();
+  })();
+</script>
+</body>
+</html>
