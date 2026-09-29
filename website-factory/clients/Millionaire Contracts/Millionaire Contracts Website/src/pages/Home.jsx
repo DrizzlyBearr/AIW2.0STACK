@@ -9,7 +9,11 @@ import { caseStudies } from '../data/caseStudies'
 const LOGO = '/mc-logo.png'
 
 const stats = [
-  { value: '65%', label: 'Meeting success rate' },
+  // "Average", because a scroll further down BaseHome Capital shows its own
+  // 66% under the same words. The two meeting success rates on record are
+  // 66% (BaseHome) and 65% (SaaS Lead Flow); 65% is the average, rounded
+  // down rather than up.
+  { value: '65%', label: 'Average meeting success rate' },
   { value: '20+', label: 'Companies scaled' },
   { value: '3x', label: 'Average pipeline growth' },
   { value: '8+', label: 'Strategic partnerships closed' },
@@ -110,7 +114,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <SEOMeta
         title="Millionaire Contracts | We Install Your Sales Function"
-        description="Millionaire Contracts installs a complete sales function: a pre-qualifying website, a qualification framework, scripts, CRM and pipeline setup, and an outreach engine, plus a trained rep who works your pipeline daily. 65% meeting success rate, 20+ companies scaled."
+        description="Millionaire Contracts installs a complete sales function: a pre-qualifying website, a qualification framework, scripts, CRM and pipeline setup, and an outreach engine, plus a trained rep who works your pipeline daily. 65% average meeting success rate, 20+ companies scaled."
         path="/"
       />
       <Navbar />
