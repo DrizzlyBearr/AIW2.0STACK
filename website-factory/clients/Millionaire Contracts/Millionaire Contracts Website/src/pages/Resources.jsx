@@ -117,6 +117,12 @@ const articles = [
     desc: 'How Millionaire Contracts builds a proactive pipeline for consulting, legal, staffing, and corporate services firms beyond referrals.',
   },
   {
+    to: '/outsourced-sales-for-law-firms',
+    category: 'Vertical',
+    title: 'Outsourced Sales and Intake for Law Firms',
+    desc: 'How Millionaire Contracts builds and runs the intake side of small law firms: the part between someone finding you and a consultation in the diary.',
+  },
+  {
     to: '/outsourced-sales-for-private-equity',
     category: 'Vertical',
     title: 'Outsourced Sales and Deal Origination for Private Equity and M&A',
