@@ -32,6 +32,7 @@ import InconsistentRevenue from './pages/articles/InconsistentRevenue'
 import SalesStallWithoutYou from './pages/articles/SalesStallWithoutYou'
 import SaaSTechnology from './pages/SaaSTechnology'
 import ProfessionalServices from './pages/ProfessionalServices'
+import LawFirms from './pages/LawFirms'
 import PrivateEquity from './pages/PrivateEquity'
 import MarketingAgencies from './pages/MarketingAgencies'
 import FinancialServices from './pages/FinancialServices'
@@ -110,6 +111,7 @@ export default function App() {
         <Route path="/sales-stall-without-you" element={<SalesStallWithoutYou />} />
         <Route path="/outsourced-sales-for-saas" element={<SaaSTechnology />} />
         <Route path="/outsourced-sales-for-professional-services" element={<ProfessionalServices />} />
+        <Route path="/outsourced-sales-for-law-firms" element={<LawFirms />} />
         <Route path="/outsourced-sales-for-private-equity" element={<PrivateEquity />} />
         <Route path="/outsourced-sales-for-marketing-agencies" element={<MarketingAgencies />} />
         <Route path="/outsourced-sales-for-financial-services" element={<FinancialServices />} />

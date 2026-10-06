@@ -12,7 +12,7 @@ export const testimonials = [
     initials: 'AM',
   },
   {
-    quote: 'Working with Millionaire Contracts on our private equity outreach was a decision that paid off immediately. Their closing team drove a 65% meeting success rate across targeted investor accounts.',
+    quote: 'Working with Millionaire Contracts on our private equity outreach was a decision that paid off immediately. Their closing team drove a 66% meeting success rate across targeted investor accounts.',
     name: 'Jamil V.',
     company: 'BaseHome Capital',
     initials: 'JV',

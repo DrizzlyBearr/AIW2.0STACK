@@ -4,11 +4,16 @@ import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import Testimonials from '../components/Testimonials'
 import SEOMeta from '../components/SEOMeta'
+import { caseStudies } from '../data/caseStudies'
 
 const LOGO = '/mc-logo.png'
 
 const stats = [
-  { value: '65%', label: 'Meeting success rate' },
+  // "Average", because a scroll further down BaseHome Capital shows its own
+  // 66% under the same words. The two meeting success rates on record are
+  // 66% (BaseHome) and 65% (SaaS Lead Flow); 65% is the average, rounded
+  // down rather than up.
+  { value: '65%', label: 'Average meeting success rate' },
   { value: '20+', label: 'Companies scaled' },
   { value: '3x', label: 'Average pipeline growth' },
   { value: '8+', label: 'Strategic partnerships closed' },
@@ -46,11 +51,41 @@ const pillars = [
   { name: 'Outreach Engine', line: 'Cadences and channels for consistent outbound volume.', to: '/services#outreach-engine' },
 ]
 
+/**
+ * A result on the homepage, read out of that client's own case study.
+ *
+ * These used to be typed in here, and three of the four had drifted away
+ * from the case studies they sit beside:
+ *
+ *   KPG / MTN Zambia   "12+ enterprise deals closed"   its case study states no number at all
+ *   Sigma Health       "3x pipeline growth"            its case study states no number at all
+ *   Eads Bridge        "100% client satisfaction"      that is BaseHome's figure; Eads Bridge's is 50%
+ *
+ * and BaseHome itself carried 65%, which is SaaS Lead Flow's figure; its own
+ * is 66%. Every one of those was a claim about a named client that the
+ * client's own page did not make, one click away from the page that would
+ * show it. A prospect who checks finds the mismatch, and the ones who check
+ * are the ones worth having.
+ *
+ * So the client name, the figure, its label and the link all come from the
+ * same record, keyed by the slug the link uses. A row cannot credit one
+ * client with another's result, and a label that does not exist in the case
+ * study fails the build rather than shipping a number from nowhere.
+ */
+function caseResult(slug, label) {
+  const study = caseStudies[slug]
+  const result = study?.metrics.find((m) => m.label === label)
+  if (!result) {
+    throw new Error(`Home: case study "${slug}" has no result labelled "${label}"`)
+  }
+  return { client: study.name, metric: result.value, label: result.label, slug: `/${slug}` }
+}
+
 const caseResults = [
-  { client: 'KPG / MTN Zambia', metric: '12+', label: 'Enterprise deals closed', slug: '/kpg-mtn' },
-  { client: 'BaseHome Capital', metric: '65%', label: 'Meeting success rate', slug: '/basehome-capital' },
-  { client: 'Sigma Health Technologies', metric: '3x', label: 'Pipeline growth', slug: '/portfolio' },
-  { client: 'Eads Bridge Holdings', metric: '100%', label: 'Client satisfaction', slug: '/portfolio' },
+  caseResult('kpg-mtn', 'Device financing approvals at point of sale'),
+  caseResult('basehome-capital', 'Meeting success rate'),
+  caseResult('sigma-health-technologies', 'Discovery calls with genuinely open sellers'),
+  caseResult('eads-bridge-holdings', 'More confirmed appointments booked'),
 ]
 
 const featuredGuides = [
@@ -79,7 +114,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <SEOMeta
         title="Millionaire Contracts | We Install Your Sales Function"
-        description="Millionaire Contracts installs a complete sales function: a pre-qualifying website, a qualification framework, scripts, CRM and pipeline setup, and an outreach engine, plus a trained rep who works your pipeline daily. 65% meeting success rate, 20+ companies scaled."
+        description="Millionaire Contracts installs a complete sales function: a pre-qualifying website, a qualification framework, scripts, CRM and pipeline setup, and an outreach engine, plus a trained rep who works your pipeline daily. 65% average meeting success rate, 20+ companies scaled."
         path="/"
       />
       <Navbar />
