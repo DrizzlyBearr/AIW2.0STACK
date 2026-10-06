@@ -118,13 +118,29 @@ function renderPage({ path: routePath, title, description, type }) {
 
   // Render the page content and inject it into the root element.
   let body = ''
+  let ldJson = ''
   try {
-    body = render(routePath).html
+    const rendered = render(routePath)
+    body = rendered.html
+    ldJson = rendered.ldJson || ''
   } catch (err) {
     console.error(`prerender: content render failed for ${routePath}:`, err.message)
   }
   if (body) {
     html = html.replace(/<div id="root"><\/div>/, `<div id="root">${body}</div>`)
+  }
+
+  // The page's JSON-LD, which is the one part of SEOMeta's output this script
+  // does not write itself and therefore used to lose entirely. It cannot be
+  // baked in from the statically parsed props above, because pages pass schema
+  // as a variable rather than a literal, which is precisely why it fell
+  // through the gap for 36 pages without anybody noticing.
+  //
+  // Appended rather than replacing anything: the template's Organization block
+  // is sitewide and stays, and these are the page's own Article, FAQPage and
+  // BreadcrumbList on top of it.
+  if (ldJson) {
+    html = html.replace('</head>', `  ${ldJson}\n  </head>`)
   }
 
   return html
