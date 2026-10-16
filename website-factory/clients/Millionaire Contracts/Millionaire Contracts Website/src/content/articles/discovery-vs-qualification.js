@@ -6,11 +6,11 @@ export default {
   date: '2026-09-05',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
-  title: 'Discovery vs Qualification: They Are Not the Same Thing',
+  title: 'Discovery vs Qualification in Sales: What Is the Difference?',
   description:
-    'Discovery and qualification feel like one conversation, but they answer opposite questions. Here is the split most reps miss, and what it costs when they blur it.',
+    'Discovery asks if you can help the buyer. Qualification asks if the deal is worth your time. How the two differ, and the order to run them in on a call.',
   intro:
-    'You have sat through the call that goes well and closes nothing. Real pain surfaced. The buyer opened up, nodded, thanked you for the clarity. Then the deal went quiet and died. It was not a bad call. It was the right conversation with a buyer who was never going to buy, because you ran one question deep and the other question never at all.',
+    'Discovery asks whether you can help this buyer: the problem, its cost, and whether what you sell would fix it. Qualification asks whether the deal is worth your time: budget, authority, timing and urgency. Run both, interleaved: light qualification early, deep discovery only with buyers who pass. You have sat through the call that goes well and closes nothing. Real pain surfaced. The buyer opened up, nodded, thanked you for the clarity. Then the deal went quiet and died. It was not a bad call. It was the right conversation with a buyer who was never going to buy, because you ran one question deep and the other question never at all.',
   stats: [
     { value: 'Can you help?', label: 'The question discovery actually asks' },
     { value: 'Should you?', label: 'The question qualification actually asks' },
@@ -48,6 +48,10 @@ export default {
     },
   ],
   faqs: [
+    {
+      q: 'What is the difference between discovery and qualification?',
+      a: 'Discovery finds out whether you can help the buyer, by mapping the problem and testing fit. Qualification finds out whether the deal deserves your time, by checking budget, authority, timing and urgency.',
+    },
     {
       q: 'Is qualification just BANT?',
       a: 'BANT, budget, authority, need, and timing, is one checklist for qualification, not the whole of it. The point of qualification is deciding whether a deal deserves your time, and the boxes are only shorthand for that. A rep who runs the boxes without the judgment behind them qualifies fast and closes little.',

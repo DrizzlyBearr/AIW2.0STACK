@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
+import InHouseVsOutsourced from '../components/InHouseVsOutsourced'
+import { ASSUMPTIONS, RAMP_MONTHS, extrasFor, usd } from '../lib/salesCost'
 
 const schema = {
   '@context': 'https://schema.org',
@@ -47,29 +49,11 @@ const faqSchema = {
   ],
 }
 
-// Cost assumptions, expressed per rep, per year (year 1). Shown transparently
-// so the figure reads as a planning estimate, not a fabricated quote.
-const ASSUMPTIONS = [
-  { key: 'benefits', label: 'Payroll taxes and benefits', kind: 'rate', value: 0.3, note: '30% of base salary' },
-  { key: 'tools', label: 'Sales tools and software', kind: 'flat', value: 9000, note: 'CRM, dialler, data, enrichment' },
-  { key: 'onboarding', label: 'Onboarding and training', kind: 'flat', value: 7500, note: 'Ramp materials, enablement, lost productivity' },
-  { key: 'management', label: 'Management time', kind: 'flat', value: 11000, note: 'Coaching, pipeline reviews, reporting' },
-  { key: 'recruiting', label: 'Recruiting and hiring', kind: 'flat', value: 10000, note: 'Sourcing, interviewing, agency fees' },
-]
-
-const RAMP_MONTHS = 4 // midpoint of the 3 to 6 month range
-
-const usd = (n) =>
-  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(Math.round(n))
-
 export default function SalesTeamCostCalculator() {
   const [reps, setReps] = useState(2)
   const [salary, setSalary] = useState(60000)
 
-  const perRepExtras = ASSUMPTIONS.reduce(
-    (sum, a) => sum + (a.kind === 'rate' ? salary * a.value : a.value),
-    0,
-  )
+  const perRepExtras = extrasFor(salary)
   const perRepTotal = salary + perRepExtras
   const totalYear1 = perRepTotal * reps
   const rampCost = (totalYear1 / 12) * RAMP_MONTHS
@@ -189,6 +173,8 @@ export default function SalesTeamCostCalculator() {
           </div>
         </div>
       </section>
+
+      <InHouseVsOutsourced reps={reps} salary={salary} />
 
       {/* The other side of the equation */}
       <section className="py-16 px-6 bg-gray-50">

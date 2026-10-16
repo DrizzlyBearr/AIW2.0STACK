@@ -4,12 +4,13 @@ import Footer from '../../components/Footer'
 import SEOMeta from '../../components/SEOMeta'
 import ArticleCTA from '../../components/ArticleCTA'
 import NewsletterSignup from '../../components/NewsletterSignup'
+import InHouseVsOutsourced from '../../components/InHouseVsOutsourced'
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'How Much Does Outsourced Sales Cost? $3k to $15k a Month',
-  description: 'Outsourced sales costs $3,000 to $15,000 a month on retainer, or $75 to $500 per booked meeting. The four pricing models, compared with a $110k in-house hire.',
+  headline: 'How Much Does Outsourced Sales Cost? Pricing Models Compared',
+  description: 'Outsourced sales costs $3,000 to $15,000 a month on retainer, $75 to $500 per meeting, or $150 to $600 per lead. A loaded in-house SDR costs $110k+ a year.',
   publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/what-does-outsourced-sales-cost',
 }
@@ -100,8 +101,8 @@ export default function WhatDoesOutsourcedSalesCost() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEOMeta
-        title="How Much Does Outsourced Sales Cost? $3k to $15k a Month"
-        description="Outsourced sales costs $3,000 to $15,000 a month on retainer, or $75 to $500 per booked meeting. The four pricing models, compared with a $110k in-house hire."
+        title="How Much Does Outsourced Sales Cost? Pricing Models Compared"
+        description="Outsourced sales costs $3,000 to $15,000 a month on retainer, $75 to $500 per meeting, or $150 to $600 per lead. A loaded in-house SDR costs $110k+ a year."
         path="/what-does-outsourced-sales-cost"
         type="article"
         schema={[schema, faqSchema]}
@@ -120,7 +121,7 @@ export default function WhatDoesOutsourcedSalesCost() {
               <span className="text-mc-gold">Actually Cost in 2026?</span>
             </h1>
             <p className="font-body text-gray-400 text-lg leading-relaxed max-w-2xl">
-              Outsourced sales costs $3,000 to $15,000 a month on a retainer, or $75 to $500 per booked meeting if you pay for performance. A fully loaded in-house SDR in the US costs $110,000 or more in year one. Below are the four pricing models, what moves the number, and how to decide which one fits your stage.
+              Outsourced sales costs $3,000 to $15,000 a month on a retainer, $75 to $500 per booked meeting, or $150 to $600 per qualified lead. A fully loaded in-house SDR in the US costs $110,000 to $150,000 in year one, so in most cases outsourcing is the cheaper option. Whether it is cost-effective for you depends on your deal size and close rate, which the ROI check below works through.
             </p>
           </div>
         </div>
@@ -146,6 +147,9 @@ export default function WhatDoesOutsourcedSalesCost() {
       {/* Intro */}
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto">
+          <p className="font-body text-gray-700 leading-relaxed text-base mb-5">
+            There are four common pricing models for outsourced sales and outsourced SDR work. A monthly retainer of $3,000 to $15,000 buys a dedicated team: appointment setting only sits at the low end, and a full sales team as a service, with strategy, management and closing, sits at the high end. Pay per appointment ($75 to $500 a meeting) and pay per qualified lead ($150 to $600 a lead) charge only for output. A hybrid pairs a smaller retainer with a performance bonus.
+          </p>
           <p className="font-body text-gray-700 leading-relaxed text-base mb-5">
             Outsourced sales pricing is one of the least transparent areas in B2B services. Agencies bury numbers behind "it depends" and "book a call to find out." The result is that most buyers enter pricing conversations without a baseline, which puts them at a disadvantage.
           </p>
@@ -191,6 +195,8 @@ export default function WhatDoesOutsourcedSalesCost() {
           </p>
         </div>
       </section>
+
+      <InHouseVsOutsourced standalone bg="bg-white border-y border-gray-100" />
 
       {/* Pricing models */}
       <section className="py-16 px-6">

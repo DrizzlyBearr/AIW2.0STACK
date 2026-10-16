@@ -8,8 +8,8 @@ import NewsletterSignup from '../../components/NewsletterSignup'
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Commission-Only Sales Reps: Do They Actually Work?',
-  description: 'An honest look at commission-only sales reps: why they are appealing, why they usually fail for complex B2B, when the model can work, and the alternatives that keep the cost alignment without the downsides.',
+  headline: 'Do Commission-Only Sales Models Work? The Honest Answer',
+  description: 'Commission-only reps work when the sale is simple, short and fed with leads. In complex B2B they usually fail. Compared with base plus commission.',
   publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/commission-only-sales-reps',
 }
@@ -28,10 +28,26 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Do commission-only sales reps actually work?',
+      name: 'Do commission-only sales models work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'They can work in narrow situations: a simple product, a short sales cycle, a warm lead flow, and a large market of interchangeable prospects. For complex B2B sales with long cycles and consultative selling, commission-only reps usually fail. The rep needs income before the first deal closes, and without it they either leave or chase only the easiest short-term wins.',
+        text: 'They work when the offer is simple, the sales cycle is short, leads are supplied, and one deal pays enough to add up to a living income quickly. For complex B2B sales with long cycles, they usually fail, because the rep has no income before the first deal closes and either leaves or chases only the easiest wins.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What commission rate do commission-only reps expect?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'There is no standard rate. The payout per deal has to be high enough that a normal month of closes adds up to a living income, because the rep has no base to fall back on. Work it backwards: take the monthly income a capable rep needs, divide it by the deals they can realistically close in a month, and that is the payout per deal your offer must support.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Commission-only vs base plus commission: which is better?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For most B2B sales, base plus commission is better. The base keeps a good rep in the seat through ramp and long cycles, and the commission still ties pay to results. Commission-only is cheaper up front but attracts a thinner pool of reps and turns over faster, so it only wins when the sale is simple, short and fed with leads.',
       },
     },
     {
@@ -92,12 +108,66 @@ const failures = [
   },
 ]
 
+const comparison = {
+  columns: ['Commission-only', 'Base plus commission', 'Outsourced team'],
+  rows: [
+    {
+      label: 'Cost to you up front',
+      values: [
+        'None. You pay only when a deal closes.',
+        'A fixed base every month, plus commission. An in-house SDR base runs $55,000 to $70,000, or $110,000 to $150,000 fully loaded.',
+        'A monthly or per-meeting fee, typically 30 to 50 percent less than a fully loaded in-house hire.',
+      ],
+    },
+    {
+      label: 'Who carries the risk',
+      values: [
+        'The rep carries the income risk. You carry the cost of churn and of wrong-fit customers.',
+        'You carry the base, the hiring risk and the ramp. The rep carries the variable part.',
+        'Shared. The provider carries hiring, management and replacement. You carry the fee.',
+      ],
+    },
+    {
+      label: 'Rep quality you attract',
+      values: [
+        'A thin pool, often people between jobs. Strong reps rarely take it for a complex sale.',
+        'The widest pool, including experienced reps, depending on the base you offer.',
+        'People who already sell for a living, with management behind them. Quality varies by provider, so check.',
+      ],
+    },
+    {
+      label: 'Ramp',
+      values: [
+        'Often never finished. Reps leave before they learn a complex offer.',
+        'Typically 3 to 6 months for an SDR before consistent output.',
+        'Shorter, because the process already exists. Ask any provider when first meetings land.',
+      ],
+    },
+    {
+      label: 'Control',
+      values: [
+        'Low. You cannot direct the day of someone you do not pay.',
+        'High. They are your employee, working your process.',
+        'Medium to high. You set targets and criteria. The provider runs the daily work and reports on it.',
+      ],
+    },
+    {
+      label: 'Best for',
+      values: [
+        'Simple, fast, transactional sales with supplied leads.',
+        'A proven sales process with a manager who can coach the role.',
+        'Businesses that need pipeline soon without the hiring and ramp risk.',
+      ],
+    },
+  ],
+}
+
 export default function CommissionOnlySalesReps() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEOMeta
-        title="Commission-Only Sales Reps: Do They Actually Work?"
-        description="An honest look at commission-only sales reps: why they are appealing, why they usually fail for complex B2B, when the model can work, and the alternatives that keep the cost alignment without the downsides."
+        title="Do Commission-Only Sales Models Work? The Honest Answer"
+        description="Commission-only reps work when the sale is simple, short and fed with leads. In complex B2B they usually fail. Compared with base plus commission."
         path="/commission-only-sales-reps"
         type="article"
         schema={[schema, faqSchema]}
@@ -116,7 +186,7 @@ export default function CommissionOnlySalesReps() {
               <span className="text-mc-gold">Do They Actually Work?</span>
             </h1>
             <p className="font-body text-gray-400 text-lg leading-relaxed max-w-2xl">
-              The commission-only rep is the model owners reach for when they want sales without payroll risk. Sometimes it works. For most considered B2B businesses it quietly fails. This is an honest look at why the model is appealing, where it breaks, and what carries the same upside without the downside.
+              Commission-only sales models work when the offer is simple, the sales cycle is short, leads are supplied, and one deal pays the rep enough to live on. They usually fail for complex B2B sales with long cycles, because the rep earns nothing while learning the offer and building pipeline, so they leave or chase only the easiest deals. Below is a side-by-side comparison with base plus commission and an outsourced team, a worked example, and what carries the same upside without the downside.
             </p>
           </div>
         </div>
@@ -138,6 +208,43 @@ export default function CommissionOnlySalesReps() {
           ))}
         </div>
       </div>
+
+      {/* Side by side */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="section-label mb-3 block" style={{ color: '#d8920e' }}>Side by side</span>
+            <h2 className="font-headline text-3xl font-black text-mc-teal leading-tight">
+              Commission-only vs base plus commission vs an outsourced team
+            </h2>
+          </div>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm max-w-5xl mx-auto bg-white">
+            <table className="w-full min-w-[720px]">
+              <thead>
+                <tr>
+                  <th className="text-left px-5 py-4 font-body font-semibold text-gray-500 text-sm bg-gray-50 w-1/5">Factor</th>
+                  {comparison.columns.map((c) => (
+                    <th key={c} className="text-left px-5 py-4 font-headline font-bold text-mc-teal text-sm bg-gray-50">{c}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {comparison.rows.map((row, i) => (
+                  <tr key={row.label} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
+                    <td className="px-5 py-4 font-body font-semibold text-mc-teal text-sm align-top">{row.label}</td>
+                    {row.values.map((v, j) => (
+                      <td key={j} className="px-5 py-4 font-body text-gray-600 text-sm leading-relaxed align-top">{v}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="font-body text-gray-500 text-sm max-w-3xl mx-auto mt-5">
+            Cost figures are the in-house and outsourced ranges used across this site. Commission-only has no fixed cost, which is why it looks cheapest until you count churn and lost months.
+          </p>
+        </div>
+      </section>
 
       {/* The appeal */}
       <section className="py-16 px-6">
@@ -209,6 +316,34 @@ export default function CommissionOnlySalesReps() {
           </div>
           <p className="font-body text-gray-700 leading-relaxed">
             Retail floors, some insurance sales, and certain high-volume consumer categories fit this shape. Most B2B services do not. If your sale involves multiple stakeholders, a cycle measured in weeks or months, and a rep who has to source their own conversations, the conditions that make commission-only work are absent.
+          </p>
+        </div>
+      </section>
+
+      {/* Worked example */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <span className="section-label mb-4 block" style={{ color: '#d8920e' }}>A worked example</span>
+          <h2 className="font-headline text-3xl font-black text-mc-teal mb-6">The same pay model, two very different sales</h2>
+          <p className="font-body text-gray-700 leading-relaxed mb-5">
+            These numbers are made up to show the arithmetic. They are not benchmarks. Say a rep needs $4,000 a month to stay in the seat.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4 mb-6">
+            <div className="bg-white rounded-xl p-5 border border-gray-100">
+              <h3 className="font-headline font-bold text-mc-teal text-sm mb-2">Sale A: a $6,000 B2B service</h3>
+              <p className="font-body text-gray-600 text-sm leading-relaxed">
+                At 10 percent commission, each close pays the rep $600. To earn $4,000 a month they need about seven closes (7 x $600 = $4,200). If a deal takes three months from first call to signature, a new rep earns nothing for the first three months. Few people can work a quarter unpaid, so the seat empties before the first payout.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-5 border border-gray-100">
+              <h3 className="font-headline font-bold text-mc-teal text-sm mb-2">Sale B: a $1,500 offer that closes on one call</h3>
+              <p className="font-body text-gray-600 text-sm leading-relaxed">
+                At 20 percent commission, each close pays the rep $300. With supplied leads, fifteen closes in a month pays $4,500 (15 x $300), and the first payout arrives in week one. The rep can earn while they learn, so they stay.
+              </p>
+            </div>
+          </div>
+          <p className="font-body text-gray-700 leading-relaxed">
+            Run the same sum for your own offer: your price, the payout per deal, how many deals a new rep could close in a month, and how long the first one takes. If the answer is months of no income, commission-only will keep turning over, however good the rep.
           </p>
         </div>
       </section>

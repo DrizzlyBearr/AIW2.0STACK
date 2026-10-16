@@ -8,8 +8,8 @@ import NewsletterSignup from '../../components/NewsletterSignup'
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'What Is an SDR? The Sales Development Rep Role Explained',
-  description: 'A clear definition of the sales development representative role: what an SDR does day to day, how they differ from a closer, where they fit in a pipeline, what they cost, and when to hire versus outsource.',
+  headline: 'What Is an SDR? Role, Cost, and In-House vs Contract SDRs',
+  description: 'An SDR finds prospects, qualifies them and books meetings for closers. What one costs in-house ($110k to $150k loaded) and what an SDR contract covers.',
   publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/what-is-an-sdr',
 }
@@ -60,6 +60,14 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
+      name: 'What is a contract SDR, and what should an SDR contract include?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A contract SDR works for you on a fixed-term or freelance agreement, or through an outsourced team, instead of as a permanent employee. A sound SDR contract states the target accounts, what counts as a qualified meeting, how and how often results are reported, who owns the contacts and data, and the notice period to end it.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Should I hire an SDR or outsource the role?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -96,8 +104,8 @@ export default function WhatIsAnSDR() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEOMeta
-        title="What Is an SDR? The Sales Development Rep Role Explained"
-        description="A clear definition of the sales development representative role: what an SDR does day to day, how they differ from a closer, where they fit in a pipeline, what they cost, and when to hire versus outsource."
+        title="What Is an SDR? Role, Cost, and In-House vs Contract SDRs"
+        description="An SDR finds prospects, qualifies them and books meetings for closers. What one costs in-house ($110k to $150k loaded) and what an SDR contract covers."
         path="/what-is-an-sdr"
         type="article"
         schema={[schema, faqSchema]}
@@ -116,7 +124,7 @@ export default function WhatIsAnSDR() {
               <span className="text-mc-gold">The Sales Development Rep Role Explained</span>
             </h1>
             <p className="font-body text-gray-400 text-lg leading-relaxed max-w-2xl">
-              The SDR sits at the top of the sales pipeline. They find potential customers, start the conversation, qualify the fit, and book meetings for the people who close. This is what the role is, what an SDR does day to day, how it differs from a closer, what it costs, and when to hire versus outsource.
+              An SDR, or sales development representative, finds potential customers, starts the conversation, qualifies the fit, and books meetings for the people who close. Hired in-house, the role costs $110,000 to $150,000 a year fully loaded. On a contract or through an outsourced team, you pay for the function without carrying the hire. This is what the role is, what an SDR does day to day, how it differs from a closer, and when to hire versus outsource.
             </p>
           </div>
         </div>

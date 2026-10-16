@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { startClickTracking, trackView } from './lib/track'
 import ArticleTemplate from './components/ArticleTemplate'
 import IssueTemplate from './components/IssueTemplate'
 import NewsletterArchive from './pages/NewsletterArchive'
@@ -81,6 +82,8 @@ export default function App() {
     if (typeof window.gtag === 'function') {
       window.gtag('event', 'page_view', { page_path: location.pathname + location.search })
     }
+    startClickTracking()
+    trackView(location.pathname)
   }, [location])
 
   return (

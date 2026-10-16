@@ -7,11 +7,11 @@ export default {
   category: 'Sales Strategy',
   label: 'Sales Strategy',
   service: '/sales-closing',
-  title: 'Why Single-Threaded Deals Die, and How to Multi-Thread',
+  title: 'Multithreading in Sales: What It Is and How to Do It',
   description:
-    'A deal that rests on one contact is a deal with a single point of failure. Why single-threaded deals go quiet and die, and how to build more than one door into every account that matters.',
+    'Multithreading means building relationships with several people in an account, not one champion. Why single-threaded deals die, and how to widen safely.',
   intro:
-    'Think about the last deal that went quiet on you. Not the one that said no, the one that simply stopped replying, with a champion who was warm right up until the week they were not. You probably never learned why. The reason is almost always the same, and it is not your pitch. The deal rested on one person, and when that one person went dark, you had no other way into the account. Here is how to make sure the next deal does not die that way.',
+    'Multithreading in sales means building real relationships with several people in a buying account, usually the champion, the budget holder and at least one person who will use what you sell, so the deal does not rest on one contact. You do it openly, through your champion, and early, while the deal is going well. Think about the last deal that went quiet on you. Not the one that said no, the one that simply stopped replying, with a champion who was warm right up until the week they were not. You probably never learned why. The reason is almost always the same, and it is not your pitch. The deal rested on one person, and when that one person went dark, you had no other way into the account. Here is how to make sure the next deal does not die that way.',
   stats: [
     { value: 'One contact', label: 'One point of failure in the deal' },
     { value: 'Goes dark', label: 'How single-threaded deals usually end' },

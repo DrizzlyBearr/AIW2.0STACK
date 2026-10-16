@@ -8,8 +8,8 @@ import NewsletterSignup from '../../components/NewsletterSignup'
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Why Your Revenue Is Inconsistent and What to Do About It',
-  description: 'Unpredictable revenue is not random and it is not seasonal. It is caused by uneven sales input. Here is the pattern, why the usual fixes miss it, and what actually stabilizes revenue.',
+  headline: 'Why Is My Revenue Inconsistent? 4 Causes and the Fix',
+  description: 'Inconsistent revenue is usually caused by uneven sales input, not the market or the season. The four patterns behind the swings, and how to steady them.',
   publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/inconsistent-revenue',
 }
@@ -80,8 +80,8 @@ export default function InconsistentRevenue() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEOMeta
-        title="Why Your Revenue Is Inconsistent and What to Do About It"
-        description="Unpredictable revenue is not random and it is not seasonal. It is caused by uneven sales input. Here is the pattern, why the usual fixes miss it, and what actually stabilizes revenue."
+        title="Why Is My Revenue Inconsistent? 4 Causes and the Fix"
+        description="Inconsistent revenue is usually caused by uneven sales input, not the market or the season. The four patterns behind the swings, and how to steady them."
         path="/inconsistent-revenue"
         type="article"
         schema={[schema, faqSchema]}
@@ -100,7 +100,7 @@ export default function InconsistentRevenue() {
               <span className="text-mc-gold">and what to do about it</span>
             </h1>
             <p className="font-body text-gray-400 text-lg leading-relaxed max-w-2xl">
-              Good months and bad months with no reliable way to tell which is coming. It feels like the market, the season, or bad luck. It is almost never any of those things. The cause is closer and more fixable than that.
+              Inconsistent revenue is almost always caused by inconsistent sales input. Outreach runs in bursts, and closed revenue follows four to eight weeks behind, so the swings look random when they are not. The fix is to make the input steady every week, not to change your price or your offer. Good months and bad months can feel like the market, the season, or bad luck. They are almost never any of those things.
             </p>
           </div>
         </div>

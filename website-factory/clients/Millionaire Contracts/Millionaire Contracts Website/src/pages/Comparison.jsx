@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
+import InHouseVsOutsourced from '../components/InHouseVsOutsourced'
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'In-House Sales Team vs Outsourced Sales: The Real Cost Comparison',
-  description: 'A detailed breakdown of what it actually costs to build an in-house sales team versus outsourcing your sales function, with the real numbers and a clear framework for the decision.',
+  headline: 'In-House vs Outsourced Sales: The Real Cost, Side by Side',
+  description: 'A fully loaded in-house SDR costs $110k to $150k a year. Outsourced sales typically runs $42k to $55k for comparable output. The line-by-line breakdown.',
   publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/in-house-vs-outsourced-sales',
 }
@@ -29,7 +30,7 @@ const faqSchema = {
       name: 'What does outsourced sales cost compared to in-house?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Outsourced sales functions typically run $42,000 to $55,000 per year for comparable output, representing a 30 to 50 percent reduction against a fully loaded in-house hire. You get senior sales professionals, end-to-end process management, and performance accountability without the overhead of a full-time hire.',
+        text: 'Outsourced sales functions typically run $42,000 to $55,000 per year for comparable output, against $110,000 to $150,000 for a fully loaded in-house SDR. You get senior sales professionals, end-to-end process management, and performance accountability without the overhead of a full-time hire.',
       },
     },
     {
@@ -66,8 +67,8 @@ export default function Comparison() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEOMeta
-        title="In-House Sales Team vs Outsourced Sales: The Real Cost"
-        description="Thinking of hiring an in-house SDR? Compare the true cost of building versus buying your sales function. Real numbers and a clear framework for making the decision."
+        title="In-House vs Outsourced Sales: The Real Cost, Side by Side"
+        description="A fully loaded in-house SDR costs $110k to $150k a year. Outsourced sales typically runs $42k to $55k for comparable output. The line-by-line breakdown."
         path="/in-house-vs-outsourced-sales"
         type="article"
         schema={[schema, faqSchema]}
@@ -86,7 +87,7 @@ export default function Comparison() {
               <span className="text-mc-gold">The Real Cost Comparison</span>
             </h1>
             <p className="font-body text-gray-400 text-lg leading-relaxed max-w-2xl">
-              Most founders hire a sales rep before they understand what that decision actually costs. This page gives you the honest numbers, the framework for the decision, and a clear view of what a ready-built sales operation delivers instead.
+              An in-house SDR in the US costs $110,000 to $150,000 a year once salary, benefits, tools, training, recruiting and management time are added up. Outsourced sales typically runs $42,000 to $55,000 a year for comparable output, with no 3 to 6 month ramp. Below is the line-by-line cost of each, side by side, and when building in-house is still the right call.
             </p>
           </div>
         </div>
@@ -147,6 +148,8 @@ export default function Comparison() {
           </Link>
         </div>
       </section>
+
+      <InHouseVsOutsourced standalone bg="bg-white border-y border-gray-100" />
 
       {/* Comparison table */}
       <section className="py-16 px-6 bg-gray-50">

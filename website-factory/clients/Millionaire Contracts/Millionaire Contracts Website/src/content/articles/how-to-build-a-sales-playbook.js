@@ -6,11 +6,11 @@ export default {
   date: '2026-09-04',
   category: 'Sales Management',
   label: 'Sales Management',
-  title: 'How to Build a Sales Playbook Reps Actually Use',
+  title: 'How to Build a Sales Playbook From Your Top Reps: 5 Steps',
   description:
-    'A sales playbook is not a binder of rules you invent in a room. It is what your best rep already does, written down so the rest of the team can repeat it. Here is how to extract one.',
+    'Build a sales playbook from your top reps by watching, not asking: pull their won calls, find the moves that repeat, write each as a trigger and response.',
   intro:
-    'Ask most sales leaders for their playbook and you will get a forty-page document nobody on the team has opened in a year. The reflex is to enforce it harder. That is the wrong fix, because the problem is not that reps ignore the rules. The problem is where the rules came from. The best playbooks are not written at all. They are extracted from the one rep who is already winning, and that changes everything about how you build one.',
+    'To build a playbook from your top reps, watch what they do instead of asking them. Five steps: pick the rep whose results hold up over time, compare their won calls with an average rep\'s, keep only the moves that repeat across wins, write each one as a trigger and a response in their exact words, and update it as the market shifts. Most playbooks fail because they are invented in a room. The ones reps actually use are extracted from the colleague who is already winning.',
   stats: [
     { value: 'Extract', label: 'Where a real playbook comes from' },
     { value: 'Not invent', label: 'What kills most playbooks' },
@@ -48,6 +48,10 @@ export default {
     },
   ],
   faqs: [
+    {
+      q: 'How do you build a sales playbook from your top reps?',
+      a: 'Watch them rather than interview them. Pick the rep with consistent results, compare their won calls with an average rep\'s, write down the moves that repeat across wins in their exact words, and format each as a trigger and a response a rep can use mid-call.',
+    },
     {
       q: 'How long should a sales playbook be?',
       a: 'Shorter than you think. The useful length is whatever a rep can scan in the two minutes before a call. If it cannot be read in the moment it is meant to be used, it will not be used. Most teams would be better served by a handful of tight plays than by a forty-page document that never gets opened.',

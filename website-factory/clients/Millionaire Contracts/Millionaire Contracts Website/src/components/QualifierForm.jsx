@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { trackGoal } from '../lib/track'
 
 // Posts to a Supabase edge function that holds the Command secret and forwards
 // the enquiry. The secret never reaches the browser. (Moved off a Vercel
@@ -121,6 +122,7 @@ export default function QualifierForm() {
     } catch {
       // swallow: the visitor still sees a thank-you
     }
+    trackGoal('qualifier sent')
     setStatus('success')
   }
 
