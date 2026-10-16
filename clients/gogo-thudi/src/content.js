@@ -1,74 +1,88 @@
 // All site copy and business details live here so they can be edited in one place.
-// Anything marked TODO could not be verified online and must be confirmed with Gogo Thudi
-// before the site goes live. Never put a review on the site that a real client did not write.
+// Sourced from her verified Gogo Online profile (gogoonline.co.za), October 2026.
+// Anything marked TODO still needs confirming with Gogo Thudi before the site goes live.
+// Never put a review on the site that a real client did not write.
 
 export const business = {
   name: 'Gogo Thudi',
   tagline: 'Spiritual Healer and Medium',
   area: 'Pretoria North',
   region: 'Tshwane, Gauteng',
-  // TODO: confirm her WhatsApp number (international format, no + or spaces)
+  // TODO: get her WhatsApp number from her (international format, no + or spaces)
   whatsapp: '27000000000',
-  // TODO: confirm her call number as it should be displayed
-  phoneDisplay: '000 000 0000',
-  phoneHref: 'tel:+27000000000',
-  // TODO: confirm, or remove if she prefers not to list one
-  email: 'hello@example.co.za',
-  // TODO: confirm consulting hours
+  // TODO: get her call number as it should be displayed
+  phoneDisplay: '082 000 0000',
+  phoneHref: 'tel:+27820000000',
+  // TODO: confirm, or set to null if she prefers not to list one
+  email: null,
   hours: [
-    { days: 'Monday to Friday', time: '08:00 to 18:00' },
-    { days: 'Saturday', time: '08:00 to 14:00' },
-    { days: 'Sunday', time: 'By appointment' },
+    { days: 'Monday to Wednesday', time: '08:00 to 19:00' },
+    { days: 'Thursday and Friday', time: '08:00 to 20:00' },
+    { days: 'Saturday', time: '08:00 to 19:00' },
+    { days: 'Sunday', time: 'Closed' },
   ],
-  // TODO: confirm. Shown on the hero and About section
-  yearsPractising: '10+',
-  // TODO: replace with her real rating and review count from sa-psychics.com
-  rating: '4.9',
-  reviewCount: '100+',
+  yearsPractising: '16',
+  fees: {
+    inPerson: 'R400',
+    virtual: 'R450',
+  },
+  languages: ['isiZulu', 'isiXhosa', 'English', 'Sesotho', 'Setswana', 'Sepedi'],
+  gogoOnlineUrl: 'https://gogoonline.co.za/healerprofile?id=6a18bec0057773e14bf1258e',
+  // TODO: add her real rating and review count from sa-psychics.com, e.g. { score: '4.9', count: '120', source: 'SA Psychics' }
+  rating: null,
+  // Her own words, from her Gogo Online profile
+  bio: 'I empower and teach those who are seeking spiritual guidance and need to know their purpose. I cleanse and help heal past trauma.',
+  quote: 'My destiny is to teach and guide others to their divinity, and to align them to their highest self.',
 }
 
 export const services = [
   {
-    key: 'reading',
-    title: 'Ancestral Readings',
-    summary:
-      'A consultation with your ancestors to understand what is blocking you, what they are asking of you, and the way forward.',
-    detail: 'In person or by phone',
+    key: 'divination',
+    title: 'Divination and Bone Throwing',
+    summary: 'Gogo Thudi throws the bones to see what is happening in your life, what is blocking you, and what your ancestors want you to know.',
+    detail: 'In person or virtual',
   },
   {
-    key: 'medium',
-    title: 'Mediumship',
-    summary:
-      'Messages from loved ones who have passed on. Many people come for closure, answers, or simply to hear from someone they miss.',
-    detail: 'In person or by phone',
+    key: 'ancestors',
+    title: 'Mediumship and Ancestral Guidance',
+    summary: 'Messages from your ancestors and from loved ones who have passed on. For answers, for closure, and for direction.',
+    detail: 'In person or virtual',
   },
   {
     key: 'cleansing',
-    title: 'Spiritual Cleansing',
-    summary:
-      'For when everything feels heavy, nothing goes right, and you cannot explain why. Cleansing for you, your home, or your business.',
+    title: 'Cleansing Rituals',
+    summary: 'For when everything feels heavy and nothing goes right. Cleansing to clear what has attached itself to you, your home, or your work.',
     detail: 'In person',
   },
   {
-    key: 'protection',
-    title: 'Protection',
-    summary:
-      'Protection for yourself, your family, and your home, so you can move through life with a clear and settled spirit.',
+    key: 'trauma',
+    title: 'Healing Past Trauma',
+    summary: 'Spiritual healing for old wounds that still follow you, so you can put them down and move forward lighter.',
+    detail: 'In person or virtual',
+  },
+  {
+    key: 'dreams',
+    title: 'Dream Interpretation',
+    summary: 'Dreams that repeat, dreams that frighten you, dreams that feel like a message. Find out what they mean.',
+    detail: 'In person or virtual',
+  },
+  {
+    key: 'love',
+    title: 'Love and Relationships',
+    summary: 'Honest guidance on your relationship, your marriage, or your family, seen through the eyes of your ancestors.',
+    detail: 'In person or virtual',
+  },
+  {
+    key: 'medicine',
+    title: 'Traditional Medicine',
+    summary: 'Traditional remedies prepared for your situation, as guided by the ancestors during your consultation.',
     detail: 'In person',
   },
   {
-    key: 'calling',
-    title: 'Guidance on a Calling',
-    summary:
-      'Dreams, signs, illness with no answers. If you feel the ancestors may be calling you, Gogo Thudi will help you understand it.',
-    detail: 'In person',
-  },
-  {
-    key: 'life',
-    title: 'Love, Family and Work',
-    summary:
-      'Honest guidance on relationships, family conflict, career, and business decisions, seen through the eyes of your ancestors.',
-    detail: 'In person or by phone',
+    key: 'purpose',
+    title: 'Purpose and Spiritual Growth',
+    summary: 'Teaching and mentoring for those who feel a calling or want to understand their purpose and grow spiritually.',
+    detail: 'In person or virtual',
   },
 ]
 
@@ -79,7 +93,7 @@ export const steps = [
   },
   {
     title: 'Your consultation',
-    body: 'Visit her in Pretoria North, or have your reading by phone or video call from anywhere in South Africa.',
+    body: 'Visit her in Pretoria North, or have your consultation by video call from anywhere in South Africa or abroad.',
   },
   {
     title: 'Clear next steps',
@@ -87,23 +101,27 @@ export const steps = [
   },
 ]
 
-// TODO: paste real reviews from sa-psychics.com (with the client's first name or initial only).
+// TODO: paste real reviews from sa-psychics.com (first name or initial only), e.g.
+// { name: 'Thandi M.', text: '...', source: 'SA Psychics' }
 // Leave this list empty and the section shows a placeholder notice instead of fake reviews.
 export const reviews = []
 
 export const faqs = [
   {
+    q: 'How much does a consultation cost?',
+    a: 'R400 for an in-person consultation in Pretoria North and R450 for a virtual consultation. You will know the full cost before you book. There are no hidden extras.',
+  },
+  {
+    q: 'Can I consult with her from another city or country?',
+    a: 'Yes. Virtual consultations are done by video call, so you can book from anywhere in South Africa or abroad.',
+  },
+  {
+    q: 'Which languages does she consult in?',
+    a: 'isiZulu, isiXhosa, English, Sesotho, Setswana, and Sepedi. Speak in the language you are most comfortable with.',
+  },
+  {
     q: 'Is my consultation private?',
     a: 'Yes. What you share with Gogo Thudi stays between you, her, and your ancestors. Nothing is shared with anyone else.',
-  },
-  {
-    q: 'Can I have a reading by phone?',
-    a: 'Yes. Readings and mediumship can be done by phone or video call, so you can book from anywhere in South Africa or abroad.',
-  },
-  {
-    q: 'What does a consultation cost?',
-    // TODO: confirm her fees, or keep this wording if she prefers to quote per person
-    a: 'Fees depend on the service. Send a WhatsApp message and Gogo Thudi will tell you the cost before you book. There are no hidden extras.',
   },
   {
     q: 'Do I need to bring anything?',

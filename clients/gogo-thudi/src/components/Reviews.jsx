@@ -1,4 +1,4 @@
-import { Star, Quote } from 'lucide-react'
+import { Star, Quote, BadgeCheck } from 'lucide-react'
 import { business, reviews } from '../content'
 
 export default function Reviews() {
@@ -10,16 +10,24 @@ export default function Reviews() {
             <p className="section-label mb-3">Client reviews</p>
             <h2 className="section-title">Why people keep coming back to Gogo Thudi</h2>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-ochre fill-ochre" />
-              ))}
+          {business.rating ? (
+            <div className="flex items-center gap-3">
+              <div className="flex">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-ochre fill-ochre" />
+                ))}
+              </div>
+              <p className="text-sm text-ink/70">
+                <span className="font-semibold text-night">{business.rating.score}</span> from {business.rating.count} reviews
+                on {business.rating.source}
+              </p>
             </div>
-            <p className="text-sm text-ink/70">
-              <span className="font-semibold text-night">{business.rating}</span> from {business.reviewCount} reviews
-            </p>
-          </div>
+          ) : (
+            <a href={business.gogoOnlineUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-ink/70 hover:text-clay">
+              <BadgeCheck className="w-5 h-5 text-ochre" />
+              Verified healer on Gogo Online
+            </a>
+          )}
         </div>
 
         {reviews.length === 0 ? (

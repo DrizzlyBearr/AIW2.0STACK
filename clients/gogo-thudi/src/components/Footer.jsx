@@ -16,7 +16,12 @@ export default function Footer() {
         </div>
         <div className="md:text-right space-y-1">
           <a href={business.phoneHref} className="block hover:text-ochre-light">{business.phoneDisplay}</a>
-          <a href={`mailto:${business.email}`} className="block hover:text-ochre-light">{business.email}</a>
+          {business.email && (
+            <a href={`mailto:${business.email}`} className="block hover:text-ochre-light">{business.email}</a>
+          )}
+          <a href={business.gogoOnlineUrl} target="_blank" rel="noopener noreferrer" className="block hover:text-ochre-light">
+            Gogo Online profile
+          </a>
           <p className="pt-4 text-xs text-cream/40">&copy; {new Date().getFullYear()} {business.name}</p>
         </div>
       </div>

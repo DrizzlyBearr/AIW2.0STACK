@@ -1,4 +1,4 @@
-import { MessageCircle, Phone, Star, ShieldCheck, MapPin } from 'lucide-react'
+import { MessageCircle, Phone, Star, BadgeCheck, MapPin } from 'lucide-react'
 import { business } from '../content'
 import { waLink, defaultMessage } from '../whatsapp'
 import Beadwork from './Beadwork'
@@ -21,16 +21,16 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-14 items-center">
           <div>
             <p className="text-ochre-light text-sm tracking-[0.2em] uppercase mb-5">
-              Sawubona. Dumela. Welcome.
+              Sawubona. Molo. Dumela. Thobela.
             </p>
             <h1 className="font-display font-semibold text-5xl sm:text-6xl lg:text-7xl leading-[1.02] mb-6">
               When life feels blocked,
               <span className="block italic text-ochre-light">your ancestors have answers.</span>
             </h1>
             <p className="text-cream/75 text-lg leading-relaxed mb-8 max-w-xl">
-              Gogo Thudi is a spiritual healer and medium based in {business.area}. She helps you hear what your
-              ancestors are saying, clear what is holding you back, and find your way forward. In person, or by phone
-              from anywhere.
+              Gogo Thudi is a spiritual healer and medium in {business.area} with {business.yearsPractising} years of
+              experience. She throws the bones, carries messages from your ancestors, and cleanses and heals what is
+              holding you back. In person, or by video call from anywhere.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
@@ -45,13 +45,21 @@ export default function Hero() {
             </div>
 
             <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-cream/80">
-              <li className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-ochre fill-ochre" />
-                {business.rating} from {business.reviewCount} client reviews
+              {business.rating && (
+                <li className="flex items-center gap-2">
+                  <Star className="w-4 h-4 text-ochre fill-ochre" />
+                  {business.rating.score} from {business.rating.count} reviews on {business.rating.source}
+                </li>
+              )}
+              <li>
+                <a href={business.gogoOnlineUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-ochre-light">
+                  <BadgeCheck className="w-4 h-4 text-ochre" />
+                  Verified healer on Gogo Online
+                </a>
               </li>
               <li className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-ochre" />
-                Private and confidential
+                <span className="text-ochre font-semibold">R</span>
+                {business.fees.inPerson} in person, {business.fees.virtual} virtual
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-ochre" />
@@ -60,18 +68,21 @@ export default function Hero() {
             </ul>
           </div>
 
-          {/* Portrait. Swap the placeholder for a real photo at public/gogo-thudi.jpg */}
           <div className="relative mx-auto w-full max-w-[280px] sm:max-w-sm">
             <div className="absolute -inset-3 rounded-t-full border border-ochre/40" aria-hidden="true" />
-            <div className="relative aspect-[3/4] rounded-t-full overflow-hidden bg-gradient-to-b from-night-soft via-night-mid to-clay-dark flex items-end">
-              <div className="w-full p-8 text-center">
-                <p className="font-display text-3xl">{business.name}</p>
-                <p className="text-cream/60 text-sm mt-1">Portrait photo goes here</p>
-              </div>
+            <div className="relative aspect-[3/4] rounded-t-full overflow-hidden bg-night-mid">
+              <img
+                src="/gogo-thudi.jpg"
+                alt="Gogo Thudi, spiritual healer in Pretoria North"
+                className="w-full h-full object-cover object-[50%_35%]"
+                width="960"
+                height="1280"
+                fetchpriority="high"
+              />
             </div>
-            <div className="absolute top-16 -left-4 sm:-left-8 bg-cream text-night rounded-2xl shadow-xl px-5 py-4">
+            <div className="absolute bottom-10 -left-4 sm:-left-10 bg-cream text-night rounded-2xl shadow-xl px-5 py-4">
               <p className="font-display text-4xl font-semibold leading-none">{business.yearsPractising}</p>
-              <p className="text-xs uppercase tracking-widest text-ink/60 mt-1">Years of healing</p>
+              <p className="text-xs uppercase tracking-widest text-ink/60 mt-1">Years as a medium</p>
             </div>
           </div>
         </div>

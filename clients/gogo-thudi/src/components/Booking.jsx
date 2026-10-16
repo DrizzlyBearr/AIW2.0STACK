@@ -5,7 +5,11 @@ import { waLink } from '../whatsapp'
 
 // No backend needed: the form builds a WhatsApp message and opens it.
 export default function Booking() {
-  const [form, setForm] = useState({ name: '', service: services[0].title, mode: 'In person', note: '' })
+  const modes = [
+    { value: 'In person', fee: business.fees.inPerson },
+    { value: 'Virtual', fee: business.fees.virtual },
+  ]
+  const [form, setForm] = useState({ name: '', service: services[0].title, mode: modes[0].value, note: '' })
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value })
 
   const submit = (e) => {
@@ -73,15 +77,16 @@ export default function Booking() {
           <fieldset>
             <legend className="block text-sm font-semibold text-night mb-2">How would you like to meet?</legend>
             <div className="grid grid-cols-2 gap-3">
-              {['In person', 'Phone or video'].map((m) => (
+              {modes.map((m) => (
                 <label
-                  key={m}
+                  key={m.value}
                   className={`cursor-pointer rounded-xl border px-4 py-3 text-center text-sm font-medium transition-colors ${
-                    form.mode === m ? 'border-ochre bg-ochre/15 text-night' : 'border-cream-deep bg-white text-ink/70'
+                    form.mode === m.value ? 'border-ochre bg-ochre/15 text-night' : 'border-cream-deep bg-white text-ink/70'
                   }`}
                 >
-                  <input type="radio" name="mode" value={m} checked={form.mode === m} onChange={set('mode')} className="sr-only" />
-                  {m}
+                  <input type="radio" name="mode" value={m.value} checked={form.mode === m.value} onChange={set('mode')} className="sr-only" />
+                  {m.value}
+                  <span className="block text-xs text-ink/50 mt-0.5">{m.fee}</span>
                 </label>
               ))}
             </div>
