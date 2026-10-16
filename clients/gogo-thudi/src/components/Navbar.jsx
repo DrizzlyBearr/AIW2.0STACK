@@ -4,11 +4,11 @@ import { business } from '../content'
 import { waLink, defaultMessage } from '../whatsapp'
 
 const links = [
-  { href: '#services', label: 'Services' },
-  { href: '#how', label: 'How it works' },
-  { href: '#about', label: 'About' },
-  { href: '#reviews', label: 'Reviews' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#how', label: 'How it works' },
+  { href: '/#about', label: 'About' },
+  { href: '/reviews', label: 'Reviews' },
+  { href: '/#faq', label: 'FAQ' },
 ]
 
 export default function Navbar() {
@@ -29,7 +29,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between">
-        <a href="#home" className="flex flex-col leading-none">
+        <a href="/" className="flex flex-col leading-none">
           <span className="font-display text-2xl font-semibold text-cream">{business.name}</span>
           <span className="text-[11px] uppercase tracking-[0.25em] text-ochre-light mt-1">{business.area}</span>
         </a>
@@ -40,7 +40,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href={waLink(defaultMessage)} target="_blank" rel="noopener noreferrer" className="btn-primary !px-5 !py-2.5 text-sm">
+          <a href={waLink(defaultMessage)} target="_blank" rel="noopener noreferrer" data-cta="nav" className="btn-primary !px-5 !py-2.5 text-sm">
             Book a session
           </a>
         </div>
@@ -61,7 +61,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href={waLink(defaultMessage)} target="_blank" rel="noopener noreferrer" className="btn-primary mt-4">
+          <a href={waLink(defaultMessage)} target="_blank" rel="noopener noreferrer" data-cta="nav" className="btn-primary mt-4">
             Book a session
           </a>
         </div>

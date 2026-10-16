@@ -2,23 +2,33 @@ import { useState } from 'react'
 import { MessageCircle, Phone, Clock, MapPin, Mail, ArrowUpRight } from 'lucide-react'
 import { business, services } from '../content'
 import { waLink } from '../whatsapp'
+import { track } from '../track'
 
 // No backend needed: the form builds a WhatsApp message and opens it.
-export default function Booking() {
+export default function Booking({ defaultService, source = 'home page' }) {
   const modes = [
     { value: 'In person', fee: business.fees.inPerson },
     { value: 'Virtual', fee: business.fees.virtual },
   ]
-  const [form, setForm] = useState({ name: '', service: services[0].title, mode: modes[0].value, note: '' })
+  const [form, setForm] = useState({ name: '', service: defaultService || services[0].title, mode: modes[0].value, note: '' })
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value })
+
+  const [started, setStarted] = useState(false)
+  const onStart = () => {
+    if (started) return
+    setStarted(true)
+    track('booking_form_start', { cta_location: 'booking-form' })
+  }
 
   const submit = (e) => {
     e.preventDefault()
     const lines = [
-      `Hello Gogo Thudi, my name is ${form.name}.`,
+      `Hello Gogo Thudi, my name is ${form.name}. I found you on your website (${source}).`,
       `I would like to book: ${form.service} (${form.mode}).`,
       form.note && `A little about what I need: ${form.note}`,
     ].filter(Boolean)
+    track('booking_form_submit', { cta_location: 'booking-form', service: form.service, session_type: form.mode })
+    track('generate_lead', { lead_source: 'booking-form' })
     window.open(waLink(lines.join('\n')), '_blank', 'noopener')
   }
 
@@ -38,7 +48,7 @@ export default function Booking() {
           <ul className="space-y-5 text-cream/85">
             <li className="flex gap-4">
               <Phone className="w-5 h-5 text-ochre shrink-0 mt-0.5" />
-              <a href={business.phoneHref} className="hover:text-ochre-light">{business.phoneDisplay}</a>
+              <a href={business.phoneHref} data-cta="booking-contact" className="hover:text-ochre-light">{business.phoneDisplay}</a>
             </li>
             <li className="flex gap-4">
               <MapPin className="w-5 h-5 text-ochre shrink-0 mt-0.5" />
@@ -80,10 +90,10 @@ export default function Booking() {
           </div>
         </div>
 
-        <form onSubmit={submit} className="bg-cream text-ink rounded-3xl p-6 sm:p-8 space-y-5 shadow-2xl">
+        <form onSubmit={submit} onFocus={onStart} className="bg-cream text-ink rounded-3xl p-6 sm:p-8 space-y-5 shadow-2xl">
           <div>
             <label htmlFor="name" className="block text-sm font-semibold text-night mb-2">Your name</label>
-            <input id="name" required value={form.name} onChange={set('name')} className="field" placeholder="First name is fine" />
+            <input id="name" required autoComplete="given-name" value={form.name} onChange={set('name')} className="field" placeholder="First name is fine" />
           </div>
           <div>
             <label htmlFor="service" className="block text-sm font-semibold text-night mb-2">What do you need help with?</label>
@@ -119,9 +129,12 @@ export default function Booking() {
           </div>
           <button type="submit" className="btn-primary w-full !bg-night !text-cream hover:!bg-night-mid py-4 text-base">
             <MessageCircle className="w-5 h-5" />
-            Send on WhatsApp
+            Send my booking on WhatsApp
           </button>
-          <p className="text-xs text-ink/50 text-center">Your message goes straight to Gogo Thudi and stays private.</p>
+          <p className="text-xs text-ink/50 text-center">
+            This opens WhatsApp with your message ready. Nothing is sent until you press send. Your message goes
+            straight to Gogo Thudi and stays private.
+          </p>
         </form>
       </div>
     </section>

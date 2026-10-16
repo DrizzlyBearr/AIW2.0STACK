@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-14 items-center">
           <div>
             <p className="text-ochre-light text-sm tracking-[0.2em] uppercase mb-5">
-              Sawubona. Molo. Dumela. Thobela.
+              Traditional healer and sangoma in Pretoria North
             </p>
             <h1 className="font-display font-semibold text-5xl sm:text-6xl lg:text-7xl leading-[1.02] mb-6">
               When life feels blocked,
@@ -33,16 +33,20 @@ export default function Hero() {
               ancestors, and cleanses and heals what is holding you back. In person, or by video call from anywhere.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-10">
-              <a href={waLink(defaultMessage)} target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
+            <div className="flex flex-col sm:flex-row gap-3 mb-4">
+              <a href={waLink(defaultMessage)} target="_blank" rel="noopener noreferrer" data-cta="hero" className="btn-primary text-base px-8 py-4">
                 <MessageCircle className="w-5 h-5" />
                 Book on WhatsApp
               </a>
-              <a href={business.phoneHref} className="btn-ghost text-base px-8 py-4">
+              <a href={business.phoneHref} data-cta="hero" className="btn-ghost text-base px-8 py-4">
                 <Phone className="w-5 h-5" />
                 Call {business.phoneDisplay}
               </a>
             </div>
+            <p className="text-sm text-cream/60 mb-10">
+              {business.fees.inPerson} in person, {business.fees.virtual} by video call. Your message stays private.
+              Sawubona, Molo, Dumela, Thobela.
+            </p>
 
             <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-cream/80">
               <li>
@@ -64,10 +68,6 @@ export default function Hero() {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-ochre font-semibold">R</span>
-                {business.fees.inPerson} in person, {business.fees.virtual} virtual
-              </li>
-              <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-ochre" />
                 {business.area}, {business.region}
               </li>
@@ -77,14 +77,18 @@ export default function Hero() {
           <div className="relative mx-auto w-full max-w-[280px] sm:max-w-sm">
             <div className="absolute -inset-3 rounded-t-full border border-ochre/40" aria-hidden="true" />
             <div className="relative aspect-[3/4] rounded-t-full overflow-hidden bg-night-mid">
-              <img
-                src="/gogo-thudi.jpg"
-                alt="Gogo Thudi, spiritual healer in Pretoria North"
-                className="w-full h-full object-cover object-[50%_35%]"
-                width="960"
-                height="1280"
-                fetchpriority="high"
-              />
+              <picture className="block w-full h-full">
+                <source srcSet="/gogo-thudi.webp" type="image/webp" />
+                <img
+                  src="/gogo-thudi.jpg"
+                  alt="Gogo Thudi, traditional healer in Pretoria North, wearing a yellow headwrap"
+                  className="w-full h-full object-cover object-[50%_35%]"
+                  width="960"
+                  height="1280"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </picture>
             </div>
             <div className="absolute bottom-10 -left-4 sm:-left-10 bg-cream text-night rounded-2xl shadow-xl px-5 py-4">
               <p className="font-display text-4xl font-semibold leading-none">{business.yearsPractising}</p>

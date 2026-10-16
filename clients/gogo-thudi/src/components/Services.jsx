@@ -1,6 +1,7 @@
 import { Eye, Feather, BookOpen, Droplets, Flame, HeartPulse, Moon, HeartHandshake, Briefcase, MessagesSquare, Leaf, Sparkles, ArrowRight } from 'lucide-react'
 import { business, services } from '../content'
 import { waLink } from '../whatsapp'
+import { servicePath } from '../routes'
 
 const icons = {
   divination: Eye,
@@ -46,14 +47,20 @@ export default function Services() {
                 <div className="w-12 h-12 rounded-full bg-night text-ochre-light flex items-center justify-center mb-5">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-[1.4rem] leading-snug font-semibold text-night mb-2">{s.title}</h3>
+                <h3 className="text-[1.4rem] leading-snug font-semibold text-night mb-2">
+                  <a href={servicePath(s)} className="hover:text-clay">{s.title}</a>
+                </h3>
                 <p className="text-ink/70 text-[15px] leading-relaxed mb-5 flex-1">{s.summary}</p>
                 <div className="flex items-center justify-between gap-3 pt-4 border-t border-cream-deep">
-                  <span className="text-[11px] uppercase tracking-wider text-ink/50">{s.detail}</span>
+                  <a href={servicePath(s)} className="text-sm font-semibold text-night/70 hover:text-night">
+                    Learn more
+                  </a>
                   <a
                     href={waLink(`Hello Gogo Thudi, I would like to book: ${s.title}.`)}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-cta="services-grid"
+                    data-service={s.key}
                     className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-clay hover:text-clay-dark"
                   >
                     Book <ArrowRight className="w-4 h-4" />

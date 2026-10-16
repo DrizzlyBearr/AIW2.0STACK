@@ -18,7 +18,8 @@ export default function WhatsAppButton() {
       aria-label="Message Gogo Thudi on WhatsApp"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center shadow-xl transition-all duration-300"
+      data-cta="floating"
+      className="hidden md:flex fixed bottom-6 right-6 z-50 items-center justify-center shadow-xl transition-all duration-300"
       style={{
         backgroundColor: '#25D366',
         borderRadius: hovered ? '40px' : '50%',
