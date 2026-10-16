@@ -32,7 +32,7 @@ const faqSchema = {
       name: 'Is outsourced sales cheaper than hiring in-house?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'In most cases, yes. A fully loaded in-house SDR in the US costs $110,000 to $150,000 per year when you account for salary, benefits, tools, onboarding, and management time. An outsourced equivalent typically runs $42,000 to $55,000 per year. The gap widens further when you factor in hiring risk and ramp time.',
+        text: 'In most cases, yes. A fully loaded in-house SDR in the US costs $110,000 to $150,000 per year when you account for salary, benefits, tools, onboarding, and management time. An outsourced equivalent typically costs 30 to 50 percent less. The gap widens further when you factor in hiring risk and ramp time.',
       },
     },
     {
