@@ -17,7 +17,7 @@ python3 scripts/import_reviews.py                     # uses data/sa-psychics-re
 python3 scripts/import_reviews.py path/to/new.xlsx    # or a fresh export
 ```
 
-The script keeps the text word for word but removes emojis, turns dashes into commas, and cuts surnames to an initial. Featured reviews and exclusions are set at the top of the script. Every line marked `TODO` needs confirming with Gogo Thudi before launch.
+The script keeps the text word for word but removes emojis, turns dashes into commas, and cuts surnames to an initial. Featured reviews and any exclusions are set at the top of the script. Every line marked `TODO` needs confirming with Gogo Thudi before launch.
 
 ## Research notes (October 2026)
 
@@ -39,7 +39,7 @@ The script keeps the text word for word but removes emojis, turns dashes into co
 - Abilities: Medium, Psychic, Sangoma, Inyanga, Premier Advisor
 - Bio: traditional healer and prophet. A decade ago chose to develop her gift in bone reading, water healing, counselling and spiritual guidance, and left a conventional education career to do it
 - All 291 reviews exported to `data/sa-psychics-reviews.xlsx` (18 Aug 2021 to 17 Mar 2026). 290 are 5 stars, 1 is 4 stars (Lebo M.), average 5.0
-- 290 are on the site. The one left out is Mthokozisi (9 Aug 2025), who says she predicted a health issue that tests later confirmed. That reads as a medical claim
+- All 291 are on the site, including Mthokozisi (9 Aug 2025), who says she predicted a health issue that tests later confirmed. Kept at the client owner's request. The FAQ and footer say her guidance works alongside a doctor, not instead of one
 - The site shows 6 featured reviews first (Chloe, Azola, Jacob, Ayanda, Sharon, Simphiwe), then the rest newest first, 12 at a time
 - A Wayback Machine snapshot exists (9 Nov 2025). It could not be downloaded from the build environment, and the live page is newer anyway
 
@@ -70,7 +70,7 @@ Searching for traditional healers in Pretoria brings up mostly spam listings: ph
 
 ## Before launch
 
-1. Get Gogo Thudi's OK to reuse her SA Psychics reviews and bio, and to use her profile photo. The reviews were posted on SA Psychics, so check they don't object either.
+1. Her SA Psychics profile is linked from the hero, About, reviews, booking section, and footer. Get Gogo Thudi's OK to reuse her SA Psychics reviews and bio, and to use her profile photo. The reviews were posted on SA Psychics, so check they don't object either.
 2. Confirm she wants the street address, email and all five social accounts public, especially @thudillicious and her personal Facebook profile.
 3. Confirm the service descriptions in `src/content.js` match how she works (water healing, prophecy, traditional medicine especially).
 4. Ask for 2 or 3 more photos: a higher-resolution portrait, and one of her at work.

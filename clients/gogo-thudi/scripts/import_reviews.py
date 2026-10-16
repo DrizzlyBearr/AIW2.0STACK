@@ -18,9 +18,7 @@ SOURCE = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / 'data' / 'sa-psychic
 OUT = ROOT / 'src' / 'reviews.json'
 
 # Review numbers (the # column) left off the site, with the reason.
-EXCLUDE = {
-    23: 'Says she predicted a health issue that tests later confirmed. Reads as a medical claim.',
-}
+EXCLUDE = {}
 
 # Review numbers shown first, in this order.
 FEATURED = [31, 253, 33, 42, 243, 273]

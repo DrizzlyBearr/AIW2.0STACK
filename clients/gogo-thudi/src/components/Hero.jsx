@@ -51,9 +51,11 @@ export default function Hero() {
                   {business.rating.average} from {business.rating.count} reviews on {business.rating.source}
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Award className="w-4 h-4 text-ochre" />
-                {business.rating.badges[0]}
+              <li>
+                <a href={business.saPsychicsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-ochre-light">
+                  <Award className="w-4 h-4 text-ochre" />
+                  {business.rating.badges[0]} on SA Psychics
+                </a>
               </li>
               <li>
                 <a href={business.gogoOnlineUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-ochre-light">

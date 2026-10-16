@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MessageCircle, Phone, Clock, MapPin, Mail } from 'lucide-react'
+import { MessageCircle, Phone, Clock, MapPin, Mail, ArrowUpRight } from 'lucide-react'
 import { business, services } from '../content'
 import { waLink } from '../whatsapp'
 
@@ -62,6 +62,22 @@ export default function Booking() {
               </span>
             </li>
           </ul>
+
+          <div className="mt-10 rounded-2xl border border-cream/15 p-6">
+            <p className="font-semibold mb-1">Prefer to book through SA Psychics?</p>
+            <p className="text-cream/60 text-sm leading-relaxed mb-4">
+              Gogo Thudi is a {business.rating.badges[0]} on SA Psychics, where she has {business.rating.count} client
+              reviews. You can book a phone reading with her there too.
+            </p>
+            <a
+              href={business.saPsychicsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-ochre-light hover:text-ochre"
+            >
+              Visit her SA Psychics profile <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
         <form onSubmit={submit} className="bg-cream text-ink rounded-3xl p-6 sm:p-8 space-y-5 shadow-2xl">

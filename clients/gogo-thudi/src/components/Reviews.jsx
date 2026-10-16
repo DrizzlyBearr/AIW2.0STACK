@@ -26,10 +26,20 @@ export default function Reviews() {
             <p className="section-label mb-3">Client reviews</p>
             <h2 className="section-title">Why people keep coming back to Gogo Thudi</h2>
           </div>
-          <p className="flex items-center gap-2 text-sm text-ink/60">
-            <Award className="w-4 h-4 text-clay" />
-            {rating.badges.join(' and ')} on {rating.source}
-          </p>
+          <div className="flex flex-col md:items-end gap-3">
+            <p className="flex items-center gap-2 text-sm text-ink/60">
+              <Award className="w-4 h-4 text-clay" />
+              {rating.badges.join(' and ')} on {rating.source}
+            </p>
+            <a
+              href={business.saPsychicsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-clay/40 px-4 py-2 text-sm font-semibold text-clay hover:bg-clay hover:text-cream transition-colors"
+            >
+              View her SA Psychics profile <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
         <dl className="grid grid-cols-3 gap-3 sm:gap-5 mb-12">
@@ -60,7 +70,10 @@ export default function Reviews() {
               <blockquote className="text-ink/80 leading-relaxed flex-1">"{r.text}"</blockquote>
               <figcaption className="mt-6 pt-4 border-t border-cream-deep text-sm flex items-center justify-between gap-3">
                 <span className="font-semibold text-night">{r.name}</span>
-                <span className="text-ink/50 text-xs">{r.date}</span>
+                <span className="text-ink/50 text-xs text-right">
+                  {r.date}
+                  <span className="block">via {rating.source}</span>
+                </span>
               </figcaption>
             </figure>
           ))}
@@ -90,7 +103,7 @@ export default function Reviews() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-sm font-semibold text-clay hover:text-clay-dark"
             >
-              See them on SA Psychics <ArrowUpRight className="w-4 h-4" />
+              Read them on her SA Psychics profile <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
         </div>
