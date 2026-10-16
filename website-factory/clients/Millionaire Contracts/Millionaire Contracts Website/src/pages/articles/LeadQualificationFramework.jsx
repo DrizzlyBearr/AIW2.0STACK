@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'Lead Qualification: A Practical Framework That Actually Works',
   description: 'Lead qualification explained plainly: why it is the highest-leverage step in sales, how BANT, MEDDIC, and CHAMP compare, and a simple scoring approach that puts your effort on winnable deals.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/lead-qualification-framework',
 }
 

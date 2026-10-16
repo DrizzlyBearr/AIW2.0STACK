@@ -1,66 +1,142 @@
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { startClickTracking, trackView } from './lib/track'
-import ArticleTemplate from './components/ArticleTemplate'
-import IssueTemplate from './components/IssueTemplate'
-import NewsletterArchive from './pages/NewsletterArchive'
-import { articles as contentArticles, issues as contentIssues } from './lib/content'
-import Home from './pages/Home'
-import Services from './pages/Services'
-import Portfolio from './pages/Portfolio'
-import AboutUs from './pages/AboutUs'
-import Contact from './pages/Contact'
-import Calendar from './pages/Calendar'
-import SalesStrategy from './pages/SalesStrategy'
-import SalesManagement from './pages/SalesManagement'
-import SalesClosing from './pages/SalesClosing'
-import AppointmentSetting from './pages/AppointmentSetting'
-import CaseStudy from './pages/CaseStudy'
-import Comparison from './pages/Comparison'
-import SalesTeamCostCalculator from './pages/SalesTeamCostCalculator'
-import NotFound from './pages/NotFound'
-import HowItWorks from './pages/HowItWorks'
-import Resources from './pages/Resources'
-import HowToChooseAppointmentSetting from './pages/articles/HowToChooseAppointmentSetting'
-import WhatDoesOutsourcedSalesCost from './pages/articles/WhatDoesOutsourcedSalesCost'
-import FiveSignsYouNeedOutsourcedSales from './pages/articles/FiveSignsYouNeedOutsourcedSales'
-import WhySalesOutsourcingFails from './pages/articles/WhySalesOutsourcingFails'
-import HowToBuildB2BSalesProcess from './pages/articles/HowToBuildB2BSalesProcess'
-import WhatIsSalesOutsourcing from './pages/articles/WhatIsSalesOutsourcing'
-import PipelineEmptiesWhenBusy from './pages/articles/PipelineEmptiesWhenBusy'
-import FounderLedSalesStopsWorking from './pages/articles/FounderLedSalesStopsWorking'
-import InconsistentRevenue from './pages/articles/InconsistentRevenue'
-import SalesStallWithoutYou from './pages/articles/SalesStallWithoutYou'
-import SaaSTechnology from './pages/SaaSTechnology'
-import ProfessionalServices from './pages/ProfessionalServices'
-import LawFirms from './pages/LawFirms'
-import PrivateEquity from './pages/PrivateEquity'
-import MarketingAgencies from './pages/MarketingAgencies'
-import FinancialServices from './pages/FinancialServices'
-import Healthcare from './pages/Healthcare'
-import PipelineAndPower from './pages/PipelineAndPower'
-import NewsletterConfirm from './pages/NewsletterConfirm'
-import NewsletterUnsubscribe from './pages/NewsletterUnsubscribe'
-import WhatIsAnSDR from './pages/articles/WhatIsAnSDR'
-import SDRvsBDR from './pages/articles/SDRvsBDR'
-import HowMuchDoesAnSDRCost from './pages/articles/HowMuchDoesAnSDRCost'
-import B2BAppointmentSettingServices from './pages/articles/B2BAppointmentSettingServices'
-import FractionalSalesTeam from './pages/articles/FractionalSalesTeam'
-import HowToWriteAColdEmail from './pages/articles/HowToWriteAColdEmail'
-import LeadQualificationFramework from './pages/articles/LeadQualificationFramework'
-import HowToBuildASalesCadence from './pages/articles/HowToBuildASalesCadence'
-import HowToWriteSalesScripts from './pages/articles/HowToWriteSalesScripts'
-import HowToQualifyLeads from './pages/articles/HowToQualifyLeads'
-import HowToSetUpASalesPipeline from './pages/articles/HowToSetUpASalesPipeline'
-import WebsiteThatQualifiesLeads from './pages/articles/WebsiteThatQualifiesLeads'
-import WhatIsASalesPipeline from './pages/articles/WhatIsASalesPipeline'
-import SalesAsAService from './pages/articles/SalesAsAService'
-import ColdCallingServices from './pages/articles/ColdCallingServices'
-import LeadGenerationVsAppointmentSetting from './pages/articles/LeadGenerationVsAppointmentSetting'
-import CommissionOnlySalesReps from './pages/articles/CommissionOnlySalesReps'
+import { page } from './lib/page'
+const NewsletterArchive = page(() => import('./pages/NewsletterArchive'))
+import { articlePages, issuePages } from './lib/contentPages'
+const Home = page(() => import('./pages/Home'))
+const Services = page(() => import('./pages/Services'))
+const Portfolio = page(() => import('./pages/Portfolio'))
+const AboutUs = page(() => import('./pages/AboutUs'))
+const Contact = page(() => import('./pages/Contact'))
+const Calendar = page(() => import('./pages/Calendar'))
+const SalesStrategy = page(() => import('./pages/SalesStrategy'))
+const SalesManagement = page(() => import('./pages/SalesManagement'))
+const SalesClosing = page(() => import('./pages/SalesClosing'))
+const AppointmentSetting = page(() => import('./pages/AppointmentSetting'))
+const CaseStudy = page(() => import('./pages/CaseStudy'))
+const Comparison = page(() => import('./pages/Comparison'))
+const SalesTeamCostCalculator = page(() => import('./pages/SalesTeamCostCalculator'))
+const NotFound = page(() => import('./pages/NotFound'))
+const HowItWorks = page(() => import('./pages/HowItWorks'))
+const Resources = page(() => import('./pages/Resources'))
+const HowToChooseAppointmentSetting = page(() => import('./pages/articles/HowToChooseAppointmentSetting'))
+const WhatDoesOutsourcedSalesCost = page(() => import('./pages/articles/WhatDoesOutsourcedSalesCost'))
+const FiveSignsYouNeedOutsourcedSales = page(() => import('./pages/articles/FiveSignsYouNeedOutsourcedSales'))
+const WhySalesOutsourcingFails = page(() => import('./pages/articles/WhySalesOutsourcingFails'))
+const HowToBuildB2BSalesProcess = page(() => import('./pages/articles/HowToBuildB2BSalesProcess'))
+const WhatIsSalesOutsourcing = page(() => import('./pages/articles/WhatIsSalesOutsourcing'))
+const PipelineEmptiesWhenBusy = page(() => import('./pages/articles/PipelineEmptiesWhenBusy'))
+const FounderLedSalesStopsWorking = page(() => import('./pages/articles/FounderLedSalesStopsWorking'))
+const InconsistentRevenue = page(() => import('./pages/articles/InconsistentRevenue'))
+const SalesStallWithoutYou = page(() => import('./pages/articles/SalesStallWithoutYou'))
+const SaaSTechnology = page(() => import('./pages/SaaSTechnology'))
+const ProfessionalServices = page(() => import('./pages/ProfessionalServices'))
+const LawFirms = page(() => import('./pages/LawFirms'))
+const PrivateEquity = page(() => import('./pages/PrivateEquity'))
+const MarketingAgencies = page(() => import('./pages/MarketingAgencies'))
+const FinancialServices = page(() => import('./pages/FinancialServices'))
+const Healthcare = page(() => import('./pages/Healthcare'))
+const PipelineAndPower = page(() => import('./pages/PipelineAndPower'))
+const NewsletterConfirm = page(() => import('./pages/NewsletterConfirm'))
+const NewsletterUnsubscribe = page(() => import('./pages/NewsletterUnsubscribe'))
+const WhatIsAnSDR = page(() => import('./pages/articles/WhatIsAnSDR'))
+const SDRvsBDR = page(() => import('./pages/articles/SDRvsBDR'))
+const HowMuchDoesAnSDRCost = page(() => import('./pages/articles/HowMuchDoesAnSDRCost'))
+const B2BAppointmentSettingServices = page(() => import('./pages/articles/B2BAppointmentSettingServices'))
+const FractionalSalesTeam = page(() => import('./pages/articles/FractionalSalesTeam'))
+const HowToWriteAColdEmail = page(() => import('./pages/articles/HowToWriteAColdEmail'))
+const LeadQualificationFramework = page(() => import('./pages/articles/LeadQualificationFramework'))
+const HowToBuildASalesCadence = page(() => import('./pages/articles/HowToBuildASalesCadence'))
+const HowToWriteSalesScripts = page(() => import('./pages/articles/HowToWriteSalesScripts'))
+const HowToQualifyLeads = page(() => import('./pages/articles/HowToQualifyLeads'))
+const HowToSetUpASalesPipeline = page(() => import('./pages/articles/HowToSetUpASalesPipeline'))
+const WebsiteThatQualifiesLeads = page(() => import('./pages/articles/WebsiteThatQualifiesLeads'))
+const WhatIsASalesPipeline = page(() => import('./pages/articles/WhatIsASalesPipeline'))
+const SalesAsAService = page(() => import('./pages/articles/SalesAsAService'))
+const ColdCallingServices = page(() => import('./pages/articles/ColdCallingServices'))
+const LeadGenerationVsAppointmentSetting = page(() => import('./pages/articles/LeadGenerationVsAppointmentSetting'))
+const CommissionOnlySalesReps = page(() => import('./pages/articles/CommissionOnlySalesReps'))
+
+// Which page a link leads to, so hovering it can fetch that page's code.
+const BY_PATH = {
+  '/': Home,
+  '/services': Services,
+  '/portfolio': Portfolio,
+  '/about-us': AboutUs,
+  '/contact-us': Contact,
+  '/calender': Calendar,
+  '/sales-strategy-development': SalesStrategy,
+  '/sales-management': SalesManagement,
+  '/sales-closing': SalesClosing,
+  '/appointment-setting': AppointmentSetting,
+  '/how-it-works': HowItWorks,
+  '/resources': Resources,
+  '/how-to-choose-an-appointment-setting-company': HowToChooseAppointmentSetting,
+  '/what-does-outsourced-sales-cost': WhatDoesOutsourcedSalesCost,
+  '/five-signs-you-need-outsourced-sales': FiveSignsYouNeedOutsourcedSales,
+  '/why-sales-outsourcing-partnerships-fail': WhySalesOutsourcingFails,
+  '/how-to-build-a-b2b-sales-process': HowToBuildB2BSalesProcess,
+  '/what-is-sales-outsourcing': WhatIsSalesOutsourcing,
+  '/why-your-pipeline-empties-when-you-get-busy': PipelineEmptiesWhenBusy,
+  '/founder-led-sales-stops-working': FounderLedSalesStopsWorking,
+  '/inconsistent-revenue': InconsistentRevenue,
+  '/sales-stall-without-you': SalesStallWithoutYou,
+  '/outsourced-sales-for-saas': SaaSTechnology,
+  '/outsourced-sales-for-professional-services': ProfessionalServices,
+  '/outsourced-sales-for-law-firms': LawFirms,
+  '/outsourced-sales-for-private-equity': PrivateEquity,
+  '/outsourced-sales-for-marketing-agencies': MarketingAgencies,
+  '/outsourced-sales-for-financial-services': FinancialServices,
+  '/outsourced-sales-for-healthcare': Healthcare,
+  '/pipeline-and-power': PipelineAndPower,
+  '/newsletter-confirm': NewsletterConfirm,
+  '/newsletter-unsubscribe': NewsletterUnsubscribe,
+  '/in-house-vs-outsourced-sales': Comparison,
+  '/cost-of-building-a-sales-team': SalesTeamCostCalculator,
+  '/what-is-an-sdr': WhatIsAnSDR,
+  '/sdr-vs-bdr': SDRvsBDR,
+  '/how-much-does-an-sdr-cost': HowMuchDoesAnSDRCost,
+  '/b2b-appointment-setting-services': B2BAppointmentSettingServices,
+  '/fractional-sales-team': FractionalSalesTeam,
+  '/how-to-write-a-cold-email': HowToWriteAColdEmail,
+  '/lead-qualification-framework': LeadQualificationFramework,
+  '/how-to-build-a-sales-cadence': HowToBuildASalesCadence,
+  '/how-to-write-sales-scripts': HowToWriteSalesScripts,
+  '/how-to-qualify-leads': HowToQualifyLeads,
+  '/how-to-set-up-a-sales-pipeline': HowToSetUpASalesPipeline,
+  '/website-that-qualifies-leads': WebsiteThatQualifiesLeads,
+  '/what-is-a-sales-pipeline': WhatIsASalesPipeline,
+  '/sales-as-a-service': SalesAsAService,
+  '/cold-calling-services': ColdCallingServices,
+  '/lead-generation-vs-appointment-setting': LeadGenerationVsAppointmentSetting,
+  '/commission-only-sales-reps': CommissionOnlySalesReps,
+  '/newsletter': NewsletterArchive,
+}
+
+for (const { slug, Page } of articlePages) BY_PATH[`/${slug}`] = Page
+for (const { slug, Page } of issuePages) BY_PATH[`/newsletter/${slug}`] = Page
+
+export const preloadPath = (path) => (BY_PATH[path] || CaseStudy).preload()
 
 export default function App() {
   const location = useLocation()
+  // Fetch a page's code when a link to it is hovered or touched, so the click
+  // that follows does not wait for it.
+  useEffect(() => {
+    const ahead = (e) => {
+      const a = e.target instanceof Element ? e.target.closest('a[href^="/"]') : null
+      if (!a) return
+      const path = a.getAttribute('href').split(/[?#]/)[0]
+      if (path && path !== window.location.pathname) preloadPath(path).catch(() => {})
+    }
+    document.addEventListener('pointerover', ahead, { passive: true })
+    document.addEventListener('touchstart', ahead, { passive: true })
+    return () => {
+      document.removeEventListener('pointerover', ahead)
+      document.removeEventListener('touchstart', ahead)
+    }
+  }, [])
   useEffect(() => {
     // Honor hash links (e.g. /services#outreach-engine). Retry briefly to
     // allow the target section to be in the DOM before scrolling.
@@ -88,6 +164,10 @@ export default function App() {
 
   return (
     <div key={location.pathname} className="page-fade">
+      {/* Each page's code arrives on its own. On first load the prerendered
+          page stays on screen while it does; between pages nothing waits
+          long, because links fetch their page's code on hover. */}
+      <Suspense fallback={null}>
       <Routes location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
@@ -141,16 +221,17 @@ export default function App() {
         <Route path="/cold-calling-services" element={<ColdCallingServices />} />
         <Route path="/lead-generation-vs-appointment-setting" element={<LeadGenerationVsAppointmentSetting />} />
         <Route path="/commission-only-sales-reps" element={<CommissionOnlySalesReps />} />
-        {contentArticles.map((a) => (
-          <Route key={a.slug} path={`/${a.slug}`} element={<ArticleTemplate entry={a} />} />
+        {articlePages.map(({ slug, Page }) => (
+          <Route key={slug} path={`/${slug}`} element={<Page />} />
         ))}
         <Route path="/newsletter" element={<NewsletterArchive />} />
-        {contentIssues.map((i) => (
-          <Route key={i.slug} path={`/newsletter/${i.slug}`} element={<IssueTemplate entry={i} />} />
+        {issuePages.map(({ slug, Page }) => (
+          <Route key={slug} path={`/newsletter/${slug}`} element={<Page />} />
         ))}
         <Route path="/:slug" element={<CaseStudy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const schema = {
   '@type': 'Article',
   headline: 'In-House vs Outsourced Sales: The Real Cost, Side by Side',
   description: 'A fully loaded in-house SDR costs $110k to $150k a year. Outsourcing typically costs 30 to 50 percent less, with no 3 to 6 month ramp. The line-by-line breakdown.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/in-house-vs-outsourced-sales',
 }
 

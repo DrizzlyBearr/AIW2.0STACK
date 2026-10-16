@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How to Write a Cold Email That Gets Replies',
   description: 'A practical framework for B2B cold email that books meetings: research and targeting, subject lines, the opener, one clear point, relevance over personalization theatre, the ask, length, follow-up, and the common mistakes.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/how-to-write-a-cold-email',
 }
 

@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How to Build a B2B Sales Process from Scratch',
   description: 'A practical guide to building a B2B sales process that generates consistent pipeline. Six steps covering ICP definition, outreach sequencing, qualification criteria, pipeline stages, and reporting.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/how-to-build-a-b2b-sales-process',
 }
 

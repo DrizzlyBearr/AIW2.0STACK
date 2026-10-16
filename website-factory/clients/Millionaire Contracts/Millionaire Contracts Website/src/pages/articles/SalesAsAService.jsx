@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'Sales as a Service: The Model Explained',
   description: 'Sales as a service explained: what the subscription sales model is, how it differs from a traditional agency or a staffing firm, what is included, who it fits, and the pros and cons.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/sales-as-a-service',
 }
 

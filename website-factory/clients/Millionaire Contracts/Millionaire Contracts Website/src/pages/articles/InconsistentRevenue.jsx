@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'Why Is My Revenue Inconsistent? 4 Causes and the Fix',
   description: 'Inconsistent revenue is usually caused by uneven sales input, not the market or the season. The four patterns behind the swings, and how to steady them.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/inconsistent-revenue',
 }
 

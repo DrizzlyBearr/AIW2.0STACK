@@ -62,7 +62,9 @@ for (const file of walk(PAGES)) {
 
 // ── load the server render function (built by `vite build --ssr`) ──
 const serverBundle = await import(url.pathToFileURL(path.join(ROOT, 'dist-server', 'entry-server.js')).href)
-const { render } = serverBundle
+const { render, preloadAll } = serverBundle
+// Pages are split into their own files; load them all before rendering any.
+await preloadAll()
 
 // ── add data-driven content articles (content-as-data layer) ──
 for (const a of serverBundle.contentArticles || []) {

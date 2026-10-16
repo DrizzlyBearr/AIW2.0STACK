@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'Lead Generation vs Appointment Setting vs Sales Outsourcing',
   description: 'The difference between lead generation, appointment setting, and full sales outsourcing: what you actually get from each, where they overlap, the handoff problems between them, and how to choose based on where your gap is.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/lead-generation-vs-appointment-setting',
 }
 

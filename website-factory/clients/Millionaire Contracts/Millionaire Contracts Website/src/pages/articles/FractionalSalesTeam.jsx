@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'Fractional Sales Team: What It Is and When It Makes Sense',
   description: 'A fractional sales team explained: what it is, how it differs from a full-time hire and a fractional VP of Sales, what it includes, the stages of business it fits, and the cost logic against building in-house.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/fractional-sales-team',
 }
 

@@ -11,7 +11,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How Much Does Outsourced Sales Cost? Pricing Models Compared',
   description: 'Outsourced sales costs $3,000 to $15,000 a month on retainer, $75 to $500 per meeting, or $150 to $600 per lead. A loaded in-house SDR costs $110k+ a year.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/what-does-outsourced-sales-cost',
 }
 

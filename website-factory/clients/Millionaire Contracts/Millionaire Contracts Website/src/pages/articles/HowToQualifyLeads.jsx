@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How to Qualify Leads: A Step by Step Process',
   description: 'A practical process for qualifying leads: the questions to ask, the signals to read, how to disqualify fast and kindly, when to advance a lead, and how qualification protects rep time.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/how-to-qualify-leads',
 }
 

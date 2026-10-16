@@ -24,18 +24,74 @@
     <meta name="twitter:description" content="Millionaire Contracts builds sales operations that win. Strategy, management, closing, and appointment setting fully deployed into your business." />
     <meta name="twitter:image" content="https://www.millionairecontracts.com/og-image.png" />
 
-    <!-- Organization schema -->
+    <!-- Who MC is, for search engines and AI assistants: one organization with a
+         stable @id that every page's Article schema points back to. sameAs lists
+         MC's profiles elsewhere; add each directory profile (Clutch, GoodFirms)
+         here once it exists. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Millionaire Contracts",
-      "url": "https://www.millionairecontracts.com",
-      "logo": "https://assets.cdn.filesafe.space/A8PmgiSa8bKb0J1mBeLF/media/66fe6791c6d28935508f7ce5.png",
-      "description": "Global sales agency providing sales strategy, management, closing, and appointment setting services to ambitious businesses.",
-      "areaServed": ["US", "GB", "ZA", "SG", "JP", "KR"],
-      "sameAs": [
-        "https://www.linkedin.com/company/millionaire-contracts"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.millionairecontracts.com/#organization",
+          "name": "Millionaire Contracts",
+          "url": "https://www.millionairecontracts.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.millionairecontracts.com/mc-logo.png"
+          },
+          "image": "https://www.millionairecontracts.com/og-image.png",
+          "description": "Global sales agency providing sales strategy, management, closing, and appointment setting services to ambitious businesses.",
+          "email": "neo@millionairecontracts.com",
+          "founder": {
+            "@type": "Person",
+            "@id": "https://www.millionairecontracts.com/about-us#katleho-mohlomi",
+            "name": "Katleho Mohlomi",
+            "jobTitle": "Founder & CEO",
+            "worksFor": {
+              "@id": "https://www.millionairecontracts.com/#organization"
+            }
+          },
+          "areaServed": [
+            "US",
+            "GB",
+            "ZA",
+            "SG",
+            "JP",
+            "KR"
+          ],
+          "knowsAbout": [
+            "Sales outsourcing",
+            "Outsourced sales teams",
+            "Appointment setting",
+            "Sales development (SDR)",
+            "Sales strategy",
+            "Sales management",
+            "B2B lead generation",
+            "Cold email outreach",
+            "LinkedIn outreach"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "neo@millionairecontracts.com",
+            "url": "https://www.millionairecontracts.com/calender"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/millionaire-contracts"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.millionairecontracts.com/#website",
+          "url": "https://www.millionairecontracts.com",
+          "name": "Millionaire Contracts",
+          "publisher": {
+            "@id": "https://www.millionairecontracts.com/#organization"
+          },
+          "inLanguage": "en"
+        }
       ]
     }
     </script>

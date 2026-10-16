@@ -10,7 +10,7 @@ const schema = {
   name: 'Sales Resources and Guides',
   description: 'Guides on outsourced sales, appointment setting, pricing, and building a B2B sales process. Written for businesses deciding how to grow their pipeline.',
   url: 'https://www.millionairecontracts.com/resources',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
 }
 
 const articles = [

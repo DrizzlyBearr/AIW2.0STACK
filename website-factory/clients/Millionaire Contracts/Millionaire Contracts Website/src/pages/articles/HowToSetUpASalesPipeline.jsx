@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How to Set Up a Sales Pipeline in Your CRM',
   description: 'A practical, CRM-agnostic guide to setting up a sales pipeline: how to define stages that map to the buyer decision, entry and exit criteria, logging discipline, what to track, and the mistakes to avoid.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/how-to-set-up-a-sales-pipeline',
 }
 

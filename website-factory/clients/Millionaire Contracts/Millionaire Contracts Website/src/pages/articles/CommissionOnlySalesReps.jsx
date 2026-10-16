@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'Do Commission-Only Sales Models Work? The Honest Answer',
   description: 'Commission-only reps work when the sale is simple, short and fed with leads. In complex B2B they usually fail. Compared with base plus commission.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/commission-only-sales-reps',
 }
 

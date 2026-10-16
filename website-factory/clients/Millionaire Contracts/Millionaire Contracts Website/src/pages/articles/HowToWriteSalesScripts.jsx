@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How to Write Sales Scripts That Convert',
   description: 'How to write sales scripts for cold calls and discovery calls: why a script is a structure not a recital, how to build openers, discovery questions, objection handling, and closes, and why per-client scripts beat generic templates.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/how-to-write-sales-scripts',
 }
 

@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How to Build an Outbound Sales Cadence',
   description: 'A practical guide to building an outbound sales cadence: what a cadence is, how to choose channels, how to space and time your touches, how many touches to run, how to vary the message, when to stop, and how to measure and improve it.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/how-to-build-a-sales-cadence',
 }
 

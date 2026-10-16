@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'B2B Appointment Setting Services: How They Work and What to Expect',
   description: 'What B2B appointment setting services actually do, what a good one includes, how qualification discipline separates real providers from volume plays, what results to expect, and how to choose.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/b2b-appointment-setting-services',
 }
 

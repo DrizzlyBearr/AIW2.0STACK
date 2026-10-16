@@ -58,7 +58,7 @@ export default function ArticleTemplate({ entry }) {
     '@type': 'Article',
     headline: title,
     description,
-    publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: SITE },
+    publisher: { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'Millionaire Contracts', url: SITE },
     mainEntityOfPage: `${SITE}/${slug}`,
   }
   const faqSchema = faqs.length

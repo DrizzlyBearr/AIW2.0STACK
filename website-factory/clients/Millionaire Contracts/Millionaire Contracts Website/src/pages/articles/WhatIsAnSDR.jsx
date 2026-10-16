@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'What Is an SDR? Role, Cost, and In-House vs Contract SDRs',
   description: 'An SDR finds prospects, qualifies them and books meetings for closers. What one costs in-house ($110k to $150k loaded) and what an SDR contract covers.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/what-is-an-sdr',
 }
 

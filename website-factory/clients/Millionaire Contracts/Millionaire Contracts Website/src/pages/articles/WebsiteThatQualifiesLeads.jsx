@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How to Make Your Website Qualify Leads Before They Reach You',
   description: 'How to design a website and enquiry flow that pre-qualifies leads: what questions to ask, why a name-and-message form wastes sales time, and how qualification on the site protects rep time and improves close rates.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/website-that-qualifies-leads',
 }
 

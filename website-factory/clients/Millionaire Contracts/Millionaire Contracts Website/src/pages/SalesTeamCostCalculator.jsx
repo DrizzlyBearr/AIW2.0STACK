@@ -15,7 +15,7 @@ const schema = {
   description: 'Calculate the fully loaded annual cost of building an in-house sales team, including salary, benefits, tools, onboarding, management time, and the cost of ramp before the team produces pipeline.',
   url: 'https://www.millionairecontracts.com/cost-of-building-a-sales-team',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
 }
 
 const faqSchema = {

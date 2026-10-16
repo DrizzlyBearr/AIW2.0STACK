@@ -21,7 +21,7 @@ export default function IssueTemplate({ entry }) {
     headline: subject,
     description: preview,
     datePublished: date,
-    publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: SITE },
+    publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: SITE },
     mainEntityOfPage: `${SITE}/newsletter/${slug}`,
   }
 

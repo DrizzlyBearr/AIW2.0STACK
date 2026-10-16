@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'SDR vs BDR: What Is the Difference and Which Do You Need?',
   description: 'SDR vs BDR explained: what each role does, the real difference between inbound and outbound focus, how the terms are used loosely in practice, how the two fit together, and how to decide which your business needs.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/sdr-vs-bdr',
 }
 

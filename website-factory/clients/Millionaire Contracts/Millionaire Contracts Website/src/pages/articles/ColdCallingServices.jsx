@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'Cold Calling Services: Do They Still Work?',
   description: 'An honest look at cold calling services: where the phone still works, where it does not, why it is one channel in a multi-channel motion, and what a good service actually does.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/cold-calling-services',
 }
 

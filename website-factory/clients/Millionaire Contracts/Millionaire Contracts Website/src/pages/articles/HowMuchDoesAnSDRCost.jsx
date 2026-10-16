@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How Much Does an SDR Cost? Salary, OTE, and the Fully Loaded Number',
   description: 'The real cost of an SDR broken down: base salary, on-target earnings, and the fully loaded annual number once payroll tax, benefits, tools, management, recruiting, and ramp are added.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/how-much-does-an-sdr-cost',
 }
 

@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'What Is a Sales Pipeline? Stages Explained',
   description: 'A sales pipeline explained: what it is, the typical stages, how it differs from a forecast, what a healthy pipeline looks like, the difference between leading and lagging indicators, and the common mistakes.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/what-is-a-sales-pipeline',
 }
 
