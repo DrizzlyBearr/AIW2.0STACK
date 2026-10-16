@@ -1,14 +1,18 @@
-import { Eye, Feather, Flame, HeartPulse, Moon, HeartHandshake, Leaf, Sparkles, ArrowRight } from 'lucide-react'
+import { Eye, Feather, BookOpen, Droplets, Flame, HeartPulse, Moon, HeartHandshake, Briefcase, MessagesSquare, Leaf, Sparkles, ArrowRight } from 'lucide-react'
 import { business, services } from '../content'
 import { waLink } from '../whatsapp'
 
 const icons = {
   divination: Eye,
   ancestors: Feather,
+  prophecy: BookOpen,
+  water: Droplets,
   cleansing: Flame,
   trauma: HeartPulse,
   dreams: Moon,
   love: HeartHandshake,
+  career: Briefcase,
+  coaching: MessagesSquare,
   medicine: Leaf,
   purpose: Sparkles,
 }

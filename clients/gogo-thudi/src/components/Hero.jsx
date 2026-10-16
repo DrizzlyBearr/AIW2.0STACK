@@ -1,4 +1,4 @@
-import { MessageCircle, Phone, Star, BadgeCheck, MapPin } from 'lucide-react'
+import { MessageCircle, Phone, Star, BadgeCheck, MapPin, Award } from 'lucide-react'
 import { business } from '../content'
 import { waLink, defaultMessage } from '../whatsapp'
 import Beadwork from './Beadwork'
@@ -28,9 +28,9 @@ export default function Hero() {
               <span className="block italic text-ochre-light">your ancestors have answers.</span>
             </h1>
             <p className="text-cream/75 text-lg leading-relaxed mb-8 max-w-xl">
-              Gogo Thudi is a spiritual healer and medium in {business.area} with {business.yearsPractising} years of
-              experience. She throws the bones, carries messages from your ancestors, and cleanses and heals what is
-              holding you back. In person, or by video call from anywhere.
+              Gogo Thudi is a traditional healer, medium, and prophet in {business.area} with{' '}
+              {business.yearsPractising} years of experience. She reads the bones, carries messages from your
+              ancestors, and cleanses and heals what is holding you back. In person, or by video call from anywhere.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
@@ -45,12 +45,16 @@ export default function Hero() {
             </div>
 
             <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-cream/80">
-              {business.rating && (
-                <li className="flex items-center gap-2">
+              <li>
+                <a href="#reviews" className="flex items-center gap-2 hover:text-ochre-light">
                   <Star className="w-4 h-4 text-ochre fill-ochre" />
-                  {business.rating.score} from {business.rating.count} reviews on {business.rating.source}
-                </li>
-              )}
+                  {business.rating.count} client reviews on {business.rating.source}
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Award className="w-4 h-4 text-ochre" />
+                {business.rating.badges[0]}
+              </li>
               <li>
                 <a href={business.gogoOnlineUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-ochre-light">
                   <BadgeCheck className="w-4 h-4 text-ochre" />

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MessageCircle, Phone, Clock, MapPin } from 'lucide-react'
+import { MessageCircle, Phone, Clock, MapPin, Mail } from 'lucide-react'
 import { business, services } from '../content'
 import { waLink } from '../whatsapp'
 
@@ -43,9 +43,13 @@ export default function Booking() {
             <li className="flex gap-4">
               <MapPin className="w-5 h-5 text-ochre shrink-0 mt-0.5" />
               <span>
-                {business.area}, {business.region}
-                <span className="block text-sm text-cream/50">Exact address shared when you book</span>
+                {business.address}
+                <span className="block text-sm text-cream/50">{business.region}</span>
               </span>
+            </li>
+            <li className="flex gap-4">
+              <Mail className="w-5 h-5 text-ochre shrink-0 mt-0.5" />
+              <a href={`mailto:${business.email}`} className="hover:text-ochre-light break-all">{business.email}</a>
             </li>
             <li className="flex gap-4">
               <Clock className="w-5 h-5 text-ochre shrink-0 mt-0.5" />
