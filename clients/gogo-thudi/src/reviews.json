@@ -1,0 +1,2329 @@
+{
+ "source": "SA Psychics",
+ "total": 291,
+ "average": 5.0,
+ "fiveStar": 290,
+ "since": "2021",
+ "reviews": [
+  {
+   "id": 1,
+   "name": "Eleanor S.",
+   "date": "17 March 2026",
+   "stars": 5,
+   "text": "Excellent service! Thudi is very patient and explains her visions so clearly.",
+   "featured": 0
+  },
+  {
+   "id": 2,
+   "name": "Zelna S.",
+   "date": "10 March 2026",
+   "stars": 5,
+   "text": "Such an accurate session! She knew exactly what was happening with my daughter’s wedding plans in Franschhoek.",
+   "featured": 0
+  },
+  {
+   "id": 3,
+   "name": "Marinda v.W.",
+   "date": "9 March 2026",
+   "stars": 5,
+   "text": "Very helpful! Thudi gave me all the answers today.",
+   "featured": 0
+  },
+  {
+   "id": 4,
+   "name": "Gareth G.",
+   "date": "20 February 2026",
+   "stars": 5,
+   "text": "Thudi provided so much clarity. I feel very empowered to make changes now.",
+   "featured": 0
+  },
+  {
+   "id": 5,
+   "name": "Priscilla",
+   "date": "9 February 2026",
+   "stars": 5,
+   "text": "Thudi provided so much clarity on my love life. I was confused about my ex, but she helped me see what was truly holding me back from moving forward.",
+   "featured": 0
+  },
+  {
+   "id": 6,
+   "name": "Ofentse",
+   "date": "3 February 2026",
+   "stars": 5,
+   "text": "Thudi is very professional. I highly recommend a session.",
+   "featured": 0
+  },
+  {
+   "id": 7,
+   "name": "Nkosazana Z.",
+   "date": "28 January 2026",
+   "stars": 5,
+   "text": "Thudi helped me understand my dreams. So much insight provided during our session!",
+   "featured": 0
+  },
+  {
+   "id": 8,
+   "name": "Ezra",
+   "date": "21 January 2026",
+   "stars": 5,
+   "text": "Thudi is a true professional. I will definitely be back for another reading.",
+   "featured": 0
+  },
+  {
+   "id": 9,
+   "name": "Sandile",
+   "date": "29 December 2025",
+   "stars": 5,
+   "text": "Thudi’s reading felt very personal and sincere. She spoke with compassion and understanding, which helped me feel truly heard.",
+   "featured": 0
+  },
+  {
+   "id": 10,
+   "name": "Mandla",
+   "date": "28 December 2025",
+   "stars": 5,
+   "text": "My reading with Thudi felt incredibly genuine and comforting. She helped me understand emotional layers I hadn’t fully recognized and offered guidance that brought clarity and peace. I left feeling supported and more confident in my path.",
+   "featured": 0
+  },
+  {
+   "id": 11,
+   "name": "Lydia",
+   "date": "27 December 2025",
+   "stars": 5,
+   "text": "Thudi delivered a reading that felt balanced and thoughtful. Her insight helped me see things clearly without feeling overwhelmed, which I truly appreciated.",
+   "featured": 0
+  },
+  {
+   "id": 12,
+   "name": "Themba",
+   "date": "25 December 2025",
+   "stars": 5,
+   "text": "Thudi helped me see hope where I had been feeling stuck. Her guidance was encouraging and filled with positive energy.",
+   "featured": 0
+  },
+  {
+   "id": 13,
+   "name": "Autumn",
+   "date": "15 December 2025",
+   "stars": 5,
+   "text": "A compassionate and non-judgmental space. The reading with Thudi helped me release some old guilt by reframing a past event in a way that made sense for my soul's growth.",
+   "featured": 0
+  },
+  {
+   "id": 14,
+   "name": "Musa",
+   "date": "26 November 2025",
+   "stars": 5,
+   "text": "The clarity Thudi provided was exactly what I needed. She explained dynamics I hadn’t noticed and helped me understand what my intuition has been trying to tell me. Her insight brought me so much relief.",
+   "featured": 0
+  },
+  {
+   "id": 15,
+   "name": "Ariel",
+   "date": "15 November 2025",
+   "stars": 5,
+   "text": "I’ve had many readings, but none like the one with Thudi. She delved into my situation, provided timelines that made sense, and shared spiritual messages that resonated with my soul. Truly gifted!",
+   "featured": 0
+  },
+  {
+   "id": 16,
+   "name": "Gugulethu",
+   "date": "31 October 2025",
+   "stars": 5,
+   "text": "Thudi has a way of blending spiritual insight with practical advice. Her reading gave me direction and helped me feel confident about my choices. I trust her completely and will definitely be returning for another session.",
+   "featured": 0
+  },
+  {
+   "id": 17,
+   "name": "Sibongile",
+   "date": "10 October 2025",
+   "stars": 5,
+   "text": "I came into the reading feeling lost, but Thudi gave me clarity and reassurance. Her gentle energy made it easy to open up and truly listen.",
+   "featured": 0
+  },
+  {
+   "id": 18,
+   "name": "Ayanda",
+   "date": "9 September 2025",
+   "stars": 5,
+   "text": "Thudi brought forward a message from a passed loved one that was so specific and meaningful, it brought me to tears. It was a profoundly healing experience that provided the closure I needed.",
+   "featured": 0
+  },
+  {
+   "id": 19,
+   "name": "Nonhlanhla",
+   "date": "6 September 2025",
+   "stars": 5,
+   "text": "My reading was a much-needed boost of confidence. Thudi highlighted my strengths and how to use them to overcome current challenges. Very empowering.",
+   "featured": 0
+  },
+  {
+   "id": 20,
+   "name": "Ellie",
+   "date": "2 September 2025",
+   "stars": 5,
+   "text": "Thudi helped me define my own energy signature and understand how I impact others and the world around me. This self-awareness has been crucial in my personal and professional relationships, allowing me to show up more authentically and powerfully.",
+   "featured": 0
+  },
+  {
+   "id": 21,
+   "name": "Thembeka",
+   "date": "27 August 2025",
+   "stars": 5,
+   "text": "Thudi has a gift for seeing the grand design of your life. She helped me understand how a seemingly random event was actually a crucial piece of a larger puzzle. This big-picture perspective turned my confusion into awe and my frustration into patience.",
+   "featured": 0
+  },
+  {
+   "id": 22,
+   "name": "Zoe",
+   "date": "21 August 2025",
+   "stars": 5,
+   "text": "The kindness of Thudi shone through from the very beginning. She created an atmosphere of trust that made it easy to share openly. Her thoughtful responses provided clarity and gave me peace of mind.",
+   "featured": 0
+  },
+  {
+   "id": 24,
+   "name": "Itumeleng",
+   "date": "6 August 2025",
+   "stars": 5,
+   "text": "She was very spot on and truthful all the way. I feel good afterwards.",
+   "featured": 0
+  },
+  {
+   "id": 25,
+   "name": "Gili",
+   "date": "27 July 2025",
+   "stars": 5,
+   "text": "Thudi's guidance is deeply insightful and healing. She provided compassionate and accurate readings that helped me understand my situation and feel empowered. Her wisdom and healing energy are truly amazing.",
+   "featured": 0
+  },
+  {
+   "id": 26,
+   "name": "Caleb",
+   "date": "26 July 2025",
+   "stars": 5,
+   "text": "Thudi is someone who genuinely cares about the people she speak with. I felt that sincerity in every moment of our session. Her gentle approach and thoughtful insights gave me not just clarity but also the strength to see my situation from a new perspective.",
+   "featured": 0
+  },
+  {
+   "id": 27,
+   "name": "Madison",
+   "date": "16 July 2025",
+   "stars": 5,
+   "text": "Thudi helped me realize I wasn’t alone in how I felt, and that validation meant more to me than I can express. She guided me gently through my own thoughts and helped me find perspective. I came into the session with heaviness, but I left with a sense of lightness and hope.",
+   "featured": 0
+  },
+  {
+   "id": 28,
+   "name": "Andrew",
+   "date": "8 July 2025",
+   "stars": 5,
+   "text": "I can’t speak highly enough about my experience with Thudi. She has a rare gift for understanding what’s unspoken and bringing it into the light with care. Her guidance was thoughtful, warm, and deeply intuitive. I left feeling lighter, more focused, and incredibly grateful for her support.",
+   "featured": 0
+  },
+  {
+   "id": 29,
+   "name": "Sizwe",
+   "date": "29 June 2025",
+   "stars": 5,
+   "text": "Thudi rooted my reading in earth wisdom, using nature's metaphors to help me understand my growth cycles. I now see my challenges as necessary seasons of becoming.",
+   "featured": 0
+  },
+  {
+   "id": 30,
+   "name": "Ntombizodwa",
+   "date": "22 June 2025",
+   "stars": 5,
+   "text": "Thudi has a remarkable ability to reflect your truth back to you. She articulated thoughts I'd been struggling to express, helping me gain immediate clarity about a complicated relationship dynamic.",
+   "featured": 0
+  },
+  {
+   "id": 31,
+   "name": "Chloe",
+   "date": "6 June 2025",
+   "stars": 5,
+   "text": "I reached out to Thudi during a time of profound grief, and her words felt like a soothing balm for my soul. She tapped into the energy of my lost loved one and relayed messages that brought me to tears, not from sadness but from relief and understanding. Her reading didn’t just validate my feelings, it helped me find meaning in my pain and inspired me to keep moving forward with love.",
+   "featured": 1
+  },
+  {
+   "id": 32,
+   "name": "Naledi",
+   "date": "28 May 2025",
+   "stars": 5,
+   "text": "Thudi made one specific prediction that seemed completely improbable at the time - yet it unfolded exactly as she described, down to surprising details. This wasn't a vague \"you'll meet someone\" generality, but a precise forecast about timing, circumstances, and even physical descriptions. Witnessing this prediction come to life has forever changed my understanding of what's possible.",
+   "featured": 0
+  },
+  {
+   "id": 33,
+   "name": "Jacob",
+   "date": "21 May 2025",
+   "stars": 5,
+   "text": "What stunned me about Thudi was their ability to recall specific details from my previous readings (months apart!) without notes or prompts. This continuity created such a powerful sense of being truly seen and remembered. Her follow-through on previous predictions and ability to build on past guidance shows an incredible dedication to her clients' journeys. This isn't just a service - it's an ongoing spiritual partnership.",
+   "featured": 3
+  },
+  {
+   "id": 34,
+   "name": "Mat",
+   "date": "18 May 2025",
+   "stars": 5,
+   "text": "She's the best ,soft spoken,very patient I want to talk to her again",
+   "featured": 0
+  },
+  {
+   "id": 35,
+   "name": "Nonhlanhla",
+   "date": "17 May 2025",
+   "stars": 5,
+   "text": "I've had many readings, but Thudi's stood out because she warned me about an unlikely opportunity. When it appeared exactly as described, I was ready to seize it. Her foresight is genuinely helpful!",
+   "featured": 0
+  },
+  {
+   "id": 36,
+   "name": "Grace",
+   "date": "9 May 2025",
+   "stars": 5,
+   "text": "Thudi is incredibly gifted. She helped me reconnect with my own intuition and gave me the push I needed to trust my instincts again. Her energy is so encouraging and grounded.",
+   "featured": 0
+  },
+  {
+   "id": 37,
+   "name": "Kagiso",
+   "date": "5 May 2025",
+   "stars": 5,
+   "text": "The accuracy of the reading with Thudi was unbelievable. She even mentioned a phrase my late grandmother used to say. That moment brought tears to my eyes.",
+   "featured": 0
+  },
+  {
+   "id": 38,
+   "name": "Khanyisile",
+   "date": "27 April 2025",
+   "stars": 5,
+   "text": "From the first moment, I knew I was speaking with someone special. Thudi’s words gave me the clarity, reassurance, and hope I needed to take the next step in my journey. I am truly grateful for her guidance and light",
+   "featured": 0
+  },
+  {
+   "id": 39,
+   "name": "Luke",
+   "date": "20 April 2025",
+   "stars": 5,
+   "text": "What I loved most about Thudi was how warm and encouraging she was. Even when sharing tough truths, she did it in a way that felt supportive, not scary.",
+   "featured": 0
+  },
+  {
+   "id": 40,
+   "name": "Lily",
+   "date": "13 April 2025",
+   "stars": 5,
+   "text": "Thudi gave me the clarity I’ve been looking for. I had so many questions about my future, and she answered every single one with kindness and accuracy. I’m truly grateful",
+   "featured": 0
+  },
+  {
+   "id": 41,
+   "name": "Ntombizodwa",
+   "date": "30 March 2025",
+   "stars": 5,
+   "text": "Thudi’s twilight meditation revealed my spirit guides in vivid detail, including one who matched a portrait in my grandmother’s attic! Her ability to bridge realms is effortless. I now feel their guidance daily. A twilight whisperer with a radiant soul.",
+   "featured": 0
+  },
+  {
+   "id": 42,
+   "name": "Ayanda",
+   "date": "24 March 2025",
+   "stars": 5,
+   "text": "During a family crisis, Thudi provided the perspective I desperately needed. She saw details about the situation I hadn't shared and offered practical steps forward. Her guidance helped me make tough decisions with confidence.",
+   "featured": 4
+  },
+  {
+   "id": 43,
+   "name": "Hlengiwe",
+   "date": "7 March 2025",
+   "stars": 5,
+   "text": "Thudi was a game-changer for me. Her ability to provide clear, actionable advice while also offering encouragement and support was truly remarkable. I felt empowered and motivated to achieve my goals, thanks to her guidance.",
+   "featured": 0
+  },
+  {
+   "id": 44,
+   "name": "Hailey",
+   "date": "4 March 2025",
+   "stars": 5,
+   "text": "Thudi is a gifted psychic with a unique and refreshing approach. She provided insights that were both practical and spiritual, helping me make sense of a confusing situation. Her reading was incredibly helpful, and I’m so grateful for her guidance.",
+   "featured": 0
+  },
+  {
+   "id": 45,
+   "name": "Jocelyn",
+   "date": "1 March 2025",
+   "stars": 5,
+   "text": "Thudi is an incredible advisor. Her reading was filled with wisdom and practical advice, and she helped me see opportunities I hadn’t noticed before. I’m so grateful for her guidance!",
+   "featured": 0
+  },
+  {
+   "id": 46,
+   "name": "Given",
+   "date": "23 February 2025",
+   "stars": 5,
+   "text": "I wasn’t sure where my life was headed, but Thudi helped me realize I was already on the right path. Her wisdom gave me the clarity I needed.",
+   "featured": 0
+  },
+  {
+   "id": 47,
+   "name": "Matshidiso",
+   "date": "15 February 2025",
+   "stars": 5,
+   "text": "I can’t recommend Thudi enough! Her reading was enlightening, accurate, and deeply comforting. If you’re looking for guidance, this is the person to see!",
+   "featured": 0
+  },
+  {
+   "id": 48,
+   "name": "Lu",
+   "date": "13 February 2025",
+   "stars": 5,
+   "text": "The reading I received from Thuso was remarkable",
+   "featured": 0
+  },
+  {
+   "id": 49,
+   "name": "David",
+   "date": "3 February 2025",
+   "stars": 5,
+   "text": "Thudi’s accuracy left me speechless! She picked up on emotions and situations I never mentioned, offering advice that was both practical and uplifting. Her energy is warm and comforting, making the session unforgettable.",
+   "featured": 0
+  },
+  {
+   "id": 50,
+   "name": "Siyabonga",
+   "date": "21 January 2025",
+   "stars": 5,
+   "text": "The reading I received from Thudi was truly remarkable and deeply resonated with me. Her insights and precision were outstanding, leaving me with a revitalized sense of purpose and clarity in my life.",
+   "featured": 0
+  },
+  {
+   "id": 51,
+   "name": "Philisiwe",
+   "date": "16 January 2025",
+   "stars": 5,
+   "text": "I’m so glad I chose Thudi for my reading. Her intuitive abilities are unmatched, and her advice has already started making a positive impact on my life. She is truly one of a kind!",
+   "featured": 0
+  },
+  {
+   "id": 52,
+   "name": "Boitumelo",
+   "date": "8 January 2025",
+   "stars": 5,
+   "text": "I was impressed by Thudi’s ability to connect with my concerns. Her advice was insightful and gave me the direction I needed.",
+   "featured": 0
+  },
+  {
+   "id": 53,
+   "name": "Arianna",
+   "date": "2 January 2025",
+   "stars": 5,
+   "text": "Thudi has a truly special gift. She tapped into my energy effortlessly and provided advice that resonated deeply. Her compassion and accuracy made this one of the best readings I’ve ever had.",
+   "featured": 0
+  },
+  {
+   "id": 54,
+   "name": "Bafana",
+   "date": "26 December 2024",
+   "stars": 5,
+   "text": "My session with Thudi was so helpful. Her guidance was kind, practical, and gave me a new perspective.",
+   "featured": 0
+  },
+  {
+   "id": 55,
+   "name": "Siyanda",
+   "date": "20 December 2024",
+   "stars": 5,
+   "text": "Thudi truly has a special gift. Her reading touched on areas of my life that needed attention, and her advice gave me the confidence to move forward. I now feel more at peace with my journey, and I couldn’t be more thankful.",
+   "featured": 0
+  },
+  {
+   "id": 56,
+   "name": "Emily",
+   "date": "1 December 2024",
+   "stars": 5,
+   "text": "Thudi’s words were like a breath of fresh air. She understood my struggles and provided thoughtful guidance that gave me hope for the future.",
+   "featured": 0
+  },
+  {
+   "id": 57,
+   "name": "Nkosinathi",
+   "date": "30 November 2024",
+   "stars": 5,
+   "text": "Thudi’s guidance was precise and reassuring. I’m so grateful for her insight.",
+   "featured": 0
+  },
+  {
+   "id": 58,
+   "name": "Benjamin",
+   "date": "26 November 2024",
+   "stars": 5,
+   "text": "Thudi’s session left me feeling deeply understood and supported. She not only pinpointed my struggles but also gave me fresh perspectives that I hadn’t considered before. I feel hopeful for the first time in a while.",
+   "featured": 0
+  },
+  {
+   "id": 59,
+   "name": "Matthew",
+   "date": "24 November 2024",
+   "stars": 5,
+   "text": "Thudi made me feel comfortable from the start, and her reading was genuine and accurate. Thudi offered guidance that spoke to my heart and helped me see a clearer path forward. I’m grateful for her wisdom.",
+   "featured": 0
+  },
+  {
+   "id": 60,
+   "name": "Eleanor",
+   "date": "22 November 2024",
+   "stars": 5,
+   "text": "Thudi was incredibly intuitive, and her reading resonated deeply with me. She provided guidance that was clear and actionable, making me feel more in control of my choices. I’m looking forward to what’s next.",
+   "featured": 0
+  },
+  {
+   "id": 61,
+   "name": "Ditebogo",
+   "date": "20 November 2024",
+   "stars": 5,
+   "text": "So accurate but i ran out of time will surely book more time so that we can continue and thank you Thudi",
+   "featured": 0
+  },
+  {
+   "id": 62,
+   "name": "Kennedy",
+   "date": "19 November 2024",
+   "stars": 5,
+   "text": "I was amazed at how quickly Thudi connected with my energy. She provided clarity on issues I’d been struggling with for a long time and gave me advice that felt sincere and actionable. Highly recommend!",
+   "featured": 0
+  },
+  {
+   "id": 63,
+   "name": "Lebo M.",
+   "date": "15 November 2024",
+   "stars": 4,
+   "text": "I am at ease after our session Thudi , I will definitely book more time so that we can continue..khanya khotso Lesedi",
+   "featured": 0
+  },
+  {
+   "id": 64,
+   "name": "Scarlett",
+   "date": "12 November 2024",
+   "stars": 5,
+   "text": "Thudi’s reading felt like a comforting conversation with an old friend. She understood things about me that only someone truly gifted could. I feel empowered to make positive changes now.",
+   "featured": 0
+  },
+  {
+   "id": 65,
+   "name": "Thembi",
+   "date": "5 October 2024",
+   "stars": 5,
+   "text": "Thudi has a unique talent for connecting with spirits. Her readings are insightful and comforting, making her an excellent choice for anyone seeking spiritual guidance.",
+   "featured": 0
+  },
+  {
+   "id": 66,
+   "name": "Xolani",
+   "date": "24 September 2024",
+   "stars": 5,
+   "text": "Through her intuitive guidance, I've found the courage to pursue my dreams and live a more authentic life. Thanks, Thudi!",
+   "featured": 0
+  },
+  {
+   "id": 67,
+   "name": "Ruby",
+   "date": "19 September 2024",
+   "stars": 5,
+   "text": "Thudi is truly gifted. Her reading was accurate and full of detail. She clarified several issues that had been troubling me and offered actionable advice. I am very thankful for the session and will return for future readings.",
+   "featured": 0
+  },
+  {
+   "id": 68,
+   "name": "Thando",
+   "date": "13 September 2024",
+   "stars": 5,
+   "text": "I was amazed by Thudi's accuracy and depth of insight. She provided clear and concise information about my situation and offered practical solutions. The session was enlightening and left me feeling hopeful about the future.",
+   "featured": 0
+  },
+  {
+   "id": 69,
+   "name": "Zanele",
+   "date": "13 August 2024",
+   "stars": 5,
+   "text": "Thudi’s healing abilities are extraordinary. Her sessions have helped me release emotional blockages and find inner peace.",
+   "featured": 0
+  },
+  {
+   "id": 70,
+   "name": "Clara",
+   "date": "28 July 2024",
+   "stars": 5,
+   "text": "What struck me most was the Thudi's ability to balance spiritual guidance with practical advice.",
+   "featured": 0
+  },
+  {
+   "id": 71,
+   "name": "Mpho",
+   "date": "22 July 2024",
+   "stars": 5,
+   "text": "Thudi has a real gift! Her reading was so accurate and the advice was incredibly practical. I left feeling totally uplifted and ready to tackle my challenges head-on. Highly recommend!",
+   "featured": 0
+  },
+  {
+   "id": 72,
+   "name": "Vivian",
+   "date": "16 July 2024",
+   "stars": 5,
+   "text": "Thudi provided a thorough and accurate reading. She was able to address all of my concerns and provided practical solutions. The session was both enlightening and comforting. I am very thankful for Thudi's guidance and support.",
+   "featured": 0
+  },
+  {
+   "id": 73,
+   "name": "Sibusiso",
+   "date": "10 July 2024",
+   "stars": 5,
+   "text": "Thudi provided clarity. Much appreciated!",
+   "featured": 0
+  },
+  {
+   "id": 74,
+   "name": "Mpumi",
+   "date": "29 June 2024",
+   "stars": 5,
+   "text": "Thudi helped me see things in a new light. Thank you for your insight!",
+   "featured": 0
+  },
+  {
+   "id": 75,
+   "name": "Sne",
+   "date": "23 June 2024",
+   "stars": 5,
+   "text": "Thudi is amazing! She gave me the tools I needed to improve my relationship.",
+   "featured": 0
+  },
+  {
+   "id": 76,
+   "name": "Thulani",
+   "date": "18 June 2024",
+   "stars": 5,
+   "text": "Thudi's accuracy and empathy won me over. Thank you for the guidance and support!",
+   "featured": 0
+  },
+  {
+   "id": 77,
+   "name": "Jacob",
+   "date": "9 June 2024",
+   "stars": 5,
+   "text": "Thudi's insight into my situation was uncanny. I'm so grateful for her gift.",
+   "featured": 0
+  },
+  {
+   "id": 78,
+   "name": "Keitumetse",
+   "date": "22 May 2024",
+   "stars": 5,
+   "text": "I succeeded with Thudi's direction.",
+   "featured": 0
+  },
+  {
+   "id": 79,
+   "name": "Nolitha",
+   "date": "22 May 2024",
+   "stars": 5,
+   "text": "GOGO THUDI, S GIFT IS BEYOND expectations, she is very calm and ensures that she sympathise with you, she goes straight to the burning issue, I am so grateful for our session.",
+   "featured": 0
+  },
+  {
+   "id": 80,
+   "name": "Nolitha",
+   "date": "22 May 2024",
+   "stars": 5,
+   "text": "Gogo Thudi was on point on everything, she also makes sure she tries her best to calm you down during the session, her third is beyond, ndiyavuma. I am very grateful for our session.",
+   "featured": 0
+  },
+  {
+   "id": 81,
+   "name": "Tumelo",
+   "date": "17 May 2024",
+   "stars": 5,
+   "text": "Thudi's readings have been a source of healing for me. I'm thankful for her transformative insights.",
+   "featured": 0
+  },
+  {
+   "id": 82,
+   "name": "Sibusiso",
+   "date": "9 May 2024",
+   "stars": 5,
+   "text": "Thudi has a true gift. Her readings are not just accurate but also filled with empathy and understanding.",
+   "featured": 0
+  },
+  {
+   "id": 83,
+   "name": "Dylan",
+   "date": "4 May 2024",
+   "stars": 5,
+   "text": "Thudi is a true master of her craft. Her readings are not only accurate but also delivered with such warmth and compassion.",
+   "featured": 0
+  },
+  {
+   "id": 84,
+   "name": "Aria",
+   "date": "15 April 2024",
+   "stars": 5,
+   "text": "Thank you, Thudi, for your healing touch.",
+   "featured": 0
+  },
+  {
+   "id": 85,
+   "name": "Jabulani",
+   "date": "11 April 2024",
+   "stars": 5,
+   "text": "Thudi is a skilled healer. Highly recommended!",
+   "featured": 0
+  },
+  {
+   "id": 86,
+   "name": "Savannah",
+   "date": "4 April 2024",
+   "stars": 5,
+   "text": "Thudi is truly gifted. Her reading was insightful and uplifting, giving me clarity on my situation. I'm grateful for her guidance.",
+   "featured": 0
+  },
+  {
+   "id": 87,
+   "name": "Kagiso",
+   "date": "27 March 2024",
+   "stars": 5,
+   "text": "Thudi has a true psychic talent.",
+   "featured": 0
+  },
+  {
+   "id": 88,
+   "name": "Nokwanda",
+   "date": "17 March 2024",
+   "stars": 5,
+   "text": "I highly recommend Thudi for psychic healing. Her intuitive approach is truly healing and has helped me on my journey to self-discovery.",
+   "featured": 0
+  },
+  {
+   "id": 89,
+   "name": "Musa",
+   "date": "8 March 2024",
+   "stars": 5,
+   "text": "Thudi has a gentle healing touch. I felt cared for and supported.",
+   "featured": 0
+  },
+  {
+   "id": 90,
+   "name": "Anna",
+   "date": "2 March 2024",
+   "stars": 5,
+   "text": "Such a gifted psychic. Thudi gave me so much clarity and peace of mind. I highly recommend her!",
+   "featured": 0
+  },
+  {
+   "id": 91,
+   "name": "Lucy",
+   "date": "25 February 2024",
+   "stars": 5,
+   "text": "Thudi's healing session was transformative. I felt lighter and more at peace afterward. Thank you Thudi!",
+   "featured": 0
+  },
+  {
+   "id": 92,
+   "name": "Isondo",
+   "date": "5 February 2024",
+   "stars": 5,
+   "text": "Love how insightful Thudi is",
+   "featured": 0
+  },
+  {
+   "id": 93,
+   "name": "Chidinma",
+   "date": "28 January 2024",
+   "stars": 5,
+   "text": "Thank you Tudi so much for your time and insights",
+   "featured": 0
+  },
+  {
+   "id": 94,
+   "name": "Jasira",
+   "date": "21 January 2024",
+   "stars": 5,
+   "text": "Thudi is thorough and caring",
+   "featured": 0
+  },
+  {
+   "id": 95,
+   "name": "Gugulethu",
+   "date": "15 January 2024",
+   "stars": 5,
+   "text": "The healing session that I had with Thudi was extraordinary",
+   "featured": 0
+  },
+  {
+   "id": 96,
+   "name": "Barika",
+   "date": "18 December 2023",
+   "stars": 5,
+   "text": "Thudi is so knowledgeable and resourceful.",
+   "featured": 0
+  },
+  {
+   "id": 97,
+   "name": "Hadiza",
+   "date": "4 December 2023",
+   "stars": 5,
+   "text": "Thudi is very inspiring.",
+   "featured": 0
+  },
+  {
+   "id": 98,
+   "name": "Eshe",
+   "date": "28 November 2023",
+   "stars": 5,
+   "text": "Thudi helped me see the path I could go and be happier",
+   "featured": 0
+  },
+  {
+   "id": 99,
+   "name": "Yewande",
+   "date": "26 November 2023",
+   "stars": 5,
+   "text": "Thudi definitely amazed me- I was speechless",
+   "featured": 0
+  },
+  {
+   "id": 100,
+   "name": "Thabisa",
+   "date": "20 November 2023",
+   "stars": 5,
+   "text": "Thudi is here to help you feel inspired",
+   "featured": 0
+  },
+  {
+   "id": 101,
+   "name": "Chidinma",
+   "date": "5 November 2023",
+   "stars": 5,
+   "text": "I can feel the passion Thudi have and I'm grateful for the service",
+   "featured": 0
+  },
+  {
+   "id": 102,
+   "name": "Nadiah",
+   "date": "22 October 2023",
+   "stars": 5,
+   "text": "Thudi was able to feel, see and understand my situation",
+   "featured": 0
+  },
+  {
+   "id": 103,
+   "name": "Mochau M.",
+   "date": "17 October 2023",
+   "stars": 5,
+   "text": "Even though the time was short, thank you so much for telling me what I needed to hear and I would definitely seek you in the future",
+   "featured": 0
+  },
+  {
+   "id": 104,
+   "name": "Nasimiyu",
+   "date": "17 October 2023",
+   "stars": 5,
+   "text": "Thudi is amazing. her delivery is caring and warm",
+   "featured": 0
+  },
+  {
+   "id": 105,
+   "name": "Jabulani",
+   "date": "10 October 2023",
+   "stars": 5,
+   "text": "Thudi will give you total honesty!",
+   "featured": 0
+  },
+  {
+   "id": 106,
+   "name": "Kareem",
+   "date": "26 September 2023",
+   "stars": 5,
+   "text": "Thudi has great energy and it was wonderful to get details from her",
+   "featured": 0
+  },
+  {
+   "id": 107,
+   "name": "Debrah M.",
+   "date": "20 September 2023",
+   "stars": 5,
+   "text": "I am left speechless …. Thank you so much gogo Thudi you’re so helpful",
+   "featured": 0
+  },
+  {
+   "id": 108,
+   "name": "Obioma",
+   "date": "11 September 2023",
+   "stars": 5,
+   "text": "Thudi is very positive but honest",
+   "featured": 0
+  },
+  {
+   "id": 109,
+   "name": "Taiwo",
+   "date": "5 September 2023",
+   "stars": 5,
+   "text": "Thudi is a wonderfully sensitive and empathic psychic",
+   "featured": 0
+  },
+  {
+   "id": 110,
+   "name": "Chimamanda",
+   "date": "27 August 2023",
+   "stars": 5,
+   "text": "Thudi is the healer i needed!",
+   "featured": 0
+  },
+  {
+   "id": 111,
+   "name": "Thabisa",
+   "date": "6 August 2023",
+   "stars": 5,
+   "text": "Thank you Thudi, for your insight and words of wisdom",
+   "featured": 0
+  },
+  {
+   "id": 112,
+   "name": "Jamala",
+   "date": "1 August 2023",
+   "stars": 5,
+   "text": "Thudi is a very genuine and caring soul",
+   "featured": 0
+  },
+  {
+   "id": 113,
+   "name": "Tumelo",
+   "date": "23 July 2023",
+   "stars": 5,
+   "text": "Thudi is an amazing person with an amazing gift! Thank you so much!",
+   "featured": 0
+  },
+  {
+   "id": 114,
+   "name": "Jahzara",
+   "date": "19 July 2023",
+   "stars": 5,
+   "text": "Thank you Thudi for the hard truth that you gave to me. I needed it.",
+   "featured": 0
+  },
+  {
+   "id": 115,
+   "name": "Rehema",
+   "date": "9 July 2023",
+   "stars": 5,
+   "text": "I've been reading with Thudi for a while now and she is wonderful!",
+   "featured": 0
+  },
+  {
+   "id": 116,
+   "name": "Nur",
+   "date": "2 July 2023",
+   "stars": 5,
+   "text": "I can always count on Thudi for reassurance!",
+   "featured": 0
+  },
+  {
+   "id": 117,
+   "name": "Jacob",
+   "date": "26 June 2023",
+   "stars": 5,
+   "text": "Thudi is always so on point. Looking forward speaking with her again",
+   "featured": 0
+  },
+  {
+   "id": 118,
+   "name": "Eshe",
+   "date": "19 June 2023",
+   "stars": 5,
+   "text": "Thudi is the real deal!",
+   "featured": 0
+  },
+  {
+   "id": 119,
+   "name": "Sekolah",
+   "date": "28 May 2023",
+   "stars": 5,
+   "text": "Thudi has always stepped up to guide me as things are changing.",
+   "featured": 0
+  },
+  {
+   "id": 120,
+   "name": "Nyanko",
+   "date": "21 May 2023",
+   "stars": 5,
+   "text": "Thudi is very sincere and truthful",
+   "featured": 0
+  },
+  {
+   "id": 121,
+   "name": "Naliaka",
+   "date": "14 May 2023",
+   "stars": 5,
+   "text": "If you need straight answers or clarity of any sort, Thudi is your lady!",
+   "featured": 0
+  },
+  {
+   "id": 122,
+   "name": "Nthombi",
+   "date": "2 May 2023",
+   "stars": 5,
+   "text": "Thudi is a good listener and gets to what you are asking",
+   "featured": 0
+  },
+  {
+   "id": 123,
+   "name": "Gugulethu",
+   "date": "18 April 2023",
+   "stars": 5,
+   "text": "Thudi tells the truth, but somehow she still puts you at ease no matter what that truth may be.",
+   "featured": 0
+  },
+  {
+   "id": 124,
+   "name": "Samara",
+   "date": "16 April 2023",
+   "stars": 5,
+   "text": "Thudi is so very kind and helpful",
+   "featured": 0
+  },
+  {
+   "id": 125,
+   "name": "Fatima",
+   "date": "10 April 2023",
+   "stars": 5,
+   "text": "Thudi literally gets me through the toughest times in my life from career all the way down to relationships.",
+   "featured": 0
+  },
+  {
+   "id": 126,
+   "name": "Yananiso",
+   "date": "3 April 2023",
+   "stars": 5,
+   "text": "Thudi is always truthful, but no matter what the reading I always feel a sense of calmness after",
+   "featured": 0
+  },
+  {
+   "id": 127,
+   "name": "Thabisile X.",
+   "date": "2 April 2023",
+   "stars": 5,
+   "text": "Ibahd a beautiful session. she told me exactly what was happening in my life. she is very kind over the phone; her voice is welcoming",
+   "featured": 0
+  },
+  {
+   "id": 128,
+   "name": "Xolawubo",
+   "date": "28 March 2023",
+   "stars": 5,
+   "text": "Thudi will tell you like it is, straight up",
+   "featured": 0
+  },
+  {
+   "id": 129,
+   "name": "Chidinma",
+   "date": "27 March 2023",
+   "stars": 5,
+   "text": "Thudi helped me out and gave me clarity",
+   "featured": 0
+  },
+  {
+   "id": 130,
+   "name": "Hasina",
+   "date": "26 March 2023",
+   "stars": 5,
+   "text": "Thudi is very thorough and has a kind and caring approach",
+   "featured": 0
+  },
+  {
+   "id": 131,
+   "name": "Tadla",
+   "date": "14 March 2023",
+   "stars": 5,
+   "text": "I love every minute of our conversation. Thank you Thudi",
+   "featured": 0
+  },
+  {
+   "id": 132,
+   "name": "Yewande",
+   "date": "12 March 2023",
+   "stars": 5,
+   "text": "Thank you Thudi, great reading, gave me a lot if insight",
+   "featured": 0
+  },
+  {
+   "id": 133,
+   "name": "Thabile",
+   "date": "11 March 2023",
+   "stars": 5,
+   "text": "I had a wonderful session. She is highly gifted. I am still amazed that she picked out my deepest secrets of life. Thank you for showing the right path. Wow!",
+   "featured": 0
+  },
+  {
+   "id": 134,
+   "name": "Chidinma",
+   "date": "7 March 2023",
+   "stars": 5,
+   "text": "Thudi was very helpful and I feel I had a learning experience",
+   "featured": 0
+  },
+  {
+   "id": 135,
+   "name": "Sura",
+   "date": "5 March 2023",
+   "stars": 5,
+   "text": "Thudi was absolutely amazing!",
+   "featured": 0
+  },
+  {
+   "id": 136,
+   "name": "Vera",
+   "date": "27 February 2023",
+   "stars": 5,
+   "text": "Thudi is always honest and kind with what she sees",
+   "featured": 0
+  },
+  {
+   "id": 137,
+   "name": "Imka",
+   "date": "23 February 2023",
+   "stars": 5,
+   "text": "Thudi has always been able to pick up on what’s going on around me",
+   "featured": 0
+  },
+  {
+   "id": 138,
+   "name": "Lungelo",
+   "date": "21 February 2023",
+   "stars": 5,
+   "text": "Thudi is very direct, and knows things. I felt safe opening up",
+   "featured": 0
+  },
+  {
+   "id": 139,
+   "name": "Farid",
+   "date": "19 February 2023",
+   "stars": 5,
+   "text": "Thudi is so gifted. i was shocked of how good she is",
+   "featured": 0
+  },
+  {
+   "id": 140,
+   "name": "Nthabeleng",
+   "date": "15 February 2023",
+   "stars": 5,
+   "text": "Thokoza Gogo, still blown away by your reading. Light and love",
+   "featured": 0
+  },
+  {
+   "id": 141,
+   "name": "Nafuna",
+   "date": "12 February 2023",
+   "stars": 5,
+   "text": "Thudi confirmed things I knew and what to expect",
+   "featured": 0
+  },
+  {
+   "id": 142,
+   "name": "Mmatshepe M.",
+   "date": "8 February 2023",
+   "stars": 5,
+   "text": "Thank you Thudi. Time was too short, but I'm happy with reading",
+   "featured": 0
+  },
+  {
+   "id": 143,
+   "name": "Keitumetse",
+   "date": "7 February 2023",
+   "stars": 5,
+   "text": "Thudi gave the most beautiful advice and guidance",
+   "featured": 0
+  },
+  {
+   "id": 144,
+   "name": "Hiwot",
+   "date": "5 February 2023",
+   "stars": 5,
+   "text": "Thudi was on point with my reading",
+   "featured": 0
+  },
+  {
+   "id": 145,
+   "name": "Yananiso",
+   "date": "30 January 2023",
+   "stars": 5,
+   "text": "Thudi is great. Love her honesty.",
+   "featured": 0
+  },
+  {
+   "id": 146,
+   "name": "Rufaro",
+   "date": "24 January 2023",
+   "stars": 5,
+   "text": "Thudi does not mince words and I really appreciate it",
+   "featured": 0
+  },
+  {
+   "id": 147,
+   "name": "Musoke",
+   "date": "22 January 2023",
+   "stars": 5,
+   "text": "Thudi is fast and genuine!",
+   "featured": 0
+  },
+  {
+   "id": 148,
+   "name": "Duduzile",
+   "date": "17 January 2023",
+   "stars": 5,
+   "text": "Thudi is my favorite of all time",
+   "featured": 0
+  },
+  {
+   "id": 149,
+   "name": "Tumaini",
+   "date": "15 January 2023",
+   "stars": 5,
+   "text": "I have So much faith in her readings. Thank you Thudi",
+   "featured": 0
+  },
+  {
+   "id": 150,
+   "name": "Nafuna",
+   "date": "10 January 2023",
+   "stars": 5,
+   "text": "Thudi has a beautiful energy about her that helps you understand what’s bothering you with your life and gives light to move forward",
+   "featured": 0
+  },
+  {
+   "id": 151,
+   "name": "Keitumetse",
+   "date": "8 January 2023",
+   "stars": 5,
+   "text": "Thudi was truly nice, so kind and so reassuring",
+   "featured": 0
+  },
+  {
+   "id": 152,
+   "name": "Omari",
+   "date": "4 January 2023",
+   "stars": 5,
+   "text": "Thudi is absolutely amazing!",
+   "featured": 0
+  },
+  {
+   "id": 153,
+   "name": "Asatira",
+   "date": "2 January 2023",
+   "stars": 5,
+   "text": "Thudi is straight forward and doesn’t sugar coat!",
+   "featured": 0
+  },
+  {
+   "id": 154,
+   "name": "Retha",
+   "date": "28 December 2022",
+   "stars": 5,
+   "text": "Thudi was spot on with my opportunity areas with dating",
+   "featured": 0
+  },
+  {
+   "id": 155,
+   "name": "Kamaria",
+   "date": "26 December 2022",
+   "stars": 5,
+   "text": "My reading with Thudi was phenomenal",
+   "featured": 0
+  },
+  {
+   "id": 156,
+   "name": "Niari",
+   "date": "21 December 2022",
+   "stars": 5,
+   "text": "Thudi is straight to the point and holds nothing back.",
+   "featured": 0
+  },
+  {
+   "id": 157,
+   "name": "Urbi",
+   "date": "15 December 2022",
+   "stars": 5,
+   "text": "I had a great time talking to Thudi. She picked up on my situation right away and provided great insight",
+   "featured": 0
+  },
+  {
+   "id": 158,
+   "name": "Nompilo",
+   "date": "14 December 2022",
+   "stars": 5,
+   "text": "What a warm and gifted person, I definitely need more time. The accuracy, I was dumbfounded.",
+   "featured": 0
+  },
+  {
+   "id": 159,
+   "name": "Nandipha",
+   "date": "13 December 2022",
+   "stars": 5,
+   "text": "Thudi is definitely gifted. You must call her",
+   "featured": 0
+  },
+  {
+   "id": 160,
+   "name": "Jamala",
+   "date": "8 December 2022",
+   "stars": 5,
+   "text": "Thudi is an awesome person. Very kind and sweet.",
+   "featured": 0
+  },
+  {
+   "id": 161,
+   "name": "Imka",
+   "date": "6 December 2022",
+   "stars": 5,
+   "text": "Thudi is one of the best! She calls it every time for me.",
+   "featured": 0
+  },
+  {
+   "id": 162,
+   "name": "Lindiwe",
+   "date": "4 December 2022",
+   "stars": 5,
+   "text": "Thudi definitely see it as to how it really is",
+   "featured": 0
+  },
+  {
+   "id": 163,
+   "name": "Thandeka",
+   "date": "30 November 2022",
+   "stars": 5,
+   "text": "I loved my reading with Thudi and I feel more confident about my future.",
+   "featured": 0
+  },
+  {
+   "id": 164,
+   "name": "Nafuna",
+   "date": "27 November 2022",
+   "stars": 5,
+   "text": "Thudi didn’t need any info, but she was so in tuned with me",
+   "featured": 0
+  },
+  {
+   "id": 165,
+   "name": "Raniesha",
+   "date": "23 November 2022",
+   "stars": 5,
+   "text": "Thudi is absolutely the best in her game!",
+   "featured": 0
+  },
+  {
+   "id": 166,
+   "name": "Mandisa",
+   "date": "21 November 2022",
+   "stars": 5,
+   "text": "Thudi was able to calm, guide and provide information",
+   "featured": 0
+  },
+  {
+   "id": 167,
+   "name": "Vera",
+   "date": "16 November 2022",
+   "stars": 5,
+   "text": "Thudi was very sweet, soft, and lovely to talk to.",
+   "featured": 0
+  },
+  {
+   "id": 168,
+   "name": "Oluchi",
+   "date": "14 November 2022",
+   "stars": 5,
+   "text": "Thudi is an honest reader and such a lovely person.",
+   "featured": 0
+  },
+  {
+   "id": 169,
+   "name": "Valery",
+   "date": "10 November 2022",
+   "stars": 5,
+   "text": "Thudi has never failed me, and I would recommend her to all.",
+   "featured": 0
+  },
+  {
+   "id": 170,
+   "name": "Yakeera",
+   "date": "7 November 2022",
+   "stars": 5,
+   "text": "Thudi understands how to tap into one’s creative abilities. That is incredible!",
+   "featured": 0
+  },
+  {
+   "id": 171,
+   "name": "Rufaro",
+   "date": "3 November 2022",
+   "stars": 5,
+   "text": "Great reading. Thudi made it clear and I understand",
+   "featured": 0
+  },
+  {
+   "id": 172,
+   "name": "Isis",
+   "date": "31 October 2022",
+   "stars": 5,
+   "text": "Thusi is very honest. Felt like I was talking to my big sister.",
+   "featured": 0
+  },
+  {
+   "id": 173,
+   "name": "Liseli",
+   "date": "27 October 2022",
+   "stars": 5,
+   "text": "Thudi helped me see things clearer",
+   "featured": 0
+  },
+  {
+   "id": 174,
+   "name": "Johannes",
+   "date": "23 October 2022",
+   "stars": 5,
+   "text": "Thudi helps me to be strong and understands me",
+   "featured": 0
+  },
+  {
+   "id": 175,
+   "name": "Duduzile",
+   "date": "19 October 2022",
+   "stars": 5,
+   "text": "Thudi is great at what she does! I would highly recommend her",
+   "featured": 0
+  },
+  {
+   "id": 176,
+   "name": "Tabia",
+   "date": "13 October 2022",
+   "stars": 5,
+   "text": "Thudi always says it how it is instead of I want it to be.",
+   "featured": 0
+  },
+  {
+   "id": 177,
+   "name": "Tau",
+   "date": "11 October 2022",
+   "stars": 5,
+   "text": "Thudi is brilliant.",
+   "featured": 0
+  },
+  {
+   "id": 178,
+   "name": "Lewa",
+   "date": "3 October 2022",
+   "stars": 5,
+   "text": "Thudi makes so much sense.",
+   "featured": 0
+  },
+  {
+   "id": 179,
+   "name": "Ujana",
+   "date": "29 September 2022",
+   "stars": 5,
+   "text": "Thudi really helped me get answers to all of my questions",
+   "featured": 0
+  },
+  {
+   "id": 180,
+   "name": "Nhlanhla",
+   "date": "29 September 2022",
+   "stars": 5,
+   "text": "Yooo I'm so happy I consulted, you gave me the missing piece of my puzzle. You are one of the best, no jika jika but straight to the point.",
+   "featured": 0
+  },
+  {
+   "id": 181,
+   "name": "Mbali",
+   "date": "22 September 2022",
+   "stars": 5,
+   "text": "Thudi got right into it and I really liked that!",
+   "featured": 0
+  },
+  {
+   "id": 182,
+   "name": "Zanele T.",
+   "date": "20 September 2022",
+   "stars": 5,
+   "text": "Amazing session had, opened my eyes to so much that is happening in my life. Looking forward to booking more sessions",
+   "featured": 0
+  },
+  {
+   "id": 183,
+   "name": "Ada",
+   "date": "20 September 2022",
+   "stars": 5,
+   "text": "l will surely do what you have told me. I trust you",
+   "featured": 0
+  },
+  {
+   "id": 184,
+   "name": "Buyiswa",
+   "date": "17 September 2022",
+   "stars": 5,
+   "text": "The session was very fruitful, Gogo Thudi is my favourite Gogo she explains everything clearly. May God bless her abundantly.",
+   "featured": 0
+  },
+  {
+   "id": 185,
+   "name": "Kefiloe",
+   "date": "14 September 2022",
+   "stars": 5,
+   "text": "She's good and knowns what she's doing",
+   "featured": 0
+  },
+  {
+   "id": 186,
+   "name": "Charlize",
+   "date": "14 September 2022",
+   "stars": 5,
+   "text": "Thudi was so accurate and knew exactly what I was going through",
+   "featured": 0
+  },
+  {
+   "id": 187,
+   "name": "Lethabo",
+   "date": "12 September 2022",
+   "stars": 5,
+   "text": "Thudi was extremely detailed in her responses. I appreciated that.",
+   "featured": 0
+  },
+  {
+   "id": 188,
+   "name": "Hasina",
+   "date": "7 September 2022",
+   "stars": 5,
+   "text": "Thudi touched on some things that I have going on in my life",
+   "featured": 0
+  },
+  {
+   "id": 189,
+   "name": "Onkarabile",
+   "date": "5 September 2022",
+   "stars": 5,
+   "text": "Thudi connects quickly to me and my situation every time",
+   "featured": 0
+  },
+  {
+   "id": 190,
+   "name": "Joshua",
+   "date": "1 September 2022",
+   "stars": 5,
+   "text": "Thudi connects with you by getting a general sense of your feelings and current situation and it's amazing",
+   "featured": 0
+  },
+  {
+   "id": 191,
+   "name": "Phenyo",
+   "date": "30 August 2022",
+   "stars": 5,
+   "text": "Wholly Molly! Mrs Thudi has the highest capabilities and no one else can compare to what she is capable of",
+   "featured": 0
+  },
+  {
+   "id": 192,
+   "name": "Masego",
+   "date": "28 August 2022",
+   "stars": 5,
+   "text": "Thudi knows the best way to deal with my problem. Amazing",
+   "featured": 0
+  },
+  {
+   "id": 193,
+   "name": "Edwina",
+   "date": "24 August 2022",
+   "stars": 5,
+   "text": "Thudi tunes in right away and accurately points out whether I should trust my gut feeling or if I was just over thinking it.",
+   "featured": 0
+  },
+  {
+   "id": 194,
+   "name": "Palesa",
+   "date": "21 August 2022",
+   "stars": 5,
+   "text": "Thudi is so talented and always wants things to work out for my highest good.",
+   "featured": 0
+  },
+  {
+   "id": 195,
+   "name": "Phenyo",
+   "date": "17 August 2022",
+   "stars": 5,
+   "text": "Thudi is my go to when I need the truth",
+   "featured": 0
+  },
+  {
+   "id": 196,
+   "name": "Dahable",
+   "date": "15 August 2022",
+   "stars": 5,
+   "text": "Thudi is an excellent communicator. She will clarify anything you need to know",
+   "featured": 0
+  },
+  {
+   "id": 197,
+   "name": "Zodwa",
+   "date": "11 August 2022",
+   "stars": 5,
+   "text": "Thudi has been exceptional in giving me career advice",
+   "featured": 0
+  },
+  {
+   "id": 198,
+   "name": "Jasira",
+   "date": "9 August 2022",
+   "stars": 5,
+   "text": "Thudi is so pleasant and tunes in to others so naturally",
+   "featured": 0
+  },
+  {
+   "id": 199,
+   "name": "Yewande",
+   "date": "7 August 2022",
+   "stars": 5,
+   "text": "Thudi answered questions directly with kindness",
+   "featured": 0
+  },
+  {
+   "id": 200,
+   "name": "Lerato",
+   "date": "7 August 2022",
+   "stars": 5,
+   "text": "I got all the clarity I needed such a wonderful soul ausi thudi",
+   "featured": 0
+  },
+  {
+   "id": 201,
+   "name": "Siviwe",
+   "date": "4 August 2022",
+   "stars": 5,
+   "text": "Very energetic loves what she does and on point my favorite",
+   "featured": 0
+  },
+  {
+   "id": 202,
+   "name": "Keitumetse",
+   "date": "3 August 2022",
+   "stars": 5,
+   "text": "Thudi was on target with everything she revealed to me in my reading",
+   "featured": 0
+  },
+  {
+   "id": 203,
+   "name": "Fabunni",
+   "date": "31 July 2022",
+   "stars": 5,
+   "text": "Thudi goes straight the point and uses your time wisely to get the answers you're looking for",
+   "featured": 0
+  },
+  {
+   "id": 204,
+   "name": "Yakeera",
+   "date": "27 July 2022",
+   "stars": 5,
+   "text": "Thudi is very thoughtful and not brutal.",
+   "featured": 0
+  },
+  {
+   "id": 205,
+   "name": "Zama",
+   "date": "24 July 2022",
+   "stars": 5,
+   "text": "Thudi is one of my favorites",
+   "featured": 0
+  },
+  {
+   "id": 206,
+   "name": "Puleng",
+   "date": "20 July 2022",
+   "stars": 5,
+   "text": "When you hear her voice and how welcoming she is, it’s like a relief of all your concerns",
+   "featured": 0
+  },
+  {
+   "id": 207,
+   "name": "Chimamanda",
+   "date": "17 July 2022",
+   "stars": 5,
+   "text": "Thudi is helping me grow and develop myself",
+   "featured": 0
+  },
+  {
+   "id": 208,
+   "name": "Khethiwe",
+   "date": "12 July 2022",
+   "stars": 5,
+   "text": "Found out the truth and glad I spoke to Thudi",
+   "featured": 0
+  },
+  {
+   "id": 209,
+   "name": "Tshepo",
+   "date": "11 July 2022",
+   "stars": 5,
+   "text": "Exceptional!",
+   "featured": 0
+  },
+  {
+   "id": 210,
+   "name": "Konjit",
+   "date": "7 July 2022",
+   "stars": 5,
+   "text": "Thudi is a great and compassionate guide",
+   "featured": 0
+  },
+  {
+   "id": 211,
+   "name": "Nevaeh",
+   "date": "4 July 2022",
+   "stars": 5,
+   "text": "Thudi is always informative and right on target",
+   "featured": 0
+  },
+  {
+   "id": 212,
+   "name": "Saahana",
+   "date": "30 June 2022",
+   "stars": 5,
+   "text": "Thudi gave me advice about work and other stuff",
+   "featured": 0
+  },
+  {
+   "id": 213,
+   "name": "Yewande",
+   "date": "28 June 2022",
+   "stars": 5,
+   "text": "Thank you Thudi for always helping me and guiding me in the right direction.",
+   "featured": 0
+  },
+  {
+   "id": 214,
+   "name": "Yakeera",
+   "date": "26 June 2022",
+   "stars": 5,
+   "text": "I turn to Thudi when I need an assessment of energy or vibration of a situation or person",
+   "featured": 0
+  },
+  {
+   "id": 215,
+   "name": "Koketso",
+   "date": "22 June 2022",
+   "stars": 5,
+   "text": "Wow!!! Wow!! Wow!!! Absolutely life-changing I thoroughly enjoyed my session with Thudi, I need more and more sessions. Thank you so much! Thokoza Gogo",
+   "featured": 0
+  },
+  {
+   "id": 216,
+   "name": "Gugulethu",
+   "date": "22 June 2022",
+   "stars": 5,
+   "text": "Thudi has such a sweet energy and she accurately read the situation and person involved.",
+   "featured": 0
+  },
+  {
+   "id": 217,
+   "name": "Hibo",
+   "date": "19 June 2022",
+   "stars": 5,
+   "text": "As usual, Thudi was so sweet and reassuring",
+   "featured": 0
+  },
+  {
+   "id": 218,
+   "name": "Hlengiwe",
+   "date": "14 June 2022",
+   "stars": 5,
+   "text": "As far as her intuition, Thudi was spot on",
+   "featured": 0
+  },
+  {
+   "id": 219,
+   "name": "Fahari",
+   "date": "9 June 2022",
+   "stars": 5,
+   "text": "Thudi has a unique reading style but it was great",
+   "featured": 0
+  },
+  {
+   "id": 220,
+   "name": "Winta",
+   "date": "6 June 2022",
+   "stars": 5,
+   "text": "Thudi helped me see the connections that were missing in my view",
+   "featured": 0
+  },
+  {
+   "id": 221,
+   "name": "Sbusiso",
+   "date": "31 May 2022",
+   "stars": 5,
+   "text": "Thudi is truly blessed. She is kind and compassionate",
+   "featured": 0
+  },
+  {
+   "id": 222,
+   "name": "Dahable",
+   "date": "25 May 2022",
+   "stars": 5,
+   "text": "Thank you Thudi for helping me out today. You are a blessing",
+   "featured": 0
+  },
+  {
+   "id": 223,
+   "name": "Remo",
+   "date": "24 May 2022",
+   "stars": 5,
+   "text": "It was an eye opening experience. I wish I had more time.",
+   "featured": 0
+  },
+  {
+   "id": 224,
+   "name": "Rethabile",
+   "date": "22 May 2022",
+   "stars": 5,
+   "text": "Thudi is straightforward and brings to the surface what needs to be said",
+   "featured": 0
+  },
+  {
+   "id": 225,
+   "name": "Rethabile",
+   "date": "17 May 2022",
+   "stars": 5,
+   "text": "Thudi read right into my situation. She is great",
+   "featured": 0
+  },
+  {
+   "id": 226,
+   "name": "Adamma",
+   "date": "12 May 2022",
+   "stars": 5,
+   "text": "Thudi really cares about me and my wellbeing",
+   "featured": 0
+  },
+  {
+   "id": 227,
+   "name": "Nkosazana",
+   "date": "9 May 2022",
+   "stars": 5,
+   "text": "Thudi was so very pleasant to deal with.",
+   "featured": 0
+  },
+  {
+   "id": 228,
+   "name": "Adebola",
+   "date": "3 May 2022",
+   "stars": 5,
+   "text": "The advice I got from Thudi was invaluable.",
+   "featured": 0
+  },
+  {
+   "id": 229,
+   "name": "Nandipha",
+   "date": "28 April 2022",
+   "stars": 5,
+   "text": "Thank you Thudi for sharing your Light. :-)",
+   "featured": 0
+  },
+  {
+   "id": 230,
+   "name": "Esi",
+   "date": "24 April 2022",
+   "stars": 5,
+   "text": "Thudi has a way to put my mind at ease. She is special",
+   "featured": 0
+  },
+  {
+   "id": 231,
+   "name": "Mokgadi R.",
+   "date": "23 April 2022",
+   "stars": 5,
+   "text": "I am very relieved and satisfied with my reading. Things are more clearer now. Thank you very much.",
+   "featured": 0
+  },
+  {
+   "id": 232,
+   "name": "Zukiswa",
+   "date": "18 April 2022",
+   "stars": 5,
+   "text": "Thank you so much Thudi. I truly appreciated every minute.",
+   "featured": 0
+  },
+  {
+   "id": 233,
+   "name": "Zukiswa",
+   "date": "18 April 2022",
+   "stars": 5,
+   "text": "Thank you Thudi. I definitely need more time with you.",
+   "featured": 0
+  },
+  {
+   "id": 234,
+   "name": "Lethabo",
+   "date": "18 April 2022",
+   "stars": 5,
+   "text": "Thudi is Compassionate and also quick",
+   "featured": 0
+  },
+  {
+   "id": 235,
+   "name": "Dahable",
+   "date": "13 April 2022",
+   "stars": 5,
+   "text": "Thudi makes me feel better about my decisions.",
+   "featured": 0
+  },
+  {
+   "id": 236,
+   "name": "Tau",
+   "date": "11 April 2022",
+   "stars": 5,
+   "text": "I would read with her anytime. Thudi is awesome",
+   "featured": 0
+  },
+  {
+   "id": 237,
+   "name": "Tahiya",
+   "date": "7 April 2022",
+   "stars": 5,
+   "text": "Thudie is great. Loved her amazing kindness and honesty",
+   "featured": 0
+  },
+  {
+   "id": 238,
+   "name": "Lydia",
+   "date": "6 April 2022",
+   "stars": 5,
+   "text": "The reading was very good straight and forward.thank u Gogo Thudi",
+   "featured": 0
+  },
+  {
+   "id": 239,
+   "name": "Buhle",
+   "date": "4 April 2022",
+   "stars": 5,
+   "text": "Thudi is so sweet and kind. I just love are sessions",
+   "featured": 0
+  },
+  {
+   "id": 240,
+   "name": "Tumie",
+   "date": "1 April 2022",
+   "stars": 5,
+   "text": "Such a vibrant soul... so honest and positive!! I love gogo's energy, it left me wanting more ...",
+   "featured": 0
+  },
+  {
+   "id": 241,
+   "name": "Judas",
+   "date": "31 March 2022",
+   "stars": 5,
+   "text": "Thokoza gogo i have calling but something is blocking my gift help me please",
+   "featured": 0
+  },
+  {
+   "id": 242,
+   "name": "Seghen",
+   "date": "29 March 2022",
+   "stars": 5,
+   "text": "So much meaning in one conversation. Recommended",
+   "featured": 0
+  },
+  {
+   "id": 243,
+   "name": "Sharon",
+   "date": "29 March 2022",
+   "stars": 5,
+   "text": "Gogo within a minute was able to pick up my issues and provide solutions for me. Was also able to give great clarity on my spiritual journey. I thank our guides for connecting us together Great session indeed.",
+   "featured": 5
+  },
+  {
+   "id": 244,
+   "name": "Adie",
+   "date": "28 March 2022",
+   "stars": 5,
+   "text": "I felt like a heavy load has been lifted off my shoulders. She was spot on and gave clarity on aspect of my life. Thokoza gogo",
+   "featured": 0
+  },
+  {
+   "id": 245,
+   "name": "Bolade",
+   "date": "27 March 2022",
+   "stars": 5,
+   "text": "I love how she hears the spirit's messages. Amazing",
+   "featured": 0
+  },
+  {
+   "id": 246,
+   "name": "Amani",
+   "date": "23 March 2022",
+   "stars": 5,
+   "text": "Thudi is helping me interpret my past life discoveries and understand the deep spiritual meanings",
+   "featured": 0
+  },
+  {
+   "id": 247,
+   "name": "Terema",
+   "date": "20 March 2022",
+   "stars": 5,
+   "text": "Thudie presented me with clarity. Great session",
+   "featured": 0
+  },
+  {
+   "id": 248,
+   "name": "Mbuyiselo",
+   "date": "18 March 2022",
+   "stars": 5,
+   "text": "Everything you touched on made sense And I'm happy and appreciate what you said Thokoza gogo",
+   "featured": 0
+  },
+  {
+   "id": 249,
+   "name": "Ntombifuthi",
+   "date": "15 March 2022",
+   "stars": 5,
+   "text": "Thudie is highly credible and she has an amazing ability to being very honest, intuitive and kind",
+   "featured": 0
+  },
+  {
+   "id": 250,
+   "name": "Annika",
+   "date": "13 March 2022",
+   "stars": 5,
+   "text": "Thudi picked up a lot of things I never mentioned. SHe knew the next project I was working on. Thudie is an amazing person with an amazing gift! Thank you so much!",
+   "featured": 0
+  },
+  {
+   "id": 251,
+   "name": "Zodwa",
+   "date": "8 March 2022",
+   "stars": 5,
+   "text": "Thudi is the healer i needed. great power joined with guidance.",
+   "featured": 0
+  },
+  {
+   "id": 252,
+   "name": "Sarah",
+   "date": "3 March 2022",
+   "stars": 5,
+   "text": "Thank you Thudi for showing me the true purpose of my life",
+   "featured": 0
+  },
+  {
+   "id": 253,
+   "name": "Azola",
+   "date": "10 February 2022",
+   "stars": 5,
+   "text": "She gave me a clear indication of what needs to be done and she is spot on as she told me most of the things I knew about...I now know of the first steps that needs to be taken as she gave me the best advice ever! Qhubeka usenza umsebenzi omhle gogo",
+   "featured": 2
+  },
+  {
+   "id": 254,
+   "name": "Tumi",
+   "date": "6 February 2022",
+   "stars": 5,
+   "text": "Jumped to my situation immediately, she is very good, great adviser too.",
+   "featured": 0
+  },
+  {
+   "id": 255,
+   "name": "Matshego",
+   "date": "31 January 2022",
+   "stars": 5,
+   "text": "Thanks Gogo for calming my nerves with the clarity you gave. Am happy I could find closure with some of the questions I had in mind. Thokoza Gogo",
+   "featured": 0
+  },
+  {
+   "id": 256,
+   "name": "Matapelo",
+   "date": "27 January 2022",
+   "stars": 5,
+   "text": "Gogo provided me with soo much clarity and a sense of relief. She was accurate and gently guiding. Camagu",
+   "featured": 0
+  },
+  {
+   "id": 257,
+   "name": "Azwihangwisi",
+   "date": "21 January 2022",
+   "stars": 5,
+   "text": "She immediately jumped into my situation and from that it was a great reading!! Thank you Thudi!",
+   "featured": 0
+  },
+  {
+   "id": 258,
+   "name": "Aaliyah",
+   "date": "10 January 2022",
+   "stars": 5,
+   "text": "Thudi is on point. Connects to the situation quickly and provides great feedback! Thank you",
+   "featured": 0
+  },
+  {
+   "id": 259,
+   "name": "Ntshiwa M.",
+   "date": "5 January 2022",
+   "stars": 5,
+   "text": "God thanks for people like her in our Iives she is a light that shows path to a lot of us in the midst of the unknown",
+   "featured": 0
+  },
+  {
+   "id": 260,
+   "name": "Andi",
+   "date": "2 January 2022",
+   "stars": 5,
+   "text": "Gogo Thudi is always on point. God bless .",
+   "featured": 0
+  },
+  {
+   "id": 261,
+   "name": "Raymond",
+   "date": "1 January 2022",
+   "stars": 5,
+   "text": "I truly appreciate the consultation. Our time was extremely short indeed but i will definitely come back for more from you. You're so clear and spot on.",
+   "featured": 0
+  },
+  {
+   "id": 262,
+   "name": "Mokgaetsi",
+   "date": "31 December 2021",
+   "stars": 5,
+   "text": "Straight to the point and very clear",
+   "featured": 0
+  },
+  {
+   "id": 263,
+   "name": "Princess T.",
+   "date": "26 December 2021",
+   "stars": 5,
+   "text": "She was clear and very helpful… am grateful",
+   "featured": 0
+  },
+  {
+   "id": 264,
+   "name": "Kholofelo",
+   "date": "18 December 2021",
+   "stars": 5,
+   "text": "Thudi was spot on , im happy about how everything went . Can't wait for another reading with her again. Thank you so much gogo.",
+   "featured": 0
+  },
+  {
+   "id": 265,
+   "name": "Regi",
+   "date": "10 December 2021",
+   "stars": 5,
+   "text": "Thudi, is God sent. May God bless her with abundance. My reading went well and she was accurate. Thank you so much Gogo",
+   "featured": 0
+  },
+  {
+   "id": 266,
+   "name": "Ronewa",
+   "date": "8 December 2021",
+   "stars": 5,
+   "text": "Thudi, was on point. I will definently come back for more and also refer others to SA psychics. Your gift is impeccable Gogo",
+   "featured": 0
+  },
+  {
+   "id": 267,
+   "name": "Makhotso",
+   "date": "7 December 2021",
+   "stars": 5,
+   "text": "She is the best, I feel so much better after. talking to her and she was accurate with everything. Thank u Gogo",
+   "featured": 0
+  },
+  {
+   "id": 268,
+   "name": "Mapaseka",
+   "date": "7 December 2021",
+   "stars": 5,
+   "text": "Oh wow I'm just out of words , ka leboha Gogo. Time though",
+   "featured": 0
+  },
+  {
+   "id": 269,
+   "name": "Sindiswa",
+   "date": "7 December 2021",
+   "stars": 5,
+   "text": "I had such a great experience, all that was said was so accurate",
+   "featured": 0
+  },
+  {
+   "id": 270,
+   "name": "Mosidi",
+   "date": "1 December 2021",
+   "stars": 5,
+   "text": "Thanks Gogo you where on point. Short reading with loads of truth about me. Thokoza Gogo",
+   "featured": 0
+  },
+  {
+   "id": 271,
+   "name": "Jabulile",
+   "date": "1 December 2021",
+   "stars": 5,
+   "text": "Enjoyed my session, Thudi was on point.",
+   "featured": 0
+  },
+  {
+   "id": 272,
+   "name": "Lindiwe K.",
+   "date": "30 November 2021",
+   "stars": 5,
+   "text": "Thank you Thudi for such a mind blowing reading! I am still in awe. Thank you for your guidance and the nuggets of wisdom. The reading was short, but packed with accuracy & insight. Straight to the point.",
+   "featured": 0
+  },
+  {
+   "id": 273,
+   "name": "Simphiwe",
+   "date": "26 November 2021",
+   "stars": 5,
+   "text": "Thank you Thudi, for consistently providing insight to help me think more positively about myself, my situation and my future. I value the time and guidance you have given me. Your clear and direct insights are exactly what I need to stay on track in this human experience. Much love & respect!",
+   "featured": 6
+  },
+  {
+   "id": 274,
+   "name": "Simphiwe",
+   "date": "24 November 2021",
+   "stars": 5,
+   "text": "Amazing. She gave me guidance and much needed help",
+   "featured": 0
+  },
+  {
+   "id": 275,
+   "name": "Paul",
+   "date": "22 November 2021",
+   "stars": 5,
+   "text": "AMAZING like always!! Definitely recommend and I will continue chatting with Thudi in the future.",
+   "featured": 0
+  },
+  {
+   "id": 276,
+   "name": "Thomas",
+   "date": "12 November 2021",
+   "stars": 5,
+   "text": "I’ve been talking to Thudi for a while and she is such an awesome person, she is my angel! Every minute is totally worthy with her. I would talk to her every day",
+   "featured": 0
+  },
+  {
+   "id": 277,
+   "name": "Sipho",
+   "date": "10 November 2021",
+   "stars": 5,
+   "text": "Amazing session, thanks for hearing me out !",
+   "featured": 0
+  },
+  {
+   "id": 278,
+   "name": "Lulama",
+   "date": "7 November 2021",
+   "stars": 5,
+   "text": "Gogo is great, very very honest. Straight to the point, God bless",
+   "featured": 0
+  },
+  {
+   "id": 279,
+   "name": "Anonymous",
+   "date": "24 October 2021",
+   "stars": 5,
+   "text": "She is the best, truly gifted, picked up on my situation right away and very spot on, you will not regret it",
+   "featured": 0
+  },
+  {
+   "id": 280,
+   "name": "Masego",
+   "date": "22 October 2021",
+   "stars": 5,
+   "text": "She is very good and straight forward. Thank you so much for your gift",
+   "featured": 0
+  },
+  {
+   "id": 281,
+   "name": "Alinafe",
+   "date": "20 October 2021",
+   "stars": 5,
+   "text": "She picked up on my situation right away and saw what I been feeling and seen as well. Thank you!",
+   "featured": 0
+  },
+  {
+   "id": 282,
+   "name": "Anonymous",
+   "date": "15 October 2021",
+   "stars": 5,
+   "text": "Amen Thudi, Thank you for your guidance, May God increase you .",
+   "featured": 0
+  },
+  {
+   "id": 283,
+   "name": "Sinazo N.",
+   "date": "22 September 2021",
+   "stars": 5,
+   "text": "Thank you so much Thudi for my reading. All that you said has given me a picture of what I need to do. I will humbly do as you said and stay in prayer.",
+   "featured": 0
+  },
+  {
+   "id": 284,
+   "name": "Malik",
+   "date": "20 September 2021",
+   "stars": 5,
+   "text": "She's the best.",
+   "featured": 0
+  },
+  {
+   "id": 285,
+   "name": "Imka",
+   "date": "14 September 2021",
+   "stars": 5,
+   "text": "She explained everything that's going on in my relationship and aligned with everyone who have given me a reading in the past.",
+   "featured": 0
+  },
+  {
+   "id": 286,
+   "name": "Nthabiseng M.",
+   "date": "8 September 2021",
+   "stars": 5,
+   "text": "i have been confused about something for a very long time thank You Thudi for helping me to put the confusion to an end. you are the best",
+   "featured": 0
+  },
+  {
+   "id": 287,
+   "name": "Monki",
+   "date": "5 September 2021",
+   "stars": 5,
+   "text": "What an insightful and on point reading! I truly appreciate your help. I definitely recommend you.",
+   "featured": 0
+  },
+  {
+   "id": 288,
+   "name": "Vicky",
+   "date": "2 September 2021",
+   "stars": 5,
+   "text": "She's straightforward and got right into the main issues. She's very accurate and honest, very easy to speak to and gives advice and guides on problem solving.",
+   "featured": 0
+  },
+  {
+   "id": 289,
+   "name": "Siya",
+   "date": "27 August 2021",
+   "stars": 5,
+   "text": "She is lovely and a very gifted individual. Goes straight to the point. She provided clarity on a lot of issues and gave me advice on how to deal with everything.",
+   "featured": 0
+  },
+  {
+   "id": 290,
+   "name": "Sbambo",
+   "date": "23 August 2021",
+   "stars": 5,
+   "text": "On point,many things I have already been thinking about were confirmed",
+   "featured": 0
+  },
+  {
+   "id": 291,
+   "name": "Shelley",
+   "date": "18 August 2021",
+   "stars": 5,
+   "text": "She is awesome!",
+   "featured": 0
+  }
+ ]
+}

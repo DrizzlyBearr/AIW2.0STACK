@@ -3,8 +3,10 @@
 //   - Gogo Online verified profile: gogoonline.co.za
 //   - SA Psychics profile: sa-psychics.com/GetBusiness/THUDI (291 reviews, Premier Advisor)
 //   - Her Facebook page and Instagram (number, email, address, bio)
-// Reviews are copied word for word from SA Psychics. Emojis removed and surnames shortened
-// to an initial. Get Gogo Thudi's permission before launch (see README).
+// Reviews come from src/reviews.json, generated from data/sa-psychics-reviews.xlsx by
+// scripts/import_reviews.py. Get Gogo Thudi's permission before launch (see README).
+
+import reviewData from './reviews.json'
 
 export const business = {
   name: 'Gogo Thudi',
@@ -34,8 +36,11 @@ export const business = {
   gogoOnlineUrl: 'https://gogoonline.co.za/healerprofile?id=6a18bec0057773e14bf1258e',
   saPsychicsUrl: 'https://www.sa-psychics.com/GetBusiness/THUDI',
   rating: {
-    count: '291',
-    source: 'SA Psychics',
+    count: String(reviewData.total),
+    average: reviewData.average.toFixed(1),
+    fiveStar: reviewData.fiveStar,
+    since: reviewData.since,
+    source: reviewData.source,
     badges: ['Premier Advisor', 'Top Rated'],
   },
   // Her own words, from her Gogo Online and SA Psychics profiles
@@ -148,27 +153,16 @@ export const steps = [
   },
 ]
 
-// Word for word from her SA Psychics profile, newest first. All rated 5 stars.
+// Featured reviews first (in the order set in scripts/import_reviews.py), then the rest newest first.
 export const reviews = [
-  { name: 'Eleanor S.', date: '17 March 2026', text: 'Excellent service! Thudi is very patient and explains her visions so clearly.' },
-  { name: 'Zelna S.', date: '10 March 2026', text: 'Such an accurate session! She knew exactly what was happening with my daughter’s wedding plans in Franschhoek.' },
-  { name: 'Marinda v.W.', date: '9 March 2026', text: 'Very helpful! Thudi gave me all the answers today.' },
-  { name: 'Gareth G.', date: '20 February 2026', text: 'Thudi provided so much clarity. I feel very empowered to make changes now.' },
-  { name: 'Priscilla', date: '9 February 2026', text: 'Thudi provided so much clarity on my love life. I was confused about my ex, but she helped me see what was truly holding me back from moving forward.' },
-  { name: 'Ofentse', date: '3 February 2026', text: 'Thudi is very professional. I highly recommend a session.' },
-  { name: 'Nkosazana Z.', date: '28 January 2026', text: 'Thudi helped me understand my dreams. So much insight provided during our session!' },
-  { name: 'Ezra', date: '21 January 2026', text: 'Thudi is a true professional. I will definitely be back for another reading.' },
-  { name: 'Sandile', date: '29 December 2025', text: 'Thudi’s reading felt very personal and sincere. She spoke with compassion and understanding, which helped me feel truly heard.' },
-  { name: 'Mandla', date: '28 December 2025', text: 'My reading with Thudi felt incredibly genuine and comforting. She helped me understand emotional layers I hadn’t fully recognized and offered guidance that brought clarity and peace. I left feeling supported and more confident in my path.' },
-  { name: 'Lydia', date: '27 December 2025', text: 'Thudi delivered a reading that felt balanced and thoughtful. Her insight helped me see things clearly without feeling overwhelmed, which I truly appreciated.' },
-  { name: 'Themba', date: '25 December 2025', text: 'Thudi helped me see hope where I had been feeling stuck. Her guidance was encouraging and filled with positive energy.' },
-  { name: 'Autumn', date: '15 December 2025', text: 'A compassionate and non-judgmental space. The reading with Thudi helped me release some old guilt by reframing a past event in a way that made sense for my soul’s growth.' },
-  { name: 'Musa', date: '26 November 2025', text: 'The clarity Thudi provided was exactly what I needed. She explained dynamics I hadn’t noticed and helped me understand what my intuition has been trying to tell me. Her insight brought me so much relief.' },
-  { name: 'Ariel', date: '15 November 2025', text: 'I’ve had many readings, but none like the one with Thudi. She delved into my situation, provided timelines that made sense, and shared spiritual messages that resonated with my soul. Truly gifted!' },
-].map((r) => ({ ...r, source: 'SA Psychics' }))
+  ...reviewData.reviews.filter((r) => r.featured).sort((a, b) => a.featured - b.featured),
+  ...reviewData.reviews.filter((r) => !r.featured),
+]
 
-// Shown first in the reviews section; the rest sit behind "Show all".
-export const featuredReviewCount = 6
+export const featuredReviewCount = reviewData.reviews.filter((r) => r.featured).length
+
+// How many more reviews each "Show more" click reveals.
+export const reviewPageSize = 12
 
 export const faqs = [
   {

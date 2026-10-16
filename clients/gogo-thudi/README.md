@@ -8,7 +8,16 @@ npm run dev      # local preview
 npm run build    # production build in dist/
 ```
 
-All copy and business details live in `src/content.js`. Every line marked `TODO` needs confirming with Gogo Thudi before launch.
+All copy and business details live in `src/content.js`.
+
+Reviews live in `src/reviews.json`, generated from the spreadsheet:
+
+```
+python3 scripts/import_reviews.py                     # uses data/sa-psychics-reviews.xlsx
+python3 scripts/import_reviews.py path/to/new.xlsx    # or a fresh export
+```
+
+The script keeps the text word for word but removes emojis, turns dashes into commas, and cuts surnames to an initial. Featured reviews and exclusions are set at the top of the script. Every line marked `TODO` needs confirming with Gogo Thudi before launch.
 
 ## Research notes (October 2026)
 
@@ -29,8 +38,9 @@ All copy and business details live in `src/content.js`. Every line marked `TODO`
 - Tools: Psychic awareness, Bones, The Holy Bible
 - Abilities: Medium, Psychic, Sangoma, Inyanga, Premier Advisor
 - Bio: traditional healer and prophet. A decade ago chose to develop her gift in bone reading, water healing, counselling and spiritual guidance, and left a conventional education career to do it
-- 15 most recent reviews (15 Nov 2025 to 17 Mar 2026) are on the site, word for word, with emojis removed and surnames cut to an initial
-- One older review (Mthokozisi, 9 Aug 2025) says she predicted a health issue. Left off the site on purpose: health predictions read as medical claims
+- All 291 reviews exported to `data/sa-psychics-reviews.xlsx` (18 Aug 2021 to 17 Mar 2026). 290 are 5 stars, 1 is 4 stars (Lebo M.), average 5.0
+- 290 are on the site. The one left out is Mthokozisi (9 Aug 2025), who says she predicted a health issue that tests later confirmed. That reads as a medical claim
+- The site shows 6 featured reviews first (Chloe, Azola, Jacob, Ayanda, Sharon, Simphiwe), then the rest newest first, 12 at a time
 - A Wayback Machine snapshot exists (9 Nov 2025). It could not be downloaded from the build environment, and the live page is newer anyway
 
 ### Gogo Online ([profile](https://gogoonline.co.za/healerprofile?id=6a18bec0057773e14bf1258e), listed since May 2026)

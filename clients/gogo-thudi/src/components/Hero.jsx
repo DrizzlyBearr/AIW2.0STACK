@@ -48,7 +48,7 @@ export default function Hero() {
               <li>
                 <a href="#reviews" className="flex items-center gap-2 hover:text-ochre-light">
                   <Star className="w-4 h-4 text-ochre fill-ochre" />
-                  {business.rating.count} client reviews on {business.rating.source}
+                  {business.rating.average} from {business.rating.count} reviews on {business.rating.source}
                 </a>
               </li>
               <li className="flex items-center gap-2">
