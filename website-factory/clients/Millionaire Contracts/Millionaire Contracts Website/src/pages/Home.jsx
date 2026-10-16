@@ -90,10 +90,10 @@ const caseResults = [
 
 const featuredGuides = [
   {
-    to: '/what-is-sales-outsourcing',
+    to: '/in-house-vs-outsourced-sales',
     category: 'Start here',
-    title: 'What Is Sales Outsourcing and Is It Right for Your Business?',
-    desc: 'The definition, the four engagement models, and a framework for deciding whether it fits where you are.',
+    title: 'In-House Sales Team vs Outsourced Sales: The Real Cost',
+    desc: 'What one sales hire really costs once salary, ramp and turnover are counted, against an outsourced team.',
   },
   {
     to: '/five-signs-you-need-outsourced-sales',

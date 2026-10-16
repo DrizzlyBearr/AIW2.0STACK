@@ -342,7 +342,7 @@ export default function B2BAppointmentSettingServices() {
             {[
               { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you sign.' },
               { to: '/appointment-setting', label: 'Appointment Setting Services', desc: 'How our appointment setting engagement works.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The models, the fit, and how to decide.' },
+              { to: '/how-it-works', label: 'How It Works', desc: 'How we install a sales function, from the first call to a rep working your pipeline.' },
               { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model with what drives the number.' },
               { to: '/how-much-does-an-sdr-cost', label: 'How Much Does an SDR Cost?', desc: 'The fully loaded number for an in-house rep.' },
               { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'A diagnostic for knowing when to make the move.' },

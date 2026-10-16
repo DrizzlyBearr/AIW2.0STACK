@@ -352,7 +352,7 @@ export default function HowToWriteAColdEmail() {
             {[
               { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Six steps to a repeatable pipeline.' },
               { to: '/b2b-appointment-setting-services', label: 'B2B Appointment Setting Services', desc: 'How qualified meetings get booked and delivered.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'What it means, who it works for, and how to decide.' },
+              { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
               { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'A diagnostic for knowing when to make the move.' },
               { to: '/appointment-setting', label: 'Appointment Setting', desc: 'How we turn outreach into booked meetings.' },
               { to: '/how-it-works', label: 'How It Works', desc: 'The engagement process from first call to booked meetings.' },

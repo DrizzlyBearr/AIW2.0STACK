@@ -331,7 +331,7 @@ export default function LeadGenerationVsAppointmentSetting() {
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               { to: '/b2b-appointment-setting-services', label: 'B2B Appointment Setting Services', desc: 'What appointment setting delivers and how it runs.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The full definition and the four main models.' },
+              { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'What one sales hire really costs against an outsourced team.' },
               { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you sign.' },
               { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model with what drives the number.' },
               { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'A diagnostic for knowing when to make the move.' },

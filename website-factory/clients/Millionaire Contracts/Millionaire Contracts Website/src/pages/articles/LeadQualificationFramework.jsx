@@ -289,7 +289,7 @@ export default function LeadQualificationFramework() {
               { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Where qualification fits in a repeatable pipeline.' },
               { to: '/how-to-write-a-cold-email', label: 'How to Write a Cold Email That Gets Replies', desc: 'Getting the right prospects into the pipeline first.' },
               { to: '/b2b-appointment-setting-services', label: 'B2B Appointment Setting Services', desc: 'How qualified meetings get booked at scale.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'What it means and whether it fits your business.' },
+              { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
               { to: '/how-it-works', label: 'How It Works', desc: 'Our process from ideal customer profile to booked meeting.' },
             ].map((link) => (
               <Link

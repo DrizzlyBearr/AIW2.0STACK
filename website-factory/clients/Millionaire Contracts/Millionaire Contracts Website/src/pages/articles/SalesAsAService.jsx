@@ -307,7 +307,7 @@ export default function SalesAsAService() {
           <h2 className="font-headline text-xl font-black text-mc-teal mb-6">Go deeper</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The full definition, the models, and who it fits.' },
+              { to: '/services', label: 'Our Services', desc: 'What we build and run, and how to see whether we are a fit.' },
               { to: '/fractional-sales-team', label: 'What Is a Fractional Sales Team?', desc: 'Senior sales capability without a full-time hire.' },
               { to: '/b2b-appointment-setting-services', label: 'B2B Appointment Setting Services', desc: 'What a full appointment setting engagement covers.' },
               { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'Full number breakdown for both options.' },

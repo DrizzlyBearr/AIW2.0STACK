@@ -70,7 +70,7 @@ export default {
     },
   ],
   related: [
-    { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The plain version of what you are actually handing over.' },
+    { to: '/how-it-works', label: 'How It Works', desc: 'How we install a sales function, from the first call to a rep working your pipeline.' },
     { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales', desc: 'The two columns side by side, on the ledger that matters.' },
     { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Cost?', desc: 'The market ranges, and what actually moves them.' },
     { to: '/why-sales-outsourcing-partnerships-fail', label: 'Why Sales Outsourcing Partnerships Fail', desc: 'Where the retainer gets wasted, and how to spot it early.' },

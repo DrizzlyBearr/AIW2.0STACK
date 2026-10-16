@@ -6,6 +6,7 @@ export default {
   date: '2026-09-04',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/appointment-setting',
   title: 'Outbound vs Inbound Sales: Which One Your Business Actually Needs',
   description:
     'Not a contest between two channels. A simple way to tell which one your business needs right now, based on the one variable most of the advice ignores.',
@@ -76,7 +77,7 @@ export default {
   related: [
     { to: '/lead-generation-vs-appointment-setting', label: 'Lead Generation vs Appointment Setting', desc: 'Two things often confused, and where each fits.' },
     { to: '/how-to-book-more-sales-meetings', label: 'How to Book More Sales Meetings', desc: 'The outbound system that fills a calendar on demand.' },
-    { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'Having outbound run for you instead of hiring for it.' },
+    { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
     { to: '/b2b-appointment-setting-services', label: 'B2B Appointment Setting Services', desc: 'What outbound looks like when someone else runs it.' },
   ],
   ctaHeading: 'Need revenue on a schedule, not someday?',

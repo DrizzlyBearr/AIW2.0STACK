@@ -10,6 +10,22 @@ const SITE = 'https://www.millionairecontracts.com'
 
 marked.setOptions({ mangle: false, headerIds: false })
 
+// The service page each article leads to, so a reader always has one step from
+// the topic to the thing MC sells. Articles carried traffic and routed it
+// nowhere commercial (MC docs/website-growth.md, B). An entry's own `service`
+// wins over its category.
+const SERVICES = {
+  '/appointment-setting': { label: 'Appointment Setting Services', desc: 'We run the outbound and book qualified meetings into your calendar every week.' },
+  '/sales-closing': { label: 'Sales Closing Services', desc: 'Trained closers working the deals already in your pipeline.' },
+  '/sales-management': { label: 'Sales Management Services', desc: 'Pipeline reviews, rep coaching and accountability, run for you.' },
+  '/sales-strategy-development': { label: 'Sales Strategy Development', desc: 'The playbook, pricing, pitch and KPIs your team sells from.' },
+}
+const SERVICE_BY_CATEGORY = {
+  Outreach: '/appointment-setting',
+  'Sales Management': '/sales-management',
+  'Sales Strategy': '/sales-strategy-development',
+}
+
 // Generic renderer for a data-driven article entry. Same visual language as the
 // hand-coded article pages, but driven entirely by a content data object so the
 // content engine can produce new articles without writing components.
@@ -28,7 +44,14 @@ export default function ArticleTemplate({ entry }) {
     related = [],
     ctaHeading,
     ctaBody,
+    service,
   } = entry
+
+  const servicePath = service || SERVICE_BY_CATEGORY[category]
+  const serviceLink = SERVICES[servicePath] && !related.some((r) => r.to === servicePath)
+    ? { to: servicePath, ...SERVICES[servicePath] }
+    : null
+  const deeper = serviceLink ? [serviceLink, ...related] : related
 
   const schema = {
     '@context': 'https://schema.org',
@@ -115,12 +138,12 @@ export default function ArticleTemplate({ entry }) {
       ))}
 
       {/* Related reading */}
-      {related.length > 0 && (
+      {deeper.length > 0 && (
         <section className="py-12 px-6 bg-gray-50">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-headline text-xl font-black text-mc-teal mb-6">Go deeper</h2>
             <div className="grid sm:grid-cols-2 gap-4">
-              {related.map((link) => (
+              {deeper.map((link) => (
                 <Link key={link.to} to={link.to} className="block bg-white rounded-xl p-5 border border-gray-100 hover:border-mc-gold/40 transition-colors group">
                   <p className="font-headline font-bold text-mc-teal text-sm mb-1 group-hover:text-mc-gold transition-colors">{link.label}</p>
                   {link.desc && <p className="font-body text-gray-500 text-xs">{link.desc}</p>}

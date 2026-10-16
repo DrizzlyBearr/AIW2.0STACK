@@ -60,7 +60,7 @@ export default function SalesClosing() {
                 { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you hire any external sales provider.' },
                 { to: '/why-sales-outsourcing-partnerships-fail', label: 'Why Most Sales Outsourcing Partnerships Fail', desc: 'Five failure points and how to avoid them before you sign.' },
                 { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Six steps to a repeatable process that generates consistent pipeline.' },
-                { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The four models explained and how to choose the right fit.' },
+                { to: '/how-it-works', label: 'How It Works', desc: 'How we install a sales function, from the first call to a rep working your pipeline.' },
               ].map((link) => (
                 <Link
                   key={link.to}

@@ -323,7 +323,7 @@ export default function ColdCallingServices() {
               { to: '/b2b-appointment-setting-services', label: 'B2B Appointment Setting Services', desc: 'What appointment setting is and how it turns outreach into qualified meetings.' },
               { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions that separate real qualification discipline from volume plays.' },
               { to: '/how-to-build-a-sales-cadence', label: 'How to Build a Sales Cadence', desc: 'How to sequence phone, email, and LinkedIn into one coordinated motion.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The definition, the engagement models, and who it works for.' },
+              { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
               { to: '/appointment-setting', label: 'Appointment Setting', desc: 'How the Millionaire Contracts appointment setting function works.' },
               { to: '/how-it-works', label: 'How It Works', desc: 'The process from first call to qualified meetings on your calendar.' },
             ].map((link) => (

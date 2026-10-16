@@ -375,7 +375,7 @@ export default function HowToSetUpASalesPipeline() {
               { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Six steps to a repeatable pipeline.' },
               { to: '/lead-qualification-framework', label: 'A Lead Qualification Framework That Works', desc: 'How to decide which leads earn a pipeline stage.' },
               { to: '/how-to-build-a-sales-cadence', label: 'How to Build a Sales Cadence', desc: 'The outreach that feeds the top of the pipeline.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'When to run sales in-house and when to outsource it.' },
+              { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
               { to: '/how-it-works', label: 'How It Works', desc: 'How an engagement with Millionaire Contracts runs.' },
             ].map((link) => (
               <Link

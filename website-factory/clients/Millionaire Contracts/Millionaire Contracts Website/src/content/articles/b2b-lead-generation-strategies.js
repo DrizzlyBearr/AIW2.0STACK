@@ -6,6 +6,7 @@ export default {
   date: '2026-09-04',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/appointment-setting',
   title: 'B2B Lead Generation Strategies That Fill a Pipeline',
   description:
     'Lead generation is not traffic and not a pile of contacts. It is qualified conversations. Here are the strategies that produce them, and how to judge each one by conversations instead of raw lead count.',

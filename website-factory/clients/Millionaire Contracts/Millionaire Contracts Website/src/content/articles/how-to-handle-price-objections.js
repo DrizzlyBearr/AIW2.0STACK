@@ -6,6 +6,7 @@ export default {
   date: '2026-09-04',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/sales-closing',
   title: 'How to Handle the Price Objection',
   description:
     'Too expensive is rarely a money problem. It is a value signal. Here is why the price objection is won before price ever comes up, and how to close the gap instead of cutting the number.',

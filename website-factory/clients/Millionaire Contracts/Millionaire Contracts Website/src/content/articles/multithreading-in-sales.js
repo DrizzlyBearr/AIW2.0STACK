@@ -6,6 +6,7 @@ export default {
   date: '2026-09-05',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/sales-closing',
   title: 'Why Single-Threaded Deals Die, and How to Multi-Thread',
   description:
     'A deal that rests on one contact is a deal with a single point of failure. Why single-threaded deals go quiet and die, and how to build more than one door into every account that matters.',

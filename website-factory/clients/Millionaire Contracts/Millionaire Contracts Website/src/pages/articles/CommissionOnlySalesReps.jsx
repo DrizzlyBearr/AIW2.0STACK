@@ -281,7 +281,7 @@ export default function CommissionOnlySalesReps() {
             {[
               { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'Full number breakdown for both options.' },
               { to: '/fractional-sales-team', label: 'What Is a Fractional Sales Team?', desc: 'Part-time access to a team and a sales leader.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'What it means, how it works, and who it fits.' },
+              { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
               { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'A diagnostic for knowing when to make the move.' },
               { to: '/services', label: 'What We Do', desc: 'How an outsourced sales function is structured.' },
               { to: '/how-it-works', label: 'How It Works', desc: 'The process behind an outsourced engagement.' },

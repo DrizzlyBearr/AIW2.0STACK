@@ -104,17 +104,23 @@ function renderPage({ path: routePath, title, description, type }) {
   const canonical = `${SITE}${routePath}`
   let html = template
 
-  html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escText(ft)}</title>`)
-  html = html.replace(/(<meta name="description" content=")[^"]*("\s*\/>)/, `$1${escAttr(description)}$2`)
-  html = html.replace(/(<meta property="og:type" content=")[^"]*("\s*\/>)/, `$1${type}$2`)
-  html = html.replace(/(<meta property="og:title" content=")[^"]*("\s*\/>)/, `$1${escAttr(ft)}$2`)
-  html = html.replace(/(<meta property="og:description" content=")[^"]*("\s*\/>)/, `$1${escAttr(description)}$2`)
-  html = html.replace(/(<meta property="og:url" content=")[^"]*("\s*\/>)/, `$1${canonical}$2`)
-  html = html.replace(/(<meta name="twitter:title" content=")[^"]*("\s*\/>)/, `$1${escAttr(ft)}$2`)
-  html = html.replace(/(<meta name="twitter:description" content=")[^"]*("\s*\/>)/, `$1${escAttr(description)}$2`)
+  // Every replacement here is a function, never a string. In a replacement
+  // string "$1" is a pattern, so a description mentioning "$110k" came out
+  // with the tag's own markup spliced into the middle of it.
+  const meta = (attr, value) => {
+    html = html.replace(new RegExp(`(<meta ${attr} content=")[^"]*("\\s*\\/>)`), (_, a, b) => a + value + b)
+  }
+  html = html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escText(ft)}</title>`)
+  meta('name="description"', escAttr(description))
+  meta('property="og:type"', type)
+  meta('property="og:title"', escAttr(ft))
+  meta('property="og:description"', escAttr(description))
+  meta('property="og:url"', canonical)
+  meta('name="twitter:title"', escAttr(ft))
+  meta('name="twitter:description"', escAttr(description))
 
   // canonical link is not in the static template; inject one
-  html = html.replace(/(<meta name="description"[^>]*\/>)/, `$1\n    <link rel="canonical" href="${canonical}" />`)
+  html = html.replace(/(<meta name="description"[^>]*\/>)/, (tag) => `${tag}\n    <link rel="canonical" href="${canonical}" />`)
 
   // Render the page content and inject it into the root element.
   let body = ''
@@ -127,7 +133,7 @@ function renderPage({ path: routePath, title, description, type }) {
     console.error(`prerender: content render failed for ${routePath}:`, err.message)
   }
   if (body) {
-    html = html.replace(/<div id="root"><\/div>/, `<div id="root">${body}</div>`)
+    html = html.replace(/<div id="root"><\/div>/, () => `<div id="root">${body}</div>`)
   }
 
   // The page's JSON-LD, which is the one part of SEOMeta's output this script
@@ -140,7 +146,7 @@ function renderPage({ path: routePath, title, description, type }) {
   // is sitewide and stays, and these are the page's own Article, FAQPage and
   // BreadcrumbList on top of it.
   if (ldJson) {
-    html = html.replace('</head>', `  ${ldJson}\n  </head>`)
+    html = html.replace('</head>', () => `  ${ldJson}\n  </head>`)
   }
 
   return html

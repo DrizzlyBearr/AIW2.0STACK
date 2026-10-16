@@ -323,7 +323,7 @@ export default function SDRvsBDR() {
               { to: '/how-much-does-an-sdr-cost', label: 'How Much Does an SDR Cost?', desc: 'The true cost of the seat, in-house and outsourced.' },
               { to: '/b2b-appointment-setting-services', label: 'B2B Appointment Setting Services', desc: 'How qualified meetings get booked for your closers.' },
               { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'Full number breakdown for both options.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The forms it takes and who it works for.' },
+              { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
               { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Six steps to a repeatable pipeline.' },
             ].map((link) => (
               <Link

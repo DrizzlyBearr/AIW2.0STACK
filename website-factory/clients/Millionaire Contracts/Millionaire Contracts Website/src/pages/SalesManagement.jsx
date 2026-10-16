@@ -58,7 +58,7 @@ export default function SalesManagement() {
                 { to: '/sales-stall-without-you', label: 'Why Sales Stall Every Time You Step Back from Them', desc: 'How to remove yourself as the bottleneck in your own pipeline.' },
                 { to: '/founder-led-sales-stops-working', label: 'Founder-Led Sales: Why It Stops Working', desc: 'The point where running sales yourself starts to cap the business.' },
                 { to: '/why-sales-outsourcing-partnerships-fail', label: 'Why Most Sales Outsourcing Partnerships Fail', desc: 'Five failure points and what separates partnerships that deliver.' },
-                { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The four models explained and who each one is right for.' },
+                { to: '/how-it-works', label: 'How It Works', desc: 'How we install a sales function, from the first call to a rep working your pipeline.' },
                 { to: '/how-to-choose-an-appointment-setting-company', label: 'How to Choose an Appointment Setting Company', desc: '7 questions to ask before you hire any external sales provider.' },
                 { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model explained with what drives the number.' },
                 { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'Diagnostic guide for knowing when outsourced is the right move.' },

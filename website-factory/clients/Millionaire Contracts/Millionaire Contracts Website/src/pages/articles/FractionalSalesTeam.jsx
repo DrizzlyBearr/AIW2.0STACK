@@ -333,7 +333,7 @@ export default function FractionalSalesTeam() {
               { to: '/cost-of-building-a-sales-team', label: 'The Real Cost of Building a Sales Team', desc: 'Every line item in a full in-house build.' },
               { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'Full number breakdown for both options.' },
               { to: '/how-much-does-an-sdr-cost', label: 'How Much Does an SDR Cost?', desc: 'The fully loaded number behind one hire.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The models, the fit, and how to decide.' },
+              { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
               { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'A diagnostic for knowing when to move.' },
               { to: '/how-it-works', label: 'How It Works', desc: 'How an engagement runs, step by step.' },
             ].map((link) => (

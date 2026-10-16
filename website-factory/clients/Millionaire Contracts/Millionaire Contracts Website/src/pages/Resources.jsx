@@ -19,7 +19,6 @@ const articles = [
     category: 'Sales Fundamentals',
     title: 'What Is Sales Outsourcing and Is It Right for Your Business?',
     desc: 'The definition, the four engagement models, who it works for, who it does not, and a framework for deciding.',
-    featured: true,
   },
   { to: '/what-is-an-sdr', category: 'Sales Fundamentals', title: 'What Is an SDR? The Sales Development Rep Role Explained', desc: 'What an SDR does day to day, how the role differs from a closer, where it fits the pipeline, what it costs, and when to hire versus outsource.' },
   { to: '/sdr-vs-bdr', category: 'Sales Fundamentals', title: 'SDR vs BDR: What Is the Difference and Which Do You Need?', desc: 'The real difference between inbound-focused SDRs and outbound-focused BDRs, how they fit together, and how to decide which function you need.' },
@@ -67,6 +66,7 @@ const articles = [
     category: 'Pricing',
     title: 'What Does Outsourced Sales Actually Cost?',
     desc: 'Every pricing model explained, the factors that drive the number, and how to think about return.',
+    featured: true,
   },
   {
     to: '/cost-of-building-a-sales-team',

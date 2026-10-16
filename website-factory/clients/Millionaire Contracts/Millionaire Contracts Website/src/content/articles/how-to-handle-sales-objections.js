@@ -6,6 +6,7 @@ export default {
   date: '2026-09-04',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/sales-closing',
   title: 'How to Handle Sales Objections',
   description:
     'Objections are not obstacles to beat with clever lines. They are the buyer qualifying the deal out loud, and the teams that close more are the ones that argue less.',

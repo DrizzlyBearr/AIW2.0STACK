@@ -6,6 +6,7 @@ export default {
   date: '2026-09-05',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/sales-closing',
   title: 'What to Do When a Prospect Says They Need to Think About It',
   description:
     'The think about it objection is not a stall to push through. It is a doubt the buyer never said out loud. Here is how to surface the real reason and answer it.',

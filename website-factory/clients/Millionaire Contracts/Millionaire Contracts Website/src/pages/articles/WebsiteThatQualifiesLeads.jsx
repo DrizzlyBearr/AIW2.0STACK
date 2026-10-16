@@ -296,7 +296,7 @@ export default function WebsiteThatQualifiesLeads() {
               { to: '/how-to-qualify-leads', label: 'How to Qualify Leads', desc: 'The questions and signals that separate a fit from a waste of time.' },
               { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Six steps to a repeatable pipeline.' },
               { to: '/b2b-appointment-setting-services', label: 'B2B Appointment Setting Services', desc: 'How qualified meetings get booked and why the standard matters.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'What it means to run sales as an external function.' },
+              { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
               { to: '/how-it-works', label: 'How It Works', desc: 'The way an engagement runs from first call to booked meetings.' },
             ].map((link) => (
               <Link

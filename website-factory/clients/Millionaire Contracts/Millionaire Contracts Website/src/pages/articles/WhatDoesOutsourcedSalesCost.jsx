@@ -8,8 +8,8 @@ import NewsletterSignup from '../../components/NewsletterSignup'
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'What Does Outsourced Sales Actually Cost? (2026 Pricing Guide)',
-  description: 'A breakdown of outsourced sales pricing models, what you should expect to pay, and how to evaluate whether the cost makes sense for your business.',
+  headline: 'How Much Does Outsourced Sales Cost? $3k to $15k a Month',
+  description: 'Outsourced sales costs $3,000 to $15,000 a month on retainer, or $75 to $500 per booked meeting. The four pricing models, compared with a $110k in-house hire.',
   publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/what-does-outsourced-sales-cost',
 }
@@ -100,8 +100,8 @@ export default function WhatDoesOutsourcedSalesCost() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEOMeta
-        title="What Does Outsourced Sales Actually Cost? (2026 Pricing Guide)"
-        description="A breakdown of outsourced sales pricing models, what you should expect to pay, and how to evaluate whether the cost makes sense for your business stage."
+        title="How Much Does Outsourced Sales Cost? $3k to $15k a Month"
+        description="Outsourced sales costs $3,000 to $15,000 a month on retainer, or $75 to $500 per booked meeting. The four pricing models, compared with a $110k in-house hire."
         path="/what-does-outsourced-sales-cost"
         type="article"
         schema={[schema, faqSchema]}
@@ -120,7 +120,7 @@ export default function WhatDoesOutsourcedSalesCost() {
               <span className="text-mc-gold">Actually Cost in 2026?</span>
             </h1>
             <p className="font-body text-gray-400 text-lg leading-relaxed max-w-2xl">
-              Most agencies are not transparent about pricing until you are already in a sales process with them. This guide gives you the real numbers, the four pricing models, and a framework for deciding which one fits your stage.
+              Outsourced sales costs $3,000 to $15,000 a month on a retainer, or $75 to $500 per booked meeting if you pay for performance. A fully loaded in-house SDR in the US costs $110,000 or more in year one. Below are the four pricing models, what moves the number, and how to decide which one fits your stage.
             </p>
           </div>
         </div>

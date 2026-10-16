@@ -335,7 +335,7 @@ export default function WhatIsASalesPipeline() {
             {[
               { to: '/how-to-build-a-b2b-sales-process', label: 'How to Build a B2B Sales Process from Scratch', desc: 'Six steps to a repeatable pipeline.' },
               { to: '/why-your-pipeline-empties-when-you-get-busy', label: 'Why Your Pipeline Empties When You Get Busy', desc: 'The feast and famine cycle and how to break it.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'What it means, the models, and who it fits.' },
+              { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
               { to: '/five-signs-you-need-outsourced-sales', label: '5 Signs Your Business Needs an Outsourced Sales Team', desc: 'A diagnostic for when to make the move.' },
               { to: '/how-it-works', label: 'How It Works', desc: 'Our process from ICP to booked meetings.' },
               { to: '/services', label: 'Our Services', desc: 'The full outsourced sales offer.' },
