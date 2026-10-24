@@ -13,8 +13,9 @@
 
 const ENDPOINT = 'https://command.millionairecontracts.com/api/site-events'
 
-// Where a click counts as the point of the visit.
-const GOAL_PATHS = ['/calender', '/contact-us']
+// Where a click counts as the point of the visit. An external link counts by
+// its host: going to hire on Upwork is a goal as much as booking a call.
+const GOAL_PATHS = ['/calender', '/contact-us', 'www.upwork.com']
 
 const READ_AFTER_MS = 15000
 const FLUSH_AFTER_MS = 4000

@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import ServicePageHero from '../components/ServicePageHero'
 import SEOMeta from '../components/SEOMeta'
+import { UPWORK } from '../components/Footer'
 
 const CALENDAR_ID = '9Kr2oElVpUJaJAq02dl1'
 
@@ -37,6 +38,12 @@ export default function Calendar() {
             title="Appointment Booking"
             loading="lazy"
           />
+          <p className="font-body text-gray-500 text-sm text-center mt-6">
+            Rather work through Upwork, with its contracts and payment protection?{' '}
+            <a href={UPWORK} target="_blank" rel="me noopener" className="text-mc-teal underline hover:text-mc-gold">
+              Hire us on Upwork
+            </a>
+          </p>
         </div>
       </section>
 

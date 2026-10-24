@@ -13,6 +13,7 @@ const team = [
     name: 'Katleho Mohlomi',
     role: 'Founder & CEO',
     photo: 'https://storage.googleapis.com/msgsndr/A8PmgiSa8bKb0J1mBeLF/media/697a3bdd266d73a70af7464e.png',
+    upwork: 'https://www.upwork.com/freelancers/~01131450594cc44af0',
   },
   {
     name: 'Miense Mpasa',
@@ -219,6 +220,11 @@ export default function AboutUs() {
                 </div>
                 <h3 className="font-headline font-bold text-mc-teal">{member.name}</h3>
                 <p className="font-body text-gray-500 text-sm">{member.role}</p>
+                {member.upwork && (
+                  <a href={member.upwork} target="_blank" rel="me noopener" className="font-body text-mc-teal text-sm underline hover:text-mc-gold">
+                    Katleho on Upwork
+                  </a>
+                )}
               </div>
             ))}
           </div>

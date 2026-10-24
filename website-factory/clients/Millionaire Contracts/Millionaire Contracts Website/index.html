@@ -27,7 +27,8 @@
     <!-- Who MC is, for search engines and AI assistants: one organization with a
          stable @id that every page's Article schema points back to. sameAs lists
          MC's profiles elsewhere; add each directory profile (Clutch, GoodFirms)
-         here once it exists. -->
+         here once it exists. The founder's own profiles (Upwork) sit on the
+         founder, since they are Katleho's, not the company's. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -51,7 +52,10 @@
             "jobTitle": "Founder & CEO",
             "worksFor": {
               "@id": "https://www.millionairecontracts.com/#organization"
-            }
+            },
+            "sameAs": [
+              "https://www.upwork.com/freelancers/~01131450594cc44af0"
+            ]
           },
           "areaServed": [
             "US",
