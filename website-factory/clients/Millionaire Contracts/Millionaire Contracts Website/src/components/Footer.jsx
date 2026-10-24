@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 
 const LOGO = '/mc-logo.png'
-export const UPWORK = 'https://www.upwork.com/freelancers/~01131450594cc44af0'
+export { UPWORK_URL as UPWORK } from './Testimonials'
+import { UPWORK_URL as UPWORK } from './Testimonials'
 
 const links = [
   { label: 'Home', to: '/' },
