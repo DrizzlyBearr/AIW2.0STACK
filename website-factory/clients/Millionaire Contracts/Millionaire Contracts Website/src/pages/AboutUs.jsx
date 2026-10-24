@@ -19,6 +19,7 @@ const team = [
     name: 'Miense Mpasa',
     role: 'VP Business Development',
     photo: 'https://storage.googleapis.com/msgsndr/A8PmgiSa8bKb0J1mBeLF/media/697a3bdd1927c83cb243a485.png',
+    upwork: 'https://www.upwork.com/freelancers/~01212aef1c4c40d084',
   },
 ]
 
@@ -222,7 +223,7 @@ export default function AboutUs() {
                 <p className="font-body text-gray-500 text-sm">{member.role}</p>
                 {member.upwork && (
                   <a href={member.upwork} target="_blank" rel="me noopener" className="font-body text-mc-teal text-sm underline hover:text-mc-gold">
-                    Katleho on Upwork
+                    {member.name.split(' ')[0]} on Upwork
                   </a>
                 )}
               </div>
