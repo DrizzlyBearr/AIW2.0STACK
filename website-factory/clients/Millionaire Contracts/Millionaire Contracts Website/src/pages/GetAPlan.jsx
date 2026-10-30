@@ -10,18 +10,21 @@ import ProblemForm from '../components/ProblemForm'
 // The headline follows the ad group, read from utm_campaign. The prerendered
 // page carries the default, which is also what anyone without a tag sees.
 
+// Keyed by the ad group's utm_campaign. Keyword research for South Africa
+// (October 2026) found people search for the service by name, not the
+// problem, so each ad group is a service and its headline names it.
 const HEADLINES = {
-  'finding-people': {
-    title: 'Need the right people found and brought on board?',
-    sub: 'Clients, partners, contributors, specialists. Tell us who you need and we will send you a plan to reach them.',
+  'lead-generation': {
+    title: 'Lead generation, planned before you pay for anything.',
+    sub: 'Tell us who you sell to. We send a written plan to find and reach them: who, how, how long, and the first step. Free, within two working days.',
   },
-  'lead-follow-up': {
-    title: 'Enquiries coming in and going nowhere?',
-    sub: 'Tell us what happens after someone gets in touch, and we will send you a plan to turn more of them into business.',
+  'appointment-setting': {
+    title: 'Appointment setting and cold calling, planned first.',
+    sub: 'Tell us who you need to be talking to. We send a written plan to get those meetings booked. Free, within two working days.',
   },
-  'booking-meetings': {
-    title: 'No time to book the conversations that grow the business?',
-    sub: 'Tell us who you need to be talking to, and we will send you a plan to get those meetings in the diary.',
+  'business-development': {
+    title: "Business development for when there's no time to sell.",
+    sub: "Tell us what isn't getting done. We send a written plan to get it done, without you hiring a sales team. Free, within two working days.",
   },
 }
 
