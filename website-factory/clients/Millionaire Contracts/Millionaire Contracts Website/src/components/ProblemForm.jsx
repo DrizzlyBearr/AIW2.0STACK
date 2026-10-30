@@ -1,53 +1,41 @@
 import { useEffect, useState } from 'react'
 import { trackGoal } from '../lib/track'
+import { sendEnquiry, visitSource } from '../lib/enquiry'
+import { BANDS, MARKETS } from '../lib/markets'
 
-// The ad landing form: who you are and the problem you need solved, nothing
-// else (MC-Fulfillment-Engine docs/mc-paid-ads.md).
+// The ad landing form: the problem you need solved, and only what the plan
+// needs to be written or tells us whether we can help
+// (MC-Fulfillment-Engine docs/mc-paid-ads.md). Every field here costs some
+// visitors, so a new one has to earn its place the same way.
 //
-// It posts straight to MC's own enquiry address in Command: Command's door for
-// a business's website form, public by design, so no secret is needed. The
-// problem arrives as the message, the person lands on MC's "Website
-// enquiries" campaign, the ten-minute alert fires and the agent drafts the
-// first answer for a person to approve. The address is MC's, from Command,
-// Enquiries; if it is ever replaced there, paste the new one here.
-//
-// The fallback is the edge function the qualifier uses. As of 30 October 2026
-// nothing sent that way had ever reached Command.
-const COMMAND_ENQUIRY_URL = 'https://command.millionairecontracts.com/api/enquiries/bqUElO3i33p8i2X01M9P9QtauVR-UB8h'
-const ENQUIRY_ENDPOINT = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1/enquiry-submit'
+// It posts to MC's enquiry address in Command (src/lib/enquiry.js): the
+// problem arrives as the message, every other answer and the ad's source as
+// labelled lines beneath it.
 
 const SIZES = ['Just me', '2 to 10 people', '11 to 50 people', 'More than 50']
-
-// Where the visit came from, read once from the ad's link. Command keeps it
-// as the lead's source, e.g. enquiry:google-ads:finding-people.
-function adSource() {
-  try {
-    const q = new URLSearchParams(window.location.search)
-    const source = q.get('utm_source')
-    const campaign = q.get('utm_campaign')
-    return {
-      source: source ? [source, campaign].filter(Boolean).join(':').slice(0, 120) : 'website:get-a-plan',
-      term: (q.get('utm_term') || '').slice(0, 120),
-    }
-  } catch {
-    return { source: 'website:get-a-plan', term: '' }
-  }
-}
+const TIMING = ['Now', 'This quarter', 'Just exploring']
 
 export default function ProblemForm() {
   const [status, setStatus] = useState('idle')
   const [from, setFrom] = useState({ source: 'website:get-a-plan', term: '' })
-  const [data, setData] = useState({ name: '', company: '', email: '', problem: '', website: '', size: '', gotcha: '' })
+  const [data, setData] = useState({ name: '', company: '', email: '', problem: '', who: '', market: '', size: '', timing: '', budget: '', tried: '', website: '', gotcha: '' })
 
-  useEffect(() => setFrom(adSource()), [])
+  useEffect(() => setFrom(visitSource('website:get-a-plan')), [])
 
-  const set = (field, value) => setData((d) => ({ ...d, [field]: value }))
+  // The budget is asked in the market's own currency, never converted. A new
+  // market clears a budget picked in another currency.
+  const market = MARKETS.find((m) => m.code === data.market)
+  const budgets = [...(BANDS[market ? market.currency : 'USD'] || BANDS.USD).budget, 'Not sure yet']
+  const set = (field, value) => setData((d) => ({ ...d, [field]: value, ...(field === 'market' ? { budget: '' } : {}) }))
   const ready =
     data.name.trim().length > 1 &&
     data.company.trim().length > 1 &&
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email) &&
     data.problem.trim().length > 10 &&
-    !!data.size
+    !!data.market &&
+    !!data.size &&
+    !!data.timing &&
+    !!data.budget
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -55,11 +43,21 @@ export default function ProblemForm() {
     setStatus('loading')
     // Best effort, as on the qualifier: the visitor sees a thank-you either way.
     try {
-      const who = { email: data.email, name: data.name, company: data.company, website: data.website, size: data.size, source: from.source, term: from.term, _gotcha: data.gotcha }
-      await fetch(COMMAND_ENQUIRY_URL || ENQUIRY_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(COMMAND_ENQUIRY_URL ? { ...who, message: data.problem } : { ...who, problem: data.problem }),
+      await sendEnquiry({
+        message: data.problem,
+        name: data.name,
+        company: data.company,
+        email: data.email,
+        Website: data.website,
+        'Who they need to reach': data.who,
+        'Based in': market ? market.label : '',
+        Size: data.size,
+        Timing: data.timing,
+        Budget: data.budget,
+        'Tried so far': data.tried,
+        source: from.source,
+        term: from.term,
+        _gotcha: data.gotcha,
       })
     } catch {
       // swallow
@@ -109,12 +107,67 @@ export default function ProblemForm() {
       </div>
 
       <div>
+        <label className="block font-body text-sm text-gray-300 mb-2" htmlFor="pf-who">
+          Who do you need to reach? <span className="text-gray-500">(optional)</span>
+        </label>
+        <input
+          id="pf-who"
+          className={inputClass}
+          placeholder="For example: law firm partners in Gauteng, academic writers, our own past enquiries"
+          value={data.who}
+          onChange={(e) => set('who', e.target.value)}
+        />
+      </div>
+
+      <div>
+        <span className="block font-body text-sm text-gray-300 mb-2">Where is the business based?</span>
+        <div className="grid grid-cols-2 gap-3">
+          {MARKETS.map((m) => (
+            <button key={m.code} type="button" className={optionClass(data.market === m.code)} onClick={() => set('market', m.code)}>{m.label}</button>
+          ))}
+        </div>
+      </div>
+
+      <div>
         <span className="block font-body text-sm text-gray-300 mb-2">How big is the business?</span>
         <div className="grid grid-cols-2 gap-3">
           {SIZES.map((s) => (
             <button key={s} type="button" className={optionClass(data.size === s)} onClick={() => set('size', s)}>{s}</button>
           ))}
         </div>
+      </div>
+
+      <div>
+        <span className="block font-body text-sm text-gray-300 mb-2">When do you need this working?</span>
+        <div className="grid grid-cols-3 gap-3">
+          {TIMING.map((t) => (
+            <button key={t} type="button" className={optionClass(data.timing === t)} onClick={() => set('timing', t)}>{t}</button>
+          ))}
+        </div>
+      </div>
+
+      {market && (
+      <div>
+        <span className="block font-body text-sm text-gray-300 mb-2">Roughly what could you spend on solving it, in {market.currency}?</span>
+        <div className="grid grid-cols-2 gap-3">
+          {budgets.map((b) => (
+            <button key={b} type="button" className={optionClass(data.budget === b)} onClick={() => set('budget', b)}>{b}</button>
+          ))}
+        </div>
+      </div>
+      )}
+
+      <div>
+        <label className="block font-body text-sm text-gray-300 mb-2" htmlFor="pf-tried">
+          Anything you've tried that didn't work? <span className="text-gray-500">(optional)</span>
+        </label>
+        <textarea
+          id="pf-tried"
+          className={`${inputClass} min-h-[80px] resize-none`}
+          placeholder="A hire, an agency, a tool. What happened?"
+          value={data.tried}
+          onChange={(e) => set('tried', e.target.value)}
+        />
       </div>
 
       <div className="grid sm:grid-cols-2 gap-3">
