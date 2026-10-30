@@ -121,8 +121,8 @@ export default function ProblemForm() {
             October 2026). The plan still follows either way. */}
         <div className="rounded-xl border border-mc-gold/30 bg-mc-gold/5 p-6">
           <p className="font-headline text-lg font-bold text-white mb-2">Want it sooner?</p>
-          <p className="font-body text-gray-400 text-sm mb-5">Book 15 minutes and we will talk it through now. Your written plan still follows.</p>
-          <a href="/calender" className="btn-primary">Book 15 minutes</a>
+          <p className="font-body text-gray-400 text-sm mb-5">Book a discovery call and we will talk it through. Your written plan still follows.</p>
+          <a href="/calender" className="btn-primary">Book a discovery call</a>
         </div>
       </div>
     )

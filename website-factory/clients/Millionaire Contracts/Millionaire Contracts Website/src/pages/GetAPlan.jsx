@@ -71,7 +71,7 @@ const FEEDBACK = [
 
 const FAQ = [
   { q: 'Is the plan really free?', a: 'Yes. No card, no contract, and you keep the plan whether or not you work with us.' },
-  { q: 'Do I have to get on a call?', a: 'No. The plan comes in writing. If you want to talk it through, there is a link to book 20 minutes, but it is your choice.' },
+  { q: 'Do I have to get on a call?', a: 'No. The plan comes in writing. If you want to talk it through, there is a link to book a discovery call, but it is your choice.' },
   { q: 'What does working with you cost?', a: 'It depends on what the plan says needs doing, so we price it once you have seen the plan and only for that scope. No retainer is assumed.' },
   { q: 'Do you only work in South Africa?', a: 'No. We are South African and have run outreach and sales for clients in the US, Zambia and elsewhere, as the case studies show.' },
   { q: 'What if you are not the right fit?', a: 'We will say so in the plan and tell you who might be. A wrong fit wastes both our time.' },
