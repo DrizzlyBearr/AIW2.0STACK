@@ -50,7 +50,7 @@ const DEFAULT = {
 // case study stands behind.
 const HEADLINE_RESULTS = [
   { value: '120+', label: 'qualified appointments for Skayle 360', slug: 'skayle360' },
-  { value: '66%', label: 'meeting success rate for BaseHome Capital', slug: 'basehome-capital' },
+  { value: '$1.8M', label: 'revenue in a single year for Atlas Management', slug: 'atlas-management' },
   { value: 'R1.8M', label: 'revenue impact for Morecorp', slug: 'morecorp' },
 ]
 
