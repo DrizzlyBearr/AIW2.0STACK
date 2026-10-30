@@ -54,7 +54,7 @@ const HEADLINE_RESULTS = [
   // dated rate found on 30 October 2026); the dollar figure stays in the label
   // so it matches the case study a visitor clicks through to.
   { value: 'R29M+', label: 'revenue in a single year for Atlas Management ($1.8M)', slug: 'atlas-management' },
-  { value: 'R1.8M', label: 'revenue impact for Morecorp', slug: 'morecorp' },
+  { value: '2.4x', label: 'lead-to-client conversion for McLifestyle Fitness', slug: 'mclifestyle-fitness' },
 ]
 
 // How it works and what the plan covers, in one: the research for the page
