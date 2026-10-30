@@ -2,10 +2,19 @@ import { useEffect, useState } from 'react'
 import { trackGoal } from '../lib/track'
 
 // The ad landing form: who you are and the problem you need solved, nothing
-// else. Posts through the same edge function as the qualifier, which holds
-// the Command secret. Command takes `problem` as something to work on its
-// own, so a request with no website still becomes a lead, with the problem
-// first on its notes (MC-Fulfillment-Engine docs/mc-paid-ads.md).
+// else (MC-Fulfillment-Engine docs/mc-paid-ads.md).
+//
+// It posts straight to MC's own enquiry address in Command: Command's door for
+// a business's website form, public by design, so no secret is needed. The
+// problem arrives as the message, the person lands on MC's "Website
+// enquiries" campaign, the ten-minute alert fires and the agent drafts the
+// first answer for a person to approve. The address comes from Command,
+// Enquiries, set up by an owner of MC; paste it here.
+//
+// Until it is set, the form falls back to the edge function the qualifier
+// uses. As of 30 October 2026 nothing sent that way had ever reached Command,
+// so the address needs to be in before any ad runs.
+const COMMAND_ENQUIRY_URL = ''
 const ENQUIRY_ENDPOINT = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1/enquiry-submit'
 
 const SIZES = ['Just me', '2 to 10 people', '11 to 50 people', 'More than 50']
@@ -29,7 +38,7 @@ function adSource() {
 export default function ProblemForm() {
   const [status, setStatus] = useState('idle')
   const [from, setFrom] = useState({ source: 'website:get-a-plan', term: '' })
-  const [data, setData] = useState({ name: '', company: '', email: '', problem: '', website: '', size: '' })
+  const [data, setData] = useState({ name: '', company: '', email: '', problem: '', website: '', size: '', gotcha: '' })
 
   useEffect(() => setFrom(adSource()), [])
 
@@ -47,19 +56,11 @@ export default function ProblemForm() {
     setStatus('loading')
     // Best effort, as on the qualifier: the visitor sees a thank-you either way.
     try {
-      await fetch(ENQUIRY_ENDPOINT, {
+      const who = { email: data.email, name: data.name, company: data.company, website: data.website, size: data.size, source: from.source, term: from.term, _gotcha: data.gotcha }
+      await fetch(COMMAND_ENQUIRY_URL || ENQUIRY_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: data.email,
-          name: data.name,
-          company: data.company,
-          website: data.website,
-          problem: data.problem,
-          size: data.size,
-          source: from.source,
-          term: from.term,
-        }),
+        body: JSON.stringify(COMMAND_ENQUIRY_URL ? { ...who, message: data.problem } : { ...who, problem: data.problem }),
       })
     } catch {
       // swallow
@@ -123,6 +124,9 @@ export default function ProblemForm() {
         <input className={inputClass} type="email" placeholder="Work email" value={data.email} onChange={(e) => set('email', e.target.value)} />
         <input className={inputClass} placeholder="Website (optional)" value={data.website} onChange={(e) => set('website', e.target.value)} />
       </div>
+
+      {/* Only a bot fills this in; Command drops the enquiry if it is. */}
+      <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" value={data.gotcha} onChange={(e) => set('gotcha', e.target.value)} />
 
       <button type="submit" disabled={!ready || status === 'loading'} className="btn-primary w-full text-center disabled:opacity-40 disabled:cursor-not-allowed">
         {status === 'loading' ? 'Sending...' : 'Send me a plan'}
