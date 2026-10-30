@@ -54,17 +54,19 @@ const HEADLINE_RESULTS = [
   { value: 'R1.8M', label: 'revenue impact for Morecorp', slug: 'morecorp' },
 ]
 
+// How it works and what the plan covers, in one: the research for the page
+// found shorter pages convert better, and the two said the same thing twice.
 const STEPS = [
-  { h: 'Tell us what needs doing', p: 'Two minutes on the form. Your words, not a brief.' },
-  { h: 'Get a written plan', p: 'Within two working days: who we would reach, how, how long, and the first step.' },
+  { h: 'Tell us what needs doing', p: 'Three short steps, about two minutes. Your words, not a brief.' },
+  { h: 'Get a written plan', p: 'Within two working days: your problem in your words, who we would reach and how, how long it takes, and the first step.' },
   { h: 'You decide', p: 'Have us run it, or take the plan and do it yourself. Either way it is yours.' },
 ]
 
-const PLAN_PARTS = [
-  { h: 'Your problem, in your words', p: 'So you can check we understood it before you read anything else.' },
-  { h: 'Who we would reach, and how', p: 'The people, where they are, and the channels that get a reply from them.' },
-  { h: 'How long it takes', p: 'A realistic timeline, not a promise we cannot keep.' },
-  { h: 'The first step', p: 'What happens in week one, whether you work with us or do it yourself.' },
+// The three strongest pieces of feedback, specific and named. BaseHome's
+// quote sits beside the form's button instead (ProblemForm).
+const FEEDBACK = [
+  ...testimonials.filter((t) => ['Eads Bridge Holdings', 'MTN Zambia'].includes(t.company)).map((t) => ({ quote: t.quote, by: `${t.name}, ${t.company}` })),
+  ...upworkReviews.slice(0, 1).map((r) => ({ quote: r.quote, by: `Upwork client, ${r.job}`, upwork: true })),
 ]
 
 const FAQ = [
@@ -206,7 +208,7 @@ export default function GetAPlan() {
       <section className="bg-gray-50 px-6 py-16">
         <div className="max-w-screen-xl mx-auto">
           <h2 className="font-headline text-2xl md:text-3xl font-bold text-mc-teal text-center mb-10">How it works</h2>
-          <div className="grid md:grid-cols-3 gap-6 mb-14">
+          <div className="grid md:grid-cols-3 gap-6">
             {STEPS.map((s, i) => (
               <div key={s.h} className="flex gap-4">
                 <div className="w-10 h-10 flex-shrink-0 rounded-full bg-mc-teal text-white font-headline font-black flex items-center justify-center">{i + 1}</div>
@@ -218,16 +220,6 @@ export default function GetAPlan() {
             ))}
           </div>
 
-          <h2 className="font-headline text-2xl md:text-3xl font-bold text-mc-teal text-center mb-10">What the plan covers</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {PLAN_PARTS.map((part, i) => (
-              <div key={part.h} className="bg-white border border-gray-200 rounded-lg p-6">
-                <span className="font-headline text-mc-gold font-black text-xl">{i + 1}</span>
-                <h3 className="font-headline text-lg font-bold text-mc-teal mt-2 mb-2">{part.h}</h3>
-                <p className="font-body text-gray-600 text-sm leading-relaxed">{part.p}</p>
-              </div>
-            ))}
-          </div>
           <p className="font-body text-gray-600 text-sm text-center max-w-2xl mx-auto mt-10">
             If you give us your website we read it too, and mention it only if it is part of the problem. If we are not the right people to solve it, we will say so and tell you who might be.
           </p>
@@ -241,23 +233,12 @@ export default function GetAPlan() {
             <span className="section-label mb-3 block">Client feedback</span>
             <h2 className="font-headline text-2xl md:text-4xl font-black text-mc-teal leading-tight">What clients say</h2>
           </div>
-          <div className="grid sm:grid-cols-2 gap-6">
-            {testimonials.map((t) => (
-              <figure key={t.name} className="border border-gray-200 rounded-xl p-6 flex flex-col gap-3">
-                <blockquote className="font-body text-gray-700 text-sm leading-relaxed flex-grow">"{t.quote}"</blockquote>
-                <figcaption className="font-body text-xs">
-                  <span className="font-semibold text-mc-teal">{t.name}</span>
-                  <span className="text-gray-400">, {t.company}</span>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
-            {upworkReviews.map((r) => (
-              <figure key={r.job} className="border border-gray-200 rounded-xl p-6 flex flex-col gap-3">
-                <div className="text-mc-gold text-sm font-semibold" aria-label="Rated 5.0 out of 5 on Upwork">★★★★★ 5.0 on Upwork</div>
-                <blockquote className="font-body text-gray-700 text-sm leading-relaxed flex-grow">"{r.quote}"</blockquote>
-                <figcaption className="font-body text-gray-400 text-xs">Upwork client, {r.job}</figcaption>
+          <div className="grid md:grid-cols-3 gap-6">
+            {FEEDBACK.map((f) => (
+              <figure key={f.by} className="border border-gray-200 rounded-xl p-6 flex flex-col gap-3">
+                {f.upwork && <div className="text-mc-gold text-sm font-semibold" aria-label="Rated 5.0 out of 5 on Upwork">★★★★★ 5.0 on Upwork</div>}
+                <blockquote className="font-body text-gray-700 text-sm leading-relaxed flex-grow">"{f.quote}"</blockquote>
+                <figcaption className="font-body text-xs text-gray-500">{f.by}</figcaption>
               </figure>
             ))}
           </div>
