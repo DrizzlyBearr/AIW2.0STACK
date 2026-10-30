@@ -41,6 +41,9 @@ function walk(dir) {
 }
 
 const SKIP = new Set(['CaseStudy.jsx', 'NotFound.jsx'])
+// Pages for ad traffic only: prerendered, but kept out of search and the
+// sitemap, so they never compete with the pages meant to rank.
+const NOINDEX = new Set(['/get-a-plan'])
 const routes = []
 
 for (const file of walk(PAGES)) {
@@ -123,6 +126,9 @@ function renderPage({ path: routePath, title, description, type }) {
 
   // canonical link is not in the static template; inject one
   html = html.replace(/(<meta name="description"[^>]*\/>)/, (tag) => `${tag}\n    <link rel="canonical" href="${canonical}" />`)
+  if (NOINDEX.has(routePath)) {
+    html = html.replace(/(<meta name="description"[^>]*\/>)/, (tag) => `${tag}\n    <meta name="robots" content="noindex" />`)
+  }
 
   // Render the page content and inject it into the root element.
   let body = ''
@@ -190,7 +196,7 @@ function sitemapMeta(p) {
 
 const today = new Date().toISOString().slice(0, 10)
 const sitemapPaths = [...new Set(routes.map((r) => r.path))]
-  .filter((p) => p)
+  .filter((p) => p && !NOINDEX.has(p))
   .sort()
 
 const sitemapBody = sitemapPaths
