@@ -20,7 +20,8 @@ export default function IssueTemplate({ entry }) {
     '@type': 'Article',
     headline: subject,
     description: preview,
-    datePublished: date,
+    // Left out until the issue is sent and dated.
+    ...(date ? { datePublished: date } : {}),
     publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: SITE },
     mainEntityOfPage: `${SITE}/newsletter/${slug}`,
   }

@@ -40,7 +40,13 @@ Base directory:
    will get. Tell the owner to check it (subject line, layout, links, logo,
    unsubscribe). WAIT for their explicit approval.
 
-3. **Real send.** ONLY after the owner has seen the test and said to send, run:
+3. **Date it.** Once the owner has said to send, set the issue's `date` to
+   today (YYYY-MM-DD) in `src/content/issues/<slug>.js`, commit, and publish
+   it the way the site is published, so the issue page shows the day it went
+   out. Dating it does not change the words, so Command still accepts the
+   send.
+
+4. **Real send.** ONLY after the owner has seen the test and said to send, run:
    `node scripts/send-issue.mjs <slug> --send`
    This sends to all confirmed subscribers. The script keeps calling Command
    until the whole list is done and prints a line per batch; report the last
