@@ -8,13 +8,12 @@ import { trackGoal } from '../lib/track'
 // a business's website form, public by design, so no secret is needed. The
 // problem arrives as the message, the person lands on MC's "Website
 // enquiries" campaign, the ten-minute alert fires and the agent drafts the
-// first answer for a person to approve. The address comes from Command,
-// Enquiries, set up by an owner of MC; paste it here.
+// first answer for a person to approve. The address is MC's, from Command,
+// Enquiries; if it is ever replaced there, paste the new one here.
 //
-// Until it is set, the form falls back to the edge function the qualifier
-// uses. As of 30 October 2026 nothing sent that way had ever reached Command,
-// so the address needs to be in before any ad runs.
-const COMMAND_ENQUIRY_URL = ''
+// The fallback is the edge function the qualifier uses. As of 30 October 2026
+// nothing sent that way had ever reached Command.
+const COMMAND_ENQUIRY_URL = 'https://command.millionairecontracts.com/api/enquiries/bqUElO3i33p8i2X01M9P9QtauVR-UB8h'
 const ENQUIRY_ENDPOINT = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1/enquiry-submit'
 
 const SIZES = ['Just me', '2 to 10 people', '11 to 50 people', 'More than 50']
