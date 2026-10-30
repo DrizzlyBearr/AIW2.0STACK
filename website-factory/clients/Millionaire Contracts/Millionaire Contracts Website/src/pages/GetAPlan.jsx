@@ -62,11 +62,13 @@ const STEPS = [
   { h: 'You decide', p: 'Have us run it, or take the plan and do it yourself. Either way it is yours.' },
 ]
 
-// The three strongest pieces of feedback, specific and named. BaseHome's
-// quote sits beside the form's button instead (ProblemForm).
+// Every review MC has published, as the clients wrote them: the Upwork ones
+// first because a buyer can check them, then the named client testimonials.
+// BaseHome's sits beside the form's button instead (ProblemForm), so it is not
+// shown twice. Add a review here only in the client's own words.
 const FEEDBACK = [
-  ...testimonials.filter((t) => ['Eads Bridge Holdings', 'MTN Zambia'].includes(t.company)).map((t) => ({ quote: t.quote, by: `${t.name}, ${t.company}` })),
-  ...upworkReviews.slice(0, 1).map((r) => ({ quote: r.quote, by: `Upwork client, ${r.job}`, upwork: true })),
+  ...upworkReviews.map((r) => ({ quote: r.quote, by: `Upwork client, ${r.job}`, upwork: true })),
+  ...testimonials.filter((t) => t.company !== 'BaseHome Capital').map((t) => ({ quote: t.quote, by: `${t.name}, ${t.company}` })),
 ]
 
 const FAQ = [
@@ -145,14 +147,18 @@ export default function GetAPlan() {
           </div>
 
           <div className="max-w-3xl mx-auto mb-10">
+            <a href={UPWORK_URL} target="_blank" rel="me noopener" className="block text-center mb-3 group">
+              <span className="text-mc-gold text-lg tracking-widest" aria-hidden="true">★★★★★</span>
+              <span className="block font-body text-sm text-gray-300 group-hover:text-white">Upwork client reviews · <span className="underline">read them</span></span>
+            </a>
             <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mb-6">
               {upworkStats.map((s) => (
                 <span key={s} className="font-body text-sm text-gray-300">
-                  <span className="text-mc-gold mr-1" aria-hidden="true">★</span>{s}
+                  <span className="text-mc-gold mr-1" aria-hidden="true">✓</span>{s}
                 </span>
               ))}
               <span className="font-body text-sm text-gray-300">
-                <span className="text-mc-gold mr-1" aria-hidden="true">★</span>{caseStudyCount} client case studies
+                <span className="text-mc-gold mr-1" aria-hidden="true">✓</span>{caseStudyCount} client case studies
               </span>
             </div>
             <div className="grid grid-cols-3 gap-3">
@@ -168,6 +174,31 @@ export default function GetAPlan() {
           <div id="get-a-plan-form" ref={formRef} className="scroll-mt-6">
             <ProblemForm />
           </div>
+        </div>
+      </section>
+
+      {/* What clients say */}
+      <section className="bg-white px-6 py-16">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="section-label mb-3 block">Client reviews</span>
+            <h2 className="font-headline text-2xl md:text-4xl font-black text-mc-teal leading-tight">Clients in their own words</h2>
+          </div>
+          {/* On a phone the reviews swipe sideways, so showing all of them
+              barely lengthens the page; on a wider screen they sit in a grid. */}
+          <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory scroll-pl-6 md:scroll-pl-0 -mx-6 px-6 md:mx-0 md:px-0 pb-2">
+            {FEEDBACK.map((f) => (
+              <figure key={f.by} className="min-w-[85%] sm:min-w-[60%] md:min-w-0 snap-start border border-gray-200 rounded-xl p-6 flex flex-col gap-3">
+                {f.upwork && <div className="text-mc-gold text-sm font-semibold" aria-label="Rated 5.0 out of 5 on Upwork">★★★★★ 5.0 on Upwork</div>}
+                <blockquote className="font-body text-gray-700 text-sm leading-relaxed flex-grow">"{f.quote}"</blockquote>
+                <figcaption className="font-body text-xs text-gray-500">{f.by}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="md:hidden font-body text-xs text-gray-400 text-center mt-2">Swipe for more</p>
+          <p className="text-center mt-6">
+            <a href={UPWORK_URL} target="_blank" rel="me noopener" className="font-body text-sm text-mc-teal underline hover:text-mc-gold">See every review on Upwork</a>
+          </p>
         </div>
       </section>
 
@@ -222,28 +253,6 @@ export default function GetAPlan() {
 
           <p className="font-body text-gray-600 text-sm text-center max-w-2xl mx-auto mt-10">
             If you give us your website we read it too, and mention it only if it is part of the problem. If we are not the right people to solve it, we will say so and tell you who might be.
-          </p>
-        </div>
-      </section>
-
-      {/* What clients say */}
-      <section className="bg-white px-6 py-16">
-        <div className="max-w-screen-xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="section-label mb-3 block">Client feedback</span>
-            <h2 className="font-headline text-2xl md:text-4xl font-black text-mc-teal leading-tight">What clients say</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {FEEDBACK.map((f) => (
-              <figure key={f.by} className="border border-gray-200 rounded-xl p-6 flex flex-col gap-3">
-                {f.upwork && <div className="text-mc-gold text-sm font-semibold" aria-label="Rated 5.0 out of 5 on Upwork">★★★★★ 5.0 on Upwork</div>}
-                <blockquote className="font-body text-gray-700 text-sm leading-relaxed flex-grow">"{f.quote}"</blockquote>
-                <figcaption className="font-body text-xs text-gray-500">{f.by}</figcaption>
-              </figure>
-            ))}
-          </div>
-          <p className="text-center mt-6">
-            <a href={UPWORK_URL} target="_blank" rel="me noopener" className="font-body text-sm text-mc-teal underline hover:text-mc-gold">See every review on Upwork</a>
           </p>
         </div>
       </section>
