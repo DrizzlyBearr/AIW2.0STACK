@@ -1,13 +1,13 @@
 import { useState, useRef, useEffect } from 'react'
+import { NEWSLETTER } from '../lib/newsletter'
 
 // Inline newsletter capture for content pages. Most article traffic is not
 // ready to book a call, so this gives the not-ready-yet reader a low-commitment
-// action instead of a dead end at the foot of the page. Posts to the same
-// newsletter-subscribe function the Pipeline & Power page uses, and renders the
-// same Cloudflare Turnstile widget so the submit is accepted when the function
-// has Turnstile enforcement enabled. Honeypot below catches simple bots.
-const TURNSTILE_SITE_KEY = '0x4AAAAAADoMt2UL2VS-CDZ-'
-const FN_BASE = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1'
+// action instead of a dead end at the foot of the page. Joins the same
+// Pipeline & Power list in Command as the newsletter page
+// (src/lib/newsletter.js). The honeypot below catches simple bots; the
+// Turnstile key is empty because Command does not verify it.
+const TURNSTILE_SITE_KEY = ''
 
 export default function NewsletterSignup() {
   const [email, setEmail] = useState('')
@@ -62,17 +62,18 @@ export default function NewsletterSignup() {
     setStatus('loading')
     setErrorMsg('')
     try {
-      const res = await fetch(`${FN_BASE}/newsletter-subscribe`, {
+      const res = await fetch(NEWSLETTER.join, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email,
           _hp: honeypot,
+          source: window.location.pathname,
           ...(turnstileToken && { turnstileToken }),
         }),
       })
       const data = await res.json()
-      if (data.success) {
+      if (data.ok) {
         setStatus('success')
       } else {
         setStatus('error')

@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
+import { NEWSLETTER } from '../lib/newsletter'
 
-// Fill in after creating a Cloudflare Turnstile site at dash.cloudflare.com
-const TURNSTILE_SITE_KEY = '0x4AAAAAADoMt2UL2VS-CDZ-'
-const FN_BASE = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1'
+// Empty: Command does not verify Turnstile (src/lib/newsletter.js), so the
+// widget is not shown.
+const TURNSTILE_SITE_KEY = ''
 
 const schema = {
   '@context': 'https://schema.org',
@@ -83,17 +84,18 @@ export default function PipelineAndPower() {
     setErrorMsg('')
 
     try {
-      const res = await fetch(`${FN_BASE}/newsletter-subscribe`, {
+      const res = await fetch(NEWSLETTER.join, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email,
           _hp: honeypot,
+          source: window.location.pathname,
           ...(turnstileToken && { turnstileToken }),
         }),
       })
       const data = await res.json()
-      if (data.success) {
+      if (data.ok) {
         setStatus('success')
       } else {
         setStatus('error')
