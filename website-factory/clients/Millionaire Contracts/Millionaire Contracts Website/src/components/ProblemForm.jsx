@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { trackGoal } from '../lib/track'
 import { sendEnquiry, visitSource } from '../lib/enquiry'
-import { BANDS, MARKETS } from '../lib/markets'
+import { MARKETS } from '../lib/markets'
 
 // The ad landing form: the problem you need solved, and only what the plan
 // needs to be written or tells us whether we can help
@@ -14,28 +14,34 @@ import { BANDS, MARKETS } from '../lib/markets'
 
 const SIZES = ['Just me', '2 to 10 people', '11 to 50 people', 'More than 50']
 const TIMING = ['Now', 'This quarter', 'Just exploring']
+// Replaced a budget question: nobody knows what solving it should cost before
+// they have seen a plan, and asking felt like a sales trap. This one tells us
+// what the plan has to work around, and size already says roughly who can pay.
+const FINDING = ['Referrals and word of mouth', 'Our own outreach', 'Ads or online', 'No steady way yet']
 
 export default function ProblemForm() {
   const [status, setStatus] = useState('idle')
   const [from, setFrom] = useState({ source: 'website:get-a-plan', term: '' })
-  const [data, setData] = useState({ name: '', company: '', email: '', problem: '', who: '', market: '', size: '', timing: '', budget: '', tried: '', website: '', gotcha: '' })
+  const [data, setData] = useState({ name: '', company: '', email: '', problem: '', who: '', market: '', size: '', timing: '', finding: '', tried: '', website: '', gotcha: '' })
 
   useEffect(() => setFrom(visitSource('website:get-a-plan')), [])
 
-  // The budget is asked in the market's own currency, never converted. A new
-  // market clears a budget picked in another currency.
   const market = MARKETS.find((m) => m.code === data.market)
-  const budgets = [...(BANDS[market ? market.currency : 'USD'] || BANDS.USD).budget, 'Not sure yet']
-  const set = (field, value) => setData((d) => ({ ...d, [field]: value, ...(field === 'market' ? { budget: '' } : {}) }))
-  const ready =
-    data.name.trim().length > 1 &&
-    data.company.trim().length > 1 &&
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email) &&
-    data.problem.trim().length > 10 &&
-    !!data.market &&
-    !!data.size &&
-    !!data.timing &&
-    !!data.budget
+  const set = (field, value) => setData((d) => ({ ...d, [field]: value }))
+  // What is still needed, in the order it appears, so a grey button always
+  // says why it is grey.
+  const missing = [
+    data.problem.trim().length < 3 && 'what needs doing',
+    !data.market && 'where you are based',
+    !data.size && 'business size',
+    !data.timing && 'when you need it',
+    !data.finding && 'how customers find you',
+    data.name.trim().length < 2 && 'your name',
+    data.company.trim().length < 2 && 'company',
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email) && 'a valid work email',
+  ].filter(Boolean)
+  const ready = missing.length === 0
+  const started = Object.entries(data).some(([k, v]) => k !== 'gotcha' && String(v).trim())
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -53,7 +59,7 @@ export default function ProblemForm() {
         'Based in': market ? market.label : '',
         Size: data.size,
         Timing: data.timing,
-        Budget: data.budget,
+        'Customers find them through': data.finding,
         'Tried so far': data.tried,
         source: from.source,
         term: from.term,
@@ -146,16 +152,14 @@ export default function ProblemForm() {
         </div>
       </div>
 
-      {market && (
       <div>
-        <span className="block font-body text-sm text-gray-300 mb-2">Roughly what could you spend on solving it, in {market.currency}?</span>
+        <span className="block font-body text-sm text-gray-300 mb-2">How do new customers find you today?</span>
         <div className="grid grid-cols-2 gap-3">
-          {budgets.map((b) => (
-            <button key={b} type="button" className={optionClass(data.budget === b)} onClick={() => set('budget', b)}>{b}</button>
+          {FINDING.map((f) => (
+            <button key={f} type="button" className={optionClass(data.finding === f)} onClick={() => set('finding', f)}>{f}</button>
           ))}
         </div>
       </div>
-      )}
 
       <div>
         <label className="block font-body text-sm text-gray-300 mb-2" htmlFor="pf-tried">
@@ -183,6 +187,9 @@ export default function ProblemForm() {
       <button type="submit" disabled={!ready || status === 'loading'} className="btn-primary w-full text-center disabled:opacity-40 disabled:cursor-not-allowed">
         {status === 'loading' ? 'Sending...' : 'Send me a plan'}
       </button>
+      {started && !ready && (
+        <p className="font-body text-xs text-mc-gold text-center" aria-live="polite">Still needed: {missing.join(', ')}.</p>
+      )}
       <p className="font-body text-xs text-gray-500 text-center">Free. No call needed to get it. We only use your details to reply.</p>
     </form>
   )
