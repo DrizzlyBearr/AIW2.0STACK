@@ -30,7 +30,7 @@ export const testimonials = [
 // The quotes are the clients' own words, cut only at a full stop where
 // Upwork's page cut them.
 export const UPWORK_URL = 'https://www.upwork.com/freelancers/~01131450594cc44af0'
-export const upworkStats = ['Top Rated on Upwork', '100% Job Success', '1,800+ hours over 14 jobs']
+export const upworkStats = ['Top Rated on Upwork', '100% success score on Upwork', '1,800+ hours over 14 contracts']
 export const upworkReviews = [
   {
     quote: "I had a great experience working with Katleho on our B2B lead generation and outbound sales. He exceeded expectations by being incredibly detail-oriented and consistently accountable for the project's outcomes.",

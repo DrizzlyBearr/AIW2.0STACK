@@ -3,8 +3,7 @@ import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import ServicePageHero from '../components/ServicePageHero'
 import SEOMeta from '../components/SEOMeta'
-
-const FORM_ID = '3UOsb9RonEACTOuRjaKW'
+import ContactForm from '../components/ContactForm'
 
 export default function Contact() {
   return (
@@ -40,16 +39,9 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right, GHL form embed */}
+          {/* Right, the form: it sends to Command (ContactForm) */}
           <div>
-            <iframe
-              src={`https://api.leadconnectorhq.com/widget/form/${FORM_ID}`}
-              style={{ width: '100%', height: '520px', border: 'none' }}
-              id={FORM_ID}
-              title="Contact Form"
-              loading="lazy"
-            />
-            <script src="https://link.msgsndr.com/js/form_embed.js" async />
+            <ContactForm />
           </div>
         </div>
       </section>
