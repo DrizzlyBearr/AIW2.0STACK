@@ -3,7 +3,7 @@
 // status: 'published' makes the archive page live AND allows a real send.
 export default {
   slug: 'issue-01-the-market-everyone-left',
-  status: 'draft',
+  status: 'published',
   number: 1,
   date: '2026-09-04',
   subject: 'The market your competitors quietly left',
