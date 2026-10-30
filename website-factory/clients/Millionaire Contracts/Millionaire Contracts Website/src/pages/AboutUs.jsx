@@ -8,17 +8,19 @@ import SEOMeta from '../components/SEOMeta'
 const HANDSHAKE = 'https://images.pexels.com/photos/7876502/pexels-photo-7876502.jpeg'
 const MC_LOGO = 'https://cdn.gamma.app/dk6oknpm67llad7/280fcab067574360b8e6a5cc574b1bdd/original/Add-a-heading-1.png'
 
+// Team photos live on the site (public/team), moved off GoHighLevel's storage
+// on 30 October 2026 so they do not depend on that account.
 const team = [
   {
     name: 'Katleho Mohlomi',
     role: 'Founder & CEO',
-    photo: 'https://storage.googleapis.com/msgsndr/A8PmgiSa8bKb0J1mBeLF/media/697a3bdd266d73a70af7464e.png',
+    photo: '/team/katleho-mohlomi.webp',
     upwork: 'https://www.upwork.com/freelancers/~01131450594cc44af0',
   },
   {
     name: 'Miense Mpasa',
     role: 'VP Business Development',
-    photo: 'https://storage.googleapis.com/msgsndr/A8PmgiSa8bKb0J1mBeLF/media/697a3bdd1927c83cb243a485.png',
+    photo: '/team/miense-mpasa.webp',
     upwork: 'https://www.upwork.com/freelancers/~01212aef1c4c40d084',
   },
 ]
