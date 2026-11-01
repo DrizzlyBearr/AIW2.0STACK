@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How Much Does an SDR Cost? Salary, OTE, and the Fully Loaded Number',
   description: 'The real cost of an SDR broken down: base salary, on-target earnings, and the fully loaded annual number once payroll tax, benefits, tools, management, recruiting, and ramp are added.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/how-much-does-an-sdr-cost',
 }
 
@@ -284,7 +284,7 @@ export default function HowMuchDoesAnSDRCost() {
               { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'Full number breakdown for both options.' },
               { to: '/cost-of-building-a-sales-team', label: 'The Cost of Building a Sales Team', desc: 'What a full in-house sales function really costs to stand up.' },
               { to: '/fractional-sales-team', label: 'What Is a Fractional Sales Team?', desc: 'Senior sales capability without a full-time hire.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'What it means, the models, and who it works for.' },
+              { to: '/how-it-works', label: 'How It Works', desc: 'How we install a sales function, from the first call to a rep working your pipeline.' },
             ].map((link) => (
               <Link
                 key={link.to}

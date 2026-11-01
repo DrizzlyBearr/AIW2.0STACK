@@ -10,7 +10,7 @@ const schema = {
   name: 'Sales Resources and Guides',
   description: 'Guides on outsourced sales, appointment setting, pricing, and building a B2B sales process. Written for businesses deciding how to grow their pipeline.',
   url: 'https://www.millionairecontracts.com/resources',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
 }
 
 const articles = [
@@ -19,7 +19,6 @@ const articles = [
     category: 'Sales Fundamentals',
     title: 'What Is Sales Outsourcing and Is It Right for Your Business?',
     desc: 'The definition, the four engagement models, who it works for, who it does not, and a framework for deciding.',
-    featured: true,
   },
   { to: '/what-is-an-sdr', category: 'Sales Fundamentals', title: 'What Is an SDR? The Sales Development Rep Role Explained', desc: 'What an SDR does day to day, how the role differs from a closer, where it fits the pipeline, what it costs, and when to hire versus outsource.' },
   { to: '/sdr-vs-bdr', category: 'Sales Fundamentals', title: 'SDR vs BDR: What Is the Difference and Which Do You Need?', desc: 'The real difference between inbound-focused SDRs and outbound-focused BDRs, how they fit together, and how to decide which function you need.' },
@@ -67,6 +66,7 @@ const articles = [
     category: 'Pricing',
     title: 'What Does Outsourced Sales Actually Cost?',
     desc: 'Every pricing model explained, the factors that drive the number, and how to think about return.',
+    featured: true,
   },
   {
     to: '/cost-of-building-a-sales-team',
@@ -115,6 +115,12 @@ const articles = [
     category: 'Vertical',
     title: 'Outsourced Sales for Professional Services Firms',
     desc: 'How Millionaire Contracts builds a proactive pipeline for consulting, legal, staffing, and corporate services firms beyond referrals.',
+  },
+  {
+    to: '/outsourced-sales-for-law-firms',
+    category: 'Vertical',
+    title: 'Outsourced Sales and Intake for Law Firms',
+    desc: 'How Millionaire Contracts builds and runs the intake side of small law firms: the part between someone finding you and a consultation in the diary.',
   },
   {
     to: '/outsourced-sales-for-private-equity',

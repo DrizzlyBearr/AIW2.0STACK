@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'Founder-Led Sales: Why It Stops Working and What to Do Next',
   description: 'Founder-led sales gets a business off the ground, then quietly becomes the ceiling. Here is why it stops scaling, the signs you have hit the wall, and how to move past it.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/founder-led-sales-stops-working',
 }
 

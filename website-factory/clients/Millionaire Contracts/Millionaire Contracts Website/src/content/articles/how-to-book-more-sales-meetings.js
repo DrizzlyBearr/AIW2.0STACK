@@ -6,6 +6,7 @@ export default {
   date: '2026-09-03',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/appointment-setting',
   title: 'How to Book More Sales Meetings',
   description:
     'More booked meetings is rarely a motivation problem. It is a system problem, and mostly a specificity problem. Here is how to make booked meetings a steady output instead of a lucky streak.',

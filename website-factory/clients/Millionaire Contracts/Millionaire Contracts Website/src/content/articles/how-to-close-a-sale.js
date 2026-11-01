@@ -6,6 +6,7 @@ export default {
   date: '2026-09-04',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/sales-closing',
   title: 'How to Close a Sale Without a Single Closing Trick',
   description:
     'The close is not where deals are won or lost. A calmer way to end a sale, built on the one thing that makes a buyer say yes on their own.',

@@ -6,6 +6,7 @@ export default {
   date: '2026-09-04',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/sales-closing',
   title: 'How to Write a Sales Proposal That Confirms the Yes',
   description:
     'Not a document that wins the deal. A record of a decision the buyer already made, written so nothing in it is a surprise.',

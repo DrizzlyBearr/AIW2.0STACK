@@ -6,6 +6,7 @@ export default {
   date: '2026-09-04',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/sales-closing',
   title: 'How to Negotiate a B2B Deal Without Caving on Price',
   description:
     'Negotiation is trading, not conceding. A plain method for moving price only when the deal moves with it, so you protect margin instead of giving it away.',

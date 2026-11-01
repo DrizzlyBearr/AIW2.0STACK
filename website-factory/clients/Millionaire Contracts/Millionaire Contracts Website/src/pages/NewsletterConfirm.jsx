@@ -3,8 +3,8 @@ import { Link, useSearchParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
+import { NEWSLETTER } from '../lib/newsletter'
 
-const FN_BASE = 'https://yhktwznlnfzcfzrmpniv.supabase.co/functions/v1'
 
 export default function NewsletterConfirm() {
   const [searchParams] = useSearchParams()
@@ -19,14 +19,14 @@ export default function NewsletterConfirm() {
       return
     }
 
-    fetch(`${FN_BASE}/newsletter-confirm`, {
+    fetch(NEWSLETTER.confirm, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token }),
     })
       .then((r) => r.json())
       .then((data) => {
-        if (data.success) {
+        if (data.ok) {
           setStatus('success')
         } else {
           setStatus('error')

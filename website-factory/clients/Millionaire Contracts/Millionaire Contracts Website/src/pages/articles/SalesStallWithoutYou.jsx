@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'Why Sales Stall Every Time You Step Back from Them',
   description: 'When the founder is the sales process, any absence stops the pipeline. Here is why that dependency forms, why it is hard to break, and what changes when a team carries the sales function instead.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/sales-stall-without-you',
 }
 

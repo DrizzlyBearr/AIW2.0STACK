@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How to Write Sales Scripts That Convert',
   description: 'How to write sales scripts for cold calls and discovery calls: why a script is a structure not a recital, how to build openers, discovery questions, objection handling, and closes, and why per-client scripts beat generic templates.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/how-to-write-sales-scripts',
 }
 
@@ -360,7 +360,7 @@ export default function HowToWriteSalesScripts() {
               { to: '/how-to-write-a-cold-email', label: 'How to Write a Cold Email That Gets Replies', desc: 'The same principles applied to written outreach.' },
               { to: '/lead-qualification-framework', label: 'A Lead Qualification Framework That Works', desc: 'Decide which conversations are worth having.' },
               { to: '/sales-closing', label: 'Sales Closing: How to Ask for the Next Step', desc: 'Turn good conversations into booked outcomes.' },
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'What it means, who it fits, and how to decide.' },
+              { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
               { to: '/services', label: 'Our Services', desc: 'How Millionaire Contracts runs outbound end to end.' },
             ].map((link) => (
               <Link

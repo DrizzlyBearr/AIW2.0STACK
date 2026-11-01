@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How to Choose an Appointment Setting Company: 7 Questions to Ask Before You Hire',
   description: 'Before you hire an appointment setting company, ask these 7 questions. They separate the agencies with real qualification discipline from the ones running volume plays on your brand.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/how-to-choose-an-appointment-setting-company',
 }
 

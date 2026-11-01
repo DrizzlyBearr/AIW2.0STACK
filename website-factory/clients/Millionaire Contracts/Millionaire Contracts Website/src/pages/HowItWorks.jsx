@@ -54,8 +54,8 @@ export default function HowItWorks() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEOMeta
-        title="How It Works"
-        description="How Millionaire Contracts installs a sales function: the qualifier and a call, a build plan, installation you watch inside your account, then a rep working your pipeline daily with a written report every Friday."
+        title="How Millionaire Contracts Works: From Qualifier to Live Rep"
+        description="Four steps: answer the qualifier and talk, get a build plan, watch the install inside your account, then a trained rep works your pipeline every day."
         path="/how-it-works"
         schema={schema}
       />
@@ -73,7 +73,7 @@ export default function HowItWorks() {
               <span className="text-mc-gold">then a rep works it.</span>
             </h1>
             <p className="font-body text-gray-400 text-lg leading-relaxed max-w-2xl">
-              We install a sales function in a set order and place a trained rep on your account to work it. Every step is visible inside your own account, so you are never waiting on a status update to know where things stand.
+              Millionaire Contracts works in four steps. You answer a short qualifier and we talk, we map a build plan, we install your sales function inside your own account where you can watch it, and then a trained rep works the pipeline every day with a written report each Friday. You are never waiting on a status update to know where things stand.
             </p>
           </div>
         </div>

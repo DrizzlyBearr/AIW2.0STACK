@@ -77,7 +77,7 @@ export default {
     { to: '/five-signs-you-need-outsourced-sales', label: 'Five Signs You Need Outsourced Sales', desc: 'The tells that it is time to have outbound run for you.' },
     { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales', desc: 'The honest tradeoff between building a team and buying the motion.' },
     { to: '/cost-of-building-a-sales-team', label: 'Cost of Building a Sales Team', desc: 'What a first hire really costs once you count the ramp.' },
-    { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'Having the meetings booked for you instead of hiring for them.' },
+    { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
   ],
   ctaHeading: 'Have the demand but not the proven motion yet?',
   ctaBody: 'We point outbound at your market this week and book qualified meetings while you close the gaps, with no ramp and no first-hire risk. One call is enough to see if it fits.',

@@ -6,6 +6,7 @@ export default {
   date: '2026-09-04',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/appointment-setting',
   title: 'Speed to Lead: Why the Fastest Reply Wins',
   description:
     'Buyers reward the first useful reply, not the best pitch. Why response time beats polish, why slow deals vanish as silence instead of a no, and how to build speed into your pipeline.',

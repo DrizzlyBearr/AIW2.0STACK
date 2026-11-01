@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
-import { issues } from '../lib/content'
+import { issues } from '../lib/issues'
 
 export default function NewsletterArchive() {
   return (

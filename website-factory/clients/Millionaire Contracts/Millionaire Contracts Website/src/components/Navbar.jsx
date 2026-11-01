@@ -15,6 +15,7 @@ const services = [
 const industries = [
   { label: 'SaaS and Technology', to: '/outsourced-sales-for-saas' },
   { label: 'Professional Services', to: '/outsourced-sales-for-professional-services' },
+  { label: 'Law Firms', to: '/outsourced-sales-for-law-firms' },
   { label: 'Private Equity and M&A', to: '/outsourced-sales-for-private-equity' },
   { label: 'Marketing Agencies', to: '/outsourced-sales-for-marketing-agencies' },
   { label: 'Financial Services', to: '/outsourced-sales-for-financial-services' },

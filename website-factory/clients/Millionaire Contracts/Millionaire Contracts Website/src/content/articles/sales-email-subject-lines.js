@@ -6,11 +6,11 @@ export default {
   date: '2026-09-04',
   category: 'Outreach',
   label: 'Outreach',
-  title: 'Subject Lines That Get B2B Emails Opened',
+  title: 'B2B Email Subject Lines: 10 Examples and Why They Work',
   description:
-    'Most subject-line advice chases opens with curiosity gaps that win the click and lose the reader. A calmer way to write subjects that earn an honest open and turn it into a reply.',
+    'Good B2B email subject lines are short, specific and true to the email below them. 10 examples, the patterns to avoid, and how to judge them by replies.',
   intro:
-    'Most subject-line advice is built to win the open and stops caring what happens after the click. That is why the line you are proudest of can be the one that gets you ignored by the third email. A subject line is a promise, and the body is where you keep it or break it. Here is how to write subjects that win an honest open and turn it into a reply, instead of clever ones that burn the list the first time you send them.',
+    'Good B2B email subject lines are short, specific and true. They name something real about the reader, and the first line of the email delivers exactly that. Curiosity gaps and fake Re: lines can lift the first open, then cost you replies on every email after it. Below are ten examples that keep their promise, the lines to avoid, and how to tell which ones are working by the replies they bring, not the opens.',
   stats: [
     { value: 'A promise', label: 'What a subject line actually is' },
     { value: 'The body', label: 'What has to keep that promise' },
@@ -18,6 +18,10 @@ export default {
     { value: 'One story', label: 'What subject and body must tell' },
   ],
   sections: [
+    {
+      heading: '10 B2B email subject line examples that keep their promise',
+      body: 'Each of these works for the same reason. It names something specific, and the email below it opens on that exact thing. Swap the brackets for real details. If you have no real detail to put in, the line will not save the email.\n\n1. **[Company]\'s new SDR role and the ramp behind it.** Names a public signal, a job posting, and a cost the reader is about to carry. The email opens on that posting.\n2. **Your [region] expansion and the sales hires behind it.** Ties a move the company has announced to a problem you can help with.\n3. **No-shows on your demo calls.** Names a specific pain in plain words. Use it only when you have a reason to think they have that pain.\n4. **[Mutual contact] said you are hiring closers.** A real referral is the strongest opener there is. Never fake one.\n5. **Who owns outbound at [Company]?** A direct, honest question for when you do not know who the right person is.\n6. **Your pricing page and enterprise buyers.** Points at something the reader owns and can check in ten seconds.\n7. **How agencies like yours fill a quiet January.** Speaks to a pattern their segment knows well. The body has to deliver the how, not a pitch.\n8. **Following up on the SDR ramp note.** A follow-up that names the earlier topic, so it reads as one thread rather than a new ask.\n9. **Worth 15 minutes on [specific problem]?** States the ask plainly. Better later in a sequence, once the earlier emails have earned some trust.\n10. **Should I close the file on [topic]?** A clear last email. It gives the reader an easy yes or no, and sometimes gets the reply the earlier emails did not.\n\nThe lines to avoid are the ones that work on anyone: Quick question, You are not going to believe this, Idea for [company] with nothing specific behind it, and a Re: on a thread that never existed. Each can win an open. Each loses the reader when the body does not match.',
+    },
     {
       heading: 'The line you are proudest of may be the one getting you ignored',
       body: 'The subject line you are most proud of is often the one that gets you ignored by the third email. It won the open. It also spent something you did not know you were spending. A buyer clicked, read a body that did not match the line that pulled them in, and quietly filed you under noise. The open counted. The relationship did not survive it.\n\nMost subject-line advice is built to win that first click and stops caring what happens next. Curiosity gaps, fake urgency, a Re: on a thread that never existed. All of it works once. The problem is that email to the same person is never a one-time event. You are going to write to that inbox again. What you teach the reader in the first line decides whether the second one gets read at all.',
@@ -49,8 +53,8 @@ export default {
   ],
   faqs: [
     {
-      q: 'What makes a good B2B sales subject line?',
-      a: 'The best ones are specific and true, and the body delivers exactly what the line promised. A subject that names the real situation the reader is in beats a clever line every time, because it earns the open and keeps the promise at once. If the subject and the body tell the same story, the open turns into a reply.',
+      q: 'What are good B2B email subject lines?',
+      a: 'Good B2B subject lines are short, specific and true, and the body delivers exactly what the line promised. For example, [Company]\'s new SDR role and the ramp behind it, or No-shows on your demo calls. A subject that names the real situation the reader is in beats a clever line every time, because it earns the open and keeps the promise at once. If the subject and the body tell the same story, the open turns into a reply.',
     },
     {
       q: 'Should I use curiosity gap subject lines?',

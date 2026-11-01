@@ -3,6 +3,8 @@ import { StaticRouter } from 'react-router-dom/server'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App.jsx'
 export { articles as contentArticles, issues as contentIssues } from './lib/content'
+// Every page's code is loaded before the first render, so the HTML is whole.
+export { preloadAll } from './lib/page'
 
 // Renders the app for a given route to an HTML string. Used by the prerender
 // script at build time.

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 
 const LOGO = '/mc-logo.png'
+export { UPWORK_URL as UPWORK } from './Testimonials'
+import { UPWORK_URL as UPWORK } from './Testimonials'
 
 const links = [
   { label: 'Home', to: '/' },
@@ -70,6 +72,9 @@ export default function Footer() {
           <Link to="/calender" className="btn-primary text-sm py-2.5 px-5 inline-block">
             Book a Call
           </Link>
+          <a href={UPWORK} target="_blank" rel="me noopener" className="font-body text-gray-500 text-sm hover:text-white transition-colors block mt-3">
+            Prefer Upwork? Hire us there
+          </a>
         </div>
       </div>
 

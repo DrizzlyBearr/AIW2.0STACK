@@ -77,7 +77,7 @@ export default {
     { to: '/how-to-run-a-sales-pipeline-review', label: 'How to Run a Sales Pipeline Review', desc: 'Read your deals for the risk they carry, not just the revenue they promise.' },
     { to: '/how-to-handle-sales-objections', label: 'How to Handle Sales Objections', desc: 'Answer the hard questions without overselling a promise that churns later.' },
     { to: '/sales-as-a-service', label: 'Sales as a Service', desc: 'A sales process built to close deals that hold, run for you.' },
-    { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'Having qualified, good-fit meetings booked for you instead of hiring for it.' },
+    { to: '/what-does-outsourced-sales-cost', label: 'What Does Outsourced Sales Actually Cost?', desc: 'Every pricing model, what drives the number, and how to judge the return.' },
   ],
   ctaHeading: 'Want fewer renewals decided against you?',
   ctaBody: 'Churn starts in the deal, so that is where we work: qualified meetings with accounts that actually fit, and a sales process built to close deals that hold, not just deals that sign. One call is enough to see if it fits.',

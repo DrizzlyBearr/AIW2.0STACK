@@ -6,6 +6,7 @@ export default {
   date: '2026-09-04',
   category: 'Sales Strategy',
   label: 'Sales Strategy',
+  service: '/sales-closing',
   title: 'How to Run a Sales Demo That Closes',
   description:
     'A demo is not a feature tour. It is confirmation of a problem you already found. Here is how to run one that closes, and why the instinct to show more is what kills deals.',

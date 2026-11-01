@@ -3,9 +3,10 @@
 // status: 'published' makes the archive page live AND allows a real send.
 export default {
   slug: 'issue-01-the-market-everyone-left',
-  status: 'draft',
+  status: 'published',
   number: 1,
-  date: '2026-09-04',
+  // Set to the day it is sent (/mc-send-issue); until then the page shows no date.
+  date: '',
   subject: 'The market your competitors quietly left',
   preview:
     'Everyone chases the fastest-growing markets. The money is often sitting in the ones good vendors stopped paying attention to. Here is how to find them.',

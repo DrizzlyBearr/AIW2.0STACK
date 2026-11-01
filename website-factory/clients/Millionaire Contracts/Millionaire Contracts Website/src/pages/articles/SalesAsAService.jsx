@@ -10,7 +10,7 @@ const schema = {
   '@type': 'Article',
   headline: 'Sales as a Service: The Model Explained',
   description: 'Sales as a service explained: what the subscription sales model is, how it differs from a traditional agency or a staffing firm, what is included, who it fits, and the pros and cons.',
-  publisher: { '@type': 'Organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://www.millionairecontracts.com/#organization', name: 'Millionaire Contracts', url: 'https://www.millionairecontracts.com' },
   mainEntityOfPage: 'https://www.millionairecontracts.com/sales-as-a-service',
 }
 
@@ -307,7 +307,7 @@ export default function SalesAsAService() {
           <h2 className="font-headline text-xl font-black text-mc-teal mb-6">Go deeper</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { to: '/what-is-sales-outsourcing', label: 'What Is Sales Outsourcing?', desc: 'The full definition, the models, and who it fits.' },
+              { to: '/services', label: 'Our Services', desc: 'What we build and run, and how to see whether we are a fit.' },
               { to: '/fractional-sales-team', label: 'What Is a Fractional Sales Team?', desc: 'Senior sales capability without a full-time hire.' },
               { to: '/b2b-appointment-setting-services', label: 'B2B Appointment Setting Services', desc: 'What a full appointment setting engagement covers.' },
               { to: '/in-house-vs-outsourced-sales', label: 'In-House vs Outsourced Sales: The Real Cost', desc: 'Full number breakdown for both options.' },

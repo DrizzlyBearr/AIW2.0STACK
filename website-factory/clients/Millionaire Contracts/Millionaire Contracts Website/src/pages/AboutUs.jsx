@@ -6,18 +6,24 @@ import FAQ from '../components/FAQ'
 import SEOMeta from '../components/SEOMeta'
 
 const HANDSHAKE = 'https://images.pexels.com/photos/7876502/pexels-photo-7876502.jpeg'
-const MC_LOGO = 'https://cdn.gamma.app/dk6oknpm67llad7/280fcab067574360b8e6a5cc574b1bdd/original/Add-a-heading-1.png'
+// The site's own copy of the logo, replacing one loaded from Gamma's CDN. Its
+// lettering is dark, so it sits on a white panel in the dark section below.
+const MC_LOGO = '/mc-signature-logo.png'
 
+// Team photos live on the site (public/team), moved off GoHighLevel's storage
+// on 30 October 2026 so they do not depend on that account.
 const team = [
   {
     name: 'Katleho Mohlomi',
     role: 'Founder & CEO',
-    photo: 'https://storage.googleapis.com/msgsndr/A8PmgiSa8bKb0J1mBeLF/media/697a3bdd266d73a70af7464e.png',
+    photo: '/team/katleho-mohlomi.webp',
+    upwork: 'https://www.upwork.com/freelancers/~01131450594cc44af0',
   },
   {
     name: 'Miense Mpasa',
     role: 'VP Business Development',
-    photo: 'https://storage.googleapis.com/msgsndr/A8PmgiSa8bKb0J1mBeLF/media/697a3bdd1927c83cb243a485.png',
+    photo: '/team/miense-mpasa.webp',
+    upwork: 'https://www.upwork.com/freelancers/~01212aef1c4c40d084',
   },
 ]
 
@@ -140,7 +146,9 @@ export default function AboutUs() {
       <section className="bg-mc-teal py-16 px-6">
         <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <img src={MC_LOGO} alt="Millionaire Contracts" className="h-16 mb-6 object-contain" onError={(e) => e.target.style.display='none'} />
+            <div className="inline-block bg-white rounded-lg px-4 py-3 mb-6">
+              <img src={MC_LOGO} alt="Millionaire Contracts" className="h-12 w-auto object-contain" />
+            </div>
             <h1 className="font-headline text-4xl font-bold text-white mb-4">Millionaire Contracts</h1>
             <p className="font-body text-gray-300 text-lg leading-relaxed">
               Turning revenue into power through systems that work under pressure.
@@ -219,6 +227,11 @@ export default function AboutUs() {
                 </div>
                 <h3 className="font-headline font-bold text-mc-teal">{member.name}</h3>
                 <p className="font-body text-gray-500 text-sm">{member.role}</p>
+                {member.upwork && (
+                  <a href={member.upwork} target="_blank" rel="me noopener" className="font-body text-mc-teal text-sm underline hover:text-mc-gold">
+                    {member.name.split(' ')[0]} on Upwork
+                  </a>
+                )}
               </div>
             ))}
           </div>
