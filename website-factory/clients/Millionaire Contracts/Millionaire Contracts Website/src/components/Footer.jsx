@@ -18,6 +18,7 @@ const services = [
   { label: 'CRM and Pipeline Setup', to: '/services#crm-and-pipeline-setup' },
   { label: 'Outreach Engine', to: '/services#outreach-engine' },
   { label: 'The Full Stack', to: '/services' },
+  { label: 'Command, our platform', to: '/command' },
 ]
 
 export default function Footer() {

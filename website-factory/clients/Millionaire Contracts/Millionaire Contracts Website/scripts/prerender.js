@@ -174,7 +174,7 @@ function sitemapMeta(p) {
   if (p.startsWith('/outsourced-sales-for-')) return { priority: '0.9', changefreq: 'monthly' }
   if (p === '/pipeline-and-power') return { priority: '0.8', changefreq: 'weekly' }
   if (p === '/newsletter-confirm' || p === '/newsletter-unsubscribe') return { priority: '0.1', changefreq: 'never' }
-  if (['/how-it-works', '/portfolio', '/about-us', '/contact-us', '/resources', '/calender'].includes(p)) {
+  if (['/how-it-works', '/portfolio', '/about-us', '/contact-us', '/resources', '/calender', '/command'].includes(p)) {
     return { priority: '0.8', changefreq: 'monthly' }
   }
   return { priority: '0.7', changefreq: 'monthly' }
