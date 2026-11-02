@@ -53,6 +53,15 @@ const departments = [
   },
 ]
 
+// The other four departments Command is being shaped into. Named as being
+// built, not as live: nothing here is claimed as working today.
+const comingNext = [
+  { name: 'Operations and SOPs', body: 'How the business runs, written down as steps people and agents follow, and kept current.' },
+  { name: 'Customer support', body: 'Questions from customers answered on every channel, with a person approving what goes out.' },
+  { name: 'IT and systems', body: 'The accounts, tools and logins a business runs on, kept in one place and checked.' },
+  { name: 'Legal and compliance', body: 'Agreements, policies and deadlines kept in order, with nothing signed or sent without a person.' },
+]
+
 const steps = [
   {
     number: '01',
@@ -304,6 +313,22 @@ export default function Command() {
                 </ul>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12">
+            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-5">
+              <h3 className="font-headline font-bold text-mc-teal text-xl">Being built next</h3>
+              <p className="font-body text-gray-600 text-sm">Four more departments, on the same rules. Not available yet.</p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {comingNext.map((d) => (
+                <div key={d.name} className="rounded-2xl border border-dashed border-gray-300 bg-white/60 p-6">
+                  <span className="font-body text-[11px] font-semibold uppercase tracking-wider" style={{ color: '#8a6a1f' }}>Being built</span>
+                  <h4 className="font-headline font-bold text-mc-teal text-lg mt-2 mb-2">{d.name}</h4>
+                  <p className="font-body text-gray-600 text-sm leading-relaxed">{d.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
