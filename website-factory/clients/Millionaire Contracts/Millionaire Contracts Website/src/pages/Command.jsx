@@ -26,36 +26,26 @@ const schema = {
   url: `${SITE}/command`,
   provider: { '@type': 'Organization', name: 'Millionaire Contracts', url: SITE },
   description:
-    'Command is the platform Millionaire Contracts runs its clients’ work on. Each department is run by an accountable person with an AI agent doing the legwork, and a person approves everything that reaches the outside world.',
+    'Command is the platform Millionaire Contracts runs its clients’ sales on. Each campaign has an accountable person with an AI agent doing the legwork, and a person approves everything that reaches the outside world. Sales is available today; more departments are being built.',
 }
 
+// Only Sales is offered as available (Kat, 3 November: the other departments
+// are not complete yet). Everything else is listed under Being built next,
+// and nothing there is claimed as working today.
 const departments = [
   {
-    name: 'Sales and outreach',
-    body: 'Each campaign has a worker agent. It finds who is due, reads the conversation, writes the next message and sends it on LinkedIn or by email at a person’s pace. Once someone writes back, a person approves every reply.',
-    points: ['LinkedIn and email', 'Replies answered first', 'Every send on the record'],
-  },
-  {
-    name: 'Marketing',
-    body: 'Agents draft posts and articles for you to read, change by talking, and approve. Approved posts are scheduled for each LinkedIn account, and agents comment on the right people’s posts.',
-    points: ['Posts and articles', 'Approved before publishing', 'Scheduled per account'],
-    illustration: 'calendar',
-  },
-  {
-    name: 'Admin and finance',
-    body: 'Invoices raised, sent and chased with reminders. Instalments that bill themselves. Fixed-price work kept in milestones, every payment in the books, and a month-end panel that shows what is outstanding.',
-    points: ['Invoices and reminders', 'Payments and expenses', 'Month-end close'],
-  },
-  {
-    name: 'People and reps',
-    body: 'A rep app that works on a phone: their leads, call mode, a follow-up after every logged call, and their pay. A sales academy with modules and a certification exam. Reps paid in one go, with payslips by email.',
-    points: ['Rep app', 'Sales academy', 'Payouts and payslips'],
+    name: 'Sales',
+    body: 'Each campaign has a worker agent. It finds who is due, reads the conversation, writes the next message and sends it on LinkedIn or by email at a person’s pace. Once someone writes back, a person approves every reply, and the agent books the call into your calendar once they say yes.',
+    points: ['LinkedIn and email', 'Replies answered first', 'Calls booked into your calendar', 'Every send on the record'],
   },
 ]
 
-// The other four departments Command is being shaped into. Named as being
-// built, not as live: nothing here is claimed as working today.
+// The departments Command is being shaped into. Named as being built, not as
+// live: nothing here is claimed as working today.
 const comingNext = [
+  { name: 'Marketing', body: 'Posts and articles drafted for you to approve, then scheduled to your own accounts.' },
+  { name: 'Admin and finance', body: 'Invoices, reminders, payments and the month-end close, kept in one place.' },
+  { name: 'People and reps', body: 'A rep app for the phone, a sales academy, and pay worked out and paid in one go.' },
   { name: 'Operations and SOPs', body: 'How the business runs, written down as steps people and agents follow, and kept current.' },
   { name: 'Customer support', body: 'Questions from customers answered on every channel, with a person approving what goes out.' },
   { name: 'IT and systems', body: 'The accounts, tools and logins a business runs on, kept in one place and checked.' },
@@ -66,32 +56,28 @@ const steps = [
   {
     number: '01',
     heading: 'Agents do the legwork',
-    body: 'They find who is due, draft the messages, write the reports and keep the books. Every step an agent takes is recorded, so you can see what it did and why.',
+    body: 'They find who is due, write the messages, answer what they can and book the calls. Every step an agent takes is recorded, so you can see what it did and why.',
   },
   {
     number: '02',
     heading: 'A person approves what goes out',
-    body: 'Anything that reaches the outside world shows a card with Approve and Decline. A reply to a lead, an email to a client, a calendar change, a document sent for sign-off. Nothing goes until a person presses Approve.',
+    body: 'Anything that reaches the outside world shows a card with Approve and Decline. A reply to a lead, a booked call, a change to a campaign. Nothing goes until a person presses Approve.',
   },
   {
     number: '03',
     heading: 'You see it all in one place',
-    body: 'The work happens on Command, not in scattered inboxes and spreadsheets. So every department is visible from one place, from anywhere.',
+    body: 'The work happens on Command, not in scattered inboxes and spreadsheets. So every campaign, conversation and call is visible from one place, from anywhere.',
   },
 ]
 
 const audiences = [
   {
     heading: 'You and your team',
-    body: 'Your own portal: the work being done for you, delivery dates, documents waiting on your sign-off, weekly reports and key dates. You can talk to an agent about your own business, and only yours.',
-  },
-  {
-    heading: 'Your reps',
-    body: 'A phone-friendly app with their leads, call mode, follow-ups and pay, plus the sales academy that picks up where they left off.',
+    body: 'Your own portal: your campaigns, the replies and drafts waiting on your approval, and the calls booked. You can talk to an agent about your own business, and only yours.',
   },
   {
     heading: 'Our team at Millionaire Contracts',
-    body: 'We run every client, campaign, agent and payment from Command, and talk to the COO agent on the home screen. Your work sits in the same place as ours.',
+    body: 'We run every client, campaign and agent from Command, and talk to the COO agent on the home screen. Your work sits in the same place as ours.',
   },
 ]
 
@@ -154,24 +140,6 @@ function ApprovalIllustration() {
   )
 }
 
-// ── Illustration: a week of scheduled posts ──
-function CalendarIllustration() {
-  const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
-  const posts = [true, false, true, false, true, false, false]
-  return (
-    <div role="img" aria-label="Illustration of a week with three posts scheduled." className="mt-5">
-      <div aria-hidden="true" className="grid grid-cols-7 gap-1.5">
-        {days.map((d, i) => (
-          <div key={i} className="rounded-md border border-gray-200 bg-gray-50 px-1 py-2 flex flex-col items-center gap-1.5">
-            <span className="font-body text-[10px] text-gray-500">{d}</span>
-            <span className={`w-2 h-2 rounded-full ${posts[i] ? '' : 'bg-gray-200'}`} style={posts[i] ? { backgroundColor: GOLD } : undefined} />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
 // ── Illustration: the COO's weekday morning note ──
 function MorningNoteIllustration() {
   const lines = ['Where things stand', 'What needs you', 'Three things to do today', 'One idea']
@@ -214,7 +182,7 @@ export default function Command() {
     <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
       <SEOMeta
         title="Command, the Platform Millionaire Contracts Runs On"
-        description="Command is the platform Millionaire Contracts runs its clients' work on. Agents do the legwork across sales, marketing, finance and reps, and a person approves everything that goes out."
+        description="Command is the platform Millionaire Contracts runs its clients' sales on. Agents do the legwork, and a person approves everything that goes out. Sales is available today; more departments are being built."
         path="/command"
         schema={schema}
       />
@@ -235,11 +203,11 @@ export default function Command() {
             </div>
             <span className="section-label mb-4 block" style={{ color: GOLD }}>The platform behind our work</span>
             <h1 className="font-headline text-4xl md:text-6xl font-black leading-tight mb-6" style={{ color: CREAM }}>
-              The whole office, run by people.{' '}
+              Your sales, run by people.{' '}
               <span style={{ color: GOLD }}>Agents do the legwork.</span>
             </h1>
             <p className="font-body text-lg leading-relaxed max-w-2xl mb-8" style={{ color: 'rgba(236,233,226,0.75)' }}>
-              Command is the platform Millionaire Contracts runs its clients’ work on. Each department has an accountable person, with an AI agent doing the work underneath. A person signs off on everything that goes out.
+              Command is the platform Millionaire Contracts runs its clients’ sales on. Each campaign has an accountable person, with an AI agent doing the work underneath. A person signs off on everything that goes out. Sales is available today; more departments are being built.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
@@ -266,12 +234,12 @@ export default function Command() {
       <section id="what-it-does" className="py-20 px-6 bg-mc-cream scroll-mt-24">
         <div className="max-w-screen-xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="section-label mb-3 block" style={{ color: '#8a6a1f' }}>What it runs</span>
+            <span className="section-label mb-3 block" style={{ color: '#8a6a1f' }}>Available now</span>
             <h2 className="font-headline text-3xl md:text-4xl font-black text-mc-teal leading-tight">
-              The departments, in one place
+              The Sales department
             </h2>
             <p className="font-body text-gray-600 mt-4 text-base">
-              Each one is run by a person, with an agent doing the legwork underneath.
+              Sales is ready today, run by a person with an agent doing the legwork underneath. The other departments are being built on the same rules.
             </p>
           </div>
 
@@ -299,13 +267,12 @@ export default function Command() {
             <MorningNoteIllustration />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid gap-6">
             {departments.map((d) => (
               <div key={d.name} className="bg-white rounded-2xl border border-gray-200 p-7 flex flex-col">
                 <div className="w-1.5 h-8 rounded-full mb-5" style={{ backgroundColor: GOLD }} aria-hidden="true" />
                 <h3 className="font-headline font-bold text-mc-teal text-xl mb-3">{d.name}</h3>
                 <p className="font-body text-gray-600 text-sm leading-relaxed">{d.body}</p>
-                {d.illustration === 'calendar' && <CalendarIllustration />}
                 <ul className="flex flex-wrap gap-2 mt-5">
                   {d.points.map((p) => (
                     <li key={p} className="font-body text-xs font-semibold text-mc-teal bg-mc-cream rounded-full px-3 py-1.5">{p}</li>
@@ -318,7 +285,7 @@ export default function Command() {
           <div className="mt-12">
             <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-5">
               <h3 className="font-headline font-bold text-mc-teal text-xl">Being built next</h3>
-              <p className="font-body text-gray-600 text-sm">Four more departments, on the same rules. Not available yet.</p>
+              <p className="font-body text-gray-600 text-sm">Seven more departments, on the same rules. Not available yet.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {comingNext.map((d) => (
