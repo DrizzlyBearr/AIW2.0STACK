@@ -3,14 +3,21 @@ import { trackGoal } from '../lib/track'
 import { sendEnquiry, visitSource } from '../lib/enquiry'
 import { MARKETS } from '../lib/markets'
 import { testimonials } from './Testimonials'
+import { BOOKING_URL } from '../pages/Calendar'
 
 // The ad landing form (MC-Fulfillment-Engine docs/mc-paid-ads.md), in three
 // short steps: the problem first, the easy first yes; three one-tap answers;
 // contact details last, once they have already put something in. Research
 // for the page (30 October 2026) found B2B forms of six or more fields do
 // better split into steps, and that each extra field costs some visitors, so
-// it asks only what the plan needs or what says whether we can help. Who to
-// reach, what they tried and their website are asked in the first reply.
+// it asks only what the plan needs or what says whether we can help.
+//
+// Tuned for bookings (Kat, 9 November 2026, after the first Google Ads
+// enquiry): who they sell to is asked here, so the first reply does not spend
+// its one question on it; a WhatsApp number and a website are offered, never
+// required, because a message or a call inside ten minutes books far more
+// conversations than email; and the thank-you holds the calendar itself, with
+// their name and email filled in, instead of a button to another page.
 //
 // It posts to MC's enquiry address in Command (src/lib/enquiry.js): the
 // problem arrives as the message, every other answer and the ad's source as
@@ -22,21 +29,53 @@ const TIMING = ['Now', 'This quarter', 'Just exploring']
 // they have seen a plan, and asking felt like a sales trap. This one tells us
 // what the plan has to work around, and size already says roughly who can pay.
 const FINDING = ['Referrals and word of mouth', 'Our own outreach', 'Ads or online', 'No steady way yet']
+// Whether we can help at all: MC's work is reaching other businesses.
+const SELLS_TO = ['Other businesses', 'The public', 'Both']
 
 // The one quote shown beside the button: specific, named, and about the
 // result a buyer here wants.
 const BESIDE_BUTTON = testimonials.find((t) => t.company === 'BaseHome Capital')
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+// Optional, but if it is there it has to be a number someone can message.
+const phoneOk = (p) => !p.trim() || p.replace(/\D/g, '').length >= 9
+
+/** The calendar on the thank-you, filled in with what they already typed, tagged so a booking traces back here. */
+function bookingEmbed(name, email, source) {
+  const q = new URLSearchParams({
+    embed_domain: 'www.millionairecontracts.com',
+    embed_type: 'Inline',
+    hide_gdpr_banner: '1',
+    name,
+    email,
+    utm_source: 'website',
+    utm_campaign: 'get-a-plan',
+    utm_content: source,
+  })
+  return `${BOOKING_URL}?${q.toString()}`
+}
 
 export default function ProblemForm() {
   const [status, setStatus] = useState('idle')
   const [step, setStep] = useState(1)
   const [from, setFrom] = useState({ source: 'website:get-a-plan', term: '' })
-  const [data, setData] = useState({ name: '', company: '', email: '', problem: '', market: '', size: '', timing: '', finding: '', gotcha: '' })
+  const [data, setData] = useState({ name: '', company: '', email: '', phone: '', website: '', problem: '', market: '', size: '', timing: '', finding: '', sellsTo: '', gotcha: '' })
   const top = useRef(null)
 
   useEffect(() => setFrom(visitSource('website:get-a-plan')), [])
+
+  // A call booked on the thank-you is the goal this page exists for, so it is
+  // counted: Calendly tells the page when a booking is made.
+  useEffect(() => {
+    if (status !== 'success') return undefined
+    const onMessage = (e) => {
+      if (!/^https:\/\/([a-z0-9-]+\.)*calendly\.com$/.test(e.origin) || e.data?.event !== 'calendly.event_scheduled') return
+      trackGoal('call booked')
+      if (typeof window.gtag === 'function') window.gtag('event', 'book_call', { form: 'get-a-plan' })
+    }
+    window.addEventListener('message', onMessage)
+    return () => window.removeEventListener('message', onMessage)
+  }, [status])
 
   const market = MARKETS.find((m) => m.code === data.market)
   const set = (field, value) => setData((d) => ({ ...d, [field]: value }))
@@ -44,14 +83,14 @@ export default function ProblemForm() {
   // What each step still needs, so a grey button always says why it is grey.
   const needs = {
     1: [data.problem.trim().length < 3 && 'what needs doing', !data.market && 'where you are based'],
-    2: [!data.size && 'business size', !data.timing && 'when you need it', !data.finding && 'how customers find you'],
-    3: [data.name.trim().length < 2 && 'your name', data.company.trim().length < 2 && 'company', !EMAIL.test(data.email) && 'a valid work email'],
+    2: [!data.sellsTo && 'who you sell to', !data.size && 'business size', !data.timing && 'when you need it', !data.finding && 'how customers find you'],
+    3: [data.name.trim().length < 2 && 'your name', data.company.trim().length < 2 && 'company', !EMAIL.test(data.email) && 'a valid work email', !phoneOk(data.phone) && 'a full WhatsApp number, or leave it empty'],
   }
   const missing = needs[step].filter(Boolean)
   const touched = {
     1: data.problem || data.market,
-    2: data.size || data.timing || data.finding,
-    3: data.name || data.company || data.email,
+    2: data.sellsTo || data.size || data.timing || data.finding,
+    3: data.name || data.company || data.email || data.phone,
   }[step]
 
   function go(to) {
@@ -79,6 +118,9 @@ export default function ProblemForm() {
         name: data.name,
         company: data.company,
         email: data.email,
+        phone: data.phone.trim(),
+        'Sells to': data.sellsTo,
+        Website: data.website.trim(),
         'Based in': market ? market.label : '',
         Size: data.size,
         Timing: data.timing,
@@ -114,15 +156,23 @@ export default function ProblemForm() {
         </div>
         <h3 className="font-headline text-2xl font-black text-white mb-3">Got it</h3>
         <p className="font-body text-gray-400 leading-relaxed mb-8">
-          Thanks, {data.name.split(' ')[0] || 'and thanks'}. A person reads what you wrote and replies soon, in working hours usually within minutes. Your plan follows within two working days.
+          Thanks, {data.name.split(' ')[0] || 'and thanks'}. A person reads what you wrote and replies soon, in working hours usually within minutes{data.phone.trim() ? ', on WhatsApp if that is quicker' : ''}. Your plan follows within one working day.
         </p>
-        {/* Offering a booking the moment someone asks turns more requests into
-            conversations than following up later (the page research, 30
-            October 2026). The plan still follows either way. */}
-        <div className="rounded-xl border border-mc-gold/30 bg-mc-gold/5 p-6">
-          <p className="font-headline text-lg font-bold text-white mb-2">Want it sooner?</p>
-          <p className="font-body text-gray-400 text-sm mb-5">Book a discovery call and we will talk it through. Your written plan still follows.</p>
-          <a href="/calender" className="btn-primary">Book a discovery call</a>
+        {/* The calendar itself, not a button to it: the moment after they ask
+            is the moment they are most likely to book. Their name and email
+            are already in it. The plan still follows either way. */}
+        <div className="rounded-xl border border-mc-gold/30 bg-mc-gold/5 p-4 sm:p-6 text-left">
+          <p className="font-headline text-lg font-bold text-white mb-1 text-center">Want to talk it through sooner?</p>
+          <p className="font-body text-gray-400 text-sm mb-4 text-center">Pick a time for a discovery call. Your written plan still follows.</p>
+          <iframe
+            src={bookingEmbed(data.name, data.email, from.source)}
+            title="Book a discovery call with Millionaire Contracts"
+            className="w-full rounded-lg bg-white"
+            style={{ minWidth: '280px', height: '700px', border: 'none' }}
+          />
+          <p className="font-body text-xs text-gray-500 text-center mt-3">
+            Calendar not loading? <a href={BOOKING_URL} target="_blank" rel="noopener" className="underline hover:text-mc-gold">Open it on Calendly</a>
+          </p>
         </div>
       </div>
     )
@@ -163,6 +213,14 @@ export default function ProblemForm() {
       {step === 2 && (
         <>
           <div>
+            <span className={label}>Who do you sell to?</span>
+            <div className="grid grid-cols-3 gap-3">
+              {SELLS_TO.map((o) => (
+                <button key={o} type="button" className={optionClass(data.sellsTo === o)} onClick={() => set('sellsTo', o)}>{o}</button>
+              ))}
+            </div>
+          </div>
+          <div>
             <span className={label}>How big is the business?</span>
             <div className="grid grid-cols-2 gap-3">
               {SIZES.map((s) => (
@@ -196,6 +254,8 @@ export default function ProblemForm() {
             <input className={inputClass} placeholder="Your name" autoComplete="name" value={data.name} onChange={(e) => set('name', e.target.value)} />
             <input className={inputClass} placeholder="Company" autoComplete="organization" value={data.company} onChange={(e) => set('company', e.target.value)} />
             <input className={inputClass} type="email" placeholder="Work email" autoComplete="email" value={data.email} onChange={(e) => set('email', e.target.value)} />
+            <input className={inputClass} type="tel" inputMode="tel" placeholder="WhatsApp number (optional, quickest way to reach you)" autoComplete="tel" value={data.phone} onChange={(e) => set('phone', e.target.value)} />
+            <input className={inputClass} type="text" inputMode="url" placeholder="Website (optional)" autoComplete="url" value={data.website} onChange={(e) => set('website', e.target.value)} />
           </div>
           {/* Only a bot fills this in; Command drops the enquiry if it is. */}
           <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" value={data.gotcha} onChange={(e) => set('gotcha', e.target.value)} />

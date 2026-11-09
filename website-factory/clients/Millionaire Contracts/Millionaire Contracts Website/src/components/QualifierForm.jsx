@@ -30,6 +30,7 @@ export default function QualifierForm() {
     tried: '',
     name: '',
     email: '',
+    phone: '',
     gotcha: '',
   })
   const [from, setFrom] = useState({ source: 'website:services', term: '' })
@@ -68,6 +69,7 @@ export default function QualifierForm() {
         name: data.name,
         company: data.company,
         email: data.email,
+        phone: data.phone.trim(),
         Website: data.website,
         Market: market ? market.label : '',
         'People selling today': data.sellers,
@@ -267,6 +269,8 @@ export default function QualifierForm() {
           <div className="space-y-3">
             <input className={inputClass} placeholder="Your name" value={data.name} onChange={(e) => set('name', e.target.value)} autoFocus />
             <input className={inputClass} type="email" placeholder="Work email" value={data.email} onChange={(e) => set('email', e.target.value)} />
+            {/* Optional: a message or a call inside ten minutes books more conversations than email. */}
+            <input className={inputClass} type="tel" inputMode="tel" autoComplete="tel" placeholder="WhatsApp number (optional, quickest way to reach you)" value={data.phone} onChange={(e) => set('phone', e.target.value)} />
           </div>
         </div>
       )}
