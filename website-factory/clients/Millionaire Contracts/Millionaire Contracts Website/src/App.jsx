@@ -11,6 +11,8 @@ const AboutUs = page(() => import('./pages/AboutUs'))
 const Contact = page(() => import('./pages/Contact'))
 const GetAPlan = page(() => import('./pages/GetAPlan'))
 const Meet = page(() => import('./pages/Meet'))
+// A prospect's free plan, one page per private link (pages/Plan.jsx).
+const Plan = page(() => import('./pages/Plan'))
 const Calendar = page(() => import('./pages/Calendar'))
 const SalesStrategy = page(() => import('./pages/SalesStrategy'))
 const SalesManagement = page(() => import('./pages/SalesManagement'))
@@ -183,6 +185,7 @@ export default function App() {
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/get-a-plan" element={<GetAPlan />} />
         <Route path="/meet" element={<Meet />} />
+        <Route path="/plan/:slug" element={<Plan />} />
         <Route path="/calender" element={<Calendar />} />
         <Route path="/sales-strategy-development" element={<SalesStrategy />} />
         <Route path="/sales-management" element={<SalesManagement />} />
