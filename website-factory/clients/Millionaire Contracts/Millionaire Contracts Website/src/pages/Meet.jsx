@@ -16,7 +16,7 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/katleho-mohlomi/'
 const BOOKING_URL = 'https://calendly.com/katlehomoh/30min'
 // The podcast interview on YouTube: the watch link, such as
 // https://www.youtube.com/watch?v=XXXXXXXXXXX. Empty hides the section.
-const PODCAST_URL = ''
+const PODCAST_URL = 'https://www.youtube.com/watch?v=xQtHm1c-hso'
 
 function youtubeId(url) {
   const m = /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/|live\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/.exec(url || '')
@@ -53,7 +53,7 @@ export default function Meet() {
         <div className="max-w-screen-md mx-auto space-y-10">
           {/* Who you just met */}
           <section className="flex flex-col items-center text-center gap-4">
-            <img src="/team/katleho-mohlomi.webp" alt="Katleho Mohlomi" className="w-28 h-28 rounded-full object-cover border-2 border-mc-gold" />
+            <img src="/team/katleho-mohlomi.webp" alt="Katleho Mohlomi" className="w-32 h-32 rounded-full object-cover object-top border-2 border-mc-gold" />
             <div>
               <h1 className="font-headline text-3xl font-bold">Katleho Mohlomi</h1>
               <p className="text-mc-gold font-semibold mt-1">Founder &amp; CEO, Millionaire Contracts</p>
@@ -74,12 +74,12 @@ export default function Meet() {
           {/* The podcast */}
           {video && (
             <section className="space-y-3">
-              <h2 className="font-headline text-xl font-bold text-center">Hear how we work: the podcast interview</h2>
+              <h2 className="font-headline text-xl font-bold text-center">My interview on the Mpho Dagada Network</h2>
               <div className="relative w-full overflow-hidden rounded-xl border border-white/10" style={{ paddingTop: '56.25%' }}>
                 <iframe
                   className="absolute inset-0 w-full h-full"
                   src={`https://www.youtube-nocookie.com/embed/${video}`}
-                  title="Katleho Mohlomi on the podcast"
+                  title="Katleho Mohlomi on the Mpho Dagada Network"
                   loading="lazy"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
