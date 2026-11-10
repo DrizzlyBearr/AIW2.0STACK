@@ -19,6 +19,13 @@ import { BOOKING_URL } from '../pages/Calendar'
 // conversations than email; and the thank-you holds the calendar itself, with
 // their name and email filled in, instead of a button to another page.
 //
+// Step 1 is one tap (10 November 2026). In its first week 86 ad visitors came,
+// 84% on phones, about 15 started the form and 3 got past step 1, which asked
+// them to type their problem out. Everyone who passed it finished step 2,
+// which is all taps. So step 1 now asks what they need most as buttons, South
+// Africa comes first since nearly every ad visitor is there, and their own
+// words are an optional box on the last step.
+//
 // It posts to MC's enquiry address in Command (src/lib/enquiry.js): the
 // problem arrives as the message, every other answer and the ad's source as
 // labelled lines beneath it.
@@ -29,6 +36,12 @@ const TIMING = ['Now', 'This quarter', 'Just exploring']
 // they have seen a plan, and asking felt like a sales trap. This one tells us
 // what the plan has to work around, and size already says roughly who can pay.
 const FINDING = ['Referrals and word of mouth', 'Our own outreach', 'Ads or online', 'No steady way yet']
+// What they need most, as one tap. Their own words are optional, on step 3.
+const NEEDS = ['More enquiries', 'Turn enquiries into sales', 'Someone to do the outreach', 'Something else']
+// South Africa first and on its own row: almost every ad visitor is there, and
+// down the list it was mis-tapped as Australia or the United States.
+const PLAN_MARKETS = [...MARKETS.filter((m) => m.code === 'ZA'), ...MARKETS.filter((m) => m.code !== 'ZA')]
+
 // Whether we can help at all: MC's work is reaching other businesses.
 const SELLS_TO = ['Other businesses', 'The public', 'Both']
 
@@ -59,7 +72,7 @@ export default function ProblemForm() {
   const [status, setStatus] = useState('idle')
   const [step, setStep] = useState(1)
   const [from, setFrom] = useState({ source: 'website:get-a-plan', term: '' })
-  const [data, setData] = useState({ name: '', company: '', email: '', phone: '', website: '', problem: '', market: '', size: '', timing: '', finding: '', sellsTo: '', gotcha: '' })
+  const [data, setData] = useState({ name: '', company: '', email: '', phone: '', website: '', problem: '', need: '', market: '', size: '', timing: '', finding: '', sellsTo: '', gotcha: '' })
   const top = useRef(null)
 
   useEffect(() => setFrom(visitSource('website:get-a-plan')), [])
@@ -82,13 +95,13 @@ export default function ProblemForm() {
 
   // What each step still needs, so a grey button always says why it is grey.
   const needs = {
-    1: [data.problem.trim().length < 3 && 'what needs doing', !data.market && 'where you are based'],
+    1: [!data.need && 'what you need most', !data.market && 'where you are based'],
     2: [!data.sellsTo && 'who you sell to', !data.size && 'business size', !data.timing && 'when you need it', !data.finding && 'how customers find you'],
     3: [data.name.trim().length < 2 && 'your name', data.company.trim().length < 2 && 'company', !EMAIL.test(data.email) && 'a valid work email', !phoneOk(data.phone) && 'a full WhatsApp number, or leave it empty'],
   }
   const missing = needs[step].filter(Boolean)
   const touched = {
-    1: data.problem || data.market,
+    1: data.need || data.market,
     2: data.sellsTo || data.size || data.timing || data.finding,
     3: data.name || data.company || data.email || data.phone,
   }[step]
@@ -114,7 +127,9 @@ export default function ProblemForm() {
     // Best effort, as on the qualifier: the visitor sees a thank-you either way.
     try {
       await sendEnquiry({
-        message: data.problem,
+        // The tap first, then their own words if they gave any.
+        message: [data.need, data.problem.trim()].filter(Boolean).join('\n\n'),
+        'Needs most': data.need,
         name: data.name,
         company: data.company,
         email: data.email,
@@ -190,20 +205,18 @@ export default function ProblemForm() {
       {step === 1 && (
         <>
           <div>
-            <label className={label} htmlFor="pf-problem">What do you need done that isn't getting done?</label>
-            <textarea
-              id="pf-problem"
-              className={`${inputClass} min-h-[120px] resize-none`}
-              placeholder="In your own words. For example: we need more meetings with the right buyers, our enquiries go nowhere, or nobody has time to sell."
-              value={data.problem}
-              onChange={(e) => set('problem', e.target.value)}
-            />
+            <span className={label}>What do you need most?</span>
+            <div className="grid grid-cols-2 gap-3">
+              {NEEDS.map((n) => (
+                <button key={n} type="button" className={optionClass(data.need === n)} onClick={() => set('need', n)}>{n}</button>
+              ))}
+            </div>
           </div>
           <div>
             <span className={label}>Where is the business based?</span>
             <div className="grid grid-cols-2 gap-3">
-              {MARKETS.map((m) => (
-                <button key={m.code} type="button" className={optionClass(data.market === m.code)} onClick={() => set('market', m.code)}>{m.label}</button>
+              {PLAN_MARKETS.map((m, i) => (
+                <button key={m.code} type="button" className={`${optionClass(data.market === m.code)}${i === 0 ? ' col-span-2' : ''}`} onClick={() => set('market', m.code)}>{m.label}</button>
               ))}
             </div>
           </div>
@@ -254,8 +267,16 @@ export default function ProblemForm() {
             <input className={inputClass} placeholder="Your name" autoComplete="name" value={data.name} onChange={(e) => set('name', e.target.value)} />
             <input className={inputClass} placeholder="Company" autoComplete="organization" value={data.company} onChange={(e) => set('company', e.target.value)} />
             <input className={inputClass} type="email" placeholder="Work email" autoComplete="email" value={data.email} onChange={(e) => set('email', e.target.value)} />
-            <input className={inputClass} type="tel" inputMode="tel" placeholder="WhatsApp number (optional, quickest way to reach you)" autoComplete="tel" value={data.phone} onChange={(e) => set('phone', e.target.value)} />
+            <input className={inputClass} type="tel" inputMode="tel" placeholder="WhatsApp number (optional)" autoComplete="tel" value={data.phone} onChange={(e) => set('phone', e.target.value)} />
             <input className={inputClass} type="text" inputMode="url" placeholder="Website (optional)" autoComplete="url" value={data.website} onChange={(e) => set('website', e.target.value)} />
+            <textarea
+              id="pf-problem"
+              aria-label="Anything else we should know"
+              className={`${inputClass} min-h-[80px] resize-none`}
+              placeholder="Anything else we should know? Optional, a line is plenty."
+              value={data.problem}
+              onChange={(e) => set('problem', e.target.value)}
+            />
           </div>
           {/* Only a bot fills this in; Command drops the enquiry if it is. */}
           <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" value={data.gotcha} onChange={(e) => set('gotcha', e.target.value)} />

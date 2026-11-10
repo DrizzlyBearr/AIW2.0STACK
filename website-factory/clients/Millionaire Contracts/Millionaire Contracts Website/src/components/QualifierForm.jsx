@@ -270,7 +270,7 @@ export default function QualifierForm() {
             <input className={inputClass} placeholder="Your name" value={data.name} onChange={(e) => set('name', e.target.value)} autoFocus />
             <input className={inputClass} type="email" placeholder="Work email" value={data.email} onChange={(e) => set('email', e.target.value)} />
             {/* Optional: a message or a call inside ten minutes books more conversations than email. */}
-            <input className={inputClass} type="tel" inputMode="tel" autoComplete="tel" placeholder="WhatsApp number (optional, quickest way to reach you)" value={data.phone} onChange={(e) => set('phone', e.target.value)} />
+            <input className={inputClass} type="tel" inputMode="tel" autoComplete="tel" placeholder="WhatsApp number (optional)" value={data.phone} onChange={(e) => set('phone', e.target.value)} />
           </div>
         </div>
       )}
