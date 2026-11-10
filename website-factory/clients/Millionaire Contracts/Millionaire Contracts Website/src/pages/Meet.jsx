@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import SEOMeta from '../components/SEOMeta'
 import ProblemForm from '../components/ProblemForm'
 import { trackGoal } from '../lib/track'
@@ -17,6 +18,11 @@ const BOOKING_URL = 'https://calendly.com/katlehomoh/30min'
 // The podcast interview on YouTube: the watch link, such as
 // https://www.youtube.com/watch?v=XXXXXXXXXXX. Empty hides the section.
 const PODCAST_URL = 'https://www.youtube.com/watch?v=xQtHm1c-hso'
+// Its thumbnail, kept on the site (Kat, 10 November: on her phone YouTube's
+// player showed nothing until tapped, as Safari's privacy settings, content
+// blockers and a QR scanner's own browser often do). The picture is ours, so
+// it always shows; YouTube's player loads only once it is tapped.
+const PODCAST_THUMB = '/media/podcast-mpho-dagada.jpg'
 
 function youtubeId(url) {
   const m = /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/|live\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/.exec(url || '')
@@ -31,6 +37,7 @@ const PROOF = [
 
 export default function Meet() {
   const video = youtubeId(PODCAST_URL)
+  const [playing, setPlaying] = useState(false)
   const tap = (what) => () => trackGoal(`card: ${what}`)
 
   return (
@@ -76,14 +83,29 @@ export default function Meet() {
             <section className="space-y-3">
               <h2 className="font-headline text-xl font-bold text-center">My interview on the Mpho Dagada Network</h2>
               <div className="relative w-full overflow-hidden rounded-xl border border-white/10" style={{ paddingTop: '56.25%' }}>
-                <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src={`https://www.youtube-nocookie.com/embed/${video}`}
-                  title="Katleho Mohlomi on the Mpho Dagada Network"
-                  loading="lazy"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                {playing ? (
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={`https://www.youtube-nocookie.com/embed/${video}?autoplay=1&playsinline=1`}
+                    title="Katleho Mohlomi on the Mpho Dagada Network"
+                    allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => { trackGoal('card: play interview'); setPlaying(true) }}
+                    className="absolute inset-0 w-full h-full group"
+                    aria-label="Play the interview"
+                  >
+                    <img src={PODCAST_THUMB} alt="The Sales Pioneer you need to know about, with Katleho Mohlomi" className="absolute inset-0 w-full h-full object-cover" />
+                    <span className="absolute inset-0 flex items-center justify-center">
+                      <span className="flex items-center justify-center w-16 h-11 rounded-xl bg-red-600 group-hover:bg-red-500 shadow-lg">
+                        <span className="ml-1 w-0 h-0 border-y-[9px] border-y-transparent border-l-[15px] border-l-white" />
+                      </span>
+                    </span>
+                  </button>
+                )}
               </div>
               <p className="text-center text-sm">
                 <a href={PODCAST_URL} target="_blank" rel="noopener noreferrer" onClick={tap('youtube')} className="text-mc-gold underline">
