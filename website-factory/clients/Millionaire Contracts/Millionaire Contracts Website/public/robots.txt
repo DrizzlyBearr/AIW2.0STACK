@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+# Prospects' free plans: private links, never for search.
+Disallow: /plan/
+Disallow: /plans/
 
 Sitemap: https://millionairecontracts.com/sitemap.xml

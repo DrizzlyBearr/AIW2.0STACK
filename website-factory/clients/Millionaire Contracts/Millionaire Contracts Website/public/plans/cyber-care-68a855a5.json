@@ -1,0 +1,61 @@
+{
+  "business": "Cyber Care",
+  "person": "Nhlanhla",
+  "date": "10 November 2026",
+  "from": "Kat",
+  "headline": "Turning more of Cyber Care's enquiries into clients",
+  "told": [
+    "You want to turn more of your enquiries into sales",
+    "Most of your work comes from referrals and word of mouth",
+    "You sell to businesses and to the public, with a team of 2 to 10 people"
+  ],
+  "todayTitle": "Where enquiries leak today",
+  "today": [
+    { "step": "A business needs IT help" },
+    { "step": "Clicks Get a quote", "leak": "Every button goes to one general contact page" },
+    { "step": "Name, email and a message", "leak": "Nothing about users, setup or urgency" },
+    { "step": "Waits to hear back", "leak": "No reply time, so they keep shopping around" },
+    { "step": "Gets a quote, then nothing", "leak": "No follow-up, so it goes quiet" }
+  ],
+  "futureTitle": "With the plan in place",
+  "future": [
+    { "step": "A business needs IT help" },
+    { "step": "Quote form that sorts", "note": "Users, current setup, how urgent" },
+    { "step": "Reply within minutes", "note": "With a free IT check to book" },
+    { "step": "One pipeline", "note": "Every enquiry and quote in one place" },
+    { "step": "Followed up, then signed", "note": "Quotes chased a few days later" }
+  ],
+  "noticed": [
+    "Every button on the site goes to the same contact page, which asks for a name, an email, a subject and a message",
+    "Nothing says how quickly someone will hear back",
+    "Your WhatsApp number is only in the footer, and for an IT problem that's normally the first thing people reach for",
+    "Your pricing is clear and published, which is a real strength once the enquiry is in front of you"
+  ],
+  "planTitle": "How we would go about it",
+  "plan": [
+    { "title": "A proper front door", "body": "One quote form that asks the few things you need to know: how many users, what they're running now and how urgent it is. A WhatsApp button on every page, and a line that says when they'll hear back." },
+    { "title": "A fast first reply", "body": "Every enquiry answered within minutes in your hours, with an easy way to book a free IT check, so they don't carry on shopping around." },
+    { "title": "Nothing goes quiet", "body": "Every enquiry and quote sits in one simple pipeline, and quotes get followed up a few days later instead of being left to chase themselves." },
+    { "title": "More than referrals", "body": "Once the front door is sorted, we reach out to local businesses with 10 to 50 staff that should be using someone like you, in your name, so you're not waiting on word of mouth." }
+  ],
+  "timelineWeeks": 12,
+  "timeline": [
+    { "label": "Front door, first reply and pipeline", "when": "weeks 1 to 2", "from": 1, "to": 2, "body": "You approve everything as we go" },
+    { "label": "Outreach to local businesses", "when": "from week 3", "from": 3, "to": 12, "body": "Normally when the new conversations start coming in" },
+    { "label": "Follow-ups and tuning", "when": "ongoing", "from": 3, "to": 12, "body": "What the numbers show, fixed every month" }
+  ],
+  "worth": {
+    "title": "Why it's worth it",
+    "stats": [
+      { "value": "R6,000", "label": "a month for one new 10 to 50 user client, on your own pricing" },
+      { "value": "R21,500", "label": "a month for one at the top of that band" }
+    ],
+    "body": "So even a couple more clients closed a year makes a real difference, and they pay you every month after that."
+  },
+  "next": {
+    "title": "Talk it through on Thursday",
+    "body": "We talk on Thursday 13 November. It would really help to know roughly how many enquiries and quotes you get in a month, and how many of those turn into clients, so I can show you exactly where the gap is.",
+    "cta": "Move or book a call",
+    "href": "https://calendly.com/katlehomoh/30min"
+  }
+}

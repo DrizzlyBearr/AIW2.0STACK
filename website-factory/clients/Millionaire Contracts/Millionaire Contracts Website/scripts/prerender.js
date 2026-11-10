@@ -40,7 +40,8 @@ function walk(dir) {
   })
 }
 
-const SKIP = new Set(['CaseStudy.jsx', 'NotFound.jsx'])
+// Plan.jsx is a private page per prospect, opened from its link only.
+const SKIP = new Set(['CaseStudy.jsx', 'NotFound.jsx', 'Plan.jsx'])
 // Pages for ad traffic only: prerendered, but kept out of search and the
 // sitemap, so they never compete with the pages meant to rank.
 const NOINDEX = new Set(['/get-a-plan'])
