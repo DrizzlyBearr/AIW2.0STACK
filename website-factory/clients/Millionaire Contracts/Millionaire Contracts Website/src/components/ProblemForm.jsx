@@ -68,14 +68,14 @@ function bookingEmbed(name, email, source) {
   return `${BOOKING_URL}?${q.toString()}`
 }
 
-export default function ProblemForm() {
+export default function ProblemForm({ source = 'website:get-a-plan' }) {
   const [status, setStatus] = useState('idle')
   const [step, setStep] = useState(1)
-  const [from, setFrom] = useState({ source: 'website:get-a-plan', term: '' })
+  const [from, setFrom] = useState({ source, term: '' })
   const [data, setData] = useState({ name: '', company: '', email: '', phone: '', website: '', problem: '', need: '', market: '', size: '', timing: '', finding: '', sellsTo: '', gotcha: '' })
   const top = useRef(null)
 
-  useEffect(() => setFrom(visitSource('website:get-a-plan')), [])
+  useEffect(() => setFrom(visitSource(source)), [source])
 
   // A call booked on the thank-you is the goal this page exists for, so it is
   // counted: Calendly tells the page when a booking is made.

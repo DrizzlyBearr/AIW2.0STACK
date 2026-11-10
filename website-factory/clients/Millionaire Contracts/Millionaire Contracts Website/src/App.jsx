@@ -10,6 +10,7 @@ const Portfolio = page(() => import('./pages/Portfolio'))
 const AboutUs = page(() => import('./pages/AboutUs'))
 const Contact = page(() => import('./pages/Contact'))
 const GetAPlan = page(() => import('./pages/GetAPlan'))
+const Meet = page(() => import('./pages/Meet'))
 const Calendar = page(() => import('./pages/Calendar'))
 const SalesStrategy = page(() => import('./pages/SalesStrategy'))
 const SalesManagement = page(() => import('./pages/SalesManagement'))
@@ -68,6 +69,7 @@ const BY_PATH = {
   '/about-us': AboutUs,
   '/contact-us': Contact,
   '/get-a-plan': GetAPlan,
+  '/meet': Meet,
   '/calender': Calendar,
   '/sales-strategy-development': SalesStrategy,
   '/sales-management': SalesManagement,
@@ -180,6 +182,7 @@ export default function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/get-a-plan" element={<GetAPlan />} />
+        <Route path="/meet" element={<Meet />} />
         <Route path="/calender" element={<Calendar />} />
         <Route path="/sales-strategy-development" element={<SalesStrategy />} />
         <Route path="/sales-management" element={<SalesManagement />} />

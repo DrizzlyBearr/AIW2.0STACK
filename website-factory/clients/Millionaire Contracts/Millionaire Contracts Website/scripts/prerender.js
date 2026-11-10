@@ -43,7 +43,7 @@ function walk(dir) {
 const SKIP = new Set(['CaseStudy.jsx', 'NotFound.jsx'])
 // Pages for ad traffic only: prerendered, but kept out of search and the
 // sitemap, so they never compete with the pages meant to rank.
-const NOINDEX = new Set(['/get-a-plan'])
+const NOINDEX = new Set(['/get-a-plan', '/meet'])
 const routes = []
 
 for (const file of walk(PAGES)) {
