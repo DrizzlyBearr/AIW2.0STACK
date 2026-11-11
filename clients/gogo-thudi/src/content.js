@@ -44,6 +44,8 @@ export const business = {
     badges: ['Premier Advisor', 'Top Rated'],
   },
   // Her own words, from her Gogo Online and SA Psychics profiles
+  // Short version used in structured data.
+  bioShort: 'I empower and teach those who are seeking spiritual guidance and need to know their purpose.',
   bio: 'I empower and teach those who are seeking spiritual guidance and need to know their purpose. I cleanse and help heal past trauma.',
   story:
     'A decade ago, I chose to enhance my innate gift, delving into the realms of bone reading, water healing, counseling, and spiritual guidance. This spiritual calling redirected my path, leading me away from a conventional educational profession to embrace my soul mission.',
@@ -101,9 +103,9 @@ export const services = [
     detail: 'In person',
   },
   {
-    key: 'trauma',
-    slug: 'healing-past-trauma',
-    title: 'Healing Past Trauma',
+    key: 'wounds',
+    slug: 'emotional-spiritual-guidance',
+    title: 'Healing Old Wounds',
     summary: 'Spiritual healing for old wounds that still follow you, so you can put them down and move forward lighter.',
     detail: 'In person or virtual',
   },
@@ -130,8 +132,8 @@ export const services = [
   },
   {
     key: 'coaching',
-    slug: 'healing-past-trauma',
-    title: 'Life Coaching and Counselling',
+    slug: 'emotional-spiritual-guidance',
+    title: 'Life Guidance and Advice',
     summary: 'A former educator, Gogo Thudi listens without judgement and helps you make sense of where you are and what to do next.',
     detail: 'In person or virtual',
   },
@@ -156,6 +158,20 @@ export const areasServed = [
   'Pretoria North', 'Akasia', 'Annlin', 'Wonderboom', 'Sinoville', 'Montana', 'Doornpoort',
   'Theresapark', 'Karenpark', 'Rosslyn', 'Soshanguve', 'Mabopane', 'Ga-Rankuwa', 'Winterveldt',
   'Hammanskraal', 'Pretoria CBD', 'Pretoria West',
+]
+
+// Words people use for what she does, in the languages she consults in.
+// Shown on the home page. Spellings to be confirmed with Gogo Thudi (see README).
+export const localGlossary = [
+  { term: 'Isangoma, inyanga', lang: 'isiZulu', meaning: 'Traditional healer and herbalist', page: 'bone-throwing-divination' },
+  { term: 'Ngaka ya setšo', lang: 'Sepedi', meaning: 'Traditional healer', page: 'emotional-spiritual-guidance' },
+  { term: 'Igqirha', lang: 'isiXhosa', meaning: 'Traditional healer and diviner', page: 'bone-throwing-divination' },
+  { term: 'Ukubhula, go laola ka ditaola', lang: 'isiZulu, Sepedi, Setswana', meaning: 'Consulting the bones', page: 'bone-throwing-divination' },
+  { term: 'Amadlozi, izinyanya, badimo', lang: 'isiZulu, isiXhosa, Sepedi, Setswana', meaning: 'The ancestors', page: 'ancestral-guidance-mediumship' },
+  { term: 'Amaphupho, ditoro', lang: 'isiZulu, Sepedi, Setswana', meaning: 'Dreams', page: 'dream-interpretation' },
+  { term: 'Ukugeza, isiwasho', lang: 'isiZulu', meaning: 'Spiritual cleansing', page: 'spiritual-cleansing' },
+  { term: 'Umuthi, dihlare, amayeza', lang: 'isiZulu, Sepedi, isiXhosa', meaning: 'Traditional remedies', page: 'traditional-medicine' },
+  { term: 'Ubizo, ukuthwasa, intwaso', lang: 'isiZulu, isiXhosa', meaning: 'An ancestral calling and the training that follows', page: 'spiritual-growth-purpose' },
 ]
 
 export const steps = [

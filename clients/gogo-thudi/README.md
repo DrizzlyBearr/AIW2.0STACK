@@ -14,7 +14,7 @@ npm run build    # client build, server build, then scripts/prerender.mjs writes
 | Path | Source |
 |---|---|
 | `/` | `src/pages/HomePage.jsx` |
-| `/services` and `/services/{slug}` (9 pages) | `src/pages/ServicesPage.jsx`, `src/pages/ServicePage.jsx`, copy in `src/servicePages.js` |
+| `/services` and `/services/{slug}` (9 pages; `/services/healing-past-trauma` redirects to `/services/emotional-spiritual-guidance`) | `src/pages/ServicesPage.jsx`, `src/pages/ServicePage.jsx`, copy in `src/servicePages.js` |
 | `/reviews` (all 291) | `src/pages/ReviewsPage.jsx`, topics from `reviewMatch` in `src/servicePages.js` |
 | `/guides/{slug}` | `src/pages/GuidePage.jsx`, copy in `src/guides.js` |
 | 404 | `src/pages/NotFoundPage.jsx` |
@@ -39,7 +39,8 @@ traditional practice. Check these with her:
 - Water healing and prophecy descriptions (her profiles name them but do not describe them)
 - That she will encourage clients to see a doctor when their health needs it (stated in several FAQs)
 - Whether she offers ongoing teaching or ukuthwasa training (the purpose page tells people to ask)
-- Helpline numbers on two pages: GBV Command Centre 0800 428 428 and SADAG 0800 456 789. Re-check both before launch
+- GBV Command Centre number 0800 428 428 on the love page. Re-check before launch
+- The local-language terms on every service page and in the home page "In your language" section (`localTerms` in `src/servicePages.js`, `localGlossary` in `src/content.js`). She consults in these languages, so ask her to check spelling and that each word means what the site says. Less certain ones: go hlatswa, go phasa badimo, go thwasa, isiwasho
 
 Reviews live in `src/reviews.json`, generated from the spreadsheet:
 ```

@@ -28,7 +28,7 @@ export default function Footer() {
             ))}
           </ul>
           <p className="mt-6 max-w-xl text-xs leading-relaxed text-cream/40">
-            Spiritual guidance is offered alongside, not instead of, medical, psychological, legal, or financial
+            Spiritual guidance is offered alongside, not instead of, medical, legal or financial
             advice. Please see a qualified professional for those needs.
           </p>
         </div>

@@ -29,6 +29,17 @@ export default function ServicePage({ slug }) {
         eyebrow={page.problem}
         title={page.h1}
       >
+        {page.localTerms && (
+          <p className="mt-5 text-sm text-ochre-light/90">
+            Also known as{' '}
+            {page.localTerms.map(([term, lang], i) => (
+              <span key={term}>
+                {i > 0 && ', '}
+                <em className="not-italic font-semibold">{term}</em> ({lang})
+              </span>
+            ))}
+          </p>
+        )}
         <p className="mt-6 max-w-2xl text-lg text-cream/80 leading-relaxed">{page.answer}</p>
         <div className="mt-8 flex flex-col sm:flex-row gap-3">
           <a href={waLink(bookMessage)} target="_blank" rel="noopener noreferrer" data-cta="service-hero" data-service={slug} className="btn-primary text-base px-8 py-4">

@@ -9,7 +9,7 @@ const icons = {
   prophecy: BookOpen,
   water: Droplets,
   cleansing: Flame,
-  trauma: HeartPulse,
+  wounds: HeartPulse,
   dreams: Moon,
   love: HeartHandshake,
   career: Briefcase,

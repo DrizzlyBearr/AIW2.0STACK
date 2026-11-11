@@ -23,7 +23,7 @@ export default function About() {
             <p>"{business.story}"</p>
             <p>"{business.session}"</p>
             <p>
-              In her words: "{business.bio}" Today she is a Premier Advisor on SA Psychics with {business.rating.count}{' '}
+              In her words: "{business.bioShort}" Today she is a Premier Advisor on SA Psychics with {business.rating.count}{' '}
               client reviews, and a verified healer on Gogo Online. She sees clients at her practice in{' '}
               {business.area} and by video call across South Africa and beyond.
             </p>

@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-14 items-center">
           <div>
             <p className="text-ochre-light text-sm tracking-[0.2em] uppercase mb-5">
-              Traditional healer and sangoma in Pretoria North
+              Sangoma and ngaka ya setšo in Pretoria North
             </p>
             <h1 className="font-display font-semibold text-5xl sm:text-6xl lg:text-7xl leading-[1.02] mb-6">
               When life feels blocked,

@@ -59,9 +59,10 @@ const personNode = {
   name: business.name,
   image: PHOTO,
   jobTitle: business.tagline,
-  description: business.bio,
+  alternateName: ['Ngaka ya setšo', 'Isangoma', 'Inyanga', 'Igqirha'],
+  description: business.bioShort,
   worksFor: { '@id': BUSINESS_ID },
-  knowsAbout: ['Bone throwing', 'Divination', 'Mediumship', 'Ancestral guidance', 'Prophecy', 'Spiritual cleansing', 'Water healing', 'Dream interpretation', 'Traditional medicine'],
+  knowsAbout: ['Bone throwing', 'Divination', 'Mediumship', 'Ancestral guidance', 'Prophecy', 'Spiritual cleansing', 'Water healing', 'Dream interpretation', 'Traditional medicine', 'Spiritual guidance', 'Ukubhula', 'Ditaola', 'Amadlozi', 'Badimo', 'Umuthi'],
   knowsLanguage: ['zu', 'xh', 'en', 'st', 'tn', 'nso'],
   sameAs,
 }
@@ -95,8 +96,8 @@ function pageMeta(route) {
   const site = { '@type': 'WebSite', '@id': WEBSITE_ID, url: absoluteUrl('/'), name: business.name, publisher: { '@id': BUSINESS_ID }, inLanguage: 'en-ZA' }
 
   if (route.page === 'home') {
-    const title = 'Gogo Thudi | Traditional Healer and Sangoma in Pretoria North'
-    const description = `Traditional healer, medium and prophet in Pretoria North. Bone throwing, ancestral guidance and cleansing. ${business.rating.average} from ${business.rating.count} reviews. R400 in person, R450 by video.`
+    const title = 'Gogo Thudi | Sangoma and Ngaka ya Setšo in Pretoria North'
+    const description = `Spiritual consultations with a sangoma, ngaka ya setšo and prophet in Pretoria North. Ancestral guidance, bone throwing, cleansing and advice. ${business.rating.average} from ${business.rating.count} reviews.`
     return { title, description, url, graph: [site, businessNode, personNode, webPage(url, title, description)] }
   }
 
@@ -119,6 +120,7 @@ function pageMeta(route) {
       '@id': `${url}#service`,
       name: p.navTitle,
       serviceType: p.navTitle,
+      ...(p.localTerms ? { alternateName: p.localTerms.map(([t]) => t) } : {}),
       description: p.answer,
       provider: { '@id': BUSINESS_ID },
       areaServed: { '@type': 'City', name: 'Pretoria' },
@@ -212,7 +214,7 @@ export function llmsTxt() {
   return [
     `# ${business.name}`,
     '',
-    `> ${business.name} is a traditional healer, medium and prophet (sangoma and inyanga) in ${business.area}, Tshwane, South Africa, with ${business.yearsPractising} years of experience. She offers bone throwing, ancestral guidance, mediumship, spiritual cleansing, dream interpretation and traditional medicine, in person or by video call.`,
+    `> ${business.name} is a traditional healer, medium and prophet (sangoma, inyanga, ngaka ya setšo) in ${business.area}, Tshwane, South Africa, with ${business.yearsPractising} years of experience. She offers bone throwing, ancestral guidance, mediumship, spiritual cleansing, dream interpretation and traditional medicine, in person or by video call.`,
     '',
     '## Key facts',
     '',

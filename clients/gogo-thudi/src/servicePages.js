@@ -1,5 +1,5 @@
 // One page per main service. Some services share a page where they overlap
-// (cleansing and water healing, mediumship and prophecy, trauma healing and counselling),
+// (cleansing and water healing, mediumship and prophecy, emotional guidance and life advice),
 // so every page has enough real substance to stand on its own.
 //
 // Facts about how Gogo Thudi works come from her own profiles: she reads bones, works with
@@ -11,10 +11,11 @@
 export const servicePages = [
   {
     slug: 'bone-throwing-divination',
+    localTerms: [['ukubhula', 'isiZulu'], ['ukuvumisa', 'isiZulu, isiXhosa'], ['go laola ka ditaola', 'Sepedi, Setswana, Sesotho']],
     reviewTopic: 'Accurate and detailed readings',
     navTitle: 'Bone throwing and divination',
     h1: 'Bone throwing and divination in Pretoria North',
-    seoTitle: 'Bone Throwing and Divination in Pretoria North | Gogo Thudi',
+    seoTitle: 'Bone Throwing (Ukubhula, Ditaola) in Pretoria North | Gogo Thudi',
     metaDescription:
       'Bone throwing (ukuchitha amathambo) with Gogo Thudi, a traditional healer in Pretoria North. Find out what is blocking you. R400 in person, R450 by video call.',
     problem: 'Something is wrong and you cannot see why',
@@ -51,10 +52,11 @@ export const servicePages = [
   },
   {
     slug: 'ancestral-guidance-mediumship',
+    localTerms: [['amadlozi', 'isiZulu'], ['izinyanya', 'isiXhosa'], ['badimo', 'Sepedi, Setswana, Sesotho'], ['go phasa badimo', 'Sepedi, Setswana']],
     reviewTopic: 'Messages from loved ones and ancestors',
     navTitle: 'Ancestral guidance and mediumship',
     h1: 'Ancestral guidance, mediumship and prophecy',
-    seoTitle: 'Spiritual Medium and Ancestral Guidance, Pretoria | Gogo Thudi',
+    seoTitle: 'Ancestral Guidance (Amadlozi, Badimo), Pretoria | Gogo Thudi',
     metaDescription:
       'Messages from your ancestors and loved ones who have passed on. Gogo Thudi is a medium and prophet in Pretoria North. Book in person (R400) or by video (R450).',
     problem: 'You want to hear from those who came before you',
@@ -79,17 +81,18 @@ export const servicePages = [
     virtual:
       'Mediumship works the same way by video call. Many of her reviews come from clients she has only spoken to over the phone or on video.',
     notThis:
-      'Gogo Thudi passes on what comes through honestly. She cannot promise who will come through in a session, and a reading does not replace grief counselling or medical care when you need it.',
+      'Gogo Thudi passes on what comes through honestly. She cannot promise who will come through in a session, and a reading does not replace a doctor when your health needs one.',
     faqs: [
       { q: 'Can she connect with a specific person who has passed away?', a: 'You can ask for a specific person. She relays what comes through honestly, and cannot promise in advance who will come through.' },
       { q: 'What does it mean when she says she is a prophet?', a: 'Alongside the ancestors, Gogo Thudi works with the Bible in her spiritual guidance. Prophecy is part of how she receives and shares messages.' },
       { q: 'Can I bring a family member to the session?', a: 'Yes. Mention it when you book on WhatsApp so she knows to expect you both.' },
     ],
     reviewMatch: /loved one|passed|grief|ancestor|guides|spirit|message|tears|closure/i,
-    related: ['bone-throwing-divination', 'spiritual-growth-purpose', 'healing-past-trauma'],
+    related: ['bone-throwing-divination', 'spiritual-growth-purpose', 'emotional-spiritual-guidance'],
   },
   {
     slug: 'spiritual-cleansing',
+    localTerms: [['ukugeza', 'isiZulu'], ['isiwasho', 'isiZulu'], ['go hlatswa', 'Sepedi']],
     reviewTopic: 'Feeling lighter and at peace',
     navTitle: 'Spiritual cleansing and water healing',
     h1: 'Spiritual cleansing and water healing in Pretoria North',
@@ -118,21 +121,22 @@ export const servicePages = [
     virtual:
       'The first consultation can be done by video call. The cleansing itself is done in person in Pretoria North.',
     notThis:
-      'A cleansing is spiritual work. It does not replace medical or psychological care, and Gogo Thudi will encourage you to see a doctor when your health needs it.',
+      'A cleansing is spiritual work, not medical care. Gogo Thudi will encourage you to see a doctor when your health needs it.',
     faqs: [
       { q: 'Do I need a consultation before a cleansing?', a: 'Yes. The consultation shows her what needs to be cleansed and how, so the cleansing fits your situation.' },
       { q: 'What is water healing?', a: 'Water healing is one of the ways Gogo Thudi cleanses the spirit, using water to wash away what is weighing on you and restore balance. She will tell you in your consultation whether it is right for you.' },
       { q: 'Can a cleansing be done remotely?', a: 'The consultation can be done by video call, but the cleansing itself is done in person at her practice.' },
     ],
     reviewMatch: /lighter|heavy|heaviness|cleans|energy|peace|relief|healing|calm/i,
-    related: ['bone-throwing-divination', 'healing-past-trauma', 'traditional-medicine'],
+    related: ['bone-throwing-divination', 'emotional-spiritual-guidance', 'traditional-medicine'],
   },
   {
     slug: 'dream-interpretation',
+    localTerms: [['amaphupho', 'isiZulu'], ['amaphupha', 'isiXhosa'], ['ditoro', 'Sepedi, Setswana, Sesotho']],
     reviewTopic: 'Dreams',
     navTitle: 'Dream interpretation',
     h1: 'Dream interpretation with Gogo Thudi',
-    seoTitle: 'Dream Interpretation in Pretoria and by Video Call | Gogo Thudi',
+    seoTitle: 'Dream Meanings (Amaphupho, Ditoro), Pretoria | Gogo Thudi',
     metaDescription:
       'Dreams that repeat, frighten you or feel like a message from the ancestors. Gogo Thudi interprets dreams in Pretoria North or by video call. From R400.',
     problem: 'A dream will not leave you alone',
@@ -169,6 +173,7 @@ export const servicePages = [
   },
   {
     slug: 'love-relationship-guidance',
+    localTerms: [['uthando', 'isiZulu'], ['lerato', 'Sepedi, Setswana, Sesotho']],
     reviewTopic: 'Love, relationships and family',
     navTitle: 'Love and relationships',
     h1: 'Love and relationship guidance',
@@ -205,49 +210,56 @@ export const servicePages = [
       { q: 'Can my partner and I come together?', a: 'Yes. Mention it when you book on WhatsApp.' },
     ],
     reviewMatch: /love|relationship|ex\b|partner|marriage|husband|wife|family/i,
-    related: ['healing-past-trauma', 'bone-throwing-divination', 'money-career-guidance'],
+    related: ['emotional-spiritual-guidance', 'bone-throwing-divination', 'money-career-guidance'],
   },
   {
-    slug: 'healing-past-trauma',
-    reviewTopic: 'Feeling heard and healing',
-    navTitle: 'Healing past trauma and counselling',
-    h1: 'Healing past trauma, counselling and life coaching',
-    seoTitle: 'Spiritual Healing for Past Trauma, Pretoria North | Gogo Thudi',
+    slug: 'emotional-spiritual-guidance',
+    reviewTopic: 'Feeling heard and understood',
+    localTerms: [
+      ['ngaka ya setšo', 'Sepedi'],
+      ['ngaka ya setso', 'Setswana, Sesotho'],
+      ['isangoma', 'isiZulu'],
+      ['igqirha', 'isiXhosa'],
+    ],
+    navTitle: 'Emotional and spiritual guidance',
+    h1: 'Emotional and spiritual guidance from someone who listens',
+    seoTitle: 'Spiritual Guidance and Life Advice, Pretoria North | Gogo Thudi',
     metaDescription:
-      'Old wounds that still follow you. Gogo Thudi, a former educator and traditional healer, offers spiritual healing and counselling in Pretoria North and by video.',
-    problem: 'Old pain still follows you',
+      'Carrying grief, guilt or worry? Gogo Thudi listens without judgement and gives spiritual guidance and honest life advice. R400 in Pretoria North, R450 by video.',
+    problem: 'Something weighs on your heart',
     answer:
-      'Gogo Thudi helps people heal past trauma spiritually: old wounds, guilt and loss that still shape how they live. She left a career in education to follow her calling, and her sessions combine spiritual healing with counselling and practical guidance. Clients describe her as compassionate and non-judgemental.',
+      'Sometimes you need someone wise to talk to. Gogo Thudi listens without judgement, asks your ancestors for guidance, and helps you see your situation clearly, whether it is grief, guilt, family worries or feeling lost. She left a career in education to follow her calling, and clients describe her as patient and compassionate.',
     definition: {
-      term: 'Spiritual healing of trauma',
-      text: 'In traditional healing, past trauma is seen as something that can affect the spirit as well as the mind. Spiritual healing works on that side, alongside, not instead of, professional mental health care.',
+      term: 'Spiritual guidance',
+      text: 'Spiritual guidance is a consultation where a traditional healer listens to what is troubling you and asks the ancestors for direction. Many people know it as going to a ngaka ya setšo (Sepedi) or an isangoma (isiZulu) for advice when life feels heavy.',
     },
     forYou: [
-      'Something painful from the past still affects your life today',
-      'You carry guilt or regret you cannot put down',
-      'You feel stuck and want guidance on how to move forward',
+      'Something from the past still weighs on you',
+      'You carry grief, guilt or worry you cannot put down',
+      'You feel lost and want direction for your life',
+      'There is tension in your family and you want advice',
       'You want someone to listen without judging you',
     ],
     session: [
-      'Tell her what you are carrying, at your own pace.',
-      'She listens, consults your ancestors, and helps you see the situation in a new way.',
-      'She offers spiritual healing and practical guidance for moving forward.',
-      'You can book follow-up sessions if you want ongoing support.',
+      'Tell her what is on your heart, at your own pace.',
+      'She listens and asks your ancestors for guidance.',
+      'She explains what she sees and gives you honest, practical advice for moving forward.',
+      'Some clients also book a cleansing, or come back regularly for ongoing guidance.',
     ],
-    virtual:
-      'Counselling and guidance work well by video call. Some healing work may be done in person.',
+    virtual: 'Guidance and advice work well by video call, so you can talk to her from home.',
     notThis:
-      'Spiritual healing does not replace professional mental health care. If you are in crisis, call the SADAG helpline on 0800 456 789, available 24 hours.',
+      'This is spiritual guidance and advice, not medical care. If you or someone close to you is in danger, call 10111.',
     faqs: [
-      { q: 'Is this the same as therapy?', a: 'No. Gogo Thudi offers spiritual healing and guidance. It can sit alongside therapy, but it does not replace a psychologist or counsellor.' },
-      { q: 'Do I have to talk about everything that happened?', a: 'No. Share only what you are comfortable sharing. You set the pace.' },
-      { q: 'Can I have regular sessions?', a: 'Yes. Many clients come back for ongoing guidance. Book each session on WhatsApp.' },
+      { q: 'What can I bring to her?', a: 'Anything that weighs on you: grief, guilt, family tension, worries about the future, or feeling lost. She listens without judging and gives honest guidance.' },
+      { q: 'Do I have to talk about everything?', a: 'No. Share only what you are comfortable sharing. You set the pace.' },
+      { q: 'Can I come back for regular sessions?', a: 'Yes. Many clients come back for ongoing guidance. Book each session on WhatsApp.' },
     ],
-    reviewMatch: /guilt|heal|heard|non-judg|compassion|understood|stuck|hope|lighter|feelings/i,
+    reviewMatch: /guilt|heard|non-judg|compassion|understood|stuck|hope|lighter|feelings|listen/i,
     related: ['spiritual-cleansing', 'ancestral-guidance-mediumship', 'spiritual-growth-purpose'],
   },
   {
     slug: 'money-career-guidance',
+    localTerms: [['umsebenzi', 'isiZulu'], ['mošomo', 'Sepedi'], ['tiro', 'Setswana']],
     reviewTopic: 'Work, money and decisions',
     navTitle: 'Money and career',
     h1: 'Guidance on money, work and business',
@@ -286,10 +298,11 @@ export const servicePages = [
   },
   {
     slug: 'traditional-medicine',
+    localTerms: [['umuthi', 'isiZulu'], ['amayeza', 'isiXhosa'], ['dihlare', 'Sepedi'], ['ditlhare', 'Setswana'], ['meriana', 'Sesotho']],
     reviewTopic: 'Practical advice and solutions',
     navTitle: 'Traditional medicine',
     h1: 'Traditional medicine from an inyanga in Pretoria North',
-    seoTitle: 'Inyanga and Traditional Medicine in Pretoria North | Gogo Thudi',
+    seoTitle: 'Inyanga and Umuthi (Dihlare) in Pretoria North | Gogo Thudi',
     metaDescription:
       'Gogo Thudi is an inyanga as well as a sangoma. She prepares traditional remedies after a consultation in Pretoria North. Consultation R400. Book on WhatsApp.',
     problem: 'You want traditional remedies from someone you can trust',
@@ -313,21 +326,22 @@ export const servicePages = [
     virtual:
       'You can have the first consultation by video call. Remedies are prepared and collected in person.',
     notThis:
-      'Traditional medicine does not replace medical treatment. Never stop prescribed medication without speaking to your doctor. If you take chronic medication, tell Gogo Thudi in your consultation.',
+      'Traditional remedies work alongside your doctor, not instead of them. If you take anything your doctor prescribed, keep taking it and tell Gogo Thudi in your consultation.',
     faqs: [
       { q: 'What is the difference between a sangoma and an inyanga?', a: 'A sangoma mainly works through divination and the ancestors. An inyanga specialises in traditional medicine. Gogo Thudi is both.' },
       { q: 'Can I get a remedy without a consultation?', a: 'Remedies are prepared after a consultation, so they match what you actually need.' },
-      { q: 'Should I keep taking my medication from the clinic?', a: 'Yes. Never stop prescribed medication without speaking to your doctor, and tell Gogo Thudi what you take.' },
+      { q: 'Can I use remedies alongside what my doctor prescribed?', a: 'Keep taking what your doctor prescribed, and tell Gogo Thudi what you take so she can advise you.' },
     ],
     reviewMatch: /advice|solutions|remed|practical|guidance/i,
     related: ['spiritual-cleansing', 'bone-throwing-divination', 'ancestral-guidance-mediumship'],
   },
   {
     slug: 'spiritual-growth-purpose',
+    localTerms: [['ubizo', 'isiZulu'], ['ukuthwasa', 'isiZulu'], ['intwaso', 'isiXhosa'], ['go thwasa', 'Sepedi, Setswana, Sesotho']],
     reviewTopic: 'Purpose and spiritual path',
     navTitle: 'Purpose and ancestral calling',
     h1: 'Finding your purpose and understanding an ancestral calling',
-    seoTitle: 'Ancestral Calling and Spiritual Purpose, Pretoria | Gogo Thudi',
+    seoTitle: 'Ancestral Calling (Ubizo, Ukuthwasa), Pretoria | Gogo Thudi',
     metaDescription:
       'Dreams, signs or a feeling you are being called? Gogo Thudi teaches and guides people to understand their purpose and ancestral calling. Pretoria North or video.',
     problem: 'You feel you are meant for something',
@@ -358,7 +372,7 @@ export const servicePages = [
       { q: 'I do not think I have a calling. Is this still for me?', a: 'Yes. Many people come simply to understand their purpose and grow spiritually.' },
     ],
     reviewMatch: /purpose|journey|soul|spiritual|path|growth|guides|awakening/i,
-    related: ['ancestral-guidance-mediumship', 'dream-interpretation', 'healing-past-trauma'],
+    related: ['ancestral-guidance-mediumship', 'dream-interpretation', 'emotional-spiritual-guidance'],
   },
 ]
 

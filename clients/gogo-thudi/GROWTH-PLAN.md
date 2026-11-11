@@ -15,7 +15,7 @@ Goal: more WhatsApp messages and calls that turn into paid consultations (R400 i
 | Area | What was done | Why |
 |---|---|---|
 | Pages Google can read | Every page is built to finished HTML before it goes live | Google reads it straight away. AI assistants (ChatGPT, Perplexity) do not run JavaScript at all |
-| Service pages | 9 pages, one per main service, 750 to 1,000 words each, at `/services/...` | One page per search topic ranks far better than one page for everything |
+| Service pages | 9 pages, one per main service, 750 to 1,000 words each, at `/services/...`, each with its names in local languages | One page per search topic ranks far better than one page for everything |
 | Answer first | Each service page opens with a 40 to 60 word direct answer, then "What is ...?" | The format Google snippets and AI assistants quote |
 | Reviews page | All 291 reviews written into `/reviews`, grouped by topic | Real client wording ("spot on", "felt heard", "my dreams") is what people search |
 | Matched reviews | Each service page shows the reviews that mention its topic | Proof right next to the booking button |
@@ -29,6 +29,38 @@ Goal: more WhatsApp messages and calls that turn into paid consultations (R400 i
 | Low-commitment option | "Not ready to book? Ask a question first on WhatsApp" | Catches people who are not ready to book yet |
 | Source in every WhatsApp message | Messages say which page they came from, e.g. "(Dream interpretation page)" | She can see which pages bring bookings, even without analytics |
 | Click tracking | Every WhatsApp, call, form and profile click is recorded once GA4 is on | Shows which pages and services bring appointments |
+
+---
+
+## 1b. Keywords: who we want, and who we do not
+
+The site is written for people looking for a **consultation, spiritual guidance, advice or healing**,
+not for people looking for rehab, addiction treatment or clinical therapy.
+
+**Words the site uses on purpose (English):** consultation, reading, spiritual guidance, advice,
+someone to talk to, ancestral guidance, bone throwing, cleansing, dream meanings, traditional healer, sangoma.
+
+**Words people search with at home (on the site, to be confirmed with Gogo Thudi):**
+
+| Meaning | isiZulu | isiXhosa | Sepedi / Setswana / Sesotho |
+|---|---|---|---|
+| Traditional healer | isangoma, inyanga | igqirha | ngaka ya setšo (Sepedi), ngaka ya setso (Setswana, Sesotho) |
+| Consulting the bones | ukubhula, ukuvumisa | ukuvumisa | go laola ka ditaola |
+| Ancestors | amadlozi | izinyanya | badimo |
+| Dreams | amaphupho | amaphupha | ditoro |
+| Cleansing | ukugeza, isiwasho | | go hlatswa (Sepedi) |
+| Traditional remedies | umuthi | amayeza | dihlare (Sepedi), ditlhare (Setswana), meriana (Sesotho) |
+| Ancestral calling | ubizo, ukuthwasa | intwaso | go thwasa |
+
+**Words the site avoids**, because rehab and treatment centres rank for them: trauma, counselling,
+therapy, mental health, addiction, recovery, rehab, medication, clinic, crisis. The one safety line left
+on the guidance page points to 10111 for emergencies only.
+
+**If you also run Google Ads:** add these as negative keywords: rehab, rehabilitation, addiction, drug,
+alcohol, detox, recovery, psychologist, psychiatrist, therapy, counselling.
+
+**Check every month in Google Search Console** (Performance, Queries): if rehab-type searches still
+show up, send the list over and the wording that attracts them can be found and changed.
 
 ---
 
@@ -47,7 +79,7 @@ Gogo Thudi has to set this up herself, because Google verifies the owner (usuall
 6. **Phone:** `082 684 4789`. **Website:** use the tracked link from section 5.
 7. **Hours:** exactly as on the site. Google favours businesses that are open when people search.
 8. **Description (up to 750 characters, factual, no links):**
-   > Gogo Thudi is a traditional healer, medium and prophet in Pretoria North with 16 years of experience. She offers bone throwing and divination, ancestral guidance and mediumship, spiritual cleansing and water healing, dream interpretation, relationship guidance and traditional medicine. Consultations are R400 in person or R450 by video call, in isiZulu, isiXhosa, English, Sesotho, Setswana and Sepedi.
+   > Gogo Thudi is a traditional healer (isangoma, ngaka ya setšo), medium and prophet in Pretoria North with 16 years of experience. She offers spiritual consultations, bone throwing (ukubhula, ditaola), ancestral guidance and mediumship, spiritual cleansing and water healing, dream interpretation, relationship guidance and traditional medicine. Consultations are R400 in person or R450 by video call, in isiZulu, isiXhosa, English, Sesotho, Setswana and Sepedi.
 9. **Services:** add each of the 9 services with the price and whether it is in person, video, or both.
 10. **Messaging:** connect WhatsApp.
 11. **Photos:** her (the yellow headwrap photo), her consulting space, the outside of the building. Never clients without their written permission.
