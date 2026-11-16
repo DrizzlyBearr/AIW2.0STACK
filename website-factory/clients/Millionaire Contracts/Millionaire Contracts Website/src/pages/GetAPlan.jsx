@@ -23,26 +23,42 @@ import { testimonials, upworkStats, upworkReviews, UPWORK_URL } from '../compone
 // problem, so each ad group is a service and its headline names it. `work`
 // is the case studies closest to that service, most relevant first.
 const HEADLINES = {
+  // The ad's own words back (MC-Fulfillment-Engine docs/mc-google-ads-campaign.md,
+  // its headlines "Lead Generation Company", "Free Lead Generation Plan", "We
+  // Find And Reach Buyers"): Google scores the page on how well it matches the
+  // ad, and in the week of 10 November 63% of the searches we missed were lost
+  // on that score, not on budget.
   'lead-generation': {
-    title: 'Lead generation, planned before you pay for anything.',
-    sub: 'Tell us who you sell to. We send a written plan to find and reach them: who, how, how long, and the first step. Free, within two working days.',
+    title: 'B2B lead generation, with a free plan first.',
+    sub: 'Tell us who you sell to. We send a written lead generation plan to find and reach your buyers: who, how, how long, and the first step. Free, within one working day.',
     work: ['saas-lead-flow', 'skayle360', 'highsail-marketing'],
   },
   'appointment-setting': {
     title: 'Appointment setting and cold calling, planned first.',
-    sub: 'Tell us who you need to be talking to. We send a written plan to get those meetings booked. Free, within two working days.',
+    sub: 'Tell us who you need to be talking to. We send a written plan to get those meetings booked. Free, within one working day.',
     work: ['skayle360', 'basehome-capital', 'eads-bridge-holdings'],
   },
   'business-development': {
     title: "Business development for when there's no time to sell.",
-    sub: "Tell us what isn't getting done. We send a written plan to get it done, without you hiring a sales team. Free, within two working days.",
+    sub: "Tell us what isn't getting done. We send a written plan to get it done, without you hiring a sales team. Free, within one working day.",
     work: ['morecorp', 'demand-growth-ai', 'keen-people'],
   },
 }
 
+// For the searches that describe the problem rather than the service ("how to
+// get more clients", "how do agencies get clients"), added 16 November and
+// the kind that sent the first two enquiries. Chosen by the search, so it
+// wins over the ad group's headline.
+const CLIENTS = {
+  title: 'Get more clients, with a free plan first.',
+  sub: 'Tell us who your best clients are. We send a written plan to find more of them and reach them: who, how, how long, and the first step. Free, within one working day.',
+  work: ['skayle360', 'saas-lead-flow', 'highsail-marketing'],
+}
+const CLIENT_SEARCH = /client|customer/i
+
 const DEFAULT = {
   title: "Tell us what isn't getting done. We'll send you a plan to get it done.",
-  sub: 'Finding the right people, following up the leads you already have, booking the meetings you never get to. Free, in writing, within two working days.',
+  sub: 'Finding the right people, following up the leads you already have, booking the meetings you never get to. Free, in writing, within one working day.',
   work: ['skayle360', 'basehome-capital', 'morecorp'],
 }
 
@@ -61,7 +77,7 @@ const HEADLINE_RESULTS = [
 // found shorter pages convert better, and the two said the same thing twice.
 const STEPS = [
   { h: 'Tell us what needs doing', p: 'Three short steps, about two minutes. Your words, not a brief.' },
-  { h: 'Get a written plan', p: 'Within two working days: your problem in your words, who we would reach and how, how long it takes, and the first step.' },
+  { h: 'Get a written plan', p: 'Within one working day: your problem in your words, who we would reach and how, how long it takes, and the first step.' },
   { h: 'You decide', p: 'Have us run it, or take the plan and do it yourself. Either way it is yours.' },
 ]
 
@@ -93,8 +109,10 @@ export default function GetAPlan() {
 
   useEffect(() => {
     try {
-      const c = new URLSearchParams(window.location.search).get('utm_campaign')
-      if (c && HEADLINES[c]) setCopy(HEADLINES[c])
+      const q = new URLSearchParams(window.location.search)
+      const c = q.get('utm_campaign')
+      if (CLIENT_SEARCH.test(q.get('utm_term') || '')) setCopy(CLIENTS)
+      else if (c && HEADLINES[c]) setCopy(HEADLINES[c])
     } catch {
       // keep the default
     }
@@ -116,7 +134,7 @@ export default function GetAPlan() {
     <div className="min-h-screen flex flex-col bg-mc-dark">
       <SEOMeta
         title="Get a plan for the problem you are stuck on"
-        description="Tell Millionaire Contracts what needs doing that is not getting done. A free written plan within two working days."
+        description="Tell Millionaire Contracts what needs doing that is not getting done. A free written plan within one working day."
         path="/get-a-plan"
       />
 
@@ -280,7 +298,7 @@ export default function GetAPlan() {
 
       {/* Last ask */}
       <section className="px-6 py-16 text-center">
-        <h2 className="font-headline text-2xl md:text-4xl font-black text-white leading-tight max-w-2xl mx-auto mb-4">Two minutes now, a written plan in two working days.</h2>
+        <h2 className="font-headline text-2xl md:text-4xl font-black text-white leading-tight max-w-2xl mx-auto mb-4">Two minutes now, a written plan in one working day.</h2>
         <p className="font-body text-gray-400 mb-8">Free, no call needed, and yours to keep.</p>
         <button type="button" onClick={scrollToForm} className="btn-primary">Get my free plan</button>
       </section>

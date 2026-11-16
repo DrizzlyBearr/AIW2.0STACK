@@ -70,6 +70,8 @@ function bookingEmbed(name, email, source) {
 
 export default function ProblemForm({ source = 'website:get-a-plan' }) {
   const [status, setStatus] = useState('idle')
+  // Step 3's extras (company, website, a note), folded away until asked for.
+  const [more, setMore] = useState(false)
   const [step, setStep] = useState(1)
   const [from, setFrom] = useState({ source, term: '' })
   const [data, setData] = useState({ name: '', company: '', email: '', phone: '', website: '', problem: '', need: '', market: '', size: '', timing: '', finding: '', sellsTo: '', gotcha: '' })
@@ -97,7 +99,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
   const needs = {
     1: [!data.need && 'what you need most', !data.market && 'where you are based'],
     2: [!data.sellsTo && 'who you sell to', !data.size && 'business size', !data.timing && 'when you need it', !data.finding && 'how customers find you'],
-    3: [data.name.trim().length < 2 && 'your name', data.company.trim().length < 2 && 'company', !EMAIL.test(data.email) && 'a valid work email', !phoneOk(data.phone) && 'a full WhatsApp number, or leave it empty'],
+    3: [data.name.trim().length < 2 && 'your name', !EMAIL.test(data.email) && 'a valid email', !phoneOk(data.phone) && 'a full WhatsApp number, or leave it empty'],
   }
   const missing = needs[step].filter(Boolean)
   const touched = {
@@ -263,20 +265,31 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
       {step === 3 && (
         <>
           <p className="font-body text-sm text-gray-300">Last step: where should we send your plan?</p>
+          {/* Three fields, then the rest only if they want (16 November): in
+              the week after the one-tap step 1, 6 visitors reached this step
+              and 1 sent it, when it asked for six things at once. */}
           <div className="space-y-3">
             <input className={inputClass} placeholder="Your name" autoComplete="name" value={data.name} onChange={(e) => set('name', e.target.value)} />
-            <input className={inputClass} placeholder="Company" autoComplete="organization" value={data.company} onChange={(e) => set('company', e.target.value)} />
-            <input className={inputClass} type="email" placeholder="Work email" autoComplete="email" value={data.email} onChange={(e) => set('email', e.target.value)} />
+            <input className={inputClass} type="email" placeholder="Email" autoComplete="email" value={data.email} onChange={(e) => set('email', e.target.value)} />
             <input className={inputClass} type="tel" inputMode="tel" placeholder="WhatsApp number (optional)" autoComplete="tel" value={data.phone} onChange={(e) => set('phone', e.target.value)} />
-            <input className={inputClass} type="text" inputMode="url" placeholder="Website (optional)" autoComplete="url" value={data.website} onChange={(e) => set('website', e.target.value)} />
-            <textarea
-              id="pf-problem"
-              aria-label="Anything else we should know"
-              className={`${inputClass} min-h-[80px] resize-none`}
-              placeholder="Anything else we should know? Optional, a line is plenty."
-              value={data.problem}
-              onChange={(e) => set('problem', e.target.value)}
-            />
+            {more ? (
+              <>
+                <input className={inputClass} placeholder="Company (optional)" autoComplete="organization" value={data.company} onChange={(e) => set('company', e.target.value)} />
+                <input className={inputClass} type="text" inputMode="url" placeholder="Website (optional)" autoComplete="url" value={data.website} onChange={(e) => set('website', e.target.value)} />
+                <textarea
+                  id="pf-problem"
+                  aria-label="Anything else we should know"
+                  className={`${inputClass} min-h-[80px] resize-none`}
+                  placeholder="Anything else we should know? A line is plenty."
+                  value={data.problem}
+                  onChange={(e) => set('problem', e.target.value)}
+                />
+              </>
+            ) : (
+              <button type="button" onClick={() => setMore(true)} className="font-body text-sm text-mc-gold hover:underline">
+                + Add your company, website or a note (optional)
+              </button>
+            )}
           </div>
           {/* Only a bot fills this in; Command drops the enquiry if it is. */}
           <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" value={data.gotcha} onChange={(e) => set('gotcha', e.target.value)} />
