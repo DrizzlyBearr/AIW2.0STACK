@@ -132,13 +132,13 @@ Replace the domain once a real one is bought.
 
 | Where | Link |
 |---|---|
-| Google Business Profile | `https://gogo-thudi.vercel.app/?utm_source=google&utm_medium=organic&utm_campaign=gbp` |
-| Facebook page | `https://gogo-thudi.vercel.app/?utm_source=facebook&utm_medium=social&utm_campaign=profile-link` |
-| Instagram bio | `https://gogo-thudi.vercel.app/?utm_source=instagram&utm_medium=social&utm_campaign=profile-link` |
-| TikTok bio | `https://gogo-thudi.vercel.app/?utm_source=tiktok&utm_medium=social&utm_campaign=profile-link` |
-| SA Psychics profile | `https://gogo-thudi.vercel.app/?utm_source=sapsychics&utm_medium=directory&utm_campaign=profile` |
-| Gogo Online profile | `https://gogo-thudi.vercel.app/?utm_source=gogoonline&utm_medium=directory&utm_campaign=profile` |
-| WhatsApp status / broadcast | `https://gogo-thudi.vercel.app/?utm_source=whatsapp&utm_medium=social&utm_campaign=status` |
+| Google Business Profile | `https://gogothudi.co.za/?utm_source=google&utm_medium=organic&utm_campaign=gbp` |
+| Facebook page | `https://gogothudi.co.za/?utm_source=facebook&utm_medium=social&utm_campaign=profile-link` |
+| Instagram bio | `https://gogothudi.co.za/?utm_source=instagram&utm_medium=social&utm_campaign=profile-link` |
+| TikTok bio | `https://gogothudi.co.za/?utm_source=tiktok&utm_medium=social&utm_campaign=profile-link` |
+| SA Psychics profile | `https://gogothudi.co.za/?utm_source=sapsychics&utm_medium=directory&utm_campaign=profile` |
+| Gogo Online profile | `https://gogothudi.co.za/?utm_source=gogoonline&utm_medium=directory&utm_campaign=profile` |
+| WhatsApp status / broadcast | `https://gogothudi.co.za/?utm_source=whatsapp&utm_medium=social&utm_campaign=status` |
 
 Rules: lowercase, no spaces, never put a client's name or number in a link.
 
@@ -232,15 +232,14 @@ Every video should point back to a page on the site through the bio link.
 
 ---
 
-## 9. Domain
+## 9. Domain: gogothudi.co.za
 
-Buy her own domain (e.g. `gogothudi.co.za`, roughly R100 a year). Then:
-1. Add it to the Vercel project (Settings, Domains).
-2. Set the environment variable `VITE_SITE_URL` to the new address and redeploy. All canonical links, the sitemap and previews update.
-3. Redirect the `.vercel.app` address to the new domain.
-4. Update every link in sections 4 and 5.
-
-Then submit `https://[domain]/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+Bought on GoDaddy. Once it is active and pointing at Vercel:
+1. The site already uses `https://gogothudi.co.za` for canonical links, the sitemap and previews.
+2. `gogo-thudi.vercel.app` redirects permanently to the new domain (`vercel.json`), so old links keep working.
+3. In Google Search Console, add `https://gogothudi.co.za/` as a URL-prefix property. The same verification tag already on the site verifies it.
+4. Use Search Console's Change of address tool (Settings) on the old `gogo-thudi.vercel.app` property, pointing to the new one.
+5. Submit `https://gogothudi.co.za/sitemap.xml`, and update every profile link in sections 4 and 5.
 
 ---
 

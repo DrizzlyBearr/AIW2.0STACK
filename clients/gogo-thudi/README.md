@@ -26,7 +26,7 @@ Business details live in `src/content.js`. Click tracking is in `src/track.js`.
 
 | Variable | Purpose |
 |---|---|
-| `VITE_SITE_URL` | Public address, e.g. `https://gogothudi.co.za`. Defaults to `https://gogo-thudi.vercel.app` |
+| `VITE_SITE_URL` | Public address, e.g. `https://gogothudi.co.za`. Defaults to `https://gogothudi.co.za`. The old `gogo-thudi.vercel.app` address redirects there (see `vercel.json`) |
 | `VITE_GA_ID` | Google Analytics 4 ID (`G-...`). Tracking is off until set |
 
 ### Confirm with Gogo Thudi before launch

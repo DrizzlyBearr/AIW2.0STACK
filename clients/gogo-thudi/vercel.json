@@ -14,6 +14,17 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "gogo-thudi.vercel.app"
+        }
+      ],
+      "destination": "https://gogothudi.co.za/:path*",
+      "permanent": true
+    },
+    {
       "source": "/services/healing-past-trauma",
       "destination": "/services/emotional-spiritual-guidance",
       "permanent": true

@@ -1,6 +1,6 @@
-// Public address of the site. Set VITE_SITE_URL in Vercel once a domain is bought
-// (e.g. https://gogothudi.co.za). Used for canonical links, sitemap and social previews.
-export const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://gogo-thudi.vercel.app').replace(/\/$/, '')
+// Public address of the site. VITE_SITE_URL in Vercel overrides it if ever needed.
+// Used for canonical links, sitemap and social previews.
+export const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://gogothudi.co.za').replace(/\/$/, '')
 
 // Google Analytics 4 measurement ID (G-XXXXXXX). Tracking stays off until this is set.
 export const GA_ID = import.meta.env.VITE_GA_ID || ''
