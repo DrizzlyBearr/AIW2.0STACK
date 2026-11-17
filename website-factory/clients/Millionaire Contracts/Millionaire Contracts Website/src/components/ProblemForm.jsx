@@ -4,6 +4,8 @@ import { sendEnquiry, visitSource } from '../lib/enquiry'
 import { MARKETS } from '../lib/markets'
 import { testimonials } from './Testimonials'
 import { BOOKING_URL } from '../pages/Calendar'
+import { joinList } from '../lib/newsletter'
+import { LEAD_MAGNET } from '../lib/leadMagnet'
 
 // The ad landing form (MC-Fulfillment-Engine docs/mc-paid-ads.md), in three
 // short steps: the problem first, the easy first yes; three one-tap answers;
@@ -72,6 +74,12 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
   const [status, setStatus] = useState('idle')
   // Step 3's extras (company, website, a note), folded away until asked for.
   const [more, setMore] = useState(false)
+  // The 7 messages download (Kat, 17 November 2026): ticked here, or asked for
+  // on the thank-you, it joins them to Pipeline & Power. Off by default: they
+  // came for a plan, and the list only takes people who chose it (and then
+  // confirm by email). 'idle' | 'sending' | 'asked' | 'failed'
+  const [alsoMessages, setAlsoMessages] = useState(false)
+  const [messages, setMessages] = useState('idle')
   const [step, setStep] = useState(1)
   const [from, setFrom] = useState({ source, term: '' })
   const [data, setData] = useState({ name: '', company: '', email: '', phone: '', website: '', problem: '', need: '', market: '', size: '', timing: '', finding: '', sellsTo: '', gotcha: '' })
@@ -122,6 +130,14 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
     go(step + 1)
   }
 
+  async function askForMessages() {
+    if (messages === 'sending' || messages === 'asked') return
+    setMessages('sending')
+    const ok = await joinList({ firstName: data.name.trim().split(/\s+/)[0], email: data.email, source: '/get-a-plan' })
+    setMessages(ok ? 'asked' : 'failed')
+    if (ok && typeof window.gtag === 'function') window.gtag('event', 'sign_up', { method: 'lead_magnet', page: '/get-a-plan' })
+  }
+
   async function handleSubmit(e) {
     e.preventDefault()
     if (missing.length || status === 'loading') return
@@ -149,6 +165,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
     } catch {
       // swallow
     }
+    if (alsoMessages && !data.gotcha) await askForMessages()
     trackGoal('plan requested')
     // GA4 key event, imported into Google Ads as the conversion.
     if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { form: 'get-a-plan' })
@@ -190,6 +207,25 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
           <p className="font-body text-xs text-gray-500 text-center mt-3">
             Calendar not loading? <a href={BOOKING_URL} target="_blank" rel="noopener" className="underline hover:text-mc-gold">Open it on Calendly</a>
           </p>
+        </div>
+        <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-5 text-center">
+          {messages === 'asked' ? (
+            <p className="font-body text-sm text-gray-300">
+              Your 7 messages are on the way. Check your inbox and click the confirm link, and the download opens straight away
+            </p>
+          ) : (
+            <>
+              <p className="font-body text-sm text-gray-300 mb-3">
+                Not ready for a call? Get <span className="text-white font-semibold">{LEAD_MAGNET.title}</span> while you wait for your plan
+              </p>
+              <button type="button" onClick={askForMessages} disabled={messages === 'sending'} className="btn-primary disabled:opacity-60">
+                {messages === 'sending' ? 'Sending...' : 'Send me the 7 messages'}
+              </button>
+              {messages === 'failed' && (
+                <p className="font-body text-xs text-amber-200 mt-2">That didn't go through. You can also get them at millionairecontracts.com/7-messages</p>
+              )}
+            </>
+          )}
         </div>
       </div>
     )
@@ -291,6 +327,12 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
               </button>
             )}
           </div>
+          <label className="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" checked={alsoMessages} onChange={(e) => setAlsoMessages(e.target.checked)} className="mt-0.5 h-4 w-4 accent-mc-gold flex-shrink-0" />
+            <span className="font-body text-sm text-gray-300">
+              Also send me <span className="text-white">{LEAD_MAGNET.title}</span>, free, plus a short note from Kat every few days
+            </span>
+          </label>
           {/* Only a bot fills this in; Command drops the enquiry if it is. */}
           <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" value={data.gotcha} onChange={(e) => set('gotcha', e.target.value)} />
           {BESIDE_BUTTON && (
@@ -313,7 +355,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
       {touched && missing.length > 0 && (
         <p className="font-body text-xs text-mc-gold text-center" aria-live="polite">Still needed: {missing.join(', ')}.</p>
       )}
-      <p className="font-body text-xs text-gray-500 text-center">Free. No call needed to get it. We only use your details to reply.</p>
+      <p className="font-body text-xs text-gray-500 text-center">Free. No call needed to get it. We only use your details to reply{alsoMessages ? ' and to send what you ticked' : ''}.</p>
     </form>
   )
 }

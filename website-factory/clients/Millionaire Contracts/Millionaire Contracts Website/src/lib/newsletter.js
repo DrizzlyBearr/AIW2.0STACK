@@ -14,3 +14,18 @@ export const NEWSLETTER = {
   confirm: `${COMMAND}/confirm`,
   leave: `${COMMAND}/leave`,
 }
+
+/** Join the list from a form that already has their details. Resolves true when Command took it. */
+export async function joinList({ firstName = '', email, source }) {
+  try {
+    const res = await fetch(NEWSLETTER.join, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ firstName, email, source }),
+    })
+    const data = await res.json()
+    return Boolean(data.ok)
+  } catch {
+    return false
+  }
+}

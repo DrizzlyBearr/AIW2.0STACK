@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import FAQ from '../components/FAQ'
 import Testimonials from '../components/Testimonials'
 import SEOMeta from '../components/SEOMeta'
+import LeadMagnetForm from '../components/LeadMagnetForm'
 import { caseStudies } from '../data/caseStudies'
 
 const LOGO = '/mc-logo.png'
@@ -308,6 +309,25 @@ export default function Home() {
 
       {/* ── TESTIMONIALS ── */}
       <Testimonials />
+
+      {/* ── FREE DOWNLOAD ── for the visitor who isn't ready to book yet */}
+      <section className="bg-mc-dark py-20 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.04]"
+          style={{ backgroundImage: 'linear-gradient(#d8920e 1px, transparent 1px), linear-gradient(90deg, #d8920e 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+        <div className="relative z-10 max-w-screen-lg mx-auto grid md:grid-cols-[1.2fr_1fr] gap-10 items-center">
+          <div>
+            <span className="section-label mb-3 block">Free download</span>
+            <h2 className="font-headline text-3xl md:text-4xl font-black text-white leading-tight mb-4">
+              Not ready for a call? Start with <span className="text-mc-gold">the 7 messages that book meetings</span>
+            </h2>
+            <p className="font-body text-gray-300 leading-relaxed mb-3">
+              The first message, the follow-up, what to say when they ask "how much?", and the exit that gets more replies than anything else. Copy them, change the names, send them this week
+            </p>
+            <Link to="/7-messages" className="font-body text-sm text-mc-gold underline underline-offset-2">See what's inside</Link>
+          </div>
+          <LeadMagnetForm />
+        </div>
+      </section>
 
       {/* ── RESOURCES STRIP ── */}
       <section className="bg-gray-50 py-20 px-6 border-t border-gray-100">

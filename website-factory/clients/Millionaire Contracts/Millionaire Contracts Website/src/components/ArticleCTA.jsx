@@ -20,6 +20,9 @@ export default function ArticleCTA({ heading, body, cta = 'Book a Free Strategy 
               {cta}
             </Link>
           </div>
+          <p className="relative z-10 font-body text-sm text-gray-400 mt-6 pt-5 border-t border-white/10">
+            Not ready for a call? <Link to="/7-messages" className="text-mc-gold font-semibold underline underline-offset-2">Get the 7 messages that book meetings, free</Link>
+          </p>
         </div>
       </div>
     </section>
