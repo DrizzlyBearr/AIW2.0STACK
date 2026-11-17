@@ -55,7 +55,7 @@ export default function SevenMessages() {
       <SEOMeta
         title="The 7 messages that book meetings (free download)"
         description="7 short messages that get business owners to reply and book a meeting: the first message, the follow-up, the price question and more. Free from Millionaire Contracts."
-        path={LEAD_MAGNET.page}
+        path="/7-messages"
         schema={schema}
       />
       <Navbar />
