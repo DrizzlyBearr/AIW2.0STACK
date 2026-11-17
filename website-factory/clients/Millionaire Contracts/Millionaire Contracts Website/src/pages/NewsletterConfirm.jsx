@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
 import { NEWSLETTER } from '../lib/newsletter'
+import { LEAD_MAGNET } from '../lib/leadMagnet'
 
 
 export default function NewsletterConfirm() {
@@ -72,11 +73,21 @@ export default function NewsletterConfirm() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h1 className="font-headline text-3xl font-black text-white mb-4">You are on the list</h1>
+              <h1 className="font-headline text-3xl font-black text-white mb-4">You're in, here are your 7 messages</h1>
               <p className="font-body text-gray-400 leading-relaxed mb-8">
-                Your subscription is confirmed. You will get the next issue of Pipeline &amp; Power when it ships.
+                Your subscription is confirmed. Download the PDF below, and keep an eye on your inbox, I'll send you something useful every few days
               </p>
-              <Link to="/pipeline-and-power" className="btn-primary">Back to Pipeline &amp; Power</Link>
+              <a
+                href={LEAD_MAGNET.pdf}
+                download
+                onClick={() => window.gtag && window.gtag('event', 'file_download', { file_name: '7-messages' })}
+                className="btn-primary inline-block mb-6"
+              >
+                Download {LEAD_MAGNET.title}
+              </a>
+              <p className="font-body text-sm text-gray-500">
+                Want us to write these for your business? <Link to="/get-a-plan" className="text-mc-gold underline underline-offset-2">Get a free plan</Link>
+              </p>
             </>
           )}
 
