@@ -1,0 +1,63 @@
+{
+  "business": "TL Telecoms Solutions",
+  "person": "Theuns",
+  "date": "18 November 2026",
+  "from": "Kat",
+  "headline": "More professional firms asking TL Telecoms for a quote",
+  "told": [
+    "You want more enquiries, and you want them now",
+    "Customers find you mostly through ads and online",
+    "You sell to businesses and to the public, with a team of 2 to 10 people"
+  ],
+  "todayTitle": "Where enquiries leak today",
+  "today": [
+    { "step": "A firm's phone bill feels too high" },
+    { "step": "Finds you online", "leak": "Only if they're already searching" },
+    { "step": "Clicks Get a Free Quote", "leak": "Form asks for a message, not their setup" },
+    { "step": "Waits to hear back", "leak": "No time given, so they ask others too" },
+    { "step": "Mid-contract, says not yet", "leak": "No date kept to come back to them" }
+  ],
+  "futureTitle": "With the plan in place",
+  "future": [
+    { "step": "We reach the firm first", "note": "Law, accounting and medical practices" },
+    { "step": "Quote form that sorts", "note": "Staff, lines, provider, contract end" },
+    { "step": "Saving shown fast", "note": "Against what they pay now" },
+    { "step": "One pipeline", "note": "Every quote and contract end date kept" },
+    { "step": "Followed up, then ported", "note": "On the day their contract ends" }
+  ],
+  "noticed": [
+    "You're really clear about who you're for: law firms, accounting firms, medical practices and other professional firms. Most telecoms sites try to talk to everyone",
+    "Your pricing is published and simple, month to month with no contracts and per-second billing. That's a real strength, and most of your competitors hide it",
+    "The quote form asks for a name, company, phone, email, the service and a message, but nothing about how many people they have, who they're with now, or when that contract ends",
+    "The site says you respond quickly but not how quickly, and the WhatsApp number is there but easy to miss on a phone",
+    "There are no client stories or reviews yet, so a cautious firm has nothing from someone like them to go on"
+  ],
+  "planTitle": "How we would go about it",
+  "plan": [
+    { "title": "Go to the firms, not just wait for them", "body": "Your best clients aren't searching for a new phone system, they're just paying too much for the one they have. So we'd reach out to law, accounting and medical practices with roughly 5 to 30 staff, starting in KZN and Gauteng, in your name, with one simple message about what they're paying and per-second billing." },
+    { "title": "A quote form that does the work", "body": "Ask the few things you need to price it: how many people, how many lines, who they're with now, roughly what they pay, and when that contract ends. Add a WhatsApp button that's always visible, and a line that says when they'll hear back." },
+    { "title": "Show the saving fast", "body": "Every quote request answered within your working hours with a rough saving against what they pay now, so they don't go and get two other quotes while they wait." },
+    { "title": "Never lose a not-yet", "body": "Most firms will be mid-contract. Every quote and every contract end date goes into one simple pipeline, so you're the one who calls them the month their contract runs out, not whoever happens to be in front of them that week." },
+    { "title": "Something to point to", "body": "Once the first few firms are on, a short line from each one on the site and in the messages, because a law firm trusts what another law firm says." }
+  ],
+  "timelineWeeks": 12,
+  "timeline": [
+    { "label": "Quote form, first reply and pipeline", "when": "weeks 1 to 2", "from": 1, "to": 2, "body": "You approve everything as we go" },
+    { "label": "Outreach to professional firms", "when": "from week 3", "from": 3, "to": 12, "body": "Normally when the new conversations start coming in" },
+    { "label": "Follow-ups and contract-end call backs", "when": "ongoing", "from": 3, "to": 12, "body": "Tuned every month from what the numbers show" }
+  ],
+  "worth": {
+    "title": "Why it's worth it",
+    "stats": [
+      { "value": "R779", "label": "a month for a 10 person firm on your own published pricing: 10 hosted extensions, 2 SIP channels and basic voice recording, excluding VAT and call charges" },
+      { "value": "R9,348", "label": "a year from that one firm, and you keep earning on every call they make" }
+    ],
+    "body": "And because you're month to month, every firm you bring on keeps paying until they have a reason to leave. Twenty firms like that is over R15,000 a month coming in before a single call is billed."
+  },
+  "next": {
+    "title": "Talk it through",
+    "body": "It would really help to know roughly how many quote requests you get in a month, how many of those turn into clients, and what a typical client looks like for you, number of people and lines. Then I can show you exactly where the biggest gap is.",
+    "cta": "Book a call",
+    "href": "https://calendly.com/katlehomoh/30min"
+  }
+}
