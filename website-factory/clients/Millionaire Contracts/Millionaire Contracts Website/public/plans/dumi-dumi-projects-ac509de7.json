@@ -1,0 +1,63 @@
+{
+  "business": "Dumi Dumi Projects",
+  "person": "Blessing",
+  "date": "19 November 2026",
+  "from": "Kat",
+  "headline": "Winning more commercial and maintenance work for Dumi Dumi Projects",
+  "told": [
+    "You do renovations and building maintenance, with jobs normally between R400,000 and R1.5 million",
+    "Nobody is selling for the business yet, and new work mostly comes from paid ads",
+    "You've tried agents to bring in jobs, and you want more work now"
+  ],
+  "todayTitle": "Where work leaks today",
+  "today": [
+    { "step": "A building needs work" },
+    { "step": "Owner or manager searches", "leak": "Only if they're looking that week" },
+    { "step": "Lands on your site", "leak": "No projects to show what you've done" },
+    { "step": "Fills in the quote form", "leak": "Nothing about size, budget or who decides" },
+    { "step": "Quote goes out", "leak": "Nobody whose job is to follow it up" }
+  ],
+  "futureTitle": "With the plan in place",
+  "future": [
+    { "step": "We reach the managers first", "note": "Managing agents, body corporates, facilities" },
+    { "step": "Your projects on show", "note": "Real jobs, before and after" },
+    { "step": "Quote form that sorts", "note": "Property, scope, budget, who signs" },
+    { "step": "One pipeline", "note": "Every site visit and quote kept" },
+    { "step": "Followed up, then won", "note": "And the next job booked in" }
+  ],
+  "noticed": [
+    "You've got credentials most contractors your size don't: CIDB 5GB and 4CE, ISO 9001 and ISO 45001, and over 30 years of experience in the leadership team. That's exactly what property managers and companies check before they shortlist anyone",
+    "Your three client reviews are really strong, especially the one about not needing supervision and cleaning up after yourselves. That's the thing building managers worry about most",
+    "The portfolio page doesn't show any projects yet, just the reviews again, so someone deciding on a R400,000 job has nothing to look at",
+    "The numbers on the homepage show as \"0+\" next to the years and projects, so they look broken on the live site",
+    "The quote form asks for an address and when they'd like to start, but not what kind of property it is, roughly how big the job is, the budget, or who signs off, so every quote needs a follow-up call just to understand it"
+  ],
+  "planTitle": "How we would go about it",
+  "plan": [
+    { "title": "Go to the people who hire contractors", "body": "The best work isn't searching for you, it sits with managing agents, body corporates of bigger complexes, and facilities managers of offices, schools and factories in Durban and Pietermaritzburg. We'd reach out to them in Phillip's name, with your credentials and a real project up front, and book site visits straight into your calendar." },
+    { "title": "Aim for maintenance contracts, not just one-off jobs", "body": "A managing agent with ten buildings needs painting, waterproofing, plumbing and repairs every year. One good relationship can turn into a steady flow of work, so the outreach asks about their maintenance needs, not just the next project." },
+    { "title": "Show the work", "body": "Six to eight real projects on the portfolio page, each with before and after photos, the type of property and roughly what was done. Fix the homepage numbers. For a buyer spending R400,000 or more, this is what makes them call you instead of the next name on the list." },
+    { "title": "A quote form that does the work", "body": "Ask the few things you need to price it: the type of property, what needs doing, a rough size or budget, when, and who signs off. Then a quick reply on WhatsApp to book the site visit, so the job doesn't go to whoever answers first." },
+    { "title": "Nothing goes quiet", "body": "Every enquiry, site visit and quote in one simple pipeline, followed up a few days later and again after that. With nobody selling full time, this is what stops good quotes from just fading away." }
+  ],
+  "timelineWeeks": 12,
+  "timeline": [
+    { "label": "Portfolio, quote form and pipeline", "when": "weeks 1 to 2", "from": 1, "to": 2, "body": "You approve everything as we go" },
+    { "label": "Outreach to managing agents and facilities managers", "when": "from week 3", "from": 3, "to": 12, "body": "Normally when the site visits start coming in" },
+    { "label": "Follow-ups and tuning", "when": "ongoing", "from": 3, "to": 12, "body": "What the numbers show, fixed every month" }
+  ],
+  "worth": {
+    "title": "Why it's worth it",
+    "stats": [
+      { "value": "R400,000", "label": "the smallest job in your normal range" },
+      { "value": "R1.6m", "label": "a year from just one extra job a quarter, at the bottom of that range" }
+    ],
+    "body": "And a maintenance contract with a managing agent tends to bring the next job with it, so the first win is normally not the last one from that client."
+  },
+  "next": {
+    "title": "Talk it through with Phillip or Dumsile",
+    "body": "It would really help to have the owner who signs off on the call. It would also help to know roughly how many quotes you send in a month, how many you win, and which kind of job you'd most like more of, so I can show you exactly where the biggest gap is.",
+    "cta": "Book a call",
+    "href": "https://calendly.com/katlehomoh/30min"
+  }
+}
