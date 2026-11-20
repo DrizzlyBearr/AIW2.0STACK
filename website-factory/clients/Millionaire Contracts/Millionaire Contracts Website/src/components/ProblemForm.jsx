@@ -5,7 +5,7 @@ import { MARKETS } from '../lib/markets'
 import { testimonials } from './Testimonials'
 import { BOOKING_URL } from '../pages/Calendar'
 import { joinList } from '../lib/newsletter'
-import { LEAD_MAGNET } from '../lib/leadMagnet'
+import { COURSE } from '../lib/leadMagnet'
 
 // The ad landing form (MC-Fulfillment-Engine docs/mc-paid-ads.md), in three
 // short steps: the problem first, the easy first yes; three one-tap answers;
@@ -133,7 +133,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
   async function askForMessages() {
     if (messages === 'sending' || messages === 'asked') return
     setMessages('sending')
-    const ok = await joinList({ firstName: data.name.trim().split(/\s+/)[0], email: data.email, source: '/get-a-plan' })
+    const ok = await joinList({ firstName: data.name.trim().split(/\s+/)[0], email: data.email, source: '/get-a-plan', answers: data.size ? { team: data.size } : undefined })
     setMessages(ok ? 'asked' : 'failed')
     if (ok && typeof window.gtag === 'function') window.gtag('event', 'sign_up', { method: 'lead_magnet', page: '/get-a-plan' })
   }
@@ -211,18 +211,18 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
         <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-5 text-center">
           {messages === 'asked' ? (
             <p className="font-body text-sm text-gray-300">
-              Your 7 messages are on the way. Check your inbox and click the confirm link, and the download opens straight away
+              The course is on its way. Check your inbox and click the confirm link, and day 1 arrives straight after
             </p>
           ) : (
             <>
               <p className="font-body text-sm text-gray-300 mb-3">
-                Not ready for a call? Get <span className="text-white font-semibold">{LEAD_MAGNET.title}</span> while you wait for your plan
+                Not ready for a call? Start <span className="text-white font-semibold">{COURSE.title}</span>, our free 5-day course, while you wait for your plan
               </p>
               <button type="button" onClick={askForMessages} disabled={messages === 'sending'} className="btn-primary disabled:opacity-60">
-                {messages === 'sending' ? 'Sending...' : 'Send me the 7 messages'}
+                {messages === 'sending' ? 'Sending...' : 'Send me the free course'}
               </button>
               {messages === 'failed' && (
-                <p className="font-body text-xs text-amber-200 mt-2">That didn't go through. You can also get them at millionairecontracts.com/7-messages</p>
+                <p className="font-body text-xs text-amber-200 mt-2">That didn't go through. You can also start it at millionairecontracts.com/beyond-referrals</p>
               )}
             </>
           )}
@@ -330,7 +330,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
           <label className="flex items-start gap-3 cursor-pointer">
             <input type="checkbox" checked={alsoMessages} onChange={(e) => setAlsoMessages(e.target.checked)} className="mt-0.5 h-4 w-4 accent-mc-gold flex-shrink-0" />
             <span className="font-body text-sm text-gray-300">
-              Also send me <span className="text-white">{LEAD_MAGNET.title}</span>, free, plus a short note from Kat every few days
+              Also send me <span className="text-white">{COURSE.title}</span>, a free 5-day course on growing past referrals, then a short note from Kat every week or so
             </span>
           </label>
           {/* Only a bot fills this in; Command drops the enquiry if it is. */}

@@ -144,8 +144,8 @@ export default function Navbar() {
                 <Link to="/pipeline-and-power" className="block px-4 py-2.5 text-sm font-body text-mc-teal hover:text-mc-gold hover:bg-gray-50 transition-colors" onClick={() => setResourcesOpen(false)}>
                   Pipeline &amp; Power
                 </Link>
-                <Link to="/7-messages" className="block px-4 py-2.5 text-sm font-body text-mc-teal hover:text-mc-gold hover:bg-gray-50 transition-colors" onClick={() => setResourcesOpen(false)}>
-                  <span className="text-mc-gold font-semibold">Free:</span> The 7 messages that book meetings
+                <Link to="/beyond-referrals" className="block px-4 py-2.5 text-sm font-body text-mc-teal hover:text-mc-gold hover:bg-gray-50 transition-colors" onClick={() => setResourcesOpen(false)}>
+                  <span className="text-mc-gold font-semibold">Free course:</span> Beyond Referrals
                 </Link>
               </div>
             )}
@@ -206,7 +206,7 @@ export default function Navbar() {
               <div className="pl-4 flex flex-col gap-1 pb-2">
                 <Link to="/resources" className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setResourcesOpen(false) }}>Guides &amp; Articles</Link>
                 <Link to="/pipeline-and-power" className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setResourcesOpen(false) }}>Pipeline &amp; Power</Link>
-                <Link to="/7-messages" className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setResourcesOpen(false) }}><span className="text-mc-gold font-semibold">Free:</span> The 7 messages that book meetings</Link>
+                <Link to="/beyond-referrals" className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setResourcesOpen(false) }}><span className="text-mc-gold font-semibold">Free course:</span> Beyond Referrals</Link>
               </div>
             )}
           </div>

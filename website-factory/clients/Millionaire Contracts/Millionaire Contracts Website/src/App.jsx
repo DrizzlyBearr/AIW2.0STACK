@@ -44,6 +44,7 @@ const FinancialServices = page(() => import('./pages/FinancialServices'))
 const Healthcare = page(() => import('./pages/Healthcare'))
 const PipelineAndPower = page(() => import('./pages/PipelineAndPower'))
 const SevenMessages = page(() => import('./pages/SevenMessages'))
+const BeyondReferrals = page(() => import('./pages/BeyondReferrals'))
 const NewsletterConfirm = page(() => import('./pages/NewsletterConfirm'))
 const NewsletterUnsubscribe = page(() => import('./pages/NewsletterUnsubscribe'))
 const WhatIsAnSDR = page(() => import('./pages/articles/WhatIsAnSDR'))
@@ -100,6 +101,7 @@ const BY_PATH = {
   '/outsourced-sales-for-healthcare': Healthcare,
   '/pipeline-and-power': PipelineAndPower,
   '/7-messages': SevenMessages,
+  '/beyond-referrals': BeyondReferrals,
   '/newsletter-confirm': NewsletterConfirm,
   '/newsletter-unsubscribe': NewsletterUnsubscribe,
   '/in-house-vs-outsourced-sales': Comparison,
@@ -215,6 +217,7 @@ export default function App() {
         <Route path="/outsourced-sales-for-healthcare" element={<Healthcare />} />
         <Route path="/pipeline-and-power" element={<PipelineAndPower />} />
         <Route path="/7-messages" element={<SevenMessages />} />
+        <Route path="/beyond-referrals" element={<BeyondReferrals />} />
         <Route path="/newsletter-confirm" element={<NewsletterConfirm />} />
         <Route path="/newsletter-unsubscribe" element={<NewsletterUnsubscribe />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />

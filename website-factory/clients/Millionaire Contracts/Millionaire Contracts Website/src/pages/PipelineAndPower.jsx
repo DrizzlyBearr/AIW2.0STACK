@@ -118,7 +118,7 @@ export default function PipelineAndPower() {
       <Navbar />
 
       <div className="bg-mc-gold text-mc-dark text-center px-6 py-3 font-body text-sm">
-        New here? Start with the free download, <Link to="/7-messages" className="font-bold underline underline-offset-2">The 7 messages that book meetings</Link>
+        New here? Start with the free 5-day course, <Link to="/beyond-referrals" className="font-bold underline underline-offset-2">Beyond Referrals</Link>
       </div>
 
       {/* Hero */}

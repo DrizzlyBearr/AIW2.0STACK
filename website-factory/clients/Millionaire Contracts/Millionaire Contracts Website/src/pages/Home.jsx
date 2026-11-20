@@ -316,14 +316,14 @@ export default function Home() {
           style={{ backgroundImage: 'linear-gradient(#d8920e 1px, transparent 1px), linear-gradient(90deg, #d8920e 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <div className="relative z-10 max-w-screen-lg mx-auto grid md:grid-cols-[1.2fr_1fr] gap-10 items-center">
           <div>
-            <span className="section-label mb-3 block">Free download</span>
+            <span className="section-label mb-3 block">Free 5-day course</span>
             <h2 className="font-headline text-3xl md:text-4xl font-black text-white leading-tight mb-4">
-              Not ready for a call? Start with <span className="text-mc-gold">the 7 messages that book meetings</span>
+              Not ready for a call? Start with <span className="text-mc-gold">Beyond Referrals</span>
             </h2>
             <p className="font-body text-gray-300 leading-relaxed mb-3">
-              The first message, the follow-up, what to say when they ask "how much?", and the exit that gets more replies than anything else. Copy them, change the names, send them this week
+              For owners whose business already works, but whose growth still depends on word of mouth and on them. One short lesson a day: your website, who's worth your time, what to say, where the money leaks, and how to go to the work instead of waiting for it
             </p>
-            <Link to="/7-messages" className="font-body text-sm text-mc-gold underline underline-offset-2">See what's inside</Link>
+            <Link to="/beyond-referrals" className="font-body text-sm text-mc-gold underline underline-offset-2">See what's in the course</Link>
           </div>
           <LeadMagnetForm />
         </div>

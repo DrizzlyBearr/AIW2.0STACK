@@ -73,9 +73,9 @@ export default function NewsletterConfirm() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h1 className="font-headline text-3xl font-black text-white mb-4">You're in, here are your 7 messages</h1>
+              <h1 className="font-headline text-3xl font-black text-white mb-4">You're in. Day 1 is on its way</h1>
               <p className="font-body text-gray-400 leading-relaxed mb-8">
-                Your subscription is confirmed. Download the PDF below, and keep an eye on your inbox, I'll send you something useful every few days
+                Day 1 of Beyond Referrals lands in your inbox in the next few minutes, then one lesson a day. While you wait, here are the 7 messages we use to book meetings, they come up again on day 3
               </p>
               <a
                 href={LEAD_MAGNET.pdf}

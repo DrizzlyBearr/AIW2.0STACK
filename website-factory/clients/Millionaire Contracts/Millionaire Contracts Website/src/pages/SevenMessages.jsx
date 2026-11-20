@@ -70,10 +70,10 @@ export default function SevenMessages() {
               The 7 messages that <span className="text-mc-gold">book meetings</span> with South African business owners
             </h1>
             <p className="font-body text-gray-300 text-lg leading-relaxed mb-8 max-w-xl">
-              Most cold messages sound like a pitch, and people stop reading after one line. These don't. Copy them, change the names, and send them this week
+              Most cold messages sound like a pitch, and people stop reading after one line. These don't. Copy them, change the names, and send them this week. You'll also get Beyond Referrals, our free 5-day course for growing past word of mouth
             </p>
             <div className="max-w-md">
-              <LeadMagnetForm />
+              <LeadMagnetForm button="Send me the 7 messages" />
             </div>
           </div>
           <div className="hidden md:block"><Cover /></div>
