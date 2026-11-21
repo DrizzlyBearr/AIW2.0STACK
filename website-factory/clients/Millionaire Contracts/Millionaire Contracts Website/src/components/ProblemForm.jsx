@@ -3,7 +3,6 @@ import { trackGoal } from '../lib/track'
 import { sendEnquiry, visitSource } from '../lib/enquiry'
 import { MARKETS } from '../lib/markets'
 import { testimonials } from './Testimonials'
-import { BOOKING_URL } from '../pages/Calendar'
 import { joinList } from '../lib/newsletter'
 import { COURSE } from '../lib/leadMagnet'
 import { metaEvent } from '../lib/metaPixel'
@@ -56,21 +55,6 @@ const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 // Optional, but if it is there it has to be a number someone can message.
 const phoneOk = (p) => !p.trim() || p.replace(/\D/g, '').length >= 9
 
-/** The calendar on the thank-you, filled in with what they already typed, tagged so a booking traces back here. */
-function bookingEmbed(name, email, source) {
-  const q = new URLSearchParams({
-    embed_domain: 'www.millionairecontracts.com',
-    embed_type: 'Inline',
-    hide_gdpr_banner: '1',
-    name,
-    email,
-    utm_source: 'website',
-    utm_campaign: 'get-a-plan',
-    utm_content: source,
-  })
-  return `${BOOKING_URL}?${q.toString()}`
-}
-
 export default function ProblemForm({ source = 'website:get-a-plan' }) {
   const [status, setStatus] = useState('idle')
   // Step 3's extras (company, website, a note), folded away until asked for.
@@ -87,19 +71,6 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
   const top = useRef(null)
 
   useEffect(() => setFrom(visitSource(source)), [source])
-
-  // A call booked on the thank-you is the goal this page exists for, so it is
-  // counted: Calendly tells the page when a booking is made.
-  useEffect(() => {
-    if (status !== 'success') return undefined
-    const onMessage = (e) => {
-      if (!/^https:\/\/([a-z0-9-]+\.)*calendly\.com$/.test(e.origin) || e.data?.event !== 'calendly.event_scheduled') return
-      trackGoal('call booked')
-      if (typeof window.gtag === 'function') window.gtag('event', 'book_call', { form: 'get-a-plan' })
-    }
-    window.addEventListener('message', onMessage)
-    return () => window.removeEventListener('message', onMessage)
-  }, [status])
 
   const market = MARKETS.find((m) => m.code === data.market)
   const set = (field, value) => setData((d) => ({ ...d, [field]: value }))
@@ -195,21 +166,17 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
         <p className="font-body text-gray-400 leading-relaxed mb-8">
           Thanks, {data.name.split(' ')[0] || 'and thanks'}. A person reads what you wrote and replies soon, in working hours usually within minutes{data.phone.trim() ? ', on WhatsApp if that is quicker' : ''}. Your plan follows within one working day.
         </p>
-        {/* The calendar itself, not a button to it: the moment after they ask
-            is the moment they are most likely to book. Their name and email
-            are already in it. The plan still follows either way. */}
-        <div className="rounded-xl border border-mc-gold/30 bg-mc-gold/5 p-4 sm:p-6 text-left">
-          <p className="font-headline text-lg font-bold text-white mb-1 text-center">Want to talk it through sooner?</p>
-          <p className="font-body text-gray-400 text-sm mb-4 text-center">Pick a time for a discovery call. Your written plan still follows.</p>
-          <iframe
-            src={bookingEmbed(data.name, data.email, from.source)}
-            title="Book a discovery call with Millionaire Contracts"
-            className="w-full rounded-lg bg-white"
-            style={{ minWidth: '280px', height: '700px', border: 'none' }}
-          />
-          <p className="font-body text-xs text-gray-500 text-center mt-3">
-            Calendar not loading? <a href={BOOKING_URL} target="_blank" rel="noopener" className="underline hover:text-mc-gold">Open it on Calendly</a>
-          </p>
+        {/* No calendar here any more (Kat, 21 November 2026). Calls booked
+            seconds after the form, before anything was sent, mostly did not
+            happen. The plan now comes first, and the email it comes in asks
+            them to book a time to go through it. */}
+        <div className="rounded-xl border border-mc-gold/30 bg-mc-gold/5 p-5 sm:p-6 text-left">
+          <p className="font-headline text-lg font-bold text-white mb-3 text-center">What happens next</p>
+          <ol className="font-body text-sm text-gray-300 space-y-2 list-decimal pl-5">
+            <li>We reply to say we've got it, usually within minutes in working hours</li>
+            <li>Your written plan arrives within one working day, by email: what we'd do, in what order, and what it's worth to you</li>
+            <li>If it makes sense, you book a time in the same email to go through it with Kat</li>
+          </ol>
         </div>
         <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-5 text-center">
           {messages === 'asked' ? (
