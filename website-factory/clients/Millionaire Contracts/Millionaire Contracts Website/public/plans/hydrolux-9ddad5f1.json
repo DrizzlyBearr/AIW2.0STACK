@@ -1,0 +1,63 @@
+{
+  "business": "Hydrolux",
+  "person": "Baballo",
+  "date": "21 November 2026",
+  "from": "Kat",
+  "headline": "Turning more of Hydrolux's outreach into monthly clients",
+  "told": [
+    "You want to turn more of your enquiries into sales, and you want it now",
+    "You already find clients through your own outreach",
+    "You sell to other businesses, with a team of 2 to 10 people"
+  ],
+  "todayTitle": "Where enquiries leak today",
+  "today": [
+    { "step": "A business needs a website" },
+    { "step": "Sees your site", "leak": "No client websites to show what you've built" },
+    { "step": "Builds a quote", "leak": "Starts at R3,000, so price leads the conversation" },
+    { "step": "Chat on WhatsApp", "leak": "No set next step after the first chat" },
+    { "step": "One-off site, then gone", "leak": "The site leads with the build, not the monthly care" }
+  ],
+  "futureTitle": "With the plan in place",
+  "future": [
+    { "step": "Outreach to the right businesses", "note": "Ones who need upkeep, not just a site" },
+    { "step": "Real client work on show", "note": "Before and after, with results" },
+    { "step": "A package that includes care", "note": "Site plus monthly management" },
+    { "step": "One pipeline", "note": "Every chat and quote with a next step" },
+    { "step": "Monthly clients", "note": "Income that builds every month" }
+  ],
+  "noticed": [
+    "The design really stands out. For a web studio, your own site is the best proof you've got, and it shows what you can do",
+    "The quote builder is smart: three taps and the details land on your WhatsApp. That's exactly the kind of short first step that gets more people to start",
+    "The portfolio shows your own brand art and a mock-up, but no websites you've built for clients yet, which is the first thing a business owner looks for",
+    "Your monthly packages (website management from R2,000 and social media from R4,000 a month) are where the steady money is, but the site and the quote builder lead with the one-off build from R3,000",
+    "There are 3 reviews, and the short ones don't say much yet, so a few detailed ones from real clients would help a lot"
+  ],
+  "planTitle": "How we would go about it",
+  "plan": [
+    { "title": "Show 3 real client websites", "body": "Before and after screenshots, the type of business, and one line on what changed for them. Even small projects count. This is what turns a nice-looking studio into one a business owner trusts with their money." },
+    { "title": "Lead with the monthly packages", "body": "Package a site with 3 months of management or social media as the main offer, and keep the R3,000 build as the smaller option. One client on a site plus monthly care is worth around R28,000 in the first year on your own prices, compared to R3,000 for a site on its own." },
+    { "title": "Point your outreach at businesses that need ongoing care", "body": "Businesses with an outdated site that changes often, like restaurants, salons with bookings, property agents and clinics, need updates and social media every month. Aim the outreach at them, with one message about what their current site is costing them." },
+    { "title": "A clear next step after every chat", "body": "Every WhatsApp conversation ends with a booked call or a sent quote, and every quote gets followed up a few days later and again a week after. Keep them in one simple list, so nothing goes quiet." },
+    { "title": "Ask every happy client for a proper review", "body": "A few lines on what was built, how it went and what changed. Three detailed reviews will do more than ten short ones." }
+  ],
+  "timelineWeeks": 8,
+  "timeline": [
+    { "label": "Portfolio, packages and quote builder", "when": "weeks 1 to 2", "from": 1, "to": 2, "body": "Mostly your own work, using what you already have" },
+    { "label": "Outreach to businesses that need monthly care", "when": "from week 2", "from": 2, "to": 8, "body": "A few messages a day, every week" },
+    { "label": "Follow-ups and reviews", "when": "ongoing", "from": 3, "to": 8, "body": "Every quote chased, every happy client asked" }
+  ],
+  "worth": {
+    "title": "Why it's worth it",
+    "stats": [
+      { "value": "R3,000", "label": "a basic website on its own, once" },
+      { "value": "R28,000", "label": "in the first year from a R4,000 site plus R2,000 a month of management, on your own prices" }
+    ],
+    "body": "So every client who stays on a monthly package is worth around nine basic builds. A few of those and the business stops depending on the next one-off job."
+  },
+  "next": {
+    "title": "Talk it through",
+    "body": "It would really help to know roughly how many enquiries your outreach brings in a month, how many become projects, and how many clients are on a monthly package today. Then I can show you exactly where the biggest gap is.",
+    "cta": "Book a call",
+    "href": "https://calendly.com/katlehomoh/30min"
+  }
+}
