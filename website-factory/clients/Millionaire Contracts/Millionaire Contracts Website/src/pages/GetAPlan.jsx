@@ -3,6 +3,7 @@ import SEOMeta from '../components/SEOMeta'
 import ProblemForm from '../components/ProblemForm'
 import { caseStudies } from '../data/caseStudies'
 import { testimonials, upworkStats, upworkReviews, UPWORK_URL } from '../components/Testimonials'
+import PodcastInterview from '../components/PodcastInterview'
 
 // The paid ads landing page (MC-Fulfillment-Engine docs/mc-paid-ads.md),
 // built as a funnel: the offer and proof first, the form near the top for
@@ -220,6 +221,19 @@ export default function GetAPlan() {
           <p className="text-center mt-6">
             <a href={UPWORK_URL} target="_blank" rel="me noopener" className="font-body text-sm text-mc-teal underline hover:text-mc-gold">See every review on Upwork</a>
           </p>
+        </div>
+      </section>
+
+      {/* The founder, in an interview (Kat, 19 November): a face and a voice
+          behind the reviews, before the case studies. */}
+      <section className="px-6 py-16">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <span className="section-label mb-3 block">Meet the founder</span>
+            <h2 className="font-headline text-2xl md:text-4xl font-black text-white leading-tight">Katleho Mohlomi on the Mpho Dagada Network</h2>
+            <p className="font-body text-gray-400 text-sm md:text-base mt-3">Hear from the person behind the work before you ask for your plan.</p>
+          </div>
+          <PodcastInterview goal="get-a-plan" />
         </div>
       </section>
 
