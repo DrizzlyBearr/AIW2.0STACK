@@ -6,6 +6,7 @@ import { testimonials } from './Testimonials'
 import { BOOKING_URL } from '../pages/Calendar'
 import { joinList } from '../lib/newsletter'
 import { COURSE } from '../lib/leadMagnet'
+import { metaEvent } from '../lib/metaPixel'
 
 // The ad landing form (MC-Fulfillment-Engine docs/mc-paid-ads.md), in three
 // short steps: the problem first, the easy first yes; three one-tap answers;
@@ -136,6 +137,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
     const ok = await joinList({ firstName: data.name.trim().split(/\s+/)[0], email: data.email, source: '/get-a-plan', answers: data.size ? { team: data.size } : undefined })
     setMessages(ok ? 'asked' : 'failed')
     if (ok && typeof window.gtag === 'function') window.gtag('event', 'sign_up', { method: 'lead_magnet', page: '/get-a-plan' })
+    if (ok) metaEvent('CompleteRegistration', { content_name: 'Beyond Referrals' })
   }
 
   async function handleSubmit(e) {
@@ -169,6 +171,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
     trackGoal('plan requested')
     // GA4 key event, imported into Google Ads as the conversion.
     if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { form: 'get-a-plan' })
+    metaEvent('Lead', { content_name: 'Free plan' })
     setStatus('success')
   }
 

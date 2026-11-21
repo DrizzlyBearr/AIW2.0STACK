@@ -1,6 +1,7 @@
 import { useId, useState } from 'react'
 import { NEWSLETTER } from '../lib/newsletter'
 import { TURNOVER, TEAM } from '../lib/leadMagnet'
+import { metaEvent } from '../lib/metaPixel'
 
 // Sign-up for Beyond Referrals, the free course that joins the Pipeline &
 // Power list: first name, email, and two questions that tell us roughly how
@@ -37,6 +38,7 @@ export default function LeadMagnetForm({ dark = true, button = 'Start the free c
       if (data.ok) {
         setStatus('success')
         if (window.gtag) window.gtag('event', 'sign_up', { method: 'lead_magnet', page: window.location.pathname })
+        metaEvent('CompleteRegistration', { content_name: 'Beyond Referrals' })
       } else {
         setStatus('error')
         setErrorMsg(data.error || 'Something went wrong. Please try again.')

@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import SEOMeta from '../components/SEOMeta'
 import { NEWSLETTER } from '../lib/newsletter'
 import { LEAD_MAGNET } from '../lib/leadMagnet'
+import { metaEvent } from '../lib/metaPixel'
 
 
 export default function NewsletterConfirm() {
@@ -29,6 +30,7 @@ export default function NewsletterConfirm() {
       .then((data) => {
         if (data.ok) {
           setStatus('success')
+          metaEvent('Subscribe', { content_name: 'Beyond Referrals' })
         } else {
           setStatus('error')
           setMessage(data.error || 'Something went wrong. Please try again.')

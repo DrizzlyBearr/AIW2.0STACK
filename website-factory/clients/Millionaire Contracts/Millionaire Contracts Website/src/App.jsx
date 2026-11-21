@@ -1,6 +1,7 @@
 import { Suspense, useEffect } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { startClickTracking, trackView } from './lib/track'
+import { metaPageView } from './lib/metaPixel'
 import { page } from './lib/page'
 const NewsletterArchive = page(() => import('./pages/NewsletterArchive'))
 import { articlePages, issuePages } from './lib/contentPages'
@@ -172,6 +173,7 @@ export default function App() {
     }
     startClickTracking()
     trackView(location.pathname)
+    metaPageView()
   }, [location])
 
   return (
