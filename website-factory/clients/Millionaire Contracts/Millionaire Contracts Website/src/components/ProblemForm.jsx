@@ -4,7 +4,7 @@ import { sendEnquiry, visitSource } from '../lib/enquiry'
 import { MARKETS } from '../lib/markets'
 import { testimonials } from './Testimonials'
 import { joinList } from '../lib/newsletter'
-import { COURSE } from '../lib/leadMagnet'
+import { COURSE, TURNOVER } from '../lib/leadMagnet'
 import { metaEvent } from '../lib/metaPixel'
 
 // The ad landing form (MC-Fulfillment-Engine docs/mc-paid-ads.md), in three
@@ -34,6 +34,11 @@ import { metaEvent } from '../lib/metaPixel'
 
 const SIZES = ['Just me', '2 to 10 people', '11 to 50 people', 'More than 50']
 const TIMING = ['Now', 'This quarter', 'Just exploring']
+// Roughly what the business turns over (Kat, 22 November 2026). Only a
+// business above the first band counts as a conversion in Google Ads, so the
+// bidding learns to find businesses that can afford MC rather than more of
+// the one-person enquiries it was bringing. Everyone still gets an answer.
+const SMALLEST = TURNOVER[0]
 // Replaced a budget question: nobody knows what solving it should cost before
 // they have seen a plan, and asking felt like a sales trap. This one tells us
 // what the plan has to work around, and size already says roughly who can pay.
@@ -67,24 +72,25 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
   const [messages, setMessages] = useState('idle')
   const [step, setStep] = useState(1)
   const [from, setFrom] = useState({ source, term: '' })
-  const [data, setData] = useState({ name: '', company: '', email: '', phone: '', website: '', problem: '', need: '', market: '', size: '', timing: '', finding: '', sellsTo: '', gotcha: '' })
+  const [data, setData] = useState({ name: '', company: '', email: '', phone: '', website: '', problem: '', need: '', market: '', size: '', timing: '', finding: '', sellsTo: '', turnover: '', gotcha: '' })
   const top = useRef(null)
 
   useEffect(() => setFrom(visitSource(source)), [source])
 
   const market = MARKETS.find((m) => m.code === data.market)
+  const qualified = Boolean(data.turnover) && data.turnover !== SMALLEST
   const set = (field, value) => setData((d) => ({ ...d, [field]: value }))
 
   // What each step still needs, so a grey button always says why it is grey.
   const needs = {
     1: [!data.need && 'what you need most', !data.market && 'where you are based'],
-    2: [!data.sellsTo && 'who you sell to', !data.size && 'business size', !data.timing && 'when you need it', !data.finding && 'how customers find you'],
+    2: [!data.sellsTo && 'who you sell to', !data.size && 'business size', !data.turnover && 'roughly what it turns over', !data.timing && 'when you need it', !data.finding && 'how customers find you'],
     3: [data.name.trim().length < 2 && 'your name', !EMAIL.test(data.email) && 'a valid email', !phoneOk(data.phone) && 'a full WhatsApp number, or leave it empty'],
   }
   const missing = needs[step].filter(Boolean)
   const touched = {
     1: data.need || data.market,
-    2: data.sellsTo || data.size || data.timing || data.finding,
+    2: data.sellsTo || data.size || data.turnover || data.timing || data.finding,
     3: data.name || data.company || data.email || data.phone,
   }[step]
 
@@ -105,7 +111,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
   async function askForMessages() {
     if (messages === 'sending' || messages === 'asked') return
     setMessages('sending')
-    const ok = await joinList({ firstName: data.name.trim().split(/\s+/)[0], email: data.email, source: '/get-a-plan', answers: data.size ? { team: data.size } : undefined })
+    const ok = await joinList({ firstName: data.name.trim().split(/\s+/)[0], email: data.email, source: '/get-a-plan', answers: { ...(data.size ? { team: data.size } : {}), ...(data.turnover ? { turnover: data.turnover } : {}) } })
     setMessages(ok ? 'asked' : 'failed')
     if (ok && typeof window.gtag === 'function') window.gtag('event', 'sign_up', { method: 'lead_magnet', page: '/get-a-plan' })
     if (ok) metaEvent('CompleteRegistration', { content_name: 'Beyond Referrals' })
@@ -129,6 +135,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
         Website: data.website.trim(),
         'Based in': market ? market.label : '',
         Size: data.size,
+        Turnover: data.turnover,
         Timing: data.timing,
         'Customers find them through': data.finding,
         source: from.source,
@@ -139,10 +146,18 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
       // swallow
     }
     if (alsoMessages && !data.gotcha) await askForMessages()
-    trackGoal('plan requested')
-    // GA4 key event, imported into Google Ads as the conversion.
-    if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { form: 'get-a-plan' })
-    metaEvent('Lead', { content_name: 'Free plan' })
+    // GA4 key event, imported into Google Ads as the conversion: only for a
+    // business above the smallest turnover band. A smaller one is recorded as
+    // its own event, which is not a conversion, so the ads stop learning to
+    // find more of them.
+    if (qualified) {
+      trackGoal('plan requested')
+      if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { form: 'get-a-plan' })
+      metaEvent('Lead', { content_name: 'Free plan' })
+    } else {
+      trackGoal('plan requested (small)')
+      if (typeof window.gtag === 'function') window.gtag('event', 'plan_request_small', { form: 'get-a-plan' })
+    }
     setStatus('success')
   }
 
@@ -170,7 +185,10 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
             seconds after the form, before anything was sent, mostly did not
             happen. The plan now comes first, and the email it comes in asks
             them to book a time to go through it. */}
-        <div className="rounded-xl border border-mc-gold/30 bg-mc-gold/5 p-5 sm:p-6 text-left">
+        {/* A smaller business sees the course first: it is the more useful next
+            step for them, and the plan still follows. */}
+        <div className="flex flex-col gap-6">
+        <div className={`rounded-xl border border-mc-gold/30 bg-mc-gold/5 p-5 sm:p-6 text-left ${qualified ? 'order-1' : 'order-2'}`}>
           <p className="font-headline text-lg font-bold text-white mb-3 text-center">What happens next</p>
           <ol className="font-body text-sm text-gray-300 space-y-2 list-decimal pl-5">
             <li>We reply to say we've got it, usually within minutes in working hours</li>
@@ -178,7 +196,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
             <li>If it makes sense, you book a time in the same email to go through it with Kat</li>
           </ol>
         </div>
-        <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-5 text-center">
+        <div className={`rounded-xl border border-white/10 bg-white/5 p-5 text-center ${qualified ? 'order-2' : 'order-1'}`}>
           {messages === 'asked' ? (
             <p className="font-body text-sm text-gray-300">
               The course is on its way. Check your inbox and click the confirm link, and day 1 arrives straight after
@@ -186,7 +204,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
           ) : (
             <>
               <p className="font-body text-sm text-gray-300 mb-3">
-                Not ready for a call? Start <span className="text-white font-semibold">{COURSE.title}</span>, our free 5-day course, while you wait for your plan
+                {qualified ? 'Not ready for a call? Start' : 'The best place to start:'} <span className="text-white font-semibold">{COURSE.title}</span>, our free 5-day course, {qualified ? 'while you wait for your plan' : 'one short lesson a day while we put your plan together'}
               </p>
               <button type="button" onClick={askForMessages} disabled={messages === 'sending'} className="btn-primary disabled:opacity-60">
                 {messages === 'sending' ? 'Sending...' : 'Send me the free course'}
@@ -196,6 +214,7 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
               )}
             </>
           )}
+        </div>
         </div>
       </div>
     )
@@ -246,6 +265,14 @@ export default function ProblemForm({ source = 'website:get-a-plan' }) {
             <div className="grid grid-cols-2 gap-3">
               {SIZES.map((s) => (
                 <button key={s} type="button" className={optionClass(data.size === s)} onClick={() => set('size', s)}>{s}</button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <span className={label}>Roughly what does it turn over?</span>
+            <div className="grid grid-cols-2 gap-3">
+              {TURNOVER.map((t) => (
+                <button key={t} type="button" className={optionClass(data.turnover === t)} onClick={() => set('turnover', t)}>{t}</button>
               ))}
             </div>
           </div>
