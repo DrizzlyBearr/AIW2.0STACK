@@ -103,7 +103,7 @@ const forYou = [
 const faqs = [
   ['Do I need sales experience?', 'No. The setter track starts from the beginning. If you have sold before, the closer track or the full journey may suit you better, and we will tell you honestly which fits when we talk.'],
   ['Will I definitely get a contract or earn money?', 'No one can promise that, and we won\'t. We train you, practise with you, show you exactly how to find contracts on Upwork and prep you when one lands. What you earn depends on the work you put in.'],
-  ['Can I pay in instalments?', 'Yes. Payment plans are available. Choose it on the application and we will work it out when we talk.'],
+  ['Can I pay in instalments?', 'Yes. Payment plans are available on every track. Just ask when we talk and we will work out one that suits you.'],
   ['What if it is not for me?', 'You get a full refund if nothing has been set up yet. Once you start module 1 a partial refund applies, and after module 3 there is no refund.'],
   ['Do I need to buy anything else?', 'Upwork charges for "connects" to send proposals. Set aside a small budget for them from day one, and we will show you how to spend it well.'],
   ['Where does the training happen?', 'Online, one on one, with the course inside our platform, Command, so your modules, tests and role-play scores are all in one place.'],
