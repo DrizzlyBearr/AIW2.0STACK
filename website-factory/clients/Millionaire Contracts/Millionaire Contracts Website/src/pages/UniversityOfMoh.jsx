@@ -43,15 +43,19 @@ const steps = [
 ]
 
 // Real messages from students (Kat, 27 November 2026), lightly joined where one thought ran over several messages.
-// Names stay first name and initial until each student agrees to more.
+// Names stay first name and initial until each student agrees to more. Kat
+// asked for the homes and money to show (27 November): proof of what work
+// can lead to, framed beside the line that results depend on the work.
 const results = [
   {
     name: 'Miense M.',
-    outcome: 'Knew nothing about sales. Two months later, signing R16k agreements and landing an hourly contract with commission on top',
+    outcome: 'Knew nothing about sales. Two months later he was signing R16k agreements, and seven months in he moved out of his parents\' house into his own place',
     quotes: [
       'In 2 months I went from knowing nothing about sales to getting R16k agreements',
       'Going from struggling to stay above 10k a month to knowing imma clock 30k before commission is CRAZY',
+      'You have changed my life man',
     ],
+    photo: { src: '/media/moh/miense-new-place.jpg', alt: "Miense's new place, the night he moved in" },
   },
   {
     name: 'Busi D.',
@@ -59,6 +63,7 @@ const results = [
     quotes: [
       "I got a job today. It has a base pay of $400-800 and earning potential of like $2k. It's so much more than the 0 I've been bringing in",
       "Had my first official calls today as an SDR. I practiced the script a lot but I realized I'm just speaking with people",
+      "You actually changed my life from when we started last year. I'm making 10x what I made",
     ],
   },
   {
@@ -174,6 +179,9 @@ export default function UniversityOfMoh() {
               <div key={r.name} className="rounded-2xl bg-white/5 border border-white/10 p-6">
                 <p className="font-headline text-lg font-black text-mc-gold">{r.name}</p>
                 <p className="font-body text-sm text-gray-400 mb-4">{r.outcome}</p>
+                {r.photo && (
+                  <img src={r.photo.src} alt={r.photo.alt} loading="lazy" className="w-full h-56 object-cover rounded-xl mb-4" />
+                )}
                 <div className="space-y-3">
                   {r.quotes.map((q) => (
                     <p key={q} className="font-body text-gray-100 leading-relaxed">&ldquo;{q}&rdquo;</p>
