@@ -45,7 +45,9 @@ const steps = [
 // Real messages from students (Kat, 27 November 2026), lightly joined where one thought ran over several messages.
 // Names stay first name and initial until each student agrees to more. Kat
 // asked for the homes and money to show (27 November): proof of what work
-// can lead to, framed beside the line that results depend on the work.
+// can lead to, framed beside the line that results depend on the work. The
+// screenshots are the real chats (public/media/moh), cropped to the chat, with
+// a password prompt blurred and a third party's story left out.
 const results = [
   {
     name: 'Miense M.',
@@ -55,7 +57,13 @@ const results = [
       'Going from struggling to stay above 10k a month to knowing imma clock 30k before commission is CRAZY',
       'You have changed my life man',
     ],
-    photo: { src: '/media/moh/miense-new-place.jpg', alt: "Miense's new place, the night he moved in" },
+    shots: [
+      ['miense-r16k', 'Miense: in 2 months from knowing nothing about sales to R16k agreements'],
+      ['miense-30k', 'Miense: from struggling to stay above 10k a month to 30k before commission'],
+      ['miense-training-paid-off', 'Miense: two contracts at once, all your training has really paid off'],
+      ['miense-moves-out', "Miense: seven months in, moving out of his parents' house"],
+      ['miense-moved-in', 'Miense: officially moved in'],
+    ],
   },
   {
     name: 'Busi D.',
@@ -65,16 +73,23 @@ const results = [
       "Had my first official calls today as an SDR. I practiced the script a lot but I realized I'm just speaking with people",
       "You actually changed my life from when we started last year. I'm making 10x what I made",
     ],
+    shots: [
+      ['busi-got-a-job', 'Busi: got a job with a base pay of $400-800'],
+      ['busi-first-calls', 'Busi: first official calls as an SDR'],
+      ['busi-10x', "Busi: I'm making 10x what I made"],
+    ],
   },
   {
     name: 'Callan H.',
     outcome: 'Cold calling for an overseas client within months of training, and bringing in contracts for the team',
     quotes: ['You did tell me during my training days that I would come across strange people, but he is genuinely a nice guy'],
+    shots: [['callan-client-call', 'Callan: reporting back after a call with a client']],
   },
   {
     name: 'Lebohang S.',
     outcome: 'Booking meetings for a client as an appointment setter',
     quotes: ['So I did about 5 bookings today'],
+    shots: [['lebohang-5-bookings', 'Lebohang: about 5 bookings in a day']],
   },
 ]
 
@@ -179,17 +194,24 @@ export default function UniversityOfMoh() {
               <div key={r.name} className="rounded-2xl bg-white/5 border border-white/10 p-6">
                 <p className="font-headline text-lg font-black text-mc-gold">{r.name}</p>
                 <p className="font-body text-sm text-gray-400 mb-4">{r.outcome}</p>
-                {r.photo && (
-                  <img src={r.photo.src} alt={r.photo.alt} loading="lazy" className="w-full h-56 object-cover rounded-xl mb-4" />
-                )}
                 <div className="space-y-3">
                   {r.quotes.map((q) => (
                     <p key={q} className="font-body text-gray-100 leading-relaxed">&ldquo;{q}&rdquo;</p>
                   ))}
                 </div>
+                {r.shots && (
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-5">
+                    {r.shots.map(([file, alt]) => (
+                      <a key={file} href={`/media/moh/${file}.jpg`} target="_blank" rel="noopener" className="block rounded-lg overflow-hidden border border-white/10 hover:border-mc-gold/60 transition-colors">
+                        <img src={`/media/moh/${file}.jpg`} alt={alt} loading="lazy" className="w-full h-56 object-cover object-top" />
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
+          <p className="font-body text-xs text-gray-500 mt-6">The actual messages. Tap any screenshot to see it full size</p>
         </div>
       </section>
 
