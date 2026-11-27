@@ -147,6 +147,9 @@ export default function Navbar() {
                 <Link to="/beyond-referrals" className="block px-4 py-2.5 text-sm font-body text-mc-teal hover:text-mc-gold hover:bg-gray-50 transition-colors" onClick={() => setResourcesOpen(false)}>
                   <span className="text-mc-gold font-semibold">Free course:</span> Beyond Referrals
                 </Link>
+                <Link to="/university-of-moh" className="block px-4 py-2.5 text-sm font-body text-mc-teal hover:text-mc-gold hover:bg-gray-50 transition-colors" onClick={() => setResourcesOpen(false)}>
+                  <span className="text-mc-gold font-semibold">Sales training:</span> University of Moh&apos;
+                </Link>
               </div>
             )}
           </div>
@@ -207,6 +210,7 @@ export default function Navbar() {
                 <Link to="/resources" className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setResourcesOpen(false) }}>Guides &amp; Articles</Link>
                 <Link to="/pipeline-and-power" className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setResourcesOpen(false) }}>Pipeline &amp; Power</Link>
                 <Link to="/beyond-referrals" className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setResourcesOpen(false) }}><span className="text-mc-gold font-semibold">Free course:</span> Beyond Referrals</Link>
+                <Link to="/university-of-moh" className="font-body text-gray-500 py-1.5 text-sm hover:text-mc-gold" onClick={() => { setMenuOpen(false); setResourcesOpen(false) }}><span className="text-mc-gold font-semibold">Sales training:</span> University of Moh&apos;</Link>
               </div>
             )}
           </div>

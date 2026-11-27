@@ -10,6 +10,7 @@ const links = [
   { label: 'About Us', to: '/about-us' },
   { label: 'How It Works', to: '/how-it-works' },
   { label: 'Resources', to: '/resources' },
+  { label: "University of Moh'", to: '/university-of-moh' },
   { label: 'Contact', to: '/contact-us' },
 ]
 
