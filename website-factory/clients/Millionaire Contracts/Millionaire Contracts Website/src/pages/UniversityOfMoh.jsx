@@ -149,6 +149,9 @@ export default function UniversityOfMoh() {
               The same training we use for the people who sell for us, now open to anyone ready to put in the work
             </p>
             <a href="#apply" className="btn-primary inline-block">Apply now</a>
+            <p className="font-body text-gray-500 text-sm mt-5 max-w-xl">
+              Paid one-on-one sales training from R5,000, not a job offer. Private coaching, not an accredited qualification
+            </p>
           </div>
         </div>
       </section>
@@ -211,7 +214,10 @@ export default function UniversityOfMoh() {
               </div>
             ))}
           </div>
-          <p className="font-body text-xs text-gray-500 mt-6">The actual messages. Tap any screenshot to see it full size</p>
+          <p className="font-body text-sm text-gray-300 mt-6 border-l-2 border-mc-gold pl-3">
+            Results vary. No guarantee of employment or income. What each student earned came from their own work, and yours will depend on yours
+          </p>
+          <p className="font-body text-xs text-gray-500 mt-3">The actual messages, shared with each student&apos;s permission. Tap any screenshot to see it full size</p>
         </div>
       </section>
 
