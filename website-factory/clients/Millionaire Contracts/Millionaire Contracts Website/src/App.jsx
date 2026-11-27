@@ -46,6 +46,7 @@ const Healthcare = page(() => import('./pages/Healthcare'))
 const PipelineAndPower = page(() => import('./pages/PipelineAndPower'))
 const SevenMessages = page(() => import('./pages/SevenMessages'))
 const BeyondReferrals = page(() => import('./pages/BeyondReferrals'))
+const UniversityOfMoh = page(() => import('./pages/UniversityOfMoh'))
 const NewsletterConfirm = page(() => import('./pages/NewsletterConfirm'))
 const NewsletterUnsubscribe = page(() => import('./pages/NewsletterUnsubscribe'))
 const WhatIsAnSDR = page(() => import('./pages/articles/WhatIsAnSDR'))
@@ -220,6 +221,7 @@ export default function App() {
         <Route path="/pipeline-and-power" element={<PipelineAndPower />} />
         <Route path="/7-messages" element={<SevenMessages />} />
         <Route path="/beyond-referrals" element={<BeyondReferrals />} />
+        <Route path="/university-of-moh" element={<UniversityOfMoh />} />
         <Route path="/newsletter-confirm" element={<NewsletterConfirm />} />
         <Route path="/newsletter-unsubscribe" element={<NewsletterUnsubscribe />} />
         <Route path="/in-house-vs-outsourced-sales" element={<Comparison />} />
