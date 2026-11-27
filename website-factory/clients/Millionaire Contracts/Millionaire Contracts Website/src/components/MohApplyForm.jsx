@@ -15,14 +15,13 @@ export const MOH_TRACKS = [
 const NOW = ['Employed', 'Looking for work', 'Studying', 'Running my own business', 'Freelancing already']
 const EXPERIENCE = ['None yet', 'Some (under a year)', '1 year or more']
 const HOURS = ['Under 5 hours a week', '5 to 10 hours a week', 'More than 10 hours a week']
-const PAYING = ['Once off', 'A payment plan']
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export default function MohApplyForm({ defaultTrack = 'full' }) {
   const id = useId()
   const [data, setData] = useState({
-    track: defaultTrack, name: '', email: '', phone: '', now: '', experience: '', hours: '', laptop: '', paying: '', why: '', gotcha: '',
+    track: defaultTrack, name: '', email: '', phone: '', now: '', experience: '', hours: '', laptop: '', why: '', gotcha: '',
   })
   const [status, setStatus] = useState('idle')
   const set = (k) => (v) => setData((d) => ({ ...d, [k]: v }))
@@ -36,7 +35,6 @@ export default function MohApplyForm({ defaultTrack = 'full' }) {
     !data.experience && 'your sales experience',
     !data.hours && 'your time each week',
     !data.laptop && 'laptop and internet',
-    !data.paying && 'how you would pay',
   ].filter(Boolean)
 
   async function submit(e) {
@@ -56,7 +54,7 @@ export default function MohApplyForm({ defaultTrack = 'full' }) {
         'Sales experience': data.experience,
         'Time each week': data.hours,
         'Laptop and steady internet': data.laptop,
-        'Would pay': data.paying,
+        form: 'university-of-moh',
         source: from.source,
         term: from.term,
         _gotcha: data.gotcha,
@@ -126,7 +124,6 @@ export default function MohApplyForm({ defaultTrack = 'full' }) {
       <Choices name="Sales experience" options={EXPERIENCE} value={data.experience} onPick={set('experience')} />
       <Choices name="How much time can you give it?" options={HOURS} value={data.hours} onPick={set('hours')} />
       <Choices name="Do you have a laptop and steady internet?" options={['Yes', 'Not yet']} value={data.laptop} onPick={set('laptop')} />
-      <Choices name="How would you pay?" options={PAYING} value={data.paying} onPick={set('paying')} />
 
       <div className="mb-6">
         <label htmlFor={`${id}-why`} className={label}>Why do you want to do this? (optional)</label>

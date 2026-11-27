@@ -42,6 +42,37 @@ const steps = [
   ['Keep growing', 'Mentorship and the University of Moh\' network, with group sessions as more people reach the same level.'],
 ]
 
+// Real messages from students (Kat, 27 November 2026), lightly joined where one thought ran over several messages.
+// Names stay first name and initial until each student agrees to more.
+const results = [
+  {
+    name: 'Miense M.',
+    outcome: 'Knew nothing about sales. Two months later, signing R16k agreements and landing an hourly contract with commission on top',
+    quotes: [
+      'In 2 months I went from knowing nothing about sales to getting R16k agreements',
+      'Going from struggling to stay above 10k a month to knowing imma clock 30k before commission is CRAZY',
+    ],
+  },
+  {
+    name: 'Busi D.',
+    outcome: 'Trained while studying, then landed a remote SDR role with a base salary and commission',
+    quotes: [
+      "I got a job today. It has a base pay of $400-800 and earning potential of like $2k. It's so much more than the 0 I've been bringing in",
+      "Had my first official calls today as an SDR. I practiced the script a lot but I realized I'm just speaking with people",
+    ],
+  },
+  {
+    name: 'Callan H.',
+    outcome: 'Cold calling for an overseas client within months of training, and bringing in contracts for the team',
+    quotes: ['You did tell me during my training days that I would come across strange people, but he is genuinely a nice guy'],
+  },
+  {
+    name: 'Lebohang S.',
+    outcome: 'Booking meetings for a client as an appointment setter',
+    quotes: ['So I did about 5 bookings today'],
+  },
+]
+
 const forYou = [
   'You want to earn from sales, whether you are working, between jobs, studying or freelancing',
   'You are comfortable on the phone and on WhatsApp, or ready to get comfortable',
@@ -126,6 +157,31 @@ export default function UniversityOfMoh() {
             ))}
           </div>
           <p className="font-body text-sm text-gray-500 mt-6">Payment plans available on every track</p>
+        </div>
+      </section>
+
+      <section className="bg-mc-dark py-20 px-6">
+        <div className="max-w-screen-lg mx-auto">
+          <span className="section-label mb-3 block">Results</span>
+          <h2 className="font-headline text-3xl md:text-4xl font-black text-white leading-tight mb-3">
+            In their own words
+          </h2>
+          <p className="font-body text-gray-400 mb-10 max-w-2xl">
+            From messages students sent us. Their results came from their work, and yours will depend on yours
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {results.map((r) => (
+              <div key={r.name} className="rounded-2xl bg-white/5 border border-white/10 p-6">
+                <p className="font-headline text-lg font-black text-mc-gold">{r.name}</p>
+                <p className="font-body text-sm text-gray-400 mb-4">{r.outcome}</p>
+                <div className="space-y-3">
+                  {r.quotes.map((q) => (
+                    <p key={q} className="font-body text-gray-100 leading-relaxed">&ldquo;{q}&rdquo;</p>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
